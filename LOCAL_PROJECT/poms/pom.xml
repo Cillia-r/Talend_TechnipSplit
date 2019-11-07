@@ -12,6 +12,7 @@
     <module>code/routines</module>
     <module>jobs/process/testgit_0.1</module>
     <module>jobs/process/testgitgit_0.1</module>
+    <module>jobs/process/testpushandcommit_0.1</module>
   </modules>
   <properties>
     <talend.project.name>LOCAL_PROJECT</talend.project.name>

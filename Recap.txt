@@ -1,0 +1,43 @@
+Rejet Prestataire
+
+Champs                           erreur
+DateCreationEntreprise__c        format incorrecte (0).
+FormeJuridique__c                Ce champs est obligatoire mais il est vide pour : AGOR FORMATION
+ReferenceQualiteAfdas__c         Il faut rajouter la valeur "Non concerné" à la transco
+
+*************************************************************************************************************
+
+
+Orga Pro et tout les objets chargés hiers après-midi , le fichier est envoyé ce matin par mail. 
+
+**************************************************************************************************************
+
+Tiers 
+Champs                erreur
+Siret__c              Le format est incorrecte ( le siret est sur 14 chiffre)
+
+**************************************************************************************************************
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+

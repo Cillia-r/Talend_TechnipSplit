@@ -1,0 +1,3 @@
+https://192.168.30.3:4100/wgcgi.cgi?action=fw_logon&fw_logon_type=timeout    
+https://afdas--preprod.cs105.my.salesforce.com/?ec=301&startURL=%2Fvisualforce%2Fsession%3Furl%3Dhttps%253A%252F%252Fafdas--preprod.lightning.force.com%252Flightning%252Fr%252FFolder%252F00l0O000002vTdfQAE%252Fview%253FqueryScope%253DuserFolders
+https://afdas.lightning.force.com/lightning/r/a080O00001RJ5sqQAD/related/zTranscos__r/view

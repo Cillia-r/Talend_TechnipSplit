@@ -1567,14 +1567,6 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "_ocvk8PosEemPbeceHIMquQ - WPPipe__c",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_ocvk8PosEemPbeceHIMquQ - Workpackage_Detail__c",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {

@@ -1568,10 +1568,6 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "_ocvk8PosEemPbeceHIMquQ - WPPartner__c",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
     "id" : "_ocvk8PosEemPbeceHIMquQ - WPPipe__c",
     "version" : "Latest",
     "type" : "schema"

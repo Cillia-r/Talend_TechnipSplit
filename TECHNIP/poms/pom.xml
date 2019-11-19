@@ -39,6 +39,7 @@
     <module>jobs/process/TechNip/load_wpspshardware_0.1</module>
     <module>jobs/process/TechNip/load_sharingrules_0.1</module>
     <module>jobs/process/TechNip/load_relatedworkpackagesummary_0.1</module>
+    <module>jobs/process/TechNip/load_relatedworkpackagesummary1_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TECHNIP</talend.project.name>

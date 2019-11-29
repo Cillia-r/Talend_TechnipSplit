@@ -41,7 +41,10 @@ import java.io.ObjectInputStream;
 import java.io.IOException;
 import java.util.Comparator;
 
-//the import part of tJava_2
+//the import part of tJava_1
+//import java.util.List;
+
+//the import part of tJava_3
 //import java.util.List;
 
 @SuppressWarnings("unused")
@@ -555,7 +558,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		tDie_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFileInputDelimited_6_error(Exception exception,
+	public void tFileInputDelimited_5_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -563,34 +566,23 @@ public class LOAD_EmailMessage implements TalendJob {
 
 		status = "failure";
 
-		tFileInputDelimited_6_onSubJobError(exception, errorComponent,
+		tFileInputDelimited_5_onSubJobError(exception, errorComponent,
 				globalMap);
 	}
 
-	public void tHashOutput_10_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
+	public void tUniqRow_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
 		status = "failure";
 
-		tFileInputDelimited_6_onSubJobError(exception, errorComponent,
+		tFileInputDelimited_5_onSubJobError(exception, errorComponent,
 				globalMap);
 	}
 
-	public void tHashInput_20_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tHashInput_20_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tFlowToIterate_3_error(Exception exception,
+	public void tFilterColumns_1_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -598,10 +590,11 @@ public class LOAD_EmailMessage implements TalendJob {
 
 		status = "failure";
 
-		tHashInput_20_onSubJobError(exception, errorComponent, globalMap);
+		tFileInputDelimited_5_onSubJobError(exception, errorComponent,
+				globalMap);
 	}
 
-	public void tJava_2_error(Exception exception, String errorComponent,
+	public void tHashOutput_7_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -609,32 +602,11 @@ public class LOAD_EmailMessage implements TalendJob {
 
 		status = "failure";
 
-		tHashInput_20_onSubJobError(exception, errorComponent, globalMap);
+		tFileInputDelimited_5_onSubJobError(exception, errorComponent,
+				globalMap);
 	}
 
-	public void tFixedFlowInput_3_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFixedFlowInput_3_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tSalesforceInput_1_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tSalesforceInput_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tMap_5_error(Exception exception, String errorComponent,
+	public void tHashInput_19_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -642,7 +614,161 @@ public class LOAD_EmailMessage implements TalendJob {
 
 		status = "failure";
 
-		tSalesforceInput_1_onSubJobError(exception, errorComponent, globalMap);
+		tHashInput_19_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFlowToIterate_1_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_19_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tJava_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_19_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFixedFlowInput_1_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFixedFlowInput_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tSalesforceInput_5_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_5_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tSalesforceInput_11_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_11_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFlowToIterate_2_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_11_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tJava_3_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_11_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tSalesforceInput_12_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_12_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tMap_6_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_12_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tMap_7_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_12_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tSalesforceOutput_3_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_12_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFileOutputDelimited_7_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_12_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFileOutputDelimited_8_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_12_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tMap_1_error(Exception exception, String errorComponent,
@@ -687,17 +813,6 @@ public class LOAD_EmailMessage implements TalendJob {
 		status = "failure";
 
 		tSalesforceInput_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tHashInput_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tHashInput_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tHashInput_2_error(Exception exception, String errorComponent,
@@ -786,6 +901,105 @@ public class LOAD_EmailMessage implements TalendJob {
 		status = "failure";
 
 		tHashInput_9_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_21_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_21_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_22_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_22_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_23_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_23_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_24_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_24_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_25_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_25_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_26_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_26_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_27_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_27_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_28_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_28_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tHashInput_29_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_29_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tLogCatcher_1_error(Exception exception, String errorComponent,
@@ -1060,6 +1274,28 @@ public class LOAD_EmailMessage implements TalendJob {
 		tSalesforceInput_9_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tSalesforceInput_1_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tMap_5_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tAdvancedHash_Meeting_minute_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -1159,6 +1395,127 @@ public class LOAD_EmailMessage implements TalendJob {
 		tHashInput_9_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tAdvancedHash_row28_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_21_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row33_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_22_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row35_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_23_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row39_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_24_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row40_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_25_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row41_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_26_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row42_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_27_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row43_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_28_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tAdvancedHash_row44_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tHashInput_29_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_error(
+			Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		tSalesforceOutputBulkExec_1_tSalesforceBulkExec_error(exception,
+				errorComponent, globalMap);
+
+	}
+
+	public void tSalesforceOutputBulkExec_1_tSalesforceBulkExec_error(
+			Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tSalesforceInput_5_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void Implicit_Context_Regex_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -1192,7 +1549,7 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public void tFileInputDelimited_6_onSubJobError(Exception exception,
+	public void tFileInputDelimited_5_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1203,7 +1560,7 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public void tHashInput_20_onSubJobError(Exception exception,
+	public void tHashInput_19_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1214,7 +1571,7 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public void tFixedFlowInput_3_onSubJobError(Exception exception,
+	public void tFixedFlowInput_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1225,7 +1582,29 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public void tSalesforceInput_1_onSubJobError(Exception exception,
+	public void tSalesforceInput_5_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tSalesforceInput_11_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tSalesforceInput_12_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1325,6 +1704,105 @@ public class LOAD_EmailMessage implements TalendJob {
 	}
 
 	public void tHashInput_9_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_21_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_22_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_23_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_24_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_25_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_26_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_27_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_28_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tHashInput_29_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1468,6 +1946,17 @@ public class LOAD_EmailMessage implements TalendJob {
 	}
 
 	public void tSalesforceInput_9_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tSalesforceInput_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -2569,472 +3058,8 @@ public class LOAD_EmailMessage implements TalendJob {
 		globalMap.put("tDie_2_SUBPROCESS_STATE", 1);
 	}
 
-	public static class row36Struct implements
-			routines.system.IPersistableRow<row36Struct> {
-		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
-		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
-
-		public String ExternalIdSplit__c;
-
-		public String getExternalIdSplit__c() {
-			return this.ExternalIdSplit__c;
-		}
-
-		private String readString(ObjectInputStream dis) throws IOException {
-			String strReturn = null;
-			int length = 0;
-			length = dis.readInt();
-			if (length == -1) {
-				strReturn = null;
-			} else {
-				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
-					if (length < 1024
-							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
-						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
-					} else {
-						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
-					}
-				}
-				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
-						length);
-				strReturn = new String(
-						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
-						utf8Charset);
-			}
-			return strReturn;
-		}
-
-		private void writeString(String str, ObjectOutputStream dos)
-				throws IOException {
-			if (str == null) {
-				dos.writeInt(-1);
-			} else {
-				byte[] byteArray = str.getBytes(utf8Charset);
-				dos.writeInt(byteArray.length);
-				dos.write(byteArray);
-			}
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
-
-				try {
-
-					int length = 0;
-
-					this.ExternalIdSplit__c = readString(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// String
-
-				writeString(this.ExternalIdSplit__c, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("ExternalIdSplit__c=" + ExternalIdSplit__c);
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row36Struct other) {
-
-			int returnValue = -1;
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public void tFileInputDelimited_6Process(
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tFileInputDelimited_6_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				row36Struct row36 = new row36Struct();
-
-				/**
-				 * [tHashOutput_10 begin ] start
-				 */
-
-				ok_Hash.put("tHashOutput_10", false);
-				start_Hash.put("tHashOutput_10", System.currentTimeMillis());
-
-				currentComponent = "tHashOutput_10";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null) {
-
-						runStat.updateStatOnConnection("row36" + iterateId, 0,
-								0);
-
-					}
-				}
-
-				int tos_count_tHashOutput_10 = 0;
-
-				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_10 = org.talend.designer.components.hashfile.common.MapHashFile
-						.getMapHashFile();
-				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row36Struct> tHashFile_tHashOutput_10 = null;
-				String hashKey_tHashOutput_10 = "tHashFile_LOAD_EmailMessage_"
-						+ pid + "_tHashOutput_10";
-				synchronized (org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
-						.get(hashKey_tHashOutput_10)) {
-					if (mf_tHashOutput_10.getResourceMap().get(
-							hashKey_tHashOutput_10) == null) {
-						mf_tHashOutput_10
-								.getResourceMap()
-								.put(hashKey_tHashOutput_10,
-										new org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row36Struct>(
-												org.talend.designer.components.hashfile.common.MATCHING_MODE.KEEP_ALL));
-						tHashFile_tHashOutput_10 = mf_tHashOutput_10
-								.getResourceMap().get(hashKey_tHashOutput_10);
-					} else {
-						tHashFile_tHashOutput_10 = mf_tHashOutput_10
-								.getResourceMap().get(hashKey_tHashOutput_10);
-					}
-				}
-				int nb_line_tHashOutput_10 = 0;
-
-				/**
-				 * [tHashOutput_10 begin ] stop
-				 */
-
-				/**
-				 * [tFileInputDelimited_6 begin ] start
-				 */
-
-				ok_Hash.put("tFileInputDelimited_6", false);
-				start_Hash.put("tFileInputDelimited_6",
-						System.currentTimeMillis());
-
-				currentComponent = "tFileInputDelimited_6";
-
-				int tos_count_tFileInputDelimited_6 = 0;
-
-				final routines.system.RowState rowstate_tFileInputDelimited_6 = new routines.system.RowState();
-
-				int nb_line_tFileInputDelimited_6 = 0;
-				org.talend.fileprocess.FileInputDelimited fid_tFileInputDelimited_6 = null;
-				try {
-
-					Object filename_tFileInputDelimited_6 = "C:/Users/Cillia/Desktop/TalendWork/ProjetFolder/Out_file/Error/Feuille de calcul sans titre - Feuille 1.csv";
-					if (filename_tFileInputDelimited_6 instanceof java.io.InputStream) {
-
-						int footer_value_tFileInputDelimited_6 = 0, random_value_tFileInputDelimited_6 = -1;
-						if (footer_value_tFileInputDelimited_6 > 0
-								|| random_value_tFileInputDelimited_6 > 0) {
-							throw new java.lang.Exception(
-									"When the input source is a stream,footer and random shouldn't be bigger than 0.");
-						}
-
-					}
-					try {
-						fid_tFileInputDelimited_6 = new org.talend.fileprocess.FileInputDelimited(
-								"C:/Users/Cillia/Desktop/TalendWork/ProjetFolder/Out_file/Error/Feuille de calcul sans titre - Feuille 1.csv",
-								"ISO-8859-15", ",", "\n", true, 1, 0, -1, -1,
-								false);
-					} catch (java.lang.Exception e) {
-
-						System.err.println(e.getMessage());
-
-					}
-
-					while (fid_tFileInputDelimited_6 != null
-							&& fid_tFileInputDelimited_6.nextRecord()) {
-						rowstate_tFileInputDelimited_6.reset();
-
-						row36 = null;
-
-						boolean whetherReject_tFileInputDelimited_6 = false;
-						row36 = new row36Struct();
-						try {
-
-							int columnIndexWithD_tFileInputDelimited_6 = 0;
-
-							columnIndexWithD_tFileInputDelimited_6 = 0;
-
-							row36.ExternalIdSplit__c = fid_tFileInputDelimited_6
-									.get(columnIndexWithD_tFileInputDelimited_6);
-
-							if (rowstate_tFileInputDelimited_6.getException() != null) {
-								throw rowstate_tFileInputDelimited_6
-										.getException();
-							}
-
-						} catch (java.lang.Exception e) {
-							whetherReject_tFileInputDelimited_6 = true;
-
-							System.err.println(e.getMessage());
-							row36 = null;
-
-						}
-
-						/**
-						 * [tFileInputDelimited_6 begin ] stop
-						 */
-
-						/**
-						 * [tFileInputDelimited_6 main ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_6";
-
-						tos_count_tFileInputDelimited_6++;
-
-						/**
-						 * [tFileInputDelimited_6 main ] stop
-						 */
-
-						/**
-						 * [tFileInputDelimited_6 process_data_begin ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_6";
-
-						/**
-						 * [tFileInputDelimited_6 process_data_begin ] stop
-						 */
-						// Start of branch "row36"
-						if (row36 != null) {
-
-							/**
-							 * [tHashOutput_10 main ] start
-							 */
-
-							currentComponent = "tHashOutput_10";
-
-							// row36
-							// row36
-
-							if (execStat) {
-								runStat.updateStatOnConnection("row36"
-										+ iterateId, 1, 1);
-							}
-
-							row36Struct oneRow_tHashOutput_10 = new row36Struct();
-
-							oneRow_tHashOutput_10.ExternalIdSplit__c = row36.ExternalIdSplit__c;
-
-							tHashFile_tHashOutput_10.put(oneRow_tHashOutput_10);
-							nb_line_tHashOutput_10++;
-
-							tos_count_tHashOutput_10++;
-
-							/**
-							 * [tHashOutput_10 main ] stop
-							 */
-
-							/**
-							 * [tHashOutput_10 process_data_begin ] start
-							 */
-
-							currentComponent = "tHashOutput_10";
-
-							/**
-							 * [tHashOutput_10 process_data_begin ] stop
-							 */
-
-							/**
-							 * [tHashOutput_10 process_data_end ] start
-							 */
-
-							currentComponent = "tHashOutput_10";
-
-							/**
-							 * [tHashOutput_10 process_data_end ] stop
-							 */
-
-						} // End of branch "row36"
-
-						/**
-						 * [tFileInputDelimited_6 process_data_end ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_6";
-
-						/**
-						 * [tFileInputDelimited_6 process_data_end ] stop
-						 */
-
-						/**
-						 * [tFileInputDelimited_6 end ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_6";
-
-					}
-				} finally {
-					if (!((Object) ("C:/Users/Cillia/Desktop/TalendWork/ProjetFolder/Out_file/Error/Feuille de calcul sans titre - Feuille 1.csv") instanceof java.io.InputStream)) {
-						if (fid_tFileInputDelimited_6 != null) {
-							fid_tFileInputDelimited_6.close();
-						}
-					}
-					if (fid_tFileInputDelimited_6 != null) {
-						globalMap.put("tFileInputDelimited_6_NB_LINE",
-								fid_tFileInputDelimited_6.getRowNumber());
-
-					}
-				}
-
-				ok_Hash.put("tFileInputDelimited_6", true);
-				end_Hash.put("tFileInputDelimited_6",
-						System.currentTimeMillis());
-
-				/**
-				 * [tFileInputDelimited_6 end ] stop
-				 */
-
-				/**
-				 * [tHashOutput_10 end ] start
-				 */
-
-				currentComponent = "tHashOutput_10";
-
-				globalMap.put("tHashOutput_10_NB_LINE", nb_line_tHashOutput_10);
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row36" + iterateId, 2,
-								0);
-					}
-				}
-
-				ok_Hash.put("tHashOutput_10", true);
-				end_Hash.put("tHashOutput_10", System.currentTimeMillis());
-
-				/**
-				 * [tHashOutput_10 end ] stop
-				 */
-
-			}// end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil
-						.addLog("CHECKPOINT",
-								"CONNECTION:SUBJOB_OK:tFileInputDelimited_6:OnSubjobOk",
-								"", Thread.currentThread().getId() + "", "",
-								"", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk14", 0, "ok");
-			}
-
-			tHashInput_20Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileInputDelimited_6 finally ] start
-				 */
-
-				currentComponent = "tFileInputDelimited_6";
-
-				/**
-				 * [tFileInputDelimited_6 finally ] stop
-				 */
-
-				/**
-				 * [tHashOutput_10 finally ] start
-				 */
-
-				currentComponent = "tHashOutput_10";
-
-				/**
-				 * [tHashOutput_10 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFileInputDelimited_6_SUBPROCESS_STATE", 1);
-	}
-
-	public static class row38Struct implements
-			routines.system.IPersistableRow<row38Struct> {
+	public static class row31Struct implements
+			routines.system.IPersistableRow<row31Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
 		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
 
@@ -3125,7 +3150,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row38Struct other) {
+		public int compareTo(row31Struct other) {
 
 			int returnValue = -1;
 
@@ -3156,10 +3181,816 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public void tHashInput_20Process(
+	public static class row34Struct implements
+			routines.system.IPersistableRow<row34Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public Boolean Incoming;
+
+		public Boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		public String errorCode;
+
+		public String getErrorCode() {
+			return this.errorCode;
+		}
+
+		public String errorFields;
+
+		public String getErrorFields() {
+			return this.errorFields;
+		}
+
+		public String errorMessage;
+
+		public String getErrorMessage() {
+			return this.errorMessage;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.Incoming = null;
+					} else {
+						this.Incoming = dis.readBoolean();
+					}
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSplit__c = readString(dis);
+
+					this.errorCode = readString(dis);
+
+					this.errorFields = readString(dis);
+
+					this.errorMessage = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// Boolean
+
+				if (this.Incoming == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeBoolean(this.Incoming);
+				}
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+				// String
+
+				writeString(this.errorCode, dos);
+
+				// String
+
+				writeString(this.errorFields, dos);
+
+				// String
+
+				writeString(this.errorMessage, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append(",errorCode=" + errorCode);
+			sb.append(",errorFields=" + errorFields);
+			sb.append(",errorMessage=" + errorMessage);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row34Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row13Struct implements
+			routines.system.IPersistableRow<row13Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public Boolean Incoming;
+
+		public Boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		public String errorCode;
+
+		public String getErrorCode() {
+			return this.errorCode;
+		}
+
+		public String errorFields;
+
+		public String getErrorFields() {
+			return this.errorFields;
+		}
+
+		public String errorMessage;
+
+		public String getErrorMessage() {
+			return this.errorMessage;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.Incoming = null;
+					} else {
+						this.Incoming = dis.readBoolean();
+					}
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSplit__c = readString(dis);
+
+					this.errorCode = readString(dis);
+
+					this.errorFields = readString(dis);
+
+					this.errorMessage = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// Boolean
+
+				if (this.Incoming == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeBoolean(this.Incoming);
+				}
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+				// String
+
+				writeString(this.errorCode, dos);
+
+				// String
+
+				writeString(this.errorFields, dos);
+
+				// String
+
+				writeString(this.errorMessage, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append(",errorCode=" + errorCode);
+			sb.append(",errorFields=" + errorFields);
+			sb.append(",errorMessage=" + errorMessage);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row13Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tFileInputDelimited_5Process(
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tHashInput_20_SUBPROCESS_STATE", 0);
+		globalMap.put("tFileInputDelimited_5_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -3179,419 +4010,1408 @@ public class LOAD_EmailMessage implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				row38Struct row38 = new row38Struct();
+				row13Struct row13 = new row13Struct();
+				row34Struct row34 = new row34Struct();
+				row31Struct row31 = new row31Struct();
 
 				/**
-				 * [tFlowToIterate_3 begin ] start
+				 * [tHashOutput_7 begin ] start
 				 */
 
-				int NB_ITERATE_tJava_2 = 0; // for statistics
+				ok_Hash.put("tHashOutput_7", false);
+				start_Hash.put("tHashOutput_7", System.currentTimeMillis());
 
-				ok_Hash.put("tFlowToIterate_3", false);
-				start_Hash.put("tFlowToIterate_3", System.currentTimeMillis());
-
-				currentComponent = "tFlowToIterate_3";
+				currentComponent = "tHashOutput_7";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row38" + iterateId, 0,
+						runStat.updateStatOnConnection("row31" + iterateId, 0,
 								0);
 
 					}
 				}
 
-				int tos_count_tFlowToIterate_3 = 0;
+				int tos_count_tHashOutput_7 = 0;
 
-				int nb_line_tFlowToIterate_3 = 0;
-				int counter_tFlowToIterate_3 = 0;
-
-				/**
-				 * [tFlowToIterate_3 begin ] stop
-				 */
-
-				/**
-				 * [tHashInput_20 begin ] start
-				 */
-
-				ok_Hash.put("tHashInput_20", false);
-				start_Hash.put("tHashInput_20", System.currentTimeMillis());
-
-				currentComponent = "tHashInput_20";
-
-				int tos_count_tHashInput_20 = 0;
-
-				int nb_line_tHashInput_20 = 0;
-
-				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_20 = org.talend.designer.components.hashfile.common.MapHashFile
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_7 = org.talend.designer.components.hashfile.common.MapHashFile
 						.getMapHashFile();
-				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row36Struct> tHashFile_tHashInput_20 = mf_tHashInput_20
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row31Struct> tHashFile_tHashOutput_7 = null;
+				String hashKey_tHashOutput_7 = "tHashFile_LOAD_EmailMessage_"
+						+ pid + "_tHashOutput_7";
+				synchronized (org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.get(hashKey_tHashOutput_7)) {
+					if (mf_tHashOutput_7.getResourceMap().get(
+							hashKey_tHashOutput_7) == null) {
+						mf_tHashOutput_7
+								.getResourceMap()
+								.put(hashKey_tHashOutput_7,
+										new org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row31Struct>(
+												org.talend.designer.components.hashfile.common.MATCHING_MODE.KEEP_ALL));
+						tHashFile_tHashOutput_7 = mf_tHashOutput_7
+								.getResourceMap().get(hashKey_tHashOutput_7);
+					} else {
+						tHashFile_tHashOutput_7 = mf_tHashOutput_7
+								.getResourceMap().get(hashKey_tHashOutput_7);
+					}
+				}
+				int nb_line_tHashOutput_7 = 0;
+
+				/**
+				 * [tHashOutput_7 begin ] stop
+				 */
+
+				/**
+				 * [tFilterColumns_1 begin ] start
+				 */
+
+				ok_Hash.put("tFilterColumns_1", false);
+				start_Hash.put("tFilterColumns_1", System.currentTimeMillis());
+
+				currentComponent = "tFilterColumns_1";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row34" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tFilterColumns_1 = 0;
+
+				int nb_line_tFilterColumns_1 = 0;
+
+				/**
+				 * [tFilterColumns_1 begin ] stop
+				 */
+
+				/**
+				 * [tUniqRow_1 begin ] start
+				 */
+
+				ok_Hash.put("tUniqRow_1", false);
+				start_Hash.put("tUniqRow_1", System.currentTimeMillis());
+
+				currentComponent = "tUniqRow_1";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row13" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tUniqRow_1 = 0;
+
+				class KeyStruct_tUniqRow_1 {
+
+					private static final int DEFAULT_HASHCODE = 1;
+					private static final int PRIME = 31;
+					private int hashCode = DEFAULT_HASHCODE;
+					public boolean hashCodeDirty = true;
+
+					String ParentId;
+
+					@Override
+					public int hashCode() {
+						if (this.hashCodeDirty) {
+							final int prime = PRIME;
+							int result = DEFAULT_HASHCODE;
+
+							result = prime
+									* result
+									+ ((this.ParentId == null) ? 0
+											: this.ParentId.hashCode());
+
+							this.hashCode = result;
+							this.hashCodeDirty = false;
+						}
+						return this.hashCode;
+					}
+
+					@Override
+					public boolean equals(Object obj) {
+						if (this == obj)
+							return true;
+						if (obj == null)
+							return false;
+						if (getClass() != obj.getClass())
+							return false;
+						final KeyStruct_tUniqRow_1 other = (KeyStruct_tUniqRow_1) obj;
+
+						if (this.ParentId == null) {
+							if (other.ParentId != null)
+								return false;
+
+						} else if (!this.ParentId.equals(other.ParentId))
+
+							return false;
+
+						return true;
+					}
+
+				}
+
+				int nb_uniques_tUniqRow_1 = 0;
+				int nb_duplicates_tUniqRow_1 = 0;
+				KeyStruct_tUniqRow_1 finder_tUniqRow_1 = new KeyStruct_tUniqRow_1();
+				java.util.Set<KeyStruct_tUniqRow_1> keystUniqRow_1 = new java.util.HashSet<KeyStruct_tUniqRow_1>();
+
+				/**
+				 * [tUniqRow_1 begin ] stop
+				 */
+
+				/**
+				 * [tFileInputDelimited_5 begin ] start
+				 */
+
+				ok_Hash.put("tFileInputDelimited_5", false);
+				start_Hash.put("tFileInputDelimited_5",
+						System.currentTimeMillis());
+
+				currentComponent = "tFileInputDelimited_5";
+
+				int tos_count_tFileInputDelimited_5 = 0;
+
+				final routines.system.RowState rowstate_tFileInputDelimited_5 = new routines.system.RowState();
+
+				int nb_line_tFileInputDelimited_5 = 0;
+				org.talend.fileprocess.FileInputDelimited fid_tFileInputDelimited_5 = null;
+				try {
+
+					Object filename_tFileInputDelimited_5 = context.ProjetFolder
+							+ context.OutFileFolder
+							+ context.Error
+							+ jobName
+							+ "_ErrorParentIdNotNull.csv";
+					if (filename_tFileInputDelimited_5 instanceof java.io.InputStream) {
+
+						int footer_value_tFileInputDelimited_5 = 0, random_value_tFileInputDelimited_5 = -1;
+						if (footer_value_tFileInputDelimited_5 > 0
+								|| random_value_tFileInputDelimited_5 > 0) {
+							throw new java.lang.Exception(
+									"When the input source is a stream,footer and random shouldn't be bigger than 0.");
+						}
+
+					}
+					try {
+						fid_tFileInputDelimited_5 = new org.talend.fileprocess.FileInputDelimited(
+								context.ProjetFolder + context.OutFileFolder
+										+ context.Error + jobName
+										+ "_ErrorParentIdNotNull.csv",
+								"ISO-8859-15", "#", "\n", true, 1, 0, -1, -1,
+								false);
+					} catch (java.lang.Exception e) {
+
+						System.err.println(e.getMessage());
+
+					}
+
+					while (fid_tFileInputDelimited_5 != null
+							&& fid_tFileInputDelimited_5.nextRecord()) {
+						rowstate_tFileInputDelimited_5.reset();
+
+						row13 = null;
+
+						boolean whetherReject_tFileInputDelimited_5 = false;
+						row13 = new row13Struct();
+						try {
+
+							int columnIndexWithD_tFileInputDelimited_5 = 0;
+
+							String temp = "";
+
+							columnIndexWithD_tFileInputDelimited_5 = 0;
+
+							row13.ParentId = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 1;
+
+							row13.ActivityId = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 2;
+
+							row13.CreatedById = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 3;
+
+							temp = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+							if (temp.length() > 0) {
+
+								try {
+
+									row13.CreatedDate = ParserUtils
+											.parseTo_Date(temp,
+													"yyyy-MM-dd'T'HH:mm:ss'.000Z'");
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_5) {
+									rowstate_tFileInputDelimited_5
+											.setException(new RuntimeException(
+													String.format(
+															"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+															"CreatedDate",
+															"row13", temp,
+															ex_tFileInputDelimited_5),
+													ex_tFileInputDelimited_5));
+								}
+
+							} else {
+
+								row13.CreatedDate = null;
+
+							}
+
+							columnIndexWithD_tFileInputDelimited_5 = 4;
+
+							temp = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+							if (temp.length() > 0) {
+
+								try {
+
+									row13.LastModifiedDate = ParserUtils
+											.parseTo_Date(temp,
+													"yyyy-MM-dd'T'HH:mm:ss'.000Z'");
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_5) {
+									rowstate_tFileInputDelimited_5
+											.setException(new RuntimeException(
+													String.format(
+															"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+															"LastModifiedDate",
+															"row13", temp,
+															ex_tFileInputDelimited_5),
+													ex_tFileInputDelimited_5));
+								}
+
+							} else {
+
+								row13.LastModifiedDate = null;
+
+							}
+
+							columnIndexWithD_tFileInputDelimited_5 = 5;
+
+							row13.LastModifiedById = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 6;
+
+							row13.Subject = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 7;
+
+							row13.FromName = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 8;
+
+							row13.FromAddress = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 9;
+
+							row13.ToAddress = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 10;
+
+							row13.CcAddress = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 11;
+
+							row13.BccAddress = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 12;
+
+							temp = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+							if (temp.length() > 0) {
+
+								try {
+
+									row13.Incoming = ParserUtils
+											.parseTo_Boolean(temp);
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_5) {
+									rowstate_tFileInputDelimited_5
+											.setException(new RuntimeException(
+													String.format(
+															"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+															"Incoming",
+															"row13", temp,
+															ex_tFileInputDelimited_5),
+													ex_tFileInputDelimited_5));
+								}
+
+							} else {
+
+								row13.Incoming = null;
+
+							}
+
+							columnIndexWithD_tFileInputDelimited_5 = 13;
+
+							row13.Status = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 14;
+
+							temp = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+							if (temp.length() > 0) {
+
+								try {
+
+									row13.MessageDate = ParserUtils
+											.parseTo_Date(temp,
+													"yyyy-MM-dd'T'HH:mm:ss'.000Z'");
+
+								} catch (java.lang.Exception ex_tFileInputDelimited_5) {
+									rowstate_tFileInputDelimited_5
+											.setException(new RuntimeException(
+													String.format(
+															"Couldn't parse value for column '%s' in '%s', value is '%s'. Details: %s",
+															"MessageDate",
+															"row13", temp,
+															ex_tFileInputDelimited_5),
+													ex_tFileInputDelimited_5));
+								}
+
+							} else {
+
+								row13.MessageDate = null;
+
+							}
+
+							columnIndexWithD_tFileInputDelimited_5 = 15;
+
+							row13.RelatedToId = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 16;
+
+							row13.ExternalIdSplit__c = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 17;
+
+							row13.errorCode = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 18;
+
+							row13.errorFields = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							columnIndexWithD_tFileInputDelimited_5 = 19;
+
+							row13.errorMessage = fid_tFileInputDelimited_5
+									.get(columnIndexWithD_tFileInputDelimited_5);
+
+							if (rowstate_tFileInputDelimited_5.getException() != null) {
+								throw rowstate_tFileInputDelimited_5
+										.getException();
+							}
+
+						} catch (java.lang.Exception e) {
+							whetherReject_tFileInputDelimited_5 = true;
+
+							System.err.println(e.getMessage());
+							row13 = null;
+
+						}
+
+						/**
+						 * [tFileInputDelimited_5 begin ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_5 main ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_5";
+
+						tos_count_tFileInputDelimited_5++;
+
+						/**
+						 * [tFileInputDelimited_5 main ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_5 process_data_begin ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_5";
+
+						/**
+						 * [tFileInputDelimited_5 process_data_begin ] stop
+						 */
+						// Start of branch "row13"
+						if (row13 != null) {
+
+							/**
+							 * [tUniqRow_1 main ] start
+							 */
+
+							currentComponent = "tUniqRow_1";
+
+							// row13
+							// row13
+
+							if (execStat) {
+								runStat.updateStatOnConnection("row13"
+										+ iterateId, 1, 1);
+							}
+
+							row34 = null;
+							finder_tUniqRow_1.ParentId = row13.ParentId;
+							finder_tUniqRow_1.hashCodeDirty = true;
+							if (!keystUniqRow_1.contains(finder_tUniqRow_1)) {
+								KeyStruct_tUniqRow_1 new_tUniqRow_1 = new KeyStruct_tUniqRow_1();
+
+								new_tUniqRow_1.ParentId = row13.ParentId;
+
+								keystUniqRow_1.add(new_tUniqRow_1);
+								if (row34 == null) {
+
+									row34 = new row34Struct();
+								}
+								row34.ParentId = row13.ParentId;
+								row34.ActivityId = row13.ActivityId;
+								row34.CreatedById = row13.CreatedById;
+								row34.CreatedDate = row13.CreatedDate;
+								row34.LastModifiedDate = row13.LastModifiedDate;
+								row34.LastModifiedById = row13.LastModifiedById;
+								row34.Subject = row13.Subject;
+								row34.FromName = row13.FromName;
+								row34.FromAddress = row13.FromAddress;
+								row34.ToAddress = row13.ToAddress;
+								row34.CcAddress = row13.CcAddress;
+								row34.BccAddress = row13.BccAddress;
+								row34.Incoming = row13.Incoming;
+								row34.Status = row13.Status;
+								row34.MessageDate = row13.MessageDate;
+								row34.RelatedToId = row13.RelatedToId;
+								row34.ExternalIdSplit__c = row13.ExternalIdSplit__c;
+								row34.errorCode = row13.errorCode;
+								row34.errorFields = row13.errorFields;
+								row34.errorMessage = row13.errorMessage;
+								nb_uniques_tUniqRow_1++;
+							} else {
+								nb_duplicates_tUniqRow_1++;
+							}
+
+							tos_count_tUniqRow_1++;
+
+							/**
+							 * [tUniqRow_1 main ] stop
+							 */
+
+							/**
+							 * [tUniqRow_1 process_data_begin ] start
+							 */
+
+							currentComponent = "tUniqRow_1";
+
+							/**
+							 * [tUniqRow_1 process_data_begin ] stop
+							 */
+							// Start of branch "row34"
+							if (row34 != null) {
+
+								/**
+								 * [tFilterColumns_1 main ] start
+								 */
+
+								currentComponent = "tFilterColumns_1";
+
+								// row34
+								// row34
+
+								if (execStat) {
+									runStat.updateStatOnConnection("row34"
+											+ iterateId, 1, 1);
+								}
+
+								row31.ParentId = row34.ParentId;
+
+								nb_line_tFilterColumns_1++;
+
+								tos_count_tFilterColumns_1++;
+
+								/**
+								 * [tFilterColumns_1 main ] stop
+								 */
+
+								/**
+								 * [tFilterColumns_1 process_data_begin ] start
+								 */
+
+								currentComponent = "tFilterColumns_1";
+
+								/**
+								 * [tFilterColumns_1 process_data_begin ] stop
+								 */
+
+								/**
+								 * [tHashOutput_7 main ] start
+								 */
+
+								currentComponent = "tHashOutput_7";
+
+								// row31
+								// row31
+
+								if (execStat) {
+									runStat.updateStatOnConnection("row31"
+											+ iterateId, 1, 1);
+								}
+
+								row31Struct oneRow_tHashOutput_7 = new row31Struct();
+
+								oneRow_tHashOutput_7.ParentId = row31.ParentId;
+
+								tHashFile_tHashOutput_7
+										.put(oneRow_tHashOutput_7);
+								nb_line_tHashOutput_7++;
+
+								tos_count_tHashOutput_7++;
+
+								/**
+								 * [tHashOutput_7 main ] stop
+								 */
+
+								/**
+								 * [tHashOutput_7 process_data_begin ] start
+								 */
+
+								currentComponent = "tHashOutput_7";
+
+								/**
+								 * [tHashOutput_7 process_data_begin ] stop
+								 */
+
+								/**
+								 * [tHashOutput_7 process_data_end ] start
+								 */
+
+								currentComponent = "tHashOutput_7";
+
+								/**
+								 * [tHashOutput_7 process_data_end ] stop
+								 */
+
+								/**
+								 * [tFilterColumns_1 process_data_end ] start
+								 */
+
+								currentComponent = "tFilterColumns_1";
+
+								/**
+								 * [tFilterColumns_1 process_data_end ] stop
+								 */
+
+							} // End of branch "row34"
+
+							/**
+							 * [tUniqRow_1 process_data_end ] start
+							 */
+
+							currentComponent = "tUniqRow_1";
+
+							/**
+							 * [tUniqRow_1 process_data_end ] stop
+							 */
+
+						} // End of branch "row13"
+
+						/**
+						 * [tFileInputDelimited_5 process_data_end ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_5";
+
+						/**
+						 * [tFileInputDelimited_5 process_data_end ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_5 end ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_5";
+
+					}
+				} finally {
+					if (!((Object) (context.ProjetFolder
+							+ context.OutFileFolder + context.Error + jobName + "_ErrorParentIdNotNull.csv") instanceof java.io.InputStream)) {
+						if (fid_tFileInputDelimited_5 != null) {
+							fid_tFileInputDelimited_5.close();
+						}
+					}
+					if (fid_tFileInputDelimited_5 != null) {
+						globalMap.put("tFileInputDelimited_5_NB_LINE",
+								fid_tFileInputDelimited_5.getRowNumber());
+
+					}
+				}
+
+				ok_Hash.put("tFileInputDelimited_5", true);
+				end_Hash.put("tFileInputDelimited_5",
+						System.currentTimeMillis());
+
+				/**
+				 * [tFileInputDelimited_5 end ] stop
+				 */
+
+				/**
+				 * [tUniqRow_1 end ] start
+				 */
+
+				currentComponent = "tUniqRow_1";
+
+				globalMap.put("tUniqRow_1_NB_UNIQUES", nb_uniques_tUniqRow_1);
+				globalMap.put("tUniqRow_1_NB_DUPLICATES",
+						nb_duplicates_tUniqRow_1);
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row13" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tUniqRow_1", true);
+				end_Hash.put("tUniqRow_1", System.currentTimeMillis());
+
+				/**
+				 * [tUniqRow_1 end ] stop
+				 */
+
+				/**
+				 * [tFilterColumns_1 end ] start
+				 */
+
+				currentComponent = "tFilterColumns_1";
+
+				globalMap.put("tFilterColumns_1_NB_LINE",
+						nb_line_tFilterColumns_1);
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row34" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tFilterColumns_1", true);
+				end_Hash.put("tFilterColumns_1", System.currentTimeMillis());
+
+				/**
+				 * [tFilterColumns_1 end ] stop
+				 */
+
+				/**
+				 * [tHashOutput_7 end ] start
+				 */
+
+				currentComponent = "tHashOutput_7";
+
+				globalMap.put("tHashOutput_7_NB_LINE", nb_line_tHashOutput_7);
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row31" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tHashOutput_7", true);
+				end_Hash.put("tHashOutput_7", System.currentTimeMillis());
+
+				/**
+				 * [tHashOutput_7 end ] stop
+				 */
+
+			}// end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil
+						.addLog("CHECKPOINT",
+								"CONNECTION:SUBJOB_OK:tFileInputDelimited_5:OnSubjobOk",
+								"", Thread.currentThread().getId() + "", "",
+								"", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk13", 0, "ok");
+			}
+
+			tHashInput_19Process(globalMap);
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tFileInputDelimited_5 finally ] start
+				 */
+
+				currentComponent = "tFileInputDelimited_5";
+
+				/**
+				 * [tFileInputDelimited_5 finally ] stop
+				 */
+
+				/**
+				 * [tUniqRow_1 finally ] start
+				 */
+
+				currentComponent = "tUniqRow_1";
+
+				/**
+				 * [tUniqRow_1 finally ] stop
+				 */
+
+				/**
+				 * [tFilterColumns_1 finally ] start
+				 */
+
+				currentComponent = "tFilterColumns_1";
+
+				/**
+				 * [tFilterColumns_1 finally ] stop
+				 */
+
+				/**
+				 * [tHashOutput_7 finally ] start
+				 */
+
+				currentComponent = "tHashOutput_7";
+
+				/**
+				 * [tHashOutput_7 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tFileInputDelimited_5_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row30Struct implements
+			routines.system.IPersistableRow<row30Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ParentId = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("ParentId=" + ParentId);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row30Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_19Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_19_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row30Struct row30 = new row30Struct();
+
+				/**
+				 * [tFlowToIterate_1 begin ] start
+				 */
+
+				int NB_ITERATE_tJava_1 = 0; // for statistics
+
+				ok_Hash.put("tFlowToIterate_1", false);
+				start_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
+
+				currentComponent = "tFlowToIterate_1";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row30" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tFlowToIterate_1 = 0;
+
+				int nb_line_tFlowToIterate_1 = 0;
+				int counter_tFlowToIterate_1 = 0;
+
+				/**
+				 * [tFlowToIterate_1 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_19 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_19", false);
+				start_Hash.put("tHashInput_19", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_19";
+
+				int tos_count_tHashInput_19 = 0;
+
+				int nb_line_tHashInput_19 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_19 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row31Struct> tHashFile_tHashInput_19 = mf_tHashInput_19
 						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
-								+ pid + "_tHashOutput_10");
-				if (tHashFile_tHashInput_20 == null) {
+								+ pid + "_tHashOutput_7");
+				if (tHashFile_tHashInput_19 == null) {
 					throw new RuntimeException(
 							"The hash is not initialized : The hash must exist before you read from it");
 				}
-				java.util.Iterator<row36Struct> iterator_tHashInput_20 = tHashFile_tHashInput_20
+				java.util.Iterator<row31Struct> iterator_tHashInput_19 = tHashFile_tHashInput_19
 						.iterator();
-				while (iterator_tHashInput_20.hasNext()) {
-					row36Struct next_tHashInput_20 = iterator_tHashInput_20
+				while (iterator_tHashInput_19.hasNext()) {
+					row31Struct next_tHashInput_19 = iterator_tHashInput_19
 							.next();
 
-					row38.ParentId = next_tHashInput_20.ExternalIdSplit__c;
+					row30.ParentId = next_tHashInput_19.ParentId;
 
 					/**
-					 * [tHashInput_20 begin ] stop
+					 * [tHashInput_19 begin ] stop
 					 */
 
 					/**
-					 * [tHashInput_20 main ] start
+					 * [tHashInput_19 main ] start
 					 */
 
-					currentComponent = "tHashInput_20";
+					currentComponent = "tHashInput_19";
 
-					tos_count_tHashInput_20++;
-
-					/**
-					 * [tHashInput_20 main ] stop
-					 */
+					tos_count_tHashInput_19++;
 
 					/**
-					 * [tHashInput_20 process_data_begin ] start
-					 */
-
-					currentComponent = "tHashInput_20";
-
-					/**
-					 * [tHashInput_20 process_data_begin ] stop
+					 * [tHashInput_19 main ] stop
 					 */
 
 					/**
-					 * [tFlowToIterate_3 main ] start
+					 * [tHashInput_19 process_data_begin ] start
 					 */
 
-					currentComponent = "tFlowToIterate_3";
+					currentComponent = "tHashInput_19";
 
-					// row38
-					// row38
+					/**
+					 * [tHashInput_19 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tFlowToIterate_1 main ] start
+					 */
+
+					currentComponent = "tFlowToIterate_1";
+
+					// row30
+					// row30
 
 					if (execStat) {
-						runStat.updateStatOnConnection("row38" + iterateId, 1,
+						runStat.updateStatOnConnection("row30" + iterateId, 1,
 								1);
 					}
 
-					globalMap.put("row38.ParentId", row38.ParentId);
+					globalMap.put("row30.ParentId", row30.ParentId);
 
-					nb_line_tFlowToIterate_3++;
-					counter_tFlowToIterate_3++;
-					globalMap.put("tFlowToIterate_3_CURRENT_ITERATION",
-							counter_tFlowToIterate_3);
+					nb_line_tFlowToIterate_1++;
+					counter_tFlowToIterate_1++;
+					globalMap.put("tFlowToIterate_1_CURRENT_ITERATION",
+							counter_tFlowToIterate_1);
 
-					tos_count_tFlowToIterate_3++;
+					tos_count_tFlowToIterate_1++;
 
 					/**
-					 * [tFlowToIterate_3 main ] stop
+					 * [tFlowToIterate_1 main ] stop
 					 */
 
 					/**
-					 * [tFlowToIterate_3 process_data_begin ] start
+					 * [tFlowToIterate_1 process_data_begin ] start
 					 */
 
-					currentComponent = "tFlowToIterate_3";
+					currentComponent = "tFlowToIterate_1";
 
 					/**
-					 * [tFlowToIterate_3 process_data_begin ] stop
+					 * [tFlowToIterate_1 process_data_begin ] stop
 					 */
-					NB_ITERATE_tJava_2++;
+					NB_ITERATE_tJava_1++;
 
 					if (execStat) {
-						runStat.updateStatOnConnection("CreatedBy", 3, 0);
+						runStat.updateStatOnConnection(
+								"after_tSalesforceInput_12", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("OnSubjobOk15", 3, 0);
+						runStat.updateStatOnConnection("row33", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("EmailMessage", 3, 0);
+						runStat.updateStatOnConnection("row40", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("copyOfEmailMessage_0",
+								3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row28", 3, 0);
 					}
 
 					if (execStat) {
 						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
+								"after_tSalesforceInput_12", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("Opportunity", 3, 0);
+						runStat.updateStatOnConnection("row42", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("ModifiedBy", 3, 0);
+						runStat.updateStatOnConnection("row6", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("ModifiedBy", 3, 0);
+						runStat.updateStatOnConnection("row35", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
+						runStat.updateStatOnConnection("row40", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("OnComponentOk6", 3, 0);
+						runStat.updateStatOnConnection("OnSubjobOk16", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("CaseParentId", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("row25", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Project", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Meeting_minute", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Opportunity", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Task1", 3, 0);
+						runStat.updateStatOnConnection("row46", 3, 0);
 					}
 
 					if (execStat) {
 						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
+								"after_tSalesforceInput_12", 3, 0);
 					}
 
 					if (execStat) {
 						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
+								"after_tSalesforceInput_12", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("row222", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Meeting_minute", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("CreatedBy", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("CaseParentId", 3, 0);
+						runStat.updateStatOnConnection("row39", 3, 0);
 					}
 
 					if (execStat) {
 						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("row27", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Case", 3, 0);
+								"after_tSalesforceInput_12", 3, 0);
 					}
 
 					if (execStat) {
 						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
+								"after_tSalesforceInput_12", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("Contract", 3, 0);
+						runStat.updateStatOnConnection("copyOfrow2", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
+						runStat.updateStatOnConnection("row32", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("Contract", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Project", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("row2", 3, 0);
-					}
-
-					if (execStat) {
-						runStat.updateStatOnConnection("Task1", 3, 0);
+						runStat.updateStatOnConnection("row33", 3, 0);
 					}
 
 					if (execStat) {
 						runStat.updateStatOnConnection(
-								"after_tSalesforceInput_1", 3, 0);
+								"after_tSalesforceInput_12", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("Case", 3, 0);
+						runStat.updateStatOnConnection("row44", 3, 0);
 					}
 
 					if (execStat) {
-						runStat.updateStatOnConnection("iterate4", 1, "exec"
-								+ NB_ITERATE_tJava_2);
+						runStat.updateStatOnConnection("row45", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("OnComponentOk3", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("OnSubjobOk12", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("iterate2", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row41", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row42", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row43", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row35", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection(
+								"after_tSalesforceInput_12", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("OnComponentOk4", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row26", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection(
+								"after_tSalesforceInput_12", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row39", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row44", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row28", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row43", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row41", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("OnRowsEnd", 3, 0);
+					}
+
+					if (execStat) {
+						runStat.updateStatOnConnection("iterate1", 1, "exec"
+								+ NB_ITERATE_tJava_1);
 						// Thread.sleep(1000);
 					}
 
 					/**
-					 * [tJava_2 begin ] start
+					 * [tJava_1 begin ] start
 					 */
 
-					ok_Hash.put("tJava_2", false);
-					start_Hash.put("tJava_2", System.currentTimeMillis());
+					ok_Hash.put("tJava_1", false);
+					start_Hash.put("tJava_1", System.currentTimeMillis());
 
-					currentComponent = "tJava_2";
+					currentComponent = "tJava_1";
 
-					int tos_count_tJava_2 = 0;
+					int tos_count_tJava_1 = 0;
 
-					context.Id = (String) globalMap.get("row38.ParentId");
+					context.ParentId = (String) globalMap.get("row30.ParentId");
 					// System.out.println("ParentIdEmailMessageError"+":"+
 					// context.ParentId);
 
 					/**
-					 * [tJava_2 begin ] stop
+					 * [tJava_1 begin ] stop
 					 */
 
 					/**
-					 * [tJava_2 main ] start
+					 * [tJava_1 main ] start
 					 */
 
-					currentComponent = "tJava_2";
+					currentComponent = "tJava_1";
 
-					tos_count_tJava_2++;
-
-					/**
-					 * [tJava_2 main ] stop
-					 */
+					tos_count_tJava_1++;
 
 					/**
-					 * [tJava_2 process_data_begin ] start
-					 */
-
-					currentComponent = "tJava_2";
-
-					/**
-					 * [tJava_2 process_data_begin ] stop
+					 * [tJava_1 main ] stop
 					 */
 
 					/**
-					 * [tJava_2 process_data_end ] start
+					 * [tJava_1 process_data_begin ] start
 					 */
 
-					currentComponent = "tJava_2";
+					currentComponent = "tJava_1";
 
 					/**
-					 * [tJava_2 process_data_end ] stop
+					 * [tJava_1 process_data_begin ] stop
 					 */
 
 					/**
-					 * [tJava_2 end ] start
+					 * [tJava_1 process_data_end ] start
 					 */
 
-					currentComponent = "tJava_2";
+					currentComponent = "tJava_1";
 
-					ok_Hash.put("tJava_2", true);
-					end_Hash.put("tJava_2", System.currentTimeMillis());
+					/**
+					 * [tJava_1 process_data_end ] stop
+					 */
+
+					/**
+					 * [tJava_1 end ] start
+					 */
+
+					currentComponent = "tJava_1";
+
+					ok_Hash.put("tJava_1", true);
+					end_Hash.put("tJava_1", System.currentTimeMillis());
 
 					if (execStat) {
-						runStat.updateStatOnConnection("OnComponentOk6", 0,
+						runStat.updateStatOnConnection("OnComponentOk3", 0,
 								"ok");
 					}
-					tFixedFlowInput_3Process(globalMap);
+					tFixedFlowInput_1Process(globalMap);
 
 					/**
-					 * [tJava_2 end ] stop
+					 * [tJava_1 end ] stop
 					 */
 					if (execStat) {
-						runStat.updateStatOnConnection("iterate4", 2, "exec"
-								+ NB_ITERATE_tJava_2);
+						runStat.updateStatOnConnection("iterate1", 2, "exec"
+								+ NB_ITERATE_tJava_1);
 					}
 
 					/**
-					 * [tFlowToIterate_3 process_data_end ] start
+					 * [tFlowToIterate_1 process_data_end ] start
 					 */
 
-					currentComponent = "tFlowToIterate_3";
+					currentComponent = "tFlowToIterate_1";
 
 					/**
-					 * [tFlowToIterate_3 process_data_end ] stop
-					 */
-
-					/**
-					 * [tHashInput_20 process_data_end ] start
-					 */
-
-					currentComponent = "tHashInput_20";
-
-					/**
-					 * [tHashInput_20 process_data_end ] stop
+					 * [tFlowToIterate_1 process_data_end ] stop
 					 */
 
 					/**
-					 * [tHashInput_20 end ] start
+					 * [tHashInput_19 process_data_end ] start
 					 */
 
-					currentComponent = "tHashInput_20";
+					currentComponent = "tHashInput_19";
 
-					nb_line_tHashInput_20++;
+					/**
+					 * [tHashInput_19 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_19 end ] start
+					 */
+
+					currentComponent = "tHashInput_19";
+
+					nb_line_tHashInput_19++;
 				}
 
 				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
 						.remove("tHashFile_LOAD_EmailMessage_" + pid
-								+ "_tHashOutput_10");
+								+ "_tHashOutput_7");
 
-				globalMap.put("tHashInput_20_NB_LINE", nb_line_tHashInput_20);
+				globalMap.put("tHashInput_19_NB_LINE", nb_line_tHashInput_19);
 
-				ok_Hash.put("tHashInput_20", true);
-				end_Hash.put("tHashInput_20", System.currentTimeMillis());
+				ok_Hash.put("tHashInput_19", true);
+				end_Hash.put("tHashInput_19", System.currentTimeMillis());
 
 				/**
-				 * [tHashInput_20 end ] stop
+				 * [tHashInput_19 end ] stop
 				 */
 
 				/**
-				 * [tFlowToIterate_3 end ] start
+				 * [tFlowToIterate_1 end ] start
 				 */
 
-				currentComponent = "tFlowToIterate_3";
+				currentComponent = "tFlowToIterate_1";
 
-				globalMap.put("tFlowToIterate_3_NB_LINE",
-						nb_line_tFlowToIterate_3);
+				globalMap.put("tFlowToIterate_1_NB_LINE",
+						nb_line_tFlowToIterate_1);
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row38" + iterateId, 2,
+						runStat.updateStatOnConnection("row30" + iterateId, 2,
 								0);
 					}
 				}
 
-				ok_Hash.put("tFlowToIterate_3", true);
-				end_Hash.put("tFlowToIterate_3", System.currentTimeMillis());
+				ok_Hash.put("tFlowToIterate_1", true);
+				end_Hash.put("tFlowToIterate_1", System.currentTimeMillis());
 
 				/**
-				 * [tFlowToIterate_3 end ] stop
+				 * [tFlowToIterate_1 end ] stop
 				 */
 
 			}// end the resume
@@ -3612,33 +5432,33 @@ public class LOAD_EmailMessage implements TalendJob {
 			try {
 
 				/**
-				 * [tHashInput_20 finally ] start
+				 * [tHashInput_19 finally ] start
 				 */
 
-				currentComponent = "tHashInput_20";
+				currentComponent = "tHashInput_19";
 
 				/**
-				 * [tHashInput_20 finally ] stop
-				 */
-
-				/**
-				 * [tFlowToIterate_3 finally ] start
-				 */
-
-				currentComponent = "tFlowToIterate_3";
-
-				/**
-				 * [tFlowToIterate_3 finally ] stop
+				 * [tHashInput_19 finally ] stop
 				 */
 
 				/**
-				 * [tJava_2 finally ] start
+				 * [tFlowToIterate_1 finally ] start
 				 */
 
-				currentComponent = "tJava_2";
+				currentComponent = "tFlowToIterate_1";
 
 				/**
-				 * [tJava_2 finally ] stop
+				 * [tFlowToIterate_1 finally ] stop
+				 */
+
+				/**
+				 * [tJava_1 finally ] start
+				 */
+
+				currentComponent = "tJava_1";
+
+				/**
+				 * [tJava_1 finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -3649,13 +5469,13 @@ public class LOAD_EmailMessage implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tHashInput_20_SUBPROCESS_STATE", 1);
+		globalMap.put("tHashInput_19_SUBPROCESS_STATE", 1);
 	}
 
-	public void tFixedFlowInput_3Process(
+	public void tFixedFlowInput_1Process(
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tFixedFlowInput_3_SUBPROCESS_STATE", 0);
+		globalMap.put("tFixedFlowInput_1_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -3676,83 +5496,2331 @@ public class LOAD_EmailMessage implements TalendJob {
 				globalResumeTicket = true;
 
 				/**
-				 * [tFixedFlowInput_3 begin ] start
+				 * [tFixedFlowInput_1 begin ] start
 				 */
 
-				ok_Hash.put("tFixedFlowInput_3", false);
-				start_Hash.put("tFixedFlowInput_3", System.currentTimeMillis());
+				ok_Hash.put("tFixedFlowInput_1", false);
+				start_Hash.put("tFixedFlowInput_1", System.currentTimeMillis());
 
-				currentComponent = "tFixedFlowInput_3";
+				currentComponent = "tFixedFlowInput_1";
 
-				int tos_count_tFixedFlowInput_3 = 0;
+				int tos_count_tFixedFlowInput_1 = 0;
 
-				for (int i_tFixedFlowInput_3 = 0; i_tFixedFlowInput_3 < 1; i_tFixedFlowInput_3++) {
+				for (int i_tFixedFlowInput_1 = 0; i_tFixedFlowInput_1 < 1; i_tFixedFlowInput_1++) {
 
 					/**
-					 * [tFixedFlowInput_3 begin ] stop
+					 * [tFixedFlowInput_1 begin ] stop
 					 */
 
 					/**
-					 * [tFixedFlowInput_3 main ] start
+					 * [tFixedFlowInput_1 main ] start
 					 */
 
-					currentComponent = "tFixedFlowInput_3";
+					currentComponent = "tFixedFlowInput_1";
 
-					tos_count_tFixedFlowInput_3++;
-
-					/**
-					 * [tFixedFlowInput_3 main ] stop
-					 */
+					tos_count_tFixedFlowInput_1++;
 
 					/**
-					 * [tFixedFlowInput_3 process_data_begin ] start
-					 */
-
-					currentComponent = "tFixedFlowInput_3";
-
-					/**
-					 * [tFixedFlowInput_3 process_data_begin ] stop
+					 * [tFixedFlowInput_1 main ] stop
 					 */
 
 					/**
-					 * [tFixedFlowInput_3 process_data_end ] start
+					 * [tFixedFlowInput_1 process_data_begin ] start
 					 */
 
-					currentComponent = "tFixedFlowInput_3";
+					currentComponent = "tFixedFlowInput_1";
 
 					/**
-					 * [tFixedFlowInput_3 process_data_end ] stop
+					 * [tFixedFlowInput_1 process_data_begin ] stop
 					 */
 
 					/**
-					 * [tFixedFlowInput_3 end ] start
+					 * [tFixedFlowInput_1 process_data_end ] start
 					 */
 
-					currentComponent = "tFixedFlowInput_3";
+					currentComponent = "tFixedFlowInput_1";
+
+					/**
+					 * [tFixedFlowInput_1 process_data_end ] stop
+					 */
+
+					/**
+					 * [tFixedFlowInput_1 end ] start
+					 */
+
+					currentComponent = "tFixedFlowInput_1";
 
 				}
-				globalMap.put("tFixedFlowInput_3_NB_LINE", 1);
+				globalMap.put("tFixedFlowInput_1_NB_LINE", 1);
 
-				ok_Hash.put("tFixedFlowInput_3", true);
-				end_Hash.put("tFixedFlowInput_3", System.currentTimeMillis());
+				ok_Hash.put("tFixedFlowInput_1", true);
+				end_Hash.put("tFixedFlowInput_1", System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk4", 0, "ok");
+				}
+				tSalesforceInput_5Process(globalMap);
 
 				/**
-				 * [tFixedFlowInput_3 end ] stop
+				 * [tFixedFlowInput_1 end ] stop
 				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tFixedFlowInput_1 finally ] start
+				 */
+
+				currentComponent = "tFixedFlowInput_1";
+
+				/**
+				 * [tFixedFlowInput_1 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tFixedFlowInput_1_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row6Struct implements
+			routines.system.IPersistableRow<row6Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.Id = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.Id, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row6Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tSalesforceInput_5Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tSalesforceInput_5_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+		String currentVirtualComponent = null;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row6Struct row6 = new row6Struct();
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk begin ]
+				 * start
+				 */
+
+				ok_Hash.put(
+						"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+						false);
+				start_Hash.put(
+						"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+						System.currentTimeMillis());
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceOutputBulk";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row6" + iterateId, 0, 0);
+
+					}
+				}
+
+				int tos_count_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = 0;
+
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = new org.talend.components.salesforce.tsalesforceoutputbulk.TSalesforceOutputBulkDefinition();
+
+				org.talend.components.salesforce.tsalesforceoutputbulk.TSalesforceOutputBulkProperties props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = (org.talend.components.salesforce.tsalesforceoutputbulk.TSalesforceOutputBulkProperties) def_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.createRuntimeProperties();
+				props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.setValue("ignoreNull", false);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.setValue(
+								"outputAction",
+								org.talend.components.salesforce.SalesforceOutputProperties.OutputAction.DELETE);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.setValue("bulkFilePath",
+								"C:/Users/Cillia/Desktop/Technip/BULKEmail2.txt");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.setValue("append", false);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk.upsertRelationTable
+						.setValue("columnName", "Id");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk.upsertRelationTable
+						.setValue("polymorphic", false);
+
+				class SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_1_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"EmailMessage\",\"fields\":[{", s);
+
+						a("\"name\":\"Id\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"Id\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Id\",\"talend.field.isKey\":\"true\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"out\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_1_fisrt sst_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_1_fisrt = new SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_1_fisrt();
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk.schema
+						.setValue(
+								"schema",
+								new org.apache.avro.Schema.Parser()
+										.parse(sst_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_1_fisrt
+												.getSchemaValue()));
+
+				globalMap
+						.put("tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_COMPONENT_RUNTIME_PROPERTIES",
+								props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
+				java.net.URL mappings_url_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = this
+						.getClass().getResource("/xmlMappings");
+				globalMap
+						.put("tSalesforceOutputBulkExec_1_tSalesforceOutputBulk_MAPPINGS_URL",
+								mappings_url_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId,
+							String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId,
+							String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tSalesforceOutputBulkExec_1_tSalesforceOutputBulk";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = null;
+				topology_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = org.talend.components.api.component.ConnectorTopology.INCOMING;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = def_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.getRuntimeInfo(
+								org.talend.components.api.component.runtime.ExecutionEngine.DI,
+								props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk,
+								topology_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = def_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+								.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.initialize(
+								container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk,
+								props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+
+				if (initVr_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(
+							initVr_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+									.getMessage());
+				}
+
+				if (componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk;
+					compDriverInitialization_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.runAtDriver(container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = null;
+				if (componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = sourceOrSink_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.validate(container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+					if (vr_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+						throw new RuntimeException(
+								vr_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+										.getMessage());
+					}
+				}
+
+				org.talend.components.api.component.runtime.Sink sink_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = (org.talend.components.api.component.runtime.Sink) sourceOrSink_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk;
+				org.talend.components.api.component.runtime.WriteOperation writeOperation_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = sink_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.createWriteOperation();
+				writeOperation_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.initialize(container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+				org.talend.components.api.component.runtime.Writer writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = writeOperation_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.createWriter(container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+				writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.open("tSalesforceOutputBulkExec_1_tSalesforceOutputBulk");
+
+				resourceMap
+						.put("writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+								writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+
+				org.talend.components.api.component.Connector c_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.getAvailableConnectors(null, false)) {
+					if (currentConnector.getName().equals("MAIN")) {
+						c_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = currentConnector;
+						break;
+					}
+				}
+				org.apache.avro.Schema designSchema_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = props_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.getSchema(
+								c_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk,
+								false);
+				org.talend.codegen.enforcer.IncomingSchemaEnforcer incomingEnforcer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = new org.talend.codegen.enforcer.IncomingSchemaEnforcer(
+						designSchema_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+				java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = new java.util.ArrayList<Object>();
+				java.util.Iterator outgoingMainRecordsIt_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = null;
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk begin ]
+				 * stop
+				 */
+
+				/**
+				 * [tSalesforceInput_5 begin ] start
+				 */
+
+				ok_Hash.put("tSalesforceInput_5", false);
+				start_Hash
+						.put("tSalesforceInput_5", System.currentTimeMillis());
+
+				currentComponent = "tSalesforceInput_5";
+
+				int tos_count_tSalesforceInput_5 = 0;
+
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceInput_5 = new org.talend.components.salesforce.tsalesforceinput.TSalesforceInputDefinition();
+
+				org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties props_tSalesforceInput_5 = (org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties) def_tSalesforceInput_5
+						.createRuntimeProperties();
+				props_tSalesforceInput_5
+						.setValue(
+								"queryMode",
+								org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties.QueryMode.Query);
+
+				props_tSalesforceInput_5.setValue("condition", "ParentId='"
+						+ context.ParentId + "'");
+
+				props_tSalesforceInput_5.setValue("manualQuery", false);
+
+				props_tSalesforceInput_5.setValue("includeDeleted", false);
+
+				props_tSalesforceInput_5.setValue("batchSize", 250);
+
+				props_tSalesforceInput_5.setValue("normalizeDelimiter", ";");
+
+				props_tSalesforceInput_5.setValue("columnNameDelimiter", "_");
+
+				props_tSalesforceInput_5.connection.userPassword.setValue(
+						"useAuth", false);
+
+				props_tSalesforceInput_5.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_5.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceInput_5.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceInput_5.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				props_tSalesforceInput_5.module.setValue("moduleName",
+						"EmailMessage");
+
+				props_tSalesforceInput_5.module.connection.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_5.module.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_5.module.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceInput_5.module.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceInput_5.module.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				class SchemaSettingTool_tSalesforceInput_5_1_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"EmailMessage\",\"fields\":[{", s);
+
+						a("\"name\":\"Id\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"Id\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Id\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"MAIN\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceInput_5_1_fisrt sst_tSalesforceInput_5_1_fisrt = new SchemaSettingTool_tSalesforceInput_5_1_fisrt();
+
+				props_tSalesforceInput_5.module.main.setValue("schema",
+						new org.apache.avro.Schema.Parser()
+								.parse(sst_tSalesforceInput_5_1_fisrt
+										.getSchemaValue()));
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_5.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceInput_5 = props_tSalesforceInput_5.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceInput_5 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_5 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_5
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceInput_5.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_5);
+					}
+				}
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_5.module.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceInput_5 = props_tSalesforceInput_5.module.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceInput_5 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_5 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_5
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceInput_5.module.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_5);
+					}
+				}
+				globalMap.put(
+						"tSalesforceInput_5_COMPONENT_RUNTIME_PROPERTIES",
+						props_tSalesforceInput_5);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
+				java.net.URL mappings_url_tSalesforceInput_5 = this.getClass()
+						.getResource("/xmlMappings");
+				globalMap.put("tSalesforceInput_5_MAPPINGS_URL",
+						mappings_url_tSalesforceInput_5);
+
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceInput_5 = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId,
+							String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId,
+							String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tSalesforceInput_5";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tSalesforceInput_5 = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceInput_5 = null;
+				topology_tSalesforceInput_5 = org.talend.components.api.component.ConnectorTopology.OUTGOING;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceInput_5 = def_tSalesforceInput_5
+						.getRuntimeInfo(
+								org.talend.components.api.component.runtime.ExecutionEngine.DI,
+								props_tSalesforceInput_5,
+								topology_tSalesforceInput_5);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceInput_5 = def_tSalesforceInput_5
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceInput_5 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceInput_5
+								.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceInput_5 = componentRuntime_tSalesforceInput_5
+						.initialize(container_tSalesforceInput_5,
+								props_tSalesforceInput_5);
+
+				if (initVr_tSalesforceInput_5.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(
+							initVr_tSalesforceInput_5.getMessage());
+				}
+
+				if (componentRuntime_tSalesforceInput_5 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceInput_5 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceInput_5;
+					compDriverInitialization_tSalesforceInput_5
+							.runAtDriver(container_tSalesforceInput_5);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceInput_5 = null;
+				if (componentRuntime_tSalesforceInput_5 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceInput_5 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceInput_5;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceInput_5 = sourceOrSink_tSalesforceInput_5
+							.validate(container_tSalesforceInput_5);
+					if (vr_tSalesforceInput_5.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+						throw new RuntimeException(
+								vr_tSalesforceInput_5.getMessage());
+					}
+				}
+
+				org.talend.components.api.component.runtime.Source source_tSalesforceInput_5 = (org.talend.components.api.component.runtime.Source) sourceOrSink_tSalesforceInput_5;
+				org.talend.components.api.component.runtime.Reader reader_tSalesforceInput_5 = source_tSalesforceInput_5
+						.createReader(container_tSalesforceInput_5);
+				reader_tSalesforceInput_5 = new org.talend.codegen.flowvariables.runtime.FlowVariablesReader(
+						reader_tSalesforceInput_5, container_tSalesforceInput_5);
+
+				boolean multi_output_is_allowed_tSalesforceInput_5 = false;
+				org.talend.components.api.component.Connector c_tSalesforceInput_5 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceInput_5
+						.getAvailableConnectors(null, true)) {
+					if (currentConnector.getName().equals("MAIN")) {
+						c_tSalesforceInput_5 = currentConnector;
+					}
+
+					if (currentConnector.getName().equals("REJECT")) {// it's
+																		// better
+																		// to
+																		// move
+																		// the
+																		// code
+																		// to
+																		// javajet
+						multi_output_is_allowed_tSalesforceInput_5 = true;
+					}
+				}
+				org.apache.avro.Schema schema_tSalesforceInput_5 = props_tSalesforceInput_5
+						.getSchema(c_tSalesforceInput_5, true);
+
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceInput_5 = org.talend.codegen.enforcer.EnforcerCreator
+						.createOutgoingEnforcer(schema_tSalesforceInput_5,
+								false);
+
+				// Create a reusable factory that converts the output of the
+				// reader to an IndexedRecord.
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceInput_5 = null;
+
+				// Iterate through the incoming data.
+				boolean available_tSalesforceInput_5 = reader_tSalesforceInput_5
+						.start();
+
+				resourceMap.put("reader_tSalesforceInput_5",
+						reader_tSalesforceInput_5);
+
+				for (; available_tSalesforceInput_5; available_tSalesforceInput_5 = reader_tSalesforceInput_5
+						.advance()) {
+					nb_line_tSalesforceInput_5++;
+
+					if (multi_output_is_allowed_tSalesforceInput_5) {
+						row6 = null;
+
+					}
+
+					try {
+						Object data_tSalesforceInput_5 = reader_tSalesforceInput_5
+								.getCurrent();
+
+						if (multi_output_is_allowed_tSalesforceInput_5) {
+							row6 = new row6Struct();
+						}
+
+						// Construct the factory once when the first data
+						// arrives.
+						if (factory_tSalesforceInput_5 == null) {
+							factory_tSalesforceInput_5 = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(data_tSalesforceInput_5
+											.getClass());
+						}
+
+						// Enforce the outgoing schema on the input.
+						outgoingEnforcer_tSalesforceInput_5
+								.setWrapped(factory_tSalesforceInput_5
+										.convertToAvro(data_tSalesforceInput_5));
+						Object columnValue_0_tSalesforceInput_5 = outgoingEnforcer_tSalesforceInput_5
+								.get(0);
+						row6.Id = (String) (columnValue_0_tSalesforceInput_5);
+					} catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_5) {
+						java.util.Map<String, Object> info_tSalesforceInput_5 = e_tSalesforceInput_5
+								.getRejectInfo();
+						// TODO use a method instead of getting method by the
+						// special key "error/errorMessage"
+						Object errorMessage_tSalesforceInput_5 = null;
+						if (info_tSalesforceInput_5.containsKey("error")) {
+							errorMessage_tSalesforceInput_5 = info_tSalesforceInput_5
+									.get("error");
+						} else if (info_tSalesforceInput_5
+								.containsKey("errorMessage")) {
+							errorMessage_tSalesforceInput_5 = info_tSalesforceInput_5
+									.get("errorMessage");
+						} else {
+							errorMessage_tSalesforceInput_5 = "Rejected but error message missing";
+						}
+						errorMessage_tSalesforceInput_5 = "Row "
+								+ nb_line_tSalesforceInput_5 + ": "
+								+ errorMessage_tSalesforceInput_5;
+						System.err.println(errorMessage_tSalesforceInput_5);
+						// If the record is reject, the main line record should
+						// put NULL
+						row6 = null;
+					}
+					java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceInput_5 = new java.util.ArrayList<Object>();
+					java.util.Iterator outgoingMainRecordsIt_tSalesforceInput_5 = null;
+
+					/**
+					 * [tSalesforceInput_5 begin ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_5 main ] start
+					 */
+
+					currentComponent = "tSalesforceInput_5";
+
+					tos_count_tSalesforceInput_5++;
+
+					/**
+					 * [tSalesforceInput_5 main ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_5 process_data_begin ] start
+					 */
+
+					currentComponent = "tSalesforceInput_5";
+
+					/**
+					 * [tSalesforceInput_5 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk main ]
+					 * start
+					 */
+
+					currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+					currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceOutputBulk";
+
+					// row6
+					// row6
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row6" + iterateId, 1, 1);
+					}
+
+					incomingEnforcer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.createNewRecord();
+					// skip the put action if the input column doesn't appear in
+					// component runtime schema
+					if (incomingEnforcer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.getRuntimeSchema().getField("Id") != null) {
+						incomingEnforcer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+								.put("Id", row6.Id);
+					}
+					org.apache.avro.generic.IndexedRecord data_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = incomingEnforcer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.getCurrentRecord();
+
+					writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.write(data_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+
+					nb_line_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk++;
+
+					tos_count_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk++;
+
+					/**
+					 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk main ]
+					 * stop
+					 */
+
+					/**
+					 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+					 * process_data_begin ] start
+					 */
+
+					currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+					currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceOutputBulk";
+
+					/**
+					 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+					 * process_data_begin ] stop
+					 */
+
+					/**
+					 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+					 * process_data_end ] start
+					 */
+
+					currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+					currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceOutputBulk";
+
+					/**
+					 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+					 * process_data_end ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_5 process_data_end ] start
+					 */
+
+					currentComponent = "tSalesforceInput_5";
+
+					/**
+					 * [tSalesforceInput_5 process_data_end ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_5 end ] start
+					 */
+
+					currentComponent = "tSalesforceInput_5";
+
+					// end of generic
+
+					resourceMap.put("finish_tSalesforceInput_5", Boolean.TRUE);
+
+				} // while
+				reader_tSalesforceInput_5.close();
+				final java.util.Map<String, Object> resultMap_tSalesforceInput_5 = reader_tSalesforceInput_5
+						.getReturnValues();
+				if (resultMap_tSalesforceInput_5 != null) {
+					for (java.util.Map.Entry<String, Object> entry_tSalesforceInput_5 : resultMap_tSalesforceInput_5
+							.entrySet()) {
+						switch (entry_tSalesforceInput_5.getKey()) {
+						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
+							container_tSalesforceInput_5.setComponentData(
+									"tSalesforceInput_5", "ERROR_MESSAGE",
+									entry_tSalesforceInput_5.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
+							container_tSalesforceInput_5.setComponentData(
+									"tSalesforceInput_5", "NB_LINE",
+									entry_tSalesforceInput_5.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
+							container_tSalesforceInput_5.setComponentData(
+									"tSalesforceInput_5", "NB_SUCCESS",
+									entry_tSalesforceInput_5.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
+							container_tSalesforceInput_5.setComponentData(
+									"tSalesforceInput_5", "NB_REJECT",
+									entry_tSalesforceInput_5.getValue());
+							break;
+						default:
+							StringBuilder studio_key_tSalesforceInput_5 = new StringBuilder();
+							for (int i_tSalesforceInput_5 = 0; i_tSalesforceInput_5 < entry_tSalesforceInput_5
+									.getKey().length(); i_tSalesforceInput_5++) {
+								char ch_tSalesforceInput_5 = entry_tSalesforceInput_5
+										.getKey().charAt(i_tSalesforceInput_5);
+								if (Character
+										.isUpperCase(ch_tSalesforceInput_5)
+										&& i_tSalesforceInput_5 > 0) {
+									studio_key_tSalesforceInput_5.append('_');
+								}
+								studio_key_tSalesforceInput_5
+										.append(ch_tSalesforceInput_5);
+							}
+							container_tSalesforceInput_5.setComponentData(
+									"tSalesforceInput_5",
+									studio_key_tSalesforceInput_5.toString()
+											.toUpperCase(
+													java.util.Locale.ENGLISH),
+									entry_tSalesforceInput_5.getValue());
+							break;
+						}
+					}
+				}
+
+				ok_Hash.put("tSalesforceInput_5", true);
+				end_Hash.put("tSalesforceInput_5", System.currentTimeMillis());
+
+				/**
+				 * [tSalesforceInput_5 end ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk end ]
+				 * start
+				 */
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceOutputBulk";
+
+				// end of generic
+
+				resourceMap
+						.put("finish_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+								Boolean.TRUE);
+
+				org.talend.components.api.component.runtime.Result resultObject_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = (org.talend.components.api.component.runtime.Result) writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.close();
+				final java.util.Map<String, Object> resultMap_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+						.getWriteOperation()
+						.finalize(
+								java.util.Arrays
+										.<org.talend.components.api.component.runtime.Result> asList(resultObject_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk),
+								container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+				if (resultMap_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk != null) {
+					for (java.util.Map.Entry<String, Object> entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk : resultMap_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+							.entrySet()) {
+						switch (entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+								.getKey()) {
+						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
+							container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+									.setComponentData(
+											"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+											"ERROR_MESSAGE",
+											entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+													.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
+							container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+									.setComponentData(
+											"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+											"NB_LINE",
+											entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+													.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
+							container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+									.setComponentData(
+											"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+											"NB_SUCCESS",
+											entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+													.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
+							container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+									.setComponentData(
+											"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+											"NB_REJECT",
+											entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+													.getValue());
+							break;
+						default:
+							StringBuilder studio_key_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = new StringBuilder();
+							for (int i_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = 0; i_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk < entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+									.getKey().length(); i_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk++) {
+								char ch_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+										.getKey()
+										.charAt(i_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+								if (Character
+										.isUpperCase(ch_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk)
+										&& i_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk > 0) {
+									studio_key_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+											.append('_');
+								}
+								studio_key_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+										.append(ch_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+							}
+							container_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+									.setComponentData(
+											"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+											studio_key_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+													.toString()
+													.toUpperCase(
+															java.util.Locale.ENGLISH),
+											entry_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+													.getValue());
+							break;
+						}
+					}
+				}
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row6" + iterateId, 2, 0);
+					}
+				}
+
+				ok_Hash.put(
+						"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+						true);
+				end_Hash.put(
+						"tSalesforceOutputBulkExec_1_tSalesforceOutputBulk",
+						System.currentTimeMillis());
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk end ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec begin ]
+				 * start
+				 */
+
+				ok_Hash.put("tSalesforceOutputBulkExec_1_tSalesforceBulkExec",
+						false);
+				start_Hash.put(
+						"tSalesforceOutputBulkExec_1_tSalesforceBulkExec",
+						System.currentTimeMillis());
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceBulkExec";
+
+				int tos_count_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = 0;
+
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = new org.talend.components.salesforce.tsalesforcebulkexec.TSalesforceBulkExecDefinition();
+
+				org.talend.components.salesforce.tsalesforcebulkexec.TSalesforceBulkExecProperties props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = (org.talend.components.salesforce.tsalesforcebulkexec.TSalesforceBulkExecProperties) def_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+						.createRuntimeProperties();
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.setValue(
+						"bulkFilePath",
+						"C:/Users/Cillia/Desktop/Technip/BULKEmail2.txt");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+						.setValue(
+								"outputAction",
+								org.talend.components.salesforce.SalesforceOutputProperties.OutputAction.DELETE);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.bulkProperties
+						.setValue(
+								"concurrencyMode",
+								org.talend.components.salesforce.SalesforceBulkProperties.Concurrency.Parallel);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.bulkProperties
+						.setValue("bytesToCommit", 10485760);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.bulkProperties
+						.setValue("rowsToCommit", 10000);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.bulkProperties
+						.setValue("waitTimeCheckBatchState", 10000);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.upsertRelationTable
+						.setValue("columnName", "Id");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.upsertRelationTable
+						.setValue("polymorphic", false);
+
+				class SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_1_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"output\",\"fields\":[{", s);
+
+						a("\"name\":\"Id\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"Id\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Id\",\"talend.field.isKey\":\"true\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"salesforce_id\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+								s);
+
+						a("\"name\":\"salesforce_created\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"}],\"di.table.name\":\"out\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_1_fisrt sst_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_1_fisrt = new SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_1_fisrt();
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.schemaFlow
+						.setValue(
+								"schema",
+								new org.apache.avro.Schema.Parser()
+										.parse(sst_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_1_fisrt
+												.getSchemaValue()));
+
+				class SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_2_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"rejectOutput\",\"fields\":[{", s);
+
+						a("\"name\":\"Id\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"Id\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Id\",\"talend.field.isKey\":\"true\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"error\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"}],\"di.table.name\":\"out\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_2_fisrt sst_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_2_fisrt = new SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_2_fisrt();
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.schemaReject
+						.setValue(
+								"schema",
+								new org.apache.avro.Schema.Parser()
+										.parse(sst_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_2_fisrt
+												.getSchemaValue()));
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection
+						.setValue("httpChunked", true);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module
+						.setValue("moduleName", "EmailMessage");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection
+						.setValue("httpChunked", true);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				class SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_3_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"EmailMessage\",\"fields\":[{", s);
+
+						a("\"name\":\"Id\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"Id\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Id\",\"talend.field.isKey\":\"true\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"out\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_3_fisrt sst_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_3_fisrt = new SchemaSettingTool_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_3_fisrt();
+
+				props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.main
+						.setValue(
+								"schema",
+								new org.apache.avro.Schema.Parser()
+										.parse(sst_tSalesforceOutputBulkExec_1_tSalesforceBulkExec_3_fisrt
+												.getSchemaValue()));
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceOutputBulkExec_1_tSalesforceBulkExec != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+					}
+				}
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceOutputBulkExec_1_tSalesforceBulkExec != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec.module.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+					}
+				}
+				globalMap
+						.put("tSalesforceOutputBulkExec_1_tSalesforceBulkExec_COMPONENT_RUNTIME_PROPERTIES",
+								props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
+				java.net.URL mappings_url_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = this
+						.getClass().getResource("/xmlMappings");
+				globalMap
+						.put("tSalesforceOutputBulkExec_1_tSalesforceBulkExec_MAPPINGS_URL",
+								mappings_url_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId,
+							String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId,
+							String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tSalesforceOutputBulkExec_1_tSalesforceBulkExec";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = null;
+				topology_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = org.talend.components.api.component.ConnectorTopology.NONE;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = def_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+						.getRuntimeInfo(
+								org.talend.components.api.component.runtime.ExecutionEngine.DI,
+								props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec,
+								topology_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = def_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+								.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+						.initialize(
+								container_tSalesforceOutputBulkExec_1_tSalesforceBulkExec,
+								props_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+
+				if (initVr_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+						.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(
+							initVr_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+									.getMessage());
+				}
+
+				if (componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceBulkExec instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceBulkExec;
+					compDriverInitialization_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+							.runAtDriver(container_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = null;
+				if (componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceBulkExec instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceOutputBulkExec_1_tSalesforceBulkExec;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = sourceOrSink_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+							.validate(container_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+					if (vr_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+							.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+						throw new RuntimeException(
+								vr_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+										.getMessage());
+					}
+				}
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec begin ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec main ] start
+				 */
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceBulkExec";
+
+				tos_count_tSalesforceOutputBulkExec_1_tSalesforceBulkExec++;
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec main ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+				 * process_data_begin ] start
+				 */
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceBulkExec";
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+				 * process_data_begin ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+				 * process_data_end ] start
+				 */
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceBulkExec";
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+				 * process_data_end ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec end ] start
+				 */
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceBulkExec";
+
+				// end of generic
+
+				resourceMap
+						.put("finish_tSalesforceOutputBulkExec_1_tSalesforceBulkExec",
+								Boolean.TRUE);
+
+				ok_Hash.put("tSalesforceOutputBulkExec_1_tSalesforceBulkExec",
+						true);
+				end_Hash.put("tSalesforceOutputBulkExec_1_tSalesforceBulkExec",
+						System.currentTimeMillis());
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec end ] stop
+				 */
+
 			}// end the resume
 
 			if (resumeEntryMethodName == null || globalResumeTicket) {
 				resumeUtil.addLog("CHECKPOINT",
-						"CONNECTION:SUBJOB_OK:tFixedFlowInput_3:OnSubjobOk",
+						"CONNECTION:SUBJOB_OK:tSalesforceInput_5:OnSubjobOk",
 						"", Thread.currentThread().getId() + "", "", "", "",
 						"", "");
 			}
 
 			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk15", 0, "ok");
+				runStat.updateStatOnConnection("OnSubjobOk12", 0, "ok");
 			}
 
-			tSalesforceInput_1Process(globalMap);
+			tSalesforceInput_11Process(globalMap);
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			te.setVirtualComponentName(currentVirtualComponent);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tSalesforceInput_5 finally ] start
+				 */
+
+				currentComponent = "tSalesforceInput_5";
+
+				// finally of generic
+
+				if (resourceMap.get("finish_tSalesforceInput_5") == null) {
+					if (resourceMap.get("reader_tSalesforceInput_5") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Reader) resourceMap
+									.get("reader_tSalesforceInput_5")).close();
+						} catch (java.io.IOException e_tSalesforceInput_5) {
+							String errorMessage_tSalesforceInput_5 = "failed to release the resource in tSalesforceInput_5 :"
+									+ e_tSalesforceInput_5.getMessage();
+							System.err.println(errorMessage_tSalesforceInput_5);
+						}
+					}
+				}
+
+				/**
+				 * [tSalesforceInput_5 finally ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk finally ]
+				 * start
+				 */
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceOutputBulk";
+
+				// finally of generic
+
+				if (resourceMap
+						.get("finish_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk") == null) {
+					if (resourceMap
+							.get("writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Writer) resourceMap
+									.get("writer_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk"))
+									.close();
+						} catch (java.io.IOException e_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk) {
+							String errorMessage_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk = "failed to release the resource in tSalesforceOutputBulkExec_1_tSalesforceOutputBulk :"
+									+ e_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk
+											.getMessage();
+							System.err
+									.println(errorMessage_tSalesforceOutputBulkExec_1_tSalesforceOutputBulk);
+						}
+					}
+				}
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceOutputBulk finally ]
+				 * stop
+				 */
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec finally ]
+				 * start
+				 */
+
+				currentVirtualComponent = "tSalesforceOutputBulkExec_1";
+
+				currentComponent = "tSalesforceOutputBulkExec_1_tSalesforceBulkExec";
+
+				// finally of generic
+
+				if (resourceMap
+						.get("finish_tSalesforceOutputBulkExec_1_tSalesforceBulkExec") == null) {
+					if (resourceMap
+							.get("reader_tSalesforceOutputBulkExec_1_tSalesforceBulkExec") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Reader) resourceMap
+									.get("reader_tSalesforceOutputBulkExec_1_tSalesforceBulkExec"))
+									.close();
+						} catch (java.io.IOException e_tSalesforceOutputBulkExec_1_tSalesforceBulkExec) {
+							String errorMessage_tSalesforceOutputBulkExec_1_tSalesforceBulkExec = "failed to release the resource in tSalesforceOutputBulkExec_1_tSalesforceBulkExec :"
+									+ e_tSalesforceOutputBulkExec_1_tSalesforceBulkExec
+											.getMessage();
+							System.err
+									.println(errorMessage_tSalesforceOutputBulkExec_1_tSalesforceBulkExec);
+						}
+					}
+				}
+
+				/**
+				 * [tSalesforceOutputBulkExec_1_tSalesforceBulkExec finally ]
+				 * stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tSalesforceInput_5_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row32Struct implements
+			routines.system.IPersistableRow<row32Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.Id = readString(dis);
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.Id, dos);
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row32Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tSalesforceInput_11Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tSalesforceInput_11_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row32Struct row32 = new row32Struct();
+
+				/**
+				 * [tFlowToIterate_2 begin ] start
+				 */
+
+				int NB_ITERATE_tJava_3 = 0; // for statistics
+
+				ok_Hash.put("tFlowToIterate_2", false);
+				start_Hash.put("tFlowToIterate_2", System.currentTimeMillis());
+
+				currentComponent = "tFlowToIterate_2";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row32" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tFlowToIterate_2 = 0;
+
+				int nb_line_tFlowToIterate_2 = 0;
+				int counter_tFlowToIterate_2 = 0;
+
+				/**
+				 * [tFlowToIterate_2 begin ] stop
+				 */
+
+				/**
+				 * [tSalesforceInput_11 begin ] start
+				 */
+
+				ok_Hash.put("tSalesforceInput_11", false);
+				start_Hash.put("tSalesforceInput_11",
+						System.currentTimeMillis());
+
+				currentComponent = "tSalesforceInput_11";
+
+				int tos_count_tSalesforceInput_11 = 0;
+
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceInput_11 = new org.talend.components.salesforce.tsalesforceinput.TSalesforceInputDefinition();
+
+				org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties props_tSalesforceInput_11 = (org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties) def_tSalesforceInput_11
+						.createRuntimeProperties();
+				props_tSalesforceInput_11
+						.setValue(
+								"queryMode",
+								org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties.QueryMode.Query);
+
+				props_tSalesforceInput_11.setValue("manualQuery", true);
+
+				props_tSalesforceInput_11.setValue("query",
+						"SELECT Id, ExternalIdSplit__c FROM Case Where Id='"
+								+ context.ParentId + "' ");
+
+				props_tSalesforceInput_11.setValue("includeDeleted", false);
+
+				props_tSalesforceInput_11.setValue("batchSize", 250);
+
+				props_tSalesforceInput_11.setValue("normalizeDelimiter", ";");
+
+				props_tSalesforceInput_11.setValue("columnNameDelimiter", "_");
+
+				props_tSalesforceInput_11.connection.userPassword.setValue(
+						"useAuth", false);
+
+				props_tSalesforceInput_11.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_11.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceInput_11.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceInput_11.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				props_tSalesforceInput_11.module.setValue("moduleName", "Case");
+
+				props_tSalesforceInput_11.module.connection.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_11.module.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_11.module.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceInput_11.module.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceInput_11.module.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				class SchemaSettingTool_tSalesforceInput_11_1_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"Case\",\"fields\":[{", s);
+
+						a("\"name\":\"Id\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"Id\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Id\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ExternalIdSplit__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ExternalIdSplit__c\",\"talend.field.dbColumnName\":\"ExternalIdSplit__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ExternalIdSplit__c\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"MAIN\",\"di.table.label\":\"Case\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceInput_11_1_fisrt sst_tSalesforceInput_11_1_fisrt = new SchemaSettingTool_tSalesforceInput_11_1_fisrt();
+
+				props_tSalesforceInput_11.module.main.setValue("schema",
+						new org.apache.avro.Schema.Parser()
+								.parse(sst_tSalesforceInput_11_1_fisrt
+										.getSchemaValue()));
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_11.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceInput_11 = props_tSalesforceInput_11.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceInput_11 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_11 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_11
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceInput_11.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_11);
+					}
+				}
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_11.module.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceInput_11 = props_tSalesforceInput_11.module.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceInput_11 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_11 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_11
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceInput_11.module.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_11);
+					}
+				}
+				globalMap.put(
+						"tSalesforceInput_11_COMPONENT_RUNTIME_PROPERTIES",
+						props_tSalesforceInput_11);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
+				java.net.URL mappings_url_tSalesforceInput_11 = this.getClass()
+						.getResource("/xmlMappings");
+				globalMap.put("tSalesforceInput_11_MAPPINGS_URL",
+						mappings_url_tSalesforceInput_11);
+
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceInput_11 = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId,
+							String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId,
+							String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tSalesforceInput_11";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tSalesforceInput_11 = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceInput_11 = null;
+				topology_tSalesforceInput_11 = org.talend.components.api.component.ConnectorTopology.OUTGOING;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceInput_11 = def_tSalesforceInput_11
+						.getRuntimeInfo(
+								org.talend.components.api.component.runtime.ExecutionEngine.DI,
+								props_tSalesforceInput_11,
+								topology_tSalesforceInput_11);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceInput_11 = def_tSalesforceInput_11
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceInput_11 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceInput_11
+								.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceInput_11 = componentRuntime_tSalesforceInput_11
+						.initialize(container_tSalesforceInput_11,
+								props_tSalesforceInput_11);
+
+				if (initVr_tSalesforceInput_11.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(
+							initVr_tSalesforceInput_11.getMessage());
+				}
+
+				if (componentRuntime_tSalesforceInput_11 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceInput_11 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceInput_11;
+					compDriverInitialization_tSalesforceInput_11
+							.runAtDriver(container_tSalesforceInput_11);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceInput_11 = null;
+				if (componentRuntime_tSalesforceInput_11 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceInput_11 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceInput_11;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceInput_11 = sourceOrSink_tSalesforceInput_11
+							.validate(container_tSalesforceInput_11);
+					if (vr_tSalesforceInput_11.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+						throw new RuntimeException(
+								vr_tSalesforceInput_11.getMessage());
+					}
+				}
+
+				org.talend.components.api.component.runtime.Source source_tSalesforceInput_11 = (org.talend.components.api.component.runtime.Source) sourceOrSink_tSalesforceInput_11;
+				org.talend.components.api.component.runtime.Reader reader_tSalesforceInput_11 = source_tSalesforceInput_11
+						.createReader(container_tSalesforceInput_11);
+				reader_tSalesforceInput_11 = new org.talend.codegen.flowvariables.runtime.FlowVariablesReader(
+						reader_tSalesforceInput_11,
+						container_tSalesforceInput_11);
+
+				boolean multi_output_is_allowed_tSalesforceInput_11 = false;
+				org.talend.components.api.component.Connector c_tSalesforceInput_11 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceInput_11
+						.getAvailableConnectors(null, true)) {
+					if (currentConnector.getName().equals("MAIN")) {
+						c_tSalesforceInput_11 = currentConnector;
+					}
+
+					if (currentConnector.getName().equals("REJECT")) {// it's
+																		// better
+																		// to
+																		// move
+																		// the
+																		// code
+																		// to
+																		// javajet
+						multi_output_is_allowed_tSalesforceInput_11 = true;
+					}
+				}
+				org.apache.avro.Schema schema_tSalesforceInput_11 = props_tSalesforceInput_11
+						.getSchema(c_tSalesforceInput_11, true);
+
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceInput_11 = org.talend.codegen.enforcer.EnforcerCreator
+						.createOutgoingEnforcer(schema_tSalesforceInput_11,
+								false);
+
+				// Create a reusable factory that converts the output of the
+				// reader to an IndexedRecord.
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceInput_11 = null;
+
+				// Iterate through the incoming data.
+				boolean available_tSalesforceInput_11 = reader_tSalesforceInput_11
+						.start();
+
+				resourceMap.put("reader_tSalesforceInput_11",
+						reader_tSalesforceInput_11);
+
+				for (; available_tSalesforceInput_11; available_tSalesforceInput_11 = reader_tSalesforceInput_11
+						.advance()) {
+					nb_line_tSalesforceInput_11++;
+
+					if (multi_output_is_allowed_tSalesforceInput_11) {
+						row32 = null;
+
+					}
+
+					try {
+						Object data_tSalesforceInput_11 = reader_tSalesforceInput_11
+								.getCurrent();
+
+						if (multi_output_is_allowed_tSalesforceInput_11) {
+							row32 = new row32Struct();
+						}
+
+						// Construct the factory once when the first data
+						// arrives.
+						if (factory_tSalesforceInput_11 == null) {
+							factory_tSalesforceInput_11 = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(data_tSalesforceInput_11
+											.getClass());
+						}
+
+						// Enforce the outgoing schema on the input.
+						outgoingEnforcer_tSalesforceInput_11
+								.setWrapped(factory_tSalesforceInput_11
+										.convertToAvro(data_tSalesforceInput_11));
+						Object columnValue_0_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11
+								.get(0);
+						row32.Id = (String) (columnValue_0_tSalesforceInput_11);
+						Object columnValue_1_tSalesforceInput_11 = outgoingEnforcer_tSalesforceInput_11
+								.get(1);
+						row32.ExternalIdSplit__c = (String) (columnValue_1_tSalesforceInput_11);
+					} catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_11) {
+						java.util.Map<String, Object> info_tSalesforceInput_11 = e_tSalesforceInput_11
+								.getRejectInfo();
+						// TODO use a method instead of getting method by the
+						// special key "error/errorMessage"
+						Object errorMessage_tSalesforceInput_11 = null;
+						if (info_tSalesforceInput_11.containsKey("error")) {
+							errorMessage_tSalesforceInput_11 = info_tSalesforceInput_11
+									.get("error");
+						} else if (info_tSalesforceInput_11
+								.containsKey("errorMessage")) {
+							errorMessage_tSalesforceInput_11 = info_tSalesforceInput_11
+									.get("errorMessage");
+						} else {
+							errorMessage_tSalesforceInput_11 = "Rejected but error message missing";
+						}
+						errorMessage_tSalesforceInput_11 = "Row "
+								+ nb_line_tSalesforceInput_11 + ": "
+								+ errorMessage_tSalesforceInput_11;
+						System.err.println(errorMessage_tSalesforceInput_11);
+						// If the record is reject, the main line record should
+						// put NULL
+						row32 = null;
+					}
+					java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceInput_11 = new java.util.ArrayList<Object>();
+					java.util.Iterator outgoingMainRecordsIt_tSalesforceInput_11 = null;
+
+					/**
+					 * [tSalesforceInput_11 begin ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_11 main ] start
+					 */
+
+					currentComponent = "tSalesforceInput_11";
+
+					tos_count_tSalesforceInput_11++;
+
+					/**
+					 * [tSalesforceInput_11 main ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_11 process_data_begin ] start
+					 */
+
+					currentComponent = "tSalesforceInput_11";
+
+					/**
+					 * [tSalesforceInput_11 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tFlowToIterate_2 main ] start
+					 */
+
+					currentComponent = "tFlowToIterate_2";
+
+					// row32
+					// row32
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row32" + iterateId, 1,
+								1);
+					}
+
+					globalMap.put("row32.Id", row32.Id);
+
+					globalMap.put("row32.ExternalIdSplit__c",
+							row32.ExternalIdSplit__c);
+
+					nb_line_tFlowToIterate_2++;
+					counter_tFlowToIterate_2++;
+					globalMap.put("tFlowToIterate_2_CURRENT_ITERATION",
+							counter_tFlowToIterate_2);
+
+					tos_count_tFlowToIterate_2++;
+
+					/**
+					 * [tFlowToIterate_2 main ] stop
+					 */
+
+					/**
+					 * [tFlowToIterate_2 process_data_begin ] start
+					 */
+
+					currentComponent = "tFlowToIterate_2";
+
+					/**
+					 * [tFlowToIterate_2 process_data_begin ] stop
+					 */
+					NB_ITERATE_tJava_3++;
+
+					if (execStat) {
+						runStat.updateStatOnConnection("iterate2", 1, "exec"
+								+ NB_ITERATE_tJava_3);
+						// Thread.sleep(1000);
+					}
+
+					/**
+					 * [tJava_3 begin ] start
+					 */
+
+					ok_Hash.put("tJava_3", false);
+					start_Hash.put("tJava_3", System.currentTimeMillis());
+
+					currentComponent = "tJava_3";
+
+					int tos_count_tJava_3 = 0;
+
+					context.IdPreprod = (String) globalMap
+							.get("row32.ExternalIdSplit__c");
+					System.out.println(context.IdPreprod);
+
+					/**
+					 * [tJava_3 begin ] stop
+					 */
+
+					/**
+					 * [tJava_3 main ] start
+					 */
+
+					currentComponent = "tJava_3";
+
+					tos_count_tJava_3++;
+
+					/**
+					 * [tJava_3 main ] stop
+					 */
+
+					/**
+					 * [tJava_3 process_data_begin ] start
+					 */
+
+					currentComponent = "tJava_3";
+
+					/**
+					 * [tJava_3 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tJava_3 process_data_end ] start
+					 */
+
+					currentComponent = "tJava_3";
+
+					/**
+					 * [tJava_3 process_data_end ] stop
+					 */
+
+					/**
+					 * [tJava_3 end ] start
+					 */
+
+					currentComponent = "tJava_3";
+
+					ok_Hash.put("tJava_3", true);
+					end_Hash.put("tJava_3", System.currentTimeMillis());
+
+					/**
+					 * [tJava_3 end ] stop
+					 */
+					if (execStat) {
+						runStat.updateStatOnConnection("iterate2", 2, "exec"
+								+ NB_ITERATE_tJava_3);
+					}
+
+					/**
+					 * [tFlowToIterate_2 process_data_end ] start
+					 */
+
+					currentComponent = "tFlowToIterate_2";
+
+					/**
+					 * [tFlowToIterate_2 process_data_end ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_11 process_data_end ] start
+					 */
+
+					currentComponent = "tSalesforceInput_11";
+
+					/**
+					 * [tSalesforceInput_11 process_data_end ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_11 end ] start
+					 */
+
+					currentComponent = "tSalesforceInput_11";
+
+					// end of generic
+
+					resourceMap.put("finish_tSalesforceInput_11", Boolean.TRUE);
+
+				} // while
+				reader_tSalesforceInput_11.close();
+				final java.util.Map<String, Object> resultMap_tSalesforceInput_11 = reader_tSalesforceInput_11
+						.getReturnValues();
+				if (resultMap_tSalesforceInput_11 != null) {
+					for (java.util.Map.Entry<String, Object> entry_tSalesforceInput_11 : resultMap_tSalesforceInput_11
+							.entrySet()) {
+						switch (entry_tSalesforceInput_11.getKey()) {
+						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
+							container_tSalesforceInput_11.setComponentData(
+									"tSalesforceInput_11", "ERROR_MESSAGE",
+									entry_tSalesforceInput_11.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
+							container_tSalesforceInput_11.setComponentData(
+									"tSalesforceInput_11", "NB_LINE",
+									entry_tSalesforceInput_11.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
+							container_tSalesforceInput_11.setComponentData(
+									"tSalesforceInput_11", "NB_SUCCESS",
+									entry_tSalesforceInput_11.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
+							container_tSalesforceInput_11.setComponentData(
+									"tSalesforceInput_11", "NB_REJECT",
+									entry_tSalesforceInput_11.getValue());
+							break;
+						default:
+							StringBuilder studio_key_tSalesforceInput_11 = new StringBuilder();
+							for (int i_tSalesforceInput_11 = 0; i_tSalesforceInput_11 < entry_tSalesforceInput_11
+									.getKey().length(); i_tSalesforceInput_11++) {
+								char ch_tSalesforceInput_11 = entry_tSalesforceInput_11
+										.getKey().charAt(i_tSalesforceInput_11);
+								if (Character
+										.isUpperCase(ch_tSalesforceInput_11)
+										&& i_tSalesforceInput_11 > 0) {
+									studio_key_tSalesforceInput_11.append('_');
+								}
+								studio_key_tSalesforceInput_11
+										.append(ch_tSalesforceInput_11);
+							}
+							container_tSalesforceInput_11.setComponentData(
+									"tSalesforceInput_11",
+									studio_key_tSalesforceInput_11.toString()
+											.toUpperCase(
+													java.util.Locale.ENGLISH),
+									entry_tSalesforceInput_11.getValue());
+							break;
+						}
+					}
+				}
+
+				ok_Hash.put("tSalesforceInput_11", true);
+				end_Hash.put("tSalesforceInput_11", System.currentTimeMillis());
+
+				/**
+				 * [tSalesforceInput_11 end ] stop
+				 */
+
+				/**
+				 * [tFlowToIterate_2 end ] start
+				 */
+
+				currentComponent = "tFlowToIterate_2";
+
+				globalMap.put("tFlowToIterate_2_NB_LINE",
+						nb_line_tFlowToIterate_2);
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row32" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tFlowToIterate_2", true);
+				end_Hash.put("tFlowToIterate_2", System.currentTimeMillis());
+
+				/**
+				 * [tFlowToIterate_2 end ] stop
+				 */
+
+			}// end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil.addLog("CHECKPOINT",
+						"CONNECTION:SUBJOB_OK:tSalesforceInput_11:OnSubjobOk",
+						"", Thread.currentThread().getId() + "", "", "", "",
+						"", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk16", 0, "ok");
+			}
+
+			tSalesforceInput_12Process(globalMap);
 
 		} catch (java.lang.Exception e) {
 
@@ -3770,14 +7838,51 @@ public class LOAD_EmailMessage implements TalendJob {
 			try {
 
 				/**
-				 * [tFixedFlowInput_3 finally ] start
+				 * [tSalesforceInput_11 finally ] start
 				 */
 
-				currentComponent = "tFixedFlowInput_3";
+				currentComponent = "tSalesforceInput_11";
+
+				// finally of generic
+
+				if (resourceMap.get("finish_tSalesforceInput_11") == null) {
+					if (resourceMap.get("reader_tSalesforceInput_11") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Reader) resourceMap
+									.get("reader_tSalesforceInput_11")).close();
+						} catch (java.io.IOException e_tSalesforceInput_11) {
+							String errorMessage_tSalesforceInput_11 = "failed to release the resource in tSalesforceInput_11 :"
+									+ e_tSalesforceInput_11.getMessage();
+							System.err
+									.println(errorMessage_tSalesforceInput_11);
+						}
+					}
+				}
 
 				/**
-				 * [tFixedFlowInput_3 finally ] stop
+				 * [tSalesforceInput_11 finally ] stop
 				 */
+
+				/**
+				 * [tFlowToIterate_2 finally ] start
+				 */
+
+				currentComponent = "tFlowToIterate_2";
+
+				/**
+				 * [tFlowToIterate_2 finally ] stop
+				 */
+
+				/**
+				 * [tJava_3 finally ] start
+				 */
+
+				currentComponent = "tJava_3";
+
+				/**
+				 * [tJava_3 finally ] stop
+				 */
+
 			} catch (java.lang.Exception e) {
 				// ignore
 			} catch (java.lang.Error error) {
@@ -3786,11 +7891,11 @@ public class LOAD_EmailMessage implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tFixedFlowInput_3_SUBPROCESS_STATE", 1);
+		globalMap.put("tSalesforceInput_11_SUBPROCESS_STATE", 1);
 	}
 
-	public static class row27Struct implements
-			routines.system.IPersistableRow<row27Struct> {
+	public static class row45Struct implements
+			routines.system.IPersistableRow<row45Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
 		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
 
@@ -4138,7 +8243,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row27Struct other) {
+		public int compareTo(row45Struct other) {
 
 			int returnValue = -1;
 
@@ -4169,8 +8274,8 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public static class row25Struct implements
-			routines.system.IPersistableRow<row25Struct> {
+	public static class row46Struct implements
+			routines.system.IPersistableRow<row46Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
 		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
 
@@ -4557,7 +8662,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row25Struct other) {
+		public int compareTo(row46Struct other) {
 
 			int returnValue = -1;
 
@@ -4588,8 +8693,8 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public static class EmailMessageStruct implements
-			routines.system.IPersistableRow<EmailMessageStruct> {
+	public static class copyOfEmailMessage_0Struct implements
+			routines.system.IPersistableRow<copyOfEmailMessage_0Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
 		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
 
@@ -4937,7 +9042,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(EmailMessageStruct other) {
+		public int compareTo(copyOfEmailMessage_0Struct other) {
 
 			int returnValue = -1;
 
@@ -4968,8 +9073,8 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public static class row2Struct implements
-			routines.system.IPersistableRow<row2Struct> {
+	public static class copyOfrow2Struct implements
+			routines.system.IPersistableRow<copyOfrow2Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
 		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
 
@@ -5474,7 +9579,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row2Struct other) {
+		public int compareTo(copyOfrow2Struct other) {
 
 			int returnValue = -1;
 
@@ -5505,8 +9610,8 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public static class row222Struct implements
-			routines.system.IPersistableRow<row222Struct> {
+	public static class row26Struct implements
+			routines.system.IPersistableRow<row26Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
 		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
 
@@ -6011,7 +10116,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row222Struct other) {
+		public int compareTo(row26Struct other) {
 
 			int returnValue = -1;
 
@@ -6042,8 +10147,8 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public static class after_tSalesforceInput_1Struct implements
-			routines.system.IPersistableRow<after_tSalesforceInput_1Struct> {
+	public static class after_tSalesforceInput_12Struct implements
+			routines.system.IPersistableRow<after_tSalesforceInput_12Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
 		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
 
@@ -6548,7 +10653,7 @@ public class LOAD_EmailMessage implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(after_tSalesforceInput_1Struct other) {
+		public int compareTo(after_tSalesforceInput_12Struct other) {
 
 			int returnValue = -1;
 
@@ -6579,10 +10684,10 @@ public class LOAD_EmailMessage implements TalendJob {
 
 	}
 
-	public void tSalesforceInput_1Process(
+	public void tSalesforceInput_12Process(
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tSalesforceInput_1_SUBPROCESS_STATE", 0);
+		globalMap.put("tSalesforceInput_12_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -6602,418 +10707,431 @@ public class LOAD_EmailMessage implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				tHashInput_1Process(globalMap);
-				tHashInput_2Process(globalMap);
-				tHashInput_3Process(globalMap);
-				tHashInput_4Process(globalMap);
-				tHashInput_5Process(globalMap);
-				tHashInput_6Process(globalMap);
-				tHashInput_7Process(globalMap);
-				tHashInput_8Process(globalMap);
-				tHashInput_9Process(globalMap);
+				tHashInput_21Process(globalMap);
+				tHashInput_22Process(globalMap);
+				tHashInput_23Process(globalMap);
+				tHashInput_24Process(globalMap);
+				tHashInput_25Process(globalMap);
+				tHashInput_26Process(globalMap);
+				tHashInput_27Process(globalMap);
+				tHashInput_28Process(globalMap);
+				tHashInput_29Process(globalMap);
 
-				row222Struct row222 = new row222Struct();
-				row2Struct row2 = new row2Struct();
-				EmailMessageStruct EmailMessage = new EmailMessageStruct();
-				row27Struct row27 = new row27Struct();
-				row25Struct row25 = new row25Struct();
+				row26Struct row26 = new row26Struct();
+				copyOfrow2Struct copyOfrow2 = new copyOfrow2Struct();
+				copyOfEmailMessage_0Struct copyOfEmailMessage_0 = new copyOfEmailMessage_0Struct();
+				row45Struct row45 = new row45Struct();
+				row46Struct row46 = new row46Struct();
 
 				/**
-				 * [tFileOutputDelimited_6 begin ] start
+				 * [tFileOutputDelimited_7 begin ] start
 				 */
 
-				ok_Hash.put("tFileOutputDelimited_6", false);
-				start_Hash.put("tFileOutputDelimited_6",
+				ok_Hash.put("tFileOutputDelimited_7", false);
+				start_Hash.put("tFileOutputDelimited_7",
 						System.currentTimeMillis());
 
-				currentComponent = "tFileOutputDelimited_6";
+				currentComponent = "tFileOutputDelimited_7";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row27" + iterateId, 0,
+						runStat.updateStatOnConnection("row45" + iterateId, 0,
 								0);
 
 					}
 				}
 
-				int tos_count_tFileOutputDelimited_6 = 0;
+				int tos_count_tFileOutputDelimited_7 = 0;
 
-				String fileName_tFileOutputDelimited_6 = "";
-				fileName_tFileOutputDelimited_6 = (new java.io.File(
+				String fileName_tFileOutputDelimited_7 = "";
+				fileName_tFileOutputDelimited_7 = (new java.io.File(
 						context.ProjetFolder + context.OutFileFolder
 								+ context.Success
-								+ TalendDate.getDate("YYYYMMDD") + jobName
+								+ TalendDate.getDate("YYYYMMDDhhmm") + jobName
 								+ "_Success.csv")).getAbsolutePath().replace(
 						"\\", "/");
-				String fullName_tFileOutputDelimited_6 = null;
-				String extension_tFileOutputDelimited_6 = null;
-				String directory_tFileOutputDelimited_6 = null;
-				if ((fileName_tFileOutputDelimited_6.indexOf("/") != -1)) {
-					if (fileName_tFileOutputDelimited_6.lastIndexOf(".") < fileName_tFileOutputDelimited_6
+				String fullName_tFileOutputDelimited_7 = null;
+				String extension_tFileOutputDelimited_7 = null;
+				String directory_tFileOutputDelimited_7 = null;
+				if ((fileName_tFileOutputDelimited_7.indexOf("/") != -1)) {
+					if (fileName_tFileOutputDelimited_7.lastIndexOf(".") < fileName_tFileOutputDelimited_7
 							.lastIndexOf("/")) {
-						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6;
-						extension_tFileOutputDelimited_6 = "";
+						fullName_tFileOutputDelimited_7 = fileName_tFileOutputDelimited_7;
+						extension_tFileOutputDelimited_7 = "";
 					} else {
-						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
-								.substring(0, fileName_tFileOutputDelimited_6
+						fullName_tFileOutputDelimited_7 = fileName_tFileOutputDelimited_7
+								.substring(0, fileName_tFileOutputDelimited_7
 										.lastIndexOf("."));
-						extension_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
-								.substring(fileName_tFileOutputDelimited_6
+						extension_tFileOutputDelimited_7 = fileName_tFileOutputDelimited_7
+								.substring(fileName_tFileOutputDelimited_7
 										.lastIndexOf("."));
 					}
-					directory_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
-							.substring(0, fileName_tFileOutputDelimited_6
+					directory_tFileOutputDelimited_7 = fileName_tFileOutputDelimited_7
+							.substring(0, fileName_tFileOutputDelimited_7
 									.lastIndexOf("/"));
 				} else {
-					if (fileName_tFileOutputDelimited_6.lastIndexOf(".") != -1) {
-						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
-								.substring(0, fileName_tFileOutputDelimited_6
+					if (fileName_tFileOutputDelimited_7.lastIndexOf(".") != -1) {
+						fullName_tFileOutputDelimited_7 = fileName_tFileOutputDelimited_7
+								.substring(0, fileName_tFileOutputDelimited_7
 										.lastIndexOf("."));
-						extension_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
-								.substring(fileName_tFileOutputDelimited_6
+						extension_tFileOutputDelimited_7 = fileName_tFileOutputDelimited_7
+								.substring(fileName_tFileOutputDelimited_7
 										.lastIndexOf("."));
 					} else {
-						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6;
-						extension_tFileOutputDelimited_6 = "";
+						fullName_tFileOutputDelimited_7 = fileName_tFileOutputDelimited_7;
+						extension_tFileOutputDelimited_7 = "";
 					}
-					directory_tFileOutputDelimited_6 = "";
+					directory_tFileOutputDelimited_7 = "";
 				}
-				boolean isFileGenerated_tFileOutputDelimited_6 = true;
-				java.io.File filetFileOutputDelimited_6 = new java.io.File(
-						fileName_tFileOutputDelimited_6);
-				globalMap.put("tFileOutputDelimited_6_FILE_NAME",
-						fileName_tFileOutputDelimited_6);
-				if (filetFileOutputDelimited_6.exists()) {
-					isFileGenerated_tFileOutputDelimited_6 = false;
+				boolean isFileGenerated_tFileOutputDelimited_7 = true;
+				java.io.File filetFileOutputDelimited_7 = new java.io.File(
+						fileName_tFileOutputDelimited_7);
+				globalMap.put("tFileOutputDelimited_7_FILE_NAME",
+						fileName_tFileOutputDelimited_7);
+				if (filetFileOutputDelimited_7.exists()) {
+					throw new RuntimeException(
+							"The particular file \""
+									+ filetFileOutputDelimited_7
+											.getAbsoluteFile()
+									+ "\" already exist. If you want to overwrite the file, please uncheck the"
+									+ " \"Throw an error if the file already exist\" option in Advanced settings.");
 				}
-				int nb_line_tFileOutputDelimited_6 = 0;
-				int splitedFileNo_tFileOutputDelimited_6 = 0;
-				int currentRow_tFileOutputDelimited_6 = 0;
+				int nb_line_tFileOutputDelimited_7 = 0;
+				int splitedFileNo_tFileOutputDelimited_7 = 0;
+				int currentRow_tFileOutputDelimited_7 = 0;
 
-				final String OUT_DELIM_tFileOutputDelimited_6 = /**
+				final String OUT_DELIM_tFileOutputDelimited_7 = /**
 				 * Start field
-				 * tFileOutputDelimited_6:FIELDSEPARATOR
+				 * tFileOutputDelimited_7:FIELDSEPARATOR
 				 */
-				";"/** End field tFileOutputDelimited_6:FIELDSEPARATOR */
+				";"/** End field tFileOutputDelimited_7:FIELDSEPARATOR */
 				;
 
-				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_6 = /**
+				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_7 = /**
 				 * Start
-				 * field tFileOutputDelimited_6:ROWSEPARATOR
+				 * field tFileOutputDelimited_7:ROWSEPARATOR
 				 */
-				"\n"/** End field tFileOutputDelimited_6:ROWSEPARATOR */
+				"\n"/** End field tFileOutputDelimited_7:ROWSEPARATOR */
 				;
 
 				// create directory only if not exists
-				if (directory_tFileOutputDelimited_6 != null
-						&& directory_tFileOutputDelimited_6.trim().length() != 0) {
-					java.io.File dir_tFileOutputDelimited_6 = new java.io.File(
-							directory_tFileOutputDelimited_6);
-					if (!dir_tFileOutputDelimited_6.exists()) {
-						dir_tFileOutputDelimited_6.mkdirs();
+				if (directory_tFileOutputDelimited_7 != null
+						&& directory_tFileOutputDelimited_7.trim().length() != 0) {
+					java.io.File dir_tFileOutputDelimited_7 = new java.io.File(
+							directory_tFileOutputDelimited_7);
+					if (!dir_tFileOutputDelimited_7.exists()) {
+						dir_tFileOutputDelimited_7.mkdirs();
 					}
 				}
 
 				// routines.system.Row
-				java.io.Writer outtFileOutputDelimited_6 = null;
+				java.io.Writer outtFileOutputDelimited_7 = null;
 
-				outtFileOutputDelimited_6 = new java.io.BufferedWriter(
+				java.io.File fileToDelete_tFileOutputDelimited_7 = new java.io.File(
+						fileName_tFileOutputDelimited_7);
+				if (fileToDelete_tFileOutputDelimited_7.exists()) {
+					fileToDelete_tFileOutputDelimited_7.delete();
+				}
+				outtFileOutputDelimited_7 = new java.io.BufferedWriter(
 						new java.io.OutputStreamWriter(
 								new java.io.FileOutputStream(
-										fileName_tFileOutputDelimited_6, true),
+										fileName_tFileOutputDelimited_7, false),
 								"ISO-8859-15"));
-				if (filetFileOutputDelimited_6.length() == 0) {
-					outtFileOutputDelimited_6.write("ParentId");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("ActivityId");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("CreatedById");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("CreatedDate");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("LastModifiedDate");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("LastModifiedById");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("Subject");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("FromName");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("FromAddress");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("ToAddress");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("CcAddress");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("BccAddress");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("Incoming");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("Status");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("MessageDate");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("RelatedToId");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.write("ExternalIdSplit__c");
-					outtFileOutputDelimited_6
-							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_6);
-					outtFileOutputDelimited_6.flush();
+				if (filetFileOutputDelimited_7.length() == 0) {
+					outtFileOutputDelimited_7.write("ParentId");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("ActivityId");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("CreatedById");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("CreatedDate");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("LastModifiedDate");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("LastModifiedById");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("Subject");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("FromName");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("FromAddress");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("ToAddress");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("CcAddress");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("BccAddress");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("Incoming");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("Status");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("MessageDate");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("RelatedToId");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.write("ExternalIdSplit__c");
+					outtFileOutputDelimited_7
+							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_7);
+					outtFileOutputDelimited_7.flush();
 				}
 
-				resourceMap.put("out_tFileOutputDelimited_6",
-						outtFileOutputDelimited_6);
-				resourceMap.put("nb_line_tFileOutputDelimited_6",
-						nb_line_tFileOutputDelimited_6);
+				resourceMap.put("out_tFileOutputDelimited_7",
+						outtFileOutputDelimited_7);
+				resourceMap.put("nb_line_tFileOutputDelimited_7",
+						nb_line_tFileOutputDelimited_7);
 
 				/**
-				 * [tFileOutputDelimited_6 begin ] stop
+				 * [tFileOutputDelimited_7 begin ] stop
 				 */
 
 				/**
-				 * [tFileOutputDelimited_5 begin ] start
+				 * [tFileOutputDelimited_8 begin ] start
 				 */
 
-				ok_Hash.put("tFileOutputDelimited_5", false);
-				start_Hash.put("tFileOutputDelimited_5",
+				ok_Hash.put("tFileOutputDelimited_8", false);
+				start_Hash.put("tFileOutputDelimited_8",
 						System.currentTimeMillis());
 
-				currentComponent = "tFileOutputDelimited_5";
+				currentComponent = "tFileOutputDelimited_8";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row25" + iterateId, 0,
+						runStat.updateStatOnConnection("row46" + iterateId, 0,
 								0);
 
 					}
 				}
 
-				int tos_count_tFileOutputDelimited_5 = 0;
+				int tos_count_tFileOutputDelimited_8 = 0;
 
-				String fileName_tFileOutputDelimited_5 = "";
-				fileName_tFileOutputDelimited_5 = (new java.io.File(
+				String fileName_tFileOutputDelimited_8 = "";
+				fileName_tFileOutputDelimited_8 = (new java.io.File(
 						context.ProjetFolder + context.OutFileFolder
-								+ context.Error + jobName + "_Error2711.csv"))
+								+ context.Error + jobName
+								+ "_ErrorParentIdNotNull2.csv"))
 						.getAbsolutePath().replace("\\", "/");
-				String fullName_tFileOutputDelimited_5 = null;
-				String extension_tFileOutputDelimited_5 = null;
-				String directory_tFileOutputDelimited_5 = null;
-				if ((fileName_tFileOutputDelimited_5.indexOf("/") != -1)) {
-					if (fileName_tFileOutputDelimited_5.lastIndexOf(".") < fileName_tFileOutputDelimited_5
+				String fullName_tFileOutputDelimited_8 = null;
+				String extension_tFileOutputDelimited_8 = null;
+				String directory_tFileOutputDelimited_8 = null;
+				if ((fileName_tFileOutputDelimited_8.indexOf("/") != -1)) {
+					if (fileName_tFileOutputDelimited_8.lastIndexOf(".") < fileName_tFileOutputDelimited_8
 							.lastIndexOf("/")) {
-						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5;
-						extension_tFileOutputDelimited_5 = "";
+						fullName_tFileOutputDelimited_8 = fileName_tFileOutputDelimited_8;
+						extension_tFileOutputDelimited_8 = "";
 					} else {
-						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
-								.substring(0, fileName_tFileOutputDelimited_5
+						fullName_tFileOutputDelimited_8 = fileName_tFileOutputDelimited_8
+								.substring(0, fileName_tFileOutputDelimited_8
 										.lastIndexOf("."));
-						extension_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
-								.substring(fileName_tFileOutputDelimited_5
+						extension_tFileOutputDelimited_8 = fileName_tFileOutputDelimited_8
+								.substring(fileName_tFileOutputDelimited_8
 										.lastIndexOf("."));
 					}
-					directory_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
-							.substring(0, fileName_tFileOutputDelimited_5
+					directory_tFileOutputDelimited_8 = fileName_tFileOutputDelimited_8
+							.substring(0, fileName_tFileOutputDelimited_8
 									.lastIndexOf("/"));
 				} else {
-					if (fileName_tFileOutputDelimited_5.lastIndexOf(".") != -1) {
-						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
-								.substring(0, fileName_tFileOutputDelimited_5
+					if (fileName_tFileOutputDelimited_8.lastIndexOf(".") != -1) {
+						fullName_tFileOutputDelimited_8 = fileName_tFileOutputDelimited_8
+								.substring(0, fileName_tFileOutputDelimited_8
 										.lastIndexOf("."));
-						extension_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
-								.substring(fileName_tFileOutputDelimited_5
+						extension_tFileOutputDelimited_8 = fileName_tFileOutputDelimited_8
+								.substring(fileName_tFileOutputDelimited_8
 										.lastIndexOf("."));
 					} else {
-						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5;
-						extension_tFileOutputDelimited_5 = "";
+						fullName_tFileOutputDelimited_8 = fileName_tFileOutputDelimited_8;
+						extension_tFileOutputDelimited_8 = "";
 					}
-					directory_tFileOutputDelimited_5 = "";
+					directory_tFileOutputDelimited_8 = "";
 				}
-				boolean isFileGenerated_tFileOutputDelimited_5 = true;
-				java.io.File filetFileOutputDelimited_5 = new java.io.File(
-						fileName_tFileOutputDelimited_5);
-				globalMap.put("tFileOutputDelimited_5_FILE_NAME",
-						fileName_tFileOutputDelimited_5);
-				if (filetFileOutputDelimited_5.exists()) {
-					isFileGenerated_tFileOutputDelimited_5 = false;
-				}
-				int nb_line_tFileOutputDelimited_5 = 0;
-				int splitedFileNo_tFileOutputDelimited_5 = 0;
-				int currentRow_tFileOutputDelimited_5 = 0;
+				boolean isFileGenerated_tFileOutputDelimited_8 = true;
+				java.io.File filetFileOutputDelimited_8 = new java.io.File(
+						fileName_tFileOutputDelimited_8);
+				globalMap.put("tFileOutputDelimited_8_FILE_NAME",
+						fileName_tFileOutputDelimited_8);
+				int nb_line_tFileOutputDelimited_8 = 0;
+				int splitedFileNo_tFileOutputDelimited_8 = 0;
+				int currentRow_tFileOutputDelimited_8 = 0;
 
-				final String OUT_DELIM_tFileOutputDelimited_5 = /**
+				final String OUT_DELIM_tFileOutputDelimited_8 = /**
 				 * Start field
-				 * tFileOutputDelimited_5:FIELDSEPARATOR
+				 * tFileOutputDelimited_8:FIELDSEPARATOR
 				 */
-				"|"/** End field tFileOutputDelimited_5:FIELDSEPARATOR */
+				"#"/** End field tFileOutputDelimited_8:FIELDSEPARATOR */
 				;
 
-				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_5 = /**
+				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_8 = /**
 				 * Start
-				 * field tFileOutputDelimited_5:ROWSEPARATOR
+				 * field tFileOutputDelimited_8:ROWSEPARATOR
 				 */
-				"\n"/** End field tFileOutputDelimited_5:ROWSEPARATOR */
+				"\n"/** End field tFileOutputDelimited_8:ROWSEPARATOR */
 				;
 
 				// create directory only if not exists
-				if (directory_tFileOutputDelimited_5 != null
-						&& directory_tFileOutputDelimited_5.trim().length() != 0) {
-					java.io.File dir_tFileOutputDelimited_5 = new java.io.File(
-							directory_tFileOutputDelimited_5);
-					if (!dir_tFileOutputDelimited_5.exists()) {
-						dir_tFileOutputDelimited_5.mkdirs();
+				if (directory_tFileOutputDelimited_8 != null
+						&& directory_tFileOutputDelimited_8.trim().length() != 0) {
+					java.io.File dir_tFileOutputDelimited_8 = new java.io.File(
+							directory_tFileOutputDelimited_8);
+					if (!dir_tFileOutputDelimited_8.exists()) {
+						dir_tFileOutputDelimited_8.mkdirs();
 					}
 				}
 
 				// routines.system.Row
-				java.io.Writer outtFileOutputDelimited_5 = null;
+				java.io.Writer outtFileOutputDelimited_8 = null;
 
-				outtFileOutputDelimited_5 = new java.io.BufferedWriter(
+				java.io.File fileToDelete_tFileOutputDelimited_8 = new java.io.File(
+						fileName_tFileOutputDelimited_8);
+				if (fileToDelete_tFileOutputDelimited_8.exists()) {
+					fileToDelete_tFileOutputDelimited_8.delete();
+				}
+				outtFileOutputDelimited_8 = new java.io.BufferedWriter(
 						new java.io.OutputStreamWriter(
 								new java.io.FileOutputStream(
-										fileName_tFileOutputDelimited_5, true),
-								"ISO-8859-15"));
-				if (filetFileOutputDelimited_5.length() == 0) {
-					outtFileOutputDelimited_5.write("ParentId");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("ActivityId");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("CreatedById");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("CreatedDate");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("LastModifiedDate");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("LastModifiedById");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("Subject");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("FromName");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("FromAddress");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("ToAddress");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("CcAddress");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("BccAddress");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("Incoming");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("Status");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("MessageDate");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("RelatedToId");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("ExternalIdSplit__c");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("errorCode");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("errorFields");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.write("errorMessage");
-					outtFileOutputDelimited_5
-							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_5);
-					outtFileOutputDelimited_5.flush();
+										fileName_tFileOutputDelimited_8, false),
+								"UTF-8"));
+				if (filetFileOutputDelimited_8.length() == 0) {
+					outtFileOutputDelimited_8.write("ParentId");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("ActivityId");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("CreatedById");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("CreatedDate");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("LastModifiedDate");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("LastModifiedById");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("Subject");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("FromName");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("FromAddress");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("ToAddress");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("CcAddress");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("BccAddress");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("Incoming");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("Status");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("MessageDate");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("RelatedToId");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("ExternalIdSplit__c");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("errorCode");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("errorFields");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.write("errorMessage");
+					outtFileOutputDelimited_8
+							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_8);
+					outtFileOutputDelimited_8.flush();
 				}
 
-				resourceMap.put("out_tFileOutputDelimited_5",
-						outtFileOutputDelimited_5);
-				resourceMap.put("nb_line_tFileOutputDelimited_5",
-						nb_line_tFileOutputDelimited_5);
-				resourceMap.put("isFileGenerated_tFileOutputDelimited_5",
-						isFileGenerated_tFileOutputDelimited_5);
-				resourceMap.put("filetFileOutputDelimited_5",
-						filetFileOutputDelimited_5);
+				resourceMap.put("out_tFileOutputDelimited_8",
+						outtFileOutputDelimited_8);
+				resourceMap.put("nb_line_tFileOutputDelimited_8",
+						nb_line_tFileOutputDelimited_8);
+				resourceMap.put("isFileGenerated_tFileOutputDelimited_8",
+						isFileGenerated_tFileOutputDelimited_8);
+				resourceMap.put("filetFileOutputDelimited_8",
+						filetFileOutputDelimited_8);
 
 				/**
-				 * [tFileOutputDelimited_5 begin ] stop
+				 * [tFileOutputDelimited_8 begin ] stop
 				 */
 
 				/**
-				 * [tSalesforceOutput_1 begin ] start
+				 * [tSalesforceOutput_3 begin ] start
 				 */
 
-				ok_Hash.put("tSalesforceOutput_1", false);
-				start_Hash.put("tSalesforceOutput_1",
+				ok_Hash.put("tSalesforceOutput_3", false);
+				start_Hash.put("tSalesforceOutput_3",
 						System.currentTimeMillis());
 
-				currentComponent = "tSalesforceOutput_1";
+				currentComponent = "tSalesforceOutput_3";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("EmailMessage"
+						runStat.updateStatOnConnection("copyOfEmailMessage_0"
 								+ iterateId, 0, 0);
 
 					}
 				}
 
-				int tos_count_tSalesforceOutput_1 = 0;
+				int tos_count_tSalesforceOutput_3 = 0;
 
-				org.talend.components.api.component.ComponentDefinition def_tSalesforceOutput_1 = new org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputDefinition();
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceOutput_3 = new org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputDefinition();
 
-				org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputProperties props_tSalesforceOutput_1 = (org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputProperties) def_tSalesforceOutput_1
+				org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputProperties props_tSalesforceOutput_3 = (org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputProperties) def_tSalesforceOutput_3
 						.createRuntimeProperties();
-				props_tSalesforceOutput_1.setValue("extendInsert", true);
+				props_tSalesforceOutput_3.setValue("extendInsert", true);
 
-				props_tSalesforceOutput_1.setValue("ceaseForError", false);
+				props_tSalesforceOutput_3.setValue("ceaseForError", false);
 
-				props_tSalesforceOutput_1.setValue("ignoreNull", true);
+				props_tSalesforceOutput_3.setValue("ignoreNull", true);
 
-				props_tSalesforceOutput_1.setValue("commitLevel", 200);
+				props_tSalesforceOutput_3.setValue("commitLevel", 100);
 
-				props_tSalesforceOutput_1.setValue("logFileName", "");
+				props_tSalesforceOutput_3.setValue("logFileName", "");
 
-				props_tSalesforceOutput_1
+				props_tSalesforceOutput_3
 						.setValue(
 								"outputAction",
 								org.talend.components.salesforce.SalesforceOutputProperties.OutputAction.UPSERT);
 
-				props_tSalesforceOutput_1.setValue("upsertKeyColumn",
+				props_tSalesforceOutput_3.setValue("upsertKeyColumn",
 						"ExternalIdSplit__c");
 
-				props_tSalesforceOutput_1.upsertRelationTable.setValue(
+				props_tSalesforceOutput_3.upsertRelationTable.setValue(
 						"columnName", "ParentId");
 
-				class SchemaSettingTool_tSalesforceOutput_1_1_fisrt {
+				class SchemaSettingTool_tSalesforceOutput_3_1_fisrt {
 
 					String getSchemaValue() {
 
@@ -7090,14 +11208,14 @@ public class LOAD_EmailMessage implements TalendJob {
 
 				}
 
-				SchemaSettingTool_tSalesforceOutput_1_1_fisrt sst_tSalesforceOutput_1_1_fisrt = new SchemaSettingTool_tSalesforceOutput_1_1_fisrt();
+				SchemaSettingTool_tSalesforceOutput_3_1_fisrt sst_tSalesforceOutput_3_1_fisrt = new SchemaSettingTool_tSalesforceOutput_3_1_fisrt();
 
-				props_tSalesforceOutput_1.schemaFlow.setValue("schema",
+				props_tSalesforceOutput_3.schemaFlow.setValue("schema",
 						new org.apache.avro.Schema.Parser()
-								.parse(sst_tSalesforceOutput_1_1_fisrt
+								.parse(sst_tSalesforceOutput_3_1_fisrt
 										.getSchemaValue()));
 
-				class SchemaSettingTool_tSalesforceOutput_1_2_fisrt {
+				class SchemaSettingTool_tSalesforceOutput_3_2_fisrt {
 
 					String getSchemaValue() {
 
@@ -7183,55 +11301,55 @@ public class LOAD_EmailMessage implements TalendJob {
 
 				}
 
-				SchemaSettingTool_tSalesforceOutput_1_2_fisrt sst_tSalesforceOutput_1_2_fisrt = new SchemaSettingTool_tSalesforceOutput_1_2_fisrt();
+				SchemaSettingTool_tSalesforceOutput_3_2_fisrt sst_tSalesforceOutput_3_2_fisrt = new SchemaSettingTool_tSalesforceOutput_3_2_fisrt();
 
-				props_tSalesforceOutput_1.schemaReject.setValue("schema",
+				props_tSalesforceOutput_3.schemaReject.setValue("schema",
 						new org.apache.avro.Schema.Parser()
-								.parse(sst_tSalesforceOutput_1_2_fisrt
+								.parse(sst_tSalesforceOutput_3_2_fisrt
 										.getSchemaValue()));
 
-				props_tSalesforceOutput_1.connection.userPassword.setValue(
+				props_tSalesforceOutput_3.connection.userPassword.setValue(
 						"useAuth", false);
 
-				props_tSalesforceOutput_1.connection.proxy.userPassword
+				props_tSalesforceOutput_3.connection.proxy.userPassword
 						.setValue("useAuth", false);
 
-				props_tSalesforceOutput_1.connection.referencedComponent
+				props_tSalesforceOutput_3.connection.referencedComponent
 						.setValue(
 								"referenceType",
 								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
 
-				props_tSalesforceOutput_1.connection.referencedComponent
+				props_tSalesforceOutput_3.connection.referencedComponent
 						.setValue("componentInstanceId",
 								"tSalesforceConnection_2");
 
-				props_tSalesforceOutput_1.connection.referencedComponent
+				props_tSalesforceOutput_3.connection.referencedComponent
 						.setValue("referenceDefinitionName",
 								"tSalesforceConnection");
 
-				props_tSalesforceOutput_1.module.setValue("moduleName",
+				props_tSalesforceOutput_3.module.setValue("moduleName",
 						"EmailMessage");
 
-				props_tSalesforceOutput_1.module.connection.userPassword
+				props_tSalesforceOutput_3.module.connection.userPassword
 						.setValue("useAuth", false);
 
-				props_tSalesforceOutput_1.module.connection.proxy.userPassword
+				props_tSalesforceOutput_3.module.connection.proxy.userPassword
 						.setValue("useAuth", false);
 
-				props_tSalesforceOutput_1.module.connection.referencedComponent
+				props_tSalesforceOutput_3.module.connection.referencedComponent
 						.setValue(
 								"referenceType",
 								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
 
-				props_tSalesforceOutput_1.module.connection.referencedComponent
+				props_tSalesforceOutput_3.module.connection.referencedComponent
 						.setValue("componentInstanceId",
 								"tSalesforceConnection_2");
 
-				props_tSalesforceOutput_1.module.connection.referencedComponent
+				props_tSalesforceOutput_3.module.connection.referencedComponent
 						.setValue("referenceDefinitionName",
 								"tSalesforceConnection");
 
-				class SchemaSettingTool_tSalesforceOutput_1_3_fisrt {
+				class SchemaSettingTool_tSalesforceOutput_3_3_fisrt {
 
 					String getSchemaValue() {
 
@@ -7308,48 +11426,48 @@ public class LOAD_EmailMessage implements TalendJob {
 
 				}
 
-				SchemaSettingTool_tSalesforceOutput_1_3_fisrt sst_tSalesforceOutput_1_3_fisrt = new SchemaSettingTool_tSalesforceOutput_1_3_fisrt();
+				SchemaSettingTool_tSalesforceOutput_3_3_fisrt sst_tSalesforceOutput_3_3_fisrt = new SchemaSettingTool_tSalesforceOutput_3_3_fisrt();
 
-				props_tSalesforceOutput_1.module.main.setValue("schema",
+				props_tSalesforceOutput_3.module.main.setValue("schema",
 						new org.apache.avro.Schema.Parser()
-								.parse(sst_tSalesforceOutput_1_3_fisrt
+								.parse(sst_tSalesforceOutput_3_3_fisrt
 										.getSchemaValue()));
 
-				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutput_1.connection.referencedComponent.referenceType
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutput_3.connection.referencedComponent.referenceType
 						.getValue()) {
-					final String referencedComponentInstanceId_tSalesforceOutput_1 = props_tSalesforceOutput_1.connection.referencedComponent.componentInstanceId
+					final String referencedComponentInstanceId_tSalesforceOutput_3 = props_tSalesforceOutput_3.connection.referencedComponent.componentInstanceId
 							.getStringValue();
-					if (referencedComponentInstanceId_tSalesforceOutput_1 != null) {
-						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutput_1 = (org.talend.daikon.properties.Properties) globalMap
-								.get(referencedComponentInstanceId_tSalesforceOutput_1
+					if (referencedComponentInstanceId_tSalesforceOutput_3 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutput_3 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceOutput_3
 										+ "_COMPONENT_RUNTIME_PROPERTIES");
-						props_tSalesforceOutput_1.connection.referencedComponent
-								.setReference(referencedComponentProperties_tSalesforceOutput_1);
+						props_tSalesforceOutput_3.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceOutput_3);
 					}
 				}
-				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutput_1.module.connection.referencedComponent.referenceType
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutput_3.module.connection.referencedComponent.referenceType
 						.getValue()) {
-					final String referencedComponentInstanceId_tSalesforceOutput_1 = props_tSalesforceOutput_1.module.connection.referencedComponent.componentInstanceId
+					final String referencedComponentInstanceId_tSalesforceOutput_3 = props_tSalesforceOutput_3.module.connection.referencedComponent.componentInstanceId
 							.getStringValue();
-					if (referencedComponentInstanceId_tSalesforceOutput_1 != null) {
-						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutput_1 = (org.talend.daikon.properties.Properties) globalMap
-								.get(referencedComponentInstanceId_tSalesforceOutput_1
+					if (referencedComponentInstanceId_tSalesforceOutput_3 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutput_3 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceOutput_3
 										+ "_COMPONENT_RUNTIME_PROPERTIES");
-						props_tSalesforceOutput_1.module.connection.referencedComponent
-								.setReference(referencedComponentProperties_tSalesforceOutput_1);
+						props_tSalesforceOutput_3.module.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceOutput_3);
 					}
 				}
 				globalMap.put(
-						"tSalesforceOutput_1_COMPONENT_RUNTIME_PROPERTIES",
-						props_tSalesforceOutput_1);
+						"tSalesforceOutput_3_COMPONENT_RUNTIME_PROPERTIES",
+						props_tSalesforceOutput_3);
 				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
 				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
-				java.net.URL mappings_url_tSalesforceOutput_1 = this.getClass()
+				java.net.URL mappings_url_tSalesforceOutput_3 = this.getClass()
 						.getResource("/xmlMappings");
-				globalMap.put("tSalesforceOutput_1_MAPPINGS_URL",
-						mappings_url_tSalesforceOutput_1);
+				globalMap.put("tSalesforceOutput_3_MAPPINGS_URL",
+						mappings_url_tSalesforceOutput_3);
 
-				org.talend.components.api.container.RuntimeContainer container_tSalesforceOutput_1 = new org.talend.components.api.container.RuntimeContainer() {
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceOutput_3 = new org.talend.components.api.container.RuntimeContainer() {
 					public Object getComponentData(String componentId,
 							String key) {
 						return globalMap.get(componentId + "_" + key);
@@ -7361,7 +11479,7 @@ public class LOAD_EmailMessage implements TalendJob {
 					}
 
 					public String getCurrentComponentId() {
-						return "tSalesforceOutput_1";
+						return "tSalesforceOutput_3";
 					}
 
 					public Object getGlobalData(String key) {
@@ -7369,226 +11487,228 @@ public class LOAD_EmailMessage implements TalendJob {
 					}
 				};
 
-				int nb_line_tSalesforceOutput_1 = 0;
+				int nb_line_tSalesforceOutput_3 = 0;
 
-				org.talend.components.api.component.ConnectorTopology topology_tSalesforceOutput_1 = null;
-				topology_tSalesforceOutput_1 = org.talend.components.api.component.ConnectorTopology.INCOMING_AND_OUTGOING;
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceOutput_3 = null;
+				topology_tSalesforceOutput_3 = org.talend.components.api.component.ConnectorTopology.INCOMING_AND_OUTGOING;
 
-				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceOutput_1 = def_tSalesforceOutput_1
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceOutput_3 = def_tSalesforceOutput_3
 						.getRuntimeInfo(
 								org.talend.components.api.component.runtime.ExecutionEngine.DI,
-								props_tSalesforceOutput_1,
-								topology_tSalesforceOutput_1);
-				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceOutput_1 = def_tSalesforceOutput_1
+								props_tSalesforceOutput_3,
+								topology_tSalesforceOutput_3);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceOutput_3 = def_tSalesforceOutput_3
 						.getSupportedConnectorTopologies();
 
-				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
-						.forName(runtime_info_tSalesforceOutput_1
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceOutput_3
 								.getRuntimeClassName()).newInstance());
-				org.talend.daikon.properties.ValidationResult initVr_tSalesforceOutput_1 = componentRuntime_tSalesforceOutput_1
-						.initialize(container_tSalesforceOutput_1,
-								props_tSalesforceOutput_1);
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceOutput_3 = componentRuntime_tSalesforceOutput_3
+						.initialize(container_tSalesforceOutput_3,
+								props_tSalesforceOutput_3);
 
-				if (initVr_tSalesforceOutput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+				if (initVr_tSalesforceOutput_3.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
 					throw new RuntimeException(
-							initVr_tSalesforceOutput_1.getMessage());
+							initVr_tSalesforceOutput_3.getMessage());
 				}
 
-				if (componentRuntime_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
-					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceOutput_1;
-					compDriverInitialization_tSalesforceOutput_1
-							.runAtDriver(container_tSalesforceOutput_1);
+				if (componentRuntime_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceOutput_3;
+					compDriverInitialization_tSalesforceOutput_3
+							.runAtDriver(container_tSalesforceOutput_3);
 				}
 
-				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceOutput_1 = null;
-				if (componentRuntime_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
-					sourceOrSink_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceOutput_1;
-					org.talend.daikon.properties.ValidationResult vr_tSalesforceOutput_1 = sourceOrSink_tSalesforceOutput_1
-							.validate(container_tSalesforceOutput_1);
-					if (vr_tSalesforceOutput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceOutput_3 = null;
+				if (componentRuntime_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceOutput_3;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceOutput_3 = sourceOrSink_tSalesforceOutput_3
+							.validate(container_tSalesforceOutput_3);
+					if (vr_tSalesforceOutput_3.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
 						throw new RuntimeException(
-								vr_tSalesforceOutput_1.getMessage());
+								vr_tSalesforceOutput_3.getMessage());
 					}
 				}
 
-				org.talend.components.api.component.runtime.Sink sink_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.Sink) sourceOrSink_tSalesforceOutput_1;
-				org.talend.components.api.component.runtime.WriteOperation writeOperation_tSalesforceOutput_1 = sink_tSalesforceOutput_1
+				org.talend.components.api.component.runtime.Sink sink_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.Sink) sourceOrSink_tSalesforceOutput_3;
+				org.talend.components.api.component.runtime.WriteOperation writeOperation_tSalesforceOutput_3 = sink_tSalesforceOutput_3
 						.createWriteOperation();
-				writeOperation_tSalesforceOutput_1
-						.initialize(container_tSalesforceOutput_1);
-				org.talend.components.api.component.runtime.Writer writer_tSalesforceOutput_1 = writeOperation_tSalesforceOutput_1
-						.createWriter(container_tSalesforceOutput_1);
-				writer_tSalesforceOutput_1.open("tSalesforceOutput_1");
+				writeOperation_tSalesforceOutput_3
+						.initialize(container_tSalesforceOutput_3);
+				org.talend.components.api.component.runtime.Writer writer_tSalesforceOutput_3 = writeOperation_tSalesforceOutput_3
+						.createWriter(container_tSalesforceOutput_3);
+				writer_tSalesforceOutput_3.open("tSalesforceOutput_3");
 
-				resourceMap.put("writer_tSalesforceOutput_1",
-						writer_tSalesforceOutput_1);
+				resourceMap.put("writer_tSalesforceOutput_3",
+						writer_tSalesforceOutput_3);
 
-				org.talend.components.api.component.Connector c_tSalesforceOutput_1 = null;
-				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_1
+				org.talend.components.api.component.Connector c_tSalesforceOutput_3 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_3
 						.getAvailableConnectors(null, false)) {
 					if (currentConnector.getName().equals("MAIN")) {
-						c_tSalesforceOutput_1 = currentConnector;
+						c_tSalesforceOutput_3 = currentConnector;
 						break;
 					}
 				}
-				org.apache.avro.Schema designSchema_tSalesforceOutput_1 = props_tSalesforceOutput_1
-						.getSchema(c_tSalesforceOutput_1, false);
-				org.talend.codegen.enforcer.IncomingSchemaEnforcer incomingEnforcer_tSalesforceOutput_1 = new org.talend.codegen.enforcer.IncomingSchemaEnforcer(
-						designSchema_tSalesforceOutput_1);
-				c_tSalesforceOutput_1 = null;
-				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_1
+				org.apache.avro.Schema designSchema_tSalesforceOutput_3 = props_tSalesforceOutput_3
+						.getSchema(c_tSalesforceOutput_3, false);
+				org.talend.codegen.enforcer.IncomingSchemaEnforcer incomingEnforcer_tSalesforceOutput_3 = new org.talend.codegen.enforcer.IncomingSchemaEnforcer(
+						designSchema_tSalesforceOutput_3);
+				c_tSalesforceOutput_3 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_3
 						.getAvailableConnectors(null, true)) {
 					if (currentConnector.getName().equals("REJECT")) {
-						c_tSalesforceOutput_1 = currentConnector;
+						c_tSalesforceOutput_3 = currentConnector;
 					}
 				}
-				org.apache.avro.Schema rejectSchema_tSalesforceOutput_1 = props_tSalesforceOutput_1
-						.getSchema(c_tSalesforceOutput_1, true);
-				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceOutput_1OutReject = org.talend.codegen.enforcer.EnforcerCreator
+				org.apache.avro.Schema rejectSchema_tSalesforceOutput_3 = props_tSalesforceOutput_3
+						.getSchema(c_tSalesforceOutput_3, true);
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceOutput_3OutReject = org.talend.codegen.enforcer.EnforcerCreator
 						.createOutgoingEnforcer(
-								rejectSchema_tSalesforceOutput_1, false);
+								rejectSchema_tSalesforceOutput_3, false);
 
 				// Create a reusable factory that converts the output of the
 				// reader to an IndexedRecord.
-				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceOutput_1OutReject = null;
-				c_tSalesforceOutput_1 = null;
-				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_1
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceOutput_3OutReject = null;
+				c_tSalesforceOutput_3 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_3
 						.getAvailableConnectors(null, true)) {
 					if (currentConnector.getName().equals("MAIN")) {
-						c_tSalesforceOutput_1 = currentConnector;
+						c_tSalesforceOutput_3 = currentConnector;
 					}
 				}
-				org.apache.avro.Schema mainSchema_tSalesforceOutput_1 = props_tSalesforceOutput_1
-						.getSchema(c_tSalesforceOutput_1, true);
-				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceOutput_1OutMain = org.talend.codegen.enforcer.EnforcerCreator
-						.createOutgoingEnforcer(mainSchema_tSalesforceOutput_1,
+				org.apache.avro.Schema mainSchema_tSalesforceOutput_3 = props_tSalesforceOutput_3
+						.getSchema(c_tSalesforceOutput_3, true);
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceOutput_3OutMain = org.talend.codegen.enforcer.EnforcerCreator
+						.createOutgoingEnforcer(mainSchema_tSalesforceOutput_3,
 								false);
 
 				// Create a reusable factory that converts the output of the
 				// reader to an IndexedRecord.
-				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceOutput_1OutMain = null;
-				java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceOutput_1 = new java.util.ArrayList<Object>();
-				java.util.Iterator outgoingMainRecordsIt_tSalesforceOutput_1 = null;
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceOutput_3OutMain = null;
+				java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceOutput_3 = new java.util.ArrayList<Object>();
+				java.util.Iterator outgoingMainRecordsIt_tSalesforceOutput_3 = null;
 
 				/**
-				 * [tSalesforceOutput_1 begin ] stop
+				 * [tSalesforceOutput_3 begin ] stop
 				 */
 
 				/**
-				 * [tMap_1 begin ] start
+				 * [tMap_7 begin ] start
 				 */
 
-				ok_Hash.put("tMap_1", false);
-				start_Hash.put("tMap_1", System.currentTimeMillis());
+				ok_Hash.put("tMap_7", false);
+				start_Hash.put("tMap_7", System.currentTimeMillis());
 
-				currentComponent = "tMap_1";
+				currentComponent = "tMap_7";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
+						runStat.updateStatOnConnection(
+								"copyOfrow2" + iterateId, 0, 0);
 
 					}
 				}
 
-				int tos_count_tMap_1 = 0;
+				int tos_count_tMap_7 = 0;
 
 				// ###############################
 				// # Lookup's keys initialization
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CreatedByStruct> tHash_Lookup_CreatedBy = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CreatedByStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CreatedByStruct>) globalMap
-						.get("tHash_Lookup_CreatedBy"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row28Struct> tHash_Lookup_row28 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row28Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row28Struct>) globalMap
+						.get("tHash_Lookup_row28"));
 
-				CreatedByStruct CreatedByHashKey = new CreatedByStruct();
-				CreatedByStruct CreatedByDefault = new CreatedByStruct();
+				row28Struct row28HashKey = new row28Struct();
+				row28Struct row28Default = new row28Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ModifiedByStruct> tHash_Lookup_ModifiedBy = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ModifiedByStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ModifiedByStruct>) globalMap
-						.get("tHash_Lookup_ModifiedBy"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row33Struct> tHash_Lookup_row33 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row33Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row33Struct>) globalMap
+						.get("tHash_Lookup_row33"));
 
-				ModifiedByStruct ModifiedByHashKey = new ModifiedByStruct();
-				ModifiedByStruct ModifiedByDefault = new ModifiedByStruct();
+				row33Struct row33HashKey = new row33Struct();
+				row33Struct row33Default = new row33Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Meeting_minuteStruct> tHash_Lookup_Meeting_minute = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Meeting_minuteStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Meeting_minuteStruct>) globalMap
-						.get("tHash_Lookup_Meeting_minute"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row35Struct> tHash_Lookup_row35 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row35Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row35Struct>) globalMap
+						.get("tHash_Lookup_row35"));
 
-				Meeting_minuteStruct Meeting_minuteHashKey = new Meeting_minuteStruct();
-				Meeting_minuteStruct Meeting_minuteDefault = new Meeting_minuteStruct();
+				row35Struct row35HashKey = new row35Struct();
+				row35Struct row35Default = new row35Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<OpportunityStruct> tHash_Lookup_Opportunity = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<OpportunityStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<OpportunityStruct>) globalMap
-						.get("tHash_Lookup_Opportunity"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row42Struct> tHash_Lookup_row42 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row42Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row42Struct>) globalMap
+						.get("tHash_Lookup_row42"));
 
-				OpportunityStruct OpportunityHashKey = new OpportunityStruct();
-				OpportunityStruct OpportunityDefault = new OpportunityStruct();
+				row42Struct row42HashKey = new row42Struct();
+				row42Struct row42Default = new row42Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseParentIdStruct> tHash_Lookup_CaseParentId = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseParentIdStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseParentIdStruct>) globalMap
-						.get("tHash_Lookup_CaseParentId"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row40Struct> tHash_Lookup_row40 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row40Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row40Struct>) globalMap
+						.get("tHash_Lookup_row40"));
 
-				CaseParentIdStruct CaseParentIdHashKey = new CaseParentIdStruct();
-				CaseParentIdStruct CaseParentIdDefault = new CaseParentIdStruct();
+				row40Struct row40HashKey = new row40Struct();
+				row40Struct row40Default = new row40Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ProjectStruct> tHash_Lookup_Project = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ProjectStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ProjectStruct>) globalMap
-						.get("tHash_Lookup_Project"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row43Struct> tHash_Lookup_row43 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row43Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row43Struct>) globalMap
+						.get("tHash_Lookup_row43"));
 
-				ProjectStruct ProjectHashKey = new ProjectStruct();
-				ProjectStruct ProjectDefault = new ProjectStruct();
+				row43Struct row43HashKey = new row43Struct();
+				row43Struct row43Default = new row43Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Task1Struct> tHash_Lookup_Task1 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Task1Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Task1Struct>) globalMap
-						.get("tHash_Lookup_Task1"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row39Struct> tHash_Lookup_row39 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row39Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row39Struct>) globalMap
+						.get("tHash_Lookup_row39"));
 
-				Task1Struct Task1HashKey = new Task1Struct();
-				Task1Struct Task1Default = new Task1Struct();
+				row39Struct row39HashKey = new row39Struct();
+				row39Struct row39Default = new row39Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseStruct> tHash_Lookup_Case = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseStruct>) globalMap
-						.get("tHash_Lookup_Case"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row41Struct> tHash_Lookup_row41 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row41Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row41Struct>) globalMap
+						.get("tHash_Lookup_row41"));
 
-				CaseStruct CaseHashKey = new CaseStruct();
-				CaseStruct CaseDefault = new CaseStruct();
+				row41Struct row41HashKey = new row41Struct();
+				row41Struct row41Default = new row41Struct();
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ContractStruct> tHash_Lookup_Contract = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ContractStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ContractStruct>) globalMap
-						.get("tHash_Lookup_Contract"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row44Struct> tHash_Lookup_row44 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row44Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row44Struct>) globalMap
+						.get("tHash_Lookup_row44"));
 
-				ContractStruct ContractHashKey = new ContractStruct();
-				ContractStruct ContractDefault = new ContractStruct();
+				row44Struct row44HashKey = new row44Struct();
+				row44Struct row44Default = new row44Struct();
 				// ###############################
 
 				// ###############################
 				// # Vars initialization
-				class Var__tMap_1__Struct {
+				class Var__tMap_7__Struct {
 					String RelatedToId;
 					String Status;
 					String var1;
+					String var2;
 				}
-				Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
+				Var__tMap_7__Struct Var__tMap_7 = new Var__tMap_7__Struct();
 				// ###############################
 
 				// ###############################
 				// # Outputs initialization
-				EmailMessageStruct EmailMessage_tmp = new EmailMessageStruct();
+				copyOfEmailMessage_0Struct copyOfEmailMessage_0_tmp = new copyOfEmailMessage_0Struct();
 				// ###############################
 
 				/**
-				 * [tMap_1 begin ] stop
+				 * [tMap_7 begin ] stop
 				 */
 
 				/**
-				 * [tMap_5 begin ] start
+				 * [tMap_6 begin ] start
 				 */
 
-				ok_Hash.put("tMap_5", false);
-				start_Hash.put("tMap_5", System.currentTimeMillis());
+				ok_Hash.put("tMap_6", false);
+				start_Hash.put("tMap_6", System.currentTimeMillis());
 
-				currentComponent = "tMap_5";
+				currentComponent = "tMap_6";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row222" + iterateId, 0,
+						runStat.updateStatOnConnection("row26" + iterateId, 0,
 								0);
 
 					}
 				}
 
-				int tos_count_tMap_5 = 0;
+				int tos_count_tMap_6 = 0;
 
 				// ###############################
 				// # Lookup's keys initialization
@@ -7596,99 +11716,99 @@ public class LOAD_EmailMessage implements TalendJob {
 
 				// ###############################
 				// # Vars initialization
-				class Var__tMap_5__Struct {
+				class Var__tMap_6__Struct {
 				}
-				Var__tMap_5__Struct Var__tMap_5 = new Var__tMap_5__Struct();
+				Var__tMap_6__Struct Var__tMap_6 = new Var__tMap_6__Struct();
 				// ###############################
 
 				// ###############################
 				// # Outputs initialization
-				row2Struct row2_tmp = new row2Struct();
+				copyOfrow2Struct copyOfrow2_tmp = new copyOfrow2Struct();
 				// ###############################
 
 				/**
-				 * [tMap_5 begin ] stop
+				 * [tMap_6 begin ] stop
 				 */
 
 				/**
-				 * [tSalesforceInput_1 begin ] start
+				 * [tSalesforceInput_12 begin ] start
 				 */
 
-				ok_Hash.put("tSalesforceInput_1", false);
-				start_Hash
-						.put("tSalesforceInput_1", System.currentTimeMillis());
+				ok_Hash.put("tSalesforceInput_12", false);
+				start_Hash.put("tSalesforceInput_12",
+						System.currentTimeMillis());
 
-				currentComponent = "tSalesforceInput_1";
+				currentComponent = "tSalesforceInput_12";
 
-				int tos_count_tSalesforceInput_1 = 0;
+				int tos_count_tSalesforceInput_12 = 0;
 
-				org.talend.components.api.component.ComponentDefinition def_tSalesforceInput_1 = new org.talend.components.salesforce.tsalesforceinput.TSalesforceInputDefinition();
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceInput_12 = new org.talend.components.salesforce.tsalesforceinput.TSalesforceInputDefinition();
 
-				org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties props_tSalesforceInput_1 = (org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties) def_tSalesforceInput_1
+				org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties props_tSalesforceInput_12 = (org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties) def_tSalesforceInput_12
 						.createRuntimeProperties();
-				props_tSalesforceInput_1
+				props_tSalesforceInput_12
 						.setValue(
 								"queryMode",
 								org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties.QueryMode.Query);
 
-				props_tSalesforceInput_1.setValue("manualQuery", true);
+				props_tSalesforceInput_12.setValue("manualQuery", true);
 
-				props_tSalesforceInput_1
+				props_tSalesforceInput_12
 						.setValue(
 								"query",
-								"SELECT Id, ParentId, ActivityId, CreatedById, CreatedDate, LastModifiedDate, LastModifiedById, SystemModstamp, TextBody, HtmlBody, Headers, Subject, FromName, FromAddress, ValidatedFromAddress, ToAddress, CcAddress, BccAddress, Incoming, HasAttachment, Status, MessageDate, IsDeleted, ReplyToEmailMessageId, IsExternallyVisible, MessageIdentifier, ThreadIdentifier, RelatedToId, ExternalIdSAMS__c, Tech_UploadStatus__c, TECH_OldEmailMessageID__c FROM EmailMessage where Id='"
-										+ context.Id + "'  ");
+								"SELECT Id, ParentId, ActivityId, CreatedById, CreatedDate, LastModifiedDate, LastModifiedById, SystemModstamp, TextBody, HtmlBody, Headers, Subject, FromName, FromAddress, ValidatedFromAddress, ToAddress, CcAddress, BccAddress, Incoming, HasAttachment, Status, MessageDate, IsDeleted, ReplyToEmailMessageId, IsExternallyVisible, MessageIdentifier, ThreadIdentifier, RelatedToId, ExternalIdSAMS__c, Tech_UploadStatus__c, TECH_OldEmailMessageID__c FROM EmailMessage  Where ParentId='"
+										+ context.IdPreprod + "'  ");
 
-				props_tSalesforceInput_1.setValue("includeDeleted", false);
+				props_tSalesforceInput_12.setValue("includeDeleted", false);
 
-				props_tSalesforceInput_1.setValue("batchSize", 1000);
+				props_tSalesforceInput_12.setValue("batchSize", 1000);
 
-				props_tSalesforceInput_1.setValue("normalizeDelimiter", ";");
+				props_tSalesforceInput_12.setValue("normalizeDelimiter", ";");
 
-				props_tSalesforceInput_1.setValue("columnNameDelimiter", "_");
+				props_tSalesforceInput_12.setValue("columnNameDelimiter", "_");
 
-				props_tSalesforceInput_1.connection.userPassword.setValue(
+				props_tSalesforceInput_12.connection.userPassword.setValue(
 						"useAuth", false);
 
-				props_tSalesforceInput_1.connection.proxy.userPassword
+				props_tSalesforceInput_12.connection.proxy.userPassword
 						.setValue("useAuth", false);
 
-				props_tSalesforceInput_1.connection.referencedComponent
+				props_tSalesforceInput_12.connection.referencedComponent
 						.setValue(
 								"referenceType",
 								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
 
-				props_tSalesforceInput_1.connection.referencedComponent
+				props_tSalesforceInput_12.connection.referencedComponent
 						.setValue("componentInstanceId",
 								"tSalesforceConnection_1");
 
-				props_tSalesforceInput_1.connection.referencedComponent
+				props_tSalesforceInput_12.connection.referencedComponent
 						.setValue("referenceDefinitionName",
 								"tSalesforceConnection");
 
-				props_tSalesforceInput_1.module.setValue("moduleName",
+				props_tSalesforceInput_12.module.setValue("moduleName",
 						"EmailMessage");
 
-				props_tSalesforceInput_1.module.connection.userPassword
+				props_tSalesforceInput_12.module.connection.userPassword
 						.setValue("useAuth", false);
 
-				props_tSalesforceInput_1.module.connection.proxy.userPassword
+				props_tSalesforceInput_12.module.connection.proxy.userPassword
 						.setValue("useAuth", false);
 
-				props_tSalesforceInput_1.module.connection.referencedComponent
+				props_tSalesforceInput_12.module.connection.referencedComponent
 						.setValue(
 								"referenceType",
 								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
 
-				props_tSalesforceInput_1.module.connection.referencedComponent
+				props_tSalesforceInput_12.module.connection.referencedComponent
 						.setValue("componentInstanceId",
 								"tSalesforceConnection_1");
 
-				props_tSalesforceInput_1.module.connection.referencedComponent
+				props_tSalesforceInput_12.module.connection.referencedComponent
 						.setValue("referenceDefinitionName",
 								"tSalesforceConnection");
 
-				class SchemaSettingTool_tSalesforceInput_1_1_fisrt {
+				class SchemaSettingTool_tSalesforceInput_12_1_fisrt {
 
 					String getSchemaValue() {
 
@@ -7801,48 +11921,48 @@ public class LOAD_EmailMessage implements TalendJob {
 
 				}
 
-				SchemaSettingTool_tSalesforceInput_1_1_fisrt sst_tSalesforceInput_1_1_fisrt = new SchemaSettingTool_tSalesforceInput_1_1_fisrt();
+				SchemaSettingTool_tSalesforceInput_12_1_fisrt sst_tSalesforceInput_12_1_fisrt = new SchemaSettingTool_tSalesforceInput_12_1_fisrt();
 
-				props_tSalesforceInput_1.module.main.setValue("schema",
+				props_tSalesforceInput_12.module.main.setValue("schema",
 						new org.apache.avro.Schema.Parser()
-								.parse(sst_tSalesforceInput_1_1_fisrt
+								.parse(sst_tSalesforceInput_12_1_fisrt
 										.getSchemaValue()));
 
-				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_1.connection.referencedComponent.referenceType
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_12.connection.referencedComponent.referenceType
 						.getValue()) {
-					final String referencedComponentInstanceId_tSalesforceInput_1 = props_tSalesforceInput_1.connection.referencedComponent.componentInstanceId
+					final String referencedComponentInstanceId_tSalesforceInput_12 = props_tSalesforceInput_12.connection.referencedComponent.componentInstanceId
 							.getStringValue();
-					if (referencedComponentInstanceId_tSalesforceInput_1 != null) {
-						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_1 = (org.talend.daikon.properties.Properties) globalMap
-								.get(referencedComponentInstanceId_tSalesforceInput_1
+					if (referencedComponentInstanceId_tSalesforceInput_12 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_12 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_12
 										+ "_COMPONENT_RUNTIME_PROPERTIES");
-						props_tSalesforceInput_1.connection.referencedComponent
-								.setReference(referencedComponentProperties_tSalesforceInput_1);
+						props_tSalesforceInput_12.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_12);
 					}
 				}
-				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_1.module.connection.referencedComponent.referenceType
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_12.module.connection.referencedComponent.referenceType
 						.getValue()) {
-					final String referencedComponentInstanceId_tSalesforceInput_1 = props_tSalesforceInput_1.module.connection.referencedComponent.componentInstanceId
+					final String referencedComponentInstanceId_tSalesforceInput_12 = props_tSalesforceInput_12.module.connection.referencedComponent.componentInstanceId
 							.getStringValue();
-					if (referencedComponentInstanceId_tSalesforceInput_1 != null) {
-						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_1 = (org.talend.daikon.properties.Properties) globalMap
-								.get(referencedComponentInstanceId_tSalesforceInput_1
+					if (referencedComponentInstanceId_tSalesforceInput_12 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_12 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_12
 										+ "_COMPONENT_RUNTIME_PROPERTIES");
-						props_tSalesforceInput_1.module.connection.referencedComponent
-								.setReference(referencedComponentProperties_tSalesforceInput_1);
+						props_tSalesforceInput_12.module.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_12);
 					}
 				}
 				globalMap.put(
-						"tSalesforceInput_1_COMPONENT_RUNTIME_PROPERTIES",
-						props_tSalesforceInput_1);
+						"tSalesforceInput_12_COMPONENT_RUNTIME_PROPERTIES",
+						props_tSalesforceInput_12);
 				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
 				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
-				java.net.URL mappings_url_tSalesforceInput_1 = this.getClass()
+				java.net.URL mappings_url_tSalesforceInput_12 = this.getClass()
 						.getResource("/xmlMappings");
-				globalMap.put("tSalesforceInput_1_MAPPINGS_URL",
-						mappings_url_tSalesforceInput_1);
+				globalMap.put("tSalesforceInput_12_MAPPINGS_URL",
+						mappings_url_tSalesforceInput_12);
 
-				org.talend.components.api.container.RuntimeContainer container_tSalesforceInput_1 = new org.talend.components.api.container.RuntimeContainer() {
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceInput_12 = new org.talend.components.api.container.RuntimeContainer() {
 					public Object getComponentData(String componentId,
 							String key) {
 						return globalMap.get(componentId + "_" + key);
@@ -7854,7 +11974,7 @@ public class LOAD_EmailMessage implements TalendJob {
 					}
 
 					public String getCurrentComponentId() {
-						return "tSalesforceInput_1";
+						return "tSalesforceInput_12";
 					}
 
 					public Object getGlobalData(String key) {
@@ -7862,60 +11982,61 @@ public class LOAD_EmailMessage implements TalendJob {
 					}
 				};
 
-				int nb_line_tSalesforceInput_1 = 0;
+				int nb_line_tSalesforceInput_12 = 0;
 
-				org.talend.components.api.component.ConnectorTopology topology_tSalesforceInput_1 = null;
-				topology_tSalesforceInput_1 = org.talend.components.api.component.ConnectorTopology.OUTGOING;
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceInput_12 = null;
+				topology_tSalesforceInput_12 = org.talend.components.api.component.ConnectorTopology.OUTGOING;
 
-				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceInput_1 = def_tSalesforceInput_1
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceInput_12 = def_tSalesforceInput_12
 						.getRuntimeInfo(
 								org.talend.components.api.component.runtime.ExecutionEngine.DI,
-								props_tSalesforceInput_1,
-								topology_tSalesforceInput_1);
-				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceInput_1 = def_tSalesforceInput_1
+								props_tSalesforceInput_12,
+								topology_tSalesforceInput_12);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceInput_12 = def_tSalesforceInput_12
 						.getSupportedConnectorTopologies();
 
-				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceInput_1 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
-						.forName(runtime_info_tSalesforceInput_1
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceInput_12 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceInput_12
 								.getRuntimeClassName()).newInstance());
-				org.talend.daikon.properties.ValidationResult initVr_tSalesforceInput_1 = componentRuntime_tSalesforceInput_1
-						.initialize(container_tSalesforceInput_1,
-								props_tSalesforceInput_1);
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceInput_12 = componentRuntime_tSalesforceInput_12
+						.initialize(container_tSalesforceInput_12,
+								props_tSalesforceInput_12);
 
-				if (initVr_tSalesforceInput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+				if (initVr_tSalesforceInput_12.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
 					throw new RuntimeException(
-							initVr_tSalesforceInput_1.getMessage());
+							initVr_tSalesforceInput_12.getMessage());
 				}
 
-				if (componentRuntime_tSalesforceInput_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
-					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceInput_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceInput_1;
-					compDriverInitialization_tSalesforceInput_1
-							.runAtDriver(container_tSalesforceInput_1);
+				if (componentRuntime_tSalesforceInput_12 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceInput_12 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceInput_12;
+					compDriverInitialization_tSalesforceInput_12
+							.runAtDriver(container_tSalesforceInput_12);
 				}
 
-				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceInput_1 = null;
-				if (componentRuntime_tSalesforceInput_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
-					sourceOrSink_tSalesforceInput_1 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceInput_1;
-					org.talend.daikon.properties.ValidationResult vr_tSalesforceInput_1 = sourceOrSink_tSalesforceInput_1
-							.validate(container_tSalesforceInput_1);
-					if (vr_tSalesforceInput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceInput_12 = null;
+				if (componentRuntime_tSalesforceInput_12 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceInput_12 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceInput_12;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceInput_12 = sourceOrSink_tSalesforceInput_12
+							.validate(container_tSalesforceInput_12);
+					if (vr_tSalesforceInput_12.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
 						throw new RuntimeException(
-								vr_tSalesforceInput_1.getMessage());
+								vr_tSalesforceInput_12.getMessage());
 					}
 				}
 
-				org.talend.components.api.component.runtime.Source source_tSalesforceInput_1 = (org.talend.components.api.component.runtime.Source) sourceOrSink_tSalesforceInput_1;
-				org.talend.components.api.component.runtime.Reader reader_tSalesforceInput_1 = source_tSalesforceInput_1
-						.createReader(container_tSalesforceInput_1);
-				reader_tSalesforceInput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesReader(
-						reader_tSalesforceInput_1, container_tSalesforceInput_1);
+				org.talend.components.api.component.runtime.Source source_tSalesforceInput_12 = (org.talend.components.api.component.runtime.Source) sourceOrSink_tSalesforceInput_12;
+				org.talend.components.api.component.runtime.Reader reader_tSalesforceInput_12 = source_tSalesforceInput_12
+						.createReader(container_tSalesforceInput_12);
+				reader_tSalesforceInput_12 = new org.talend.codegen.flowvariables.runtime.FlowVariablesReader(
+						reader_tSalesforceInput_12,
+						container_tSalesforceInput_12);
 
-				boolean multi_output_is_allowed_tSalesforceInput_1 = false;
-				org.talend.components.api.component.Connector c_tSalesforceInput_1 = null;
-				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceInput_1
+				boolean multi_output_is_allowed_tSalesforceInput_12 = false;
+				org.talend.components.api.component.Connector c_tSalesforceInput_12 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceInput_12
 						.getAvailableConnectors(null, true)) {
 					if (currentConnector.getName().equals("MAIN")) {
-						c_tSalesforceInput_1 = currentConnector;
+						c_tSalesforceInput_12 = currentConnector;
 					}
 
 					if (currentConnector.getName().equals("REJECT")) {// it's
@@ -7926,238 +12047,238 @@ public class LOAD_EmailMessage implements TalendJob {
 																		// code
 																		// to
 																		// javajet
-						multi_output_is_allowed_tSalesforceInput_1 = true;
+						multi_output_is_allowed_tSalesforceInput_12 = true;
 					}
 				}
-				org.apache.avro.Schema schema_tSalesforceInput_1 = props_tSalesforceInput_1
-						.getSchema(c_tSalesforceInput_1, true);
+				org.apache.avro.Schema schema_tSalesforceInput_12 = props_tSalesforceInput_12
+						.getSchema(c_tSalesforceInput_12, true);
 
-				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceInput_1 = org.talend.codegen.enforcer.EnforcerCreator
-						.createOutgoingEnforcer(schema_tSalesforceInput_1,
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceInput_12 = org.talend.codegen.enforcer.EnforcerCreator
+						.createOutgoingEnforcer(schema_tSalesforceInput_12,
 								false);
 
 				// Create a reusable factory that converts the output of the
 				// reader to an IndexedRecord.
-				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceInput_1 = null;
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceInput_12 = null;
 
 				// Iterate through the incoming data.
-				boolean available_tSalesforceInput_1 = reader_tSalesforceInput_1
+				boolean available_tSalesforceInput_12 = reader_tSalesforceInput_12
 						.start();
 
-				resourceMap.put("reader_tSalesforceInput_1",
-						reader_tSalesforceInput_1);
+				resourceMap.put("reader_tSalesforceInput_12",
+						reader_tSalesforceInput_12);
 
-				for (; available_tSalesforceInput_1; available_tSalesforceInput_1 = reader_tSalesforceInput_1
+				for (; available_tSalesforceInput_12; available_tSalesforceInput_12 = reader_tSalesforceInput_12
 						.advance()) {
-					nb_line_tSalesforceInput_1++;
+					nb_line_tSalesforceInput_12++;
 
-					if (multi_output_is_allowed_tSalesforceInput_1) {
-						row222 = null;
+					if (multi_output_is_allowed_tSalesforceInput_12) {
+						row26 = null;
 
 					}
 
 					try {
-						Object data_tSalesforceInput_1 = reader_tSalesforceInput_1
+						Object data_tSalesforceInput_12 = reader_tSalesforceInput_12
 								.getCurrent();
 
-						if (multi_output_is_allowed_tSalesforceInput_1) {
-							row222 = new row222Struct();
+						if (multi_output_is_allowed_tSalesforceInput_12) {
+							row26 = new row26Struct();
 						}
 
 						// Construct the factory once when the first data
 						// arrives.
-						if (factory_tSalesforceInput_1 == null) {
-							factory_tSalesforceInput_1 = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
-									.createIndexedRecordConverter(data_tSalesforceInput_1
+						if (factory_tSalesforceInput_12 == null) {
+							factory_tSalesforceInput_12 = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(data_tSalesforceInput_12
 											.getClass());
 						}
 
 						// Enforce the outgoing schema on the input.
-						outgoingEnforcer_tSalesforceInput_1
-								.setWrapped(factory_tSalesforceInput_1
-										.convertToAvro(data_tSalesforceInput_1));
-						Object columnValue_0_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						outgoingEnforcer_tSalesforceInput_12
+								.setWrapped(factory_tSalesforceInput_12
+										.convertToAvro(data_tSalesforceInput_12));
+						Object columnValue_0_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(0);
-						row222.Id = (String) (columnValue_0_tSalesforceInput_1);
-						Object columnValue_1_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.Id = (String) (columnValue_0_tSalesforceInput_12);
+						Object columnValue_1_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(1);
-						row222.ParentId = (String) (columnValue_1_tSalesforceInput_1);
-						Object columnValue_2_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.ParentId = (String) (columnValue_1_tSalesforceInput_12);
+						Object columnValue_2_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(2);
-						row222.ActivityId = (String) (columnValue_2_tSalesforceInput_1);
-						Object columnValue_3_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.ActivityId = (String) (columnValue_2_tSalesforceInput_12);
+						Object columnValue_3_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(3);
-						row222.CreatedById = (String) (columnValue_3_tSalesforceInput_1);
-						Object columnValue_4_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.CreatedById = (String) (columnValue_3_tSalesforceInput_12);
+						Object columnValue_4_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(4);
-						row222.CreatedDate = (java.util.Date) (columnValue_4_tSalesforceInput_1);
-						Object columnValue_5_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.CreatedDate = (java.util.Date) (columnValue_4_tSalesforceInput_12);
+						Object columnValue_5_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(5);
-						row222.LastModifiedDate = (java.util.Date) (columnValue_5_tSalesforceInput_1);
-						Object columnValue_6_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.LastModifiedDate = (java.util.Date) (columnValue_5_tSalesforceInput_12);
+						Object columnValue_6_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(6);
-						row222.LastModifiedById = (String) (columnValue_6_tSalesforceInput_1);
-						Object columnValue_7_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.LastModifiedById = (String) (columnValue_6_tSalesforceInput_12);
+						Object columnValue_7_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(7);
-						row222.SystemModstamp = (java.util.Date) (columnValue_7_tSalesforceInput_1);
-						Object columnValue_8_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.SystemModstamp = (java.util.Date) (columnValue_7_tSalesforceInput_12);
+						Object columnValue_8_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(8);
-						row222.TextBody = (String) (columnValue_8_tSalesforceInput_1);
-						Object columnValue_9_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.TextBody = (String) (columnValue_8_tSalesforceInput_12);
+						Object columnValue_9_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(9);
-						row222.HtmlBody = (String) (columnValue_9_tSalesforceInput_1);
-						Object columnValue_10_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.HtmlBody = (String) (columnValue_9_tSalesforceInput_12);
+						Object columnValue_10_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(10);
-						row222.Headers = (String) (columnValue_10_tSalesforceInput_1);
-						Object columnValue_11_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.Headers = (String) (columnValue_10_tSalesforceInput_12);
+						Object columnValue_11_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(11);
-						row222.Subject = (String) (columnValue_11_tSalesforceInput_1);
-						Object columnValue_12_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.Subject = (String) (columnValue_11_tSalesforceInput_12);
+						Object columnValue_12_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(12);
-						row222.FromName = (String) (columnValue_12_tSalesforceInput_1);
-						Object columnValue_13_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.FromName = (String) (columnValue_12_tSalesforceInput_12);
+						Object columnValue_13_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(13);
-						row222.FromAddress = (String) (columnValue_13_tSalesforceInput_1);
-						Object columnValue_14_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.FromAddress = (String) (columnValue_13_tSalesforceInput_12);
+						Object columnValue_14_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(14);
-						row222.ValidatedFromAddress = (String) (columnValue_14_tSalesforceInput_1);
-						Object columnValue_15_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.ValidatedFromAddress = (String) (columnValue_14_tSalesforceInput_12);
+						Object columnValue_15_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(15);
-						row222.ToAddress = (String) (columnValue_15_tSalesforceInput_1);
-						Object columnValue_16_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.ToAddress = (String) (columnValue_15_tSalesforceInput_12);
+						Object columnValue_16_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(16);
-						row222.CcAddress = (String) (columnValue_16_tSalesforceInput_1);
-						Object columnValue_17_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.CcAddress = (String) (columnValue_16_tSalesforceInput_12);
+						Object columnValue_17_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(17);
-						row222.BccAddress = (String) (columnValue_17_tSalesforceInput_1);
-						Object columnValue_18_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.BccAddress = (String) (columnValue_17_tSalesforceInput_12);
+						Object columnValue_18_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(18);
-						if (columnValue_18_tSalesforceInput_1 == null) {
-							row222.Incoming = false;
+						if (columnValue_18_tSalesforceInput_12 == null) {
+							row26.Incoming = false;
 						} else {
-							row222.Incoming = (boolean) (columnValue_18_tSalesforceInput_1);
+							row26.Incoming = (boolean) (columnValue_18_tSalesforceInput_12);
 						}
-						Object columnValue_19_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						Object columnValue_19_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(19);
-						if (columnValue_19_tSalesforceInput_1 == null) {
-							row222.HasAttachment = false;
+						if (columnValue_19_tSalesforceInput_12 == null) {
+							row26.HasAttachment = false;
 						} else {
-							row222.HasAttachment = (boolean) (columnValue_19_tSalesforceInput_1);
+							row26.HasAttachment = (boolean) (columnValue_19_tSalesforceInput_12);
 						}
-						Object columnValue_20_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						Object columnValue_20_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(20);
-						row222.Status = (String) (columnValue_20_tSalesforceInput_1);
-						Object columnValue_21_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.Status = (String) (columnValue_20_tSalesforceInput_12);
+						Object columnValue_21_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(21);
-						row222.MessageDate = (java.util.Date) (columnValue_21_tSalesforceInput_1);
-						Object columnValue_22_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.MessageDate = (java.util.Date) (columnValue_21_tSalesforceInput_12);
+						Object columnValue_22_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(22);
-						if (columnValue_22_tSalesforceInput_1 == null) {
-							row222.IsDeleted = false;
+						if (columnValue_22_tSalesforceInput_12 == null) {
+							row26.IsDeleted = false;
 						} else {
-							row222.IsDeleted = (boolean) (columnValue_22_tSalesforceInput_1);
+							row26.IsDeleted = (boolean) (columnValue_22_tSalesforceInput_12);
 						}
-						Object columnValue_23_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						Object columnValue_23_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(23);
-						row222.ReplyToEmailMessageId = (String) (columnValue_23_tSalesforceInput_1);
-						Object columnValue_24_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.ReplyToEmailMessageId = (String) (columnValue_23_tSalesforceInput_12);
+						Object columnValue_24_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(24);
-						if (columnValue_24_tSalesforceInput_1 == null) {
-							row222.IsExternallyVisible = false;
+						if (columnValue_24_tSalesforceInput_12 == null) {
+							row26.IsExternallyVisible = false;
 						} else {
-							row222.IsExternallyVisible = (boolean) (columnValue_24_tSalesforceInput_1);
+							row26.IsExternallyVisible = (boolean) (columnValue_24_tSalesforceInput_12);
 						}
-						Object columnValue_25_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						Object columnValue_25_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(25);
-						row222.MessageIdentifier = (String) (columnValue_25_tSalesforceInput_1);
-						Object columnValue_26_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.MessageIdentifier = (String) (columnValue_25_tSalesforceInput_12);
+						Object columnValue_26_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(26);
-						row222.ThreadIdentifier = (String) (columnValue_26_tSalesforceInput_1);
-						Object columnValue_27_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.ThreadIdentifier = (String) (columnValue_26_tSalesforceInput_12);
+						Object columnValue_27_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(27);
-						row222.RelatedToId = (String) (columnValue_27_tSalesforceInput_1);
-						Object columnValue_28_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.RelatedToId = (String) (columnValue_27_tSalesforceInput_12);
+						Object columnValue_28_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(28);
-						row222.ExternalIdSAMS__c = (String) (columnValue_28_tSalesforceInput_1);
-						Object columnValue_29_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.ExternalIdSAMS__c = (String) (columnValue_28_tSalesforceInput_12);
+						Object columnValue_29_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(29);
-						row222.Tech_UploadStatus__c = (String) (columnValue_29_tSalesforceInput_1);
-						Object columnValue_30_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+						row26.Tech_UploadStatus__c = (String) (columnValue_29_tSalesforceInput_12);
+						Object columnValue_30_tSalesforceInput_12 = outgoingEnforcer_tSalesforceInput_12
 								.get(30);
-						row222.TECH_OldEmailMessageID__c = (String) (columnValue_30_tSalesforceInput_1);
-					} catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_1) {
-						java.util.Map<String, Object> info_tSalesforceInput_1 = e_tSalesforceInput_1
+						row26.TECH_OldEmailMessageID__c = (String) (columnValue_30_tSalesforceInput_12);
+					} catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_12) {
+						java.util.Map<String, Object> info_tSalesforceInput_12 = e_tSalesforceInput_12
 								.getRejectInfo();
 						// TODO use a method instead of getting method by the
 						// special key "error/errorMessage"
-						Object errorMessage_tSalesforceInput_1 = null;
-						if (info_tSalesforceInput_1.containsKey("error")) {
-							errorMessage_tSalesforceInput_1 = info_tSalesforceInput_1
+						Object errorMessage_tSalesforceInput_12 = null;
+						if (info_tSalesforceInput_12.containsKey("error")) {
+							errorMessage_tSalesforceInput_12 = info_tSalesforceInput_12
 									.get("error");
-						} else if (info_tSalesforceInput_1
+						} else if (info_tSalesforceInput_12
 								.containsKey("errorMessage")) {
-							errorMessage_tSalesforceInput_1 = info_tSalesforceInput_1
+							errorMessage_tSalesforceInput_12 = info_tSalesforceInput_12
 									.get("errorMessage");
 						} else {
-							errorMessage_tSalesforceInput_1 = "Rejected but error message missing";
+							errorMessage_tSalesforceInput_12 = "Rejected but error message missing";
 						}
-						errorMessage_tSalesforceInput_1 = "Row "
-								+ nb_line_tSalesforceInput_1 + ": "
-								+ errorMessage_tSalesforceInput_1;
-						System.err.println(errorMessage_tSalesforceInput_1);
+						errorMessage_tSalesforceInput_12 = "Row "
+								+ nb_line_tSalesforceInput_12 + ": "
+								+ errorMessage_tSalesforceInput_12;
+						System.err.println(errorMessage_tSalesforceInput_12);
 						// If the record is reject, the main line record should
 						// put NULL
-						row222 = null;
+						row26 = null;
 					}
-					java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceInput_1 = new java.util.ArrayList<Object>();
-					java.util.Iterator outgoingMainRecordsIt_tSalesforceInput_1 = null;
+					java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceInput_12 = new java.util.ArrayList<Object>();
+					java.util.Iterator outgoingMainRecordsIt_tSalesforceInput_12 = null;
 
 					/**
-					 * [tSalesforceInput_1 begin ] stop
+					 * [tSalesforceInput_12 begin ] stop
 					 */
 
 					/**
-					 * [tSalesforceInput_1 main ] start
+					 * [tSalesforceInput_12 main ] start
 					 */
 
-					currentComponent = "tSalesforceInput_1";
+					currentComponent = "tSalesforceInput_12";
 
-					tos_count_tSalesforceInput_1++;
-
-					/**
-					 * [tSalesforceInput_1 main ] stop
-					 */
+					tos_count_tSalesforceInput_12++;
 
 					/**
-					 * [tSalesforceInput_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tSalesforceInput_1";
-
-					/**
-					 * [tSalesforceInput_1 process_data_begin ] stop
+					 * [tSalesforceInput_12 main ] stop
 					 */
 
 					/**
-					 * [tMap_5 main ] start
+					 * [tSalesforceInput_12 process_data_begin ] start
 					 */
 
-					currentComponent = "tMap_5";
+					currentComponent = "tSalesforceInput_12";
 
-					// row222
-					// row222
+					/**
+					 * [tSalesforceInput_12 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tMap_6 main ] start
+					 */
+
+					currentComponent = "tMap_6";
+
+					// row26
+					// row26
 
 					if (execStat) {
-						runStat.updateStatOnConnection("row222" + iterateId, 1,
+						runStat.updateStatOnConnection("row26" + iterateId, 1,
 								1);
 					}
 
-					boolean hasCasePrimitiveKeyWithNull_tMap_5 = false;
+					boolean hasCasePrimitiveKeyWithNull_tMap_6 = false;
 
 					// ###############################
 					// # Input tables (lookups)
-					boolean rejectedInnerJoin_tMap_5 = false;
-					boolean mainRowRejected_tMap_5 = false;
+					boolean rejectedInnerJoin_tMap_6 = false;
+					boolean mainRowRejected_tMap_6 = false;
 
 					// ###############################
 					{ // start of Var scope
@@ -8165,607 +12286,589 @@ public class LOAD_EmailMessage implements TalendJob {
 						// ###############################
 						// # Vars tables
 
-						Var__tMap_5__Struct Var = Var__tMap_5;// ###############################
+						Var__tMap_6__Struct Var = Var__tMap_6;// ###############################
 						// ###############################
 						// # Output tables
 
-						row2 = null;
+						copyOfrow2 = null;
 
-						// # Output table : 'row2'
-						row2_tmp.Id = row222.Id;
-						row2_tmp.ParentId = row222.ParentId;
-						row2_tmp.ActivityId = row222.ActivityId;
-						row2_tmp.CreatedById = row222.CreatedById;
-						row2_tmp.CreatedDate = row222.CreatedDate;
-						row2_tmp.LastModifiedDate = row222.LastModifiedDate;
-						row2_tmp.LastModifiedById = row222.LastModifiedById;
-						row2_tmp.SystemModstamp = row222.SystemModstamp;
-						row2_tmp.TextBody = row222.TextBody;
-						row2_tmp.HtmlBody = row222.HtmlBody;
-						row2_tmp.Headers = row222.Headers;
-						row2_tmp.Subject = row222.Subject;
-						row2_tmp.FromName = row222.FromName;
-						row2_tmp.FromAddress = row222.FromAddress;
-						row2_tmp.ValidatedFromAddress = row222.ValidatedFromAddress;
-						row2_tmp.ToAddress = row222.ToAddress;
-						row2_tmp.CcAddress = row222.CcAddress;
-						row2_tmp.BccAddress = row222.BccAddress;
-						row2_tmp.Incoming = row222.Incoming;
-						row2_tmp.HasAttachment = row222.HasAttachment;
-						row2_tmp.Status = row222.Status;
-						row2_tmp.MessageDate = row222.MessageDate;
-						row2_tmp.IsDeleted = row222.IsDeleted;
-						row2_tmp.ReplyToEmailMessageId = row222.ReplyToEmailMessageId;
-						row2_tmp.IsExternallyVisible = row222.IsExternallyVisible;
-						row2_tmp.MessageIdentifier = row222.MessageIdentifier;
-						row2_tmp.ThreadIdentifier = row222.ThreadIdentifier;
-						row2_tmp.RelatedToId = row222.RelatedToId;
-						row2_tmp.ExternalIdSAMS__c = row222.ExternalIdSAMS__c;
-						row2_tmp.Tech_UploadStatus__c = row222.Tech_UploadStatus__c;
-						row2_tmp.TECH_OldEmailMessageID__c = row222.TECH_OldEmailMessageID__c;
-						row2 = row2_tmp;
+						// # Output table : 'copyOfrow2'
+						copyOfrow2_tmp.Id = row26.Id;
+						copyOfrow2_tmp.ParentId = row26.ParentId;
+						copyOfrow2_tmp.ActivityId = row26.ActivityId;
+						copyOfrow2_tmp.CreatedById = row26.CreatedById;
+						copyOfrow2_tmp.CreatedDate = row26.CreatedDate;
+						copyOfrow2_tmp.LastModifiedDate = row26.LastModifiedDate;
+						copyOfrow2_tmp.LastModifiedById = row26.LastModifiedById;
+						copyOfrow2_tmp.SystemModstamp = row26.SystemModstamp;
+						copyOfrow2_tmp.TextBody = row26.TextBody;
+						copyOfrow2_tmp.HtmlBody = row26.HtmlBody;
+						copyOfrow2_tmp.Headers = row26.Headers;
+						copyOfrow2_tmp.Subject = row26.Subject;
+						copyOfrow2_tmp.FromName = row26.FromName;
+						copyOfrow2_tmp.FromAddress = row26.FromAddress;
+						copyOfrow2_tmp.ValidatedFromAddress = row26.ValidatedFromAddress;
+						copyOfrow2_tmp.ToAddress = row26.ToAddress;
+						copyOfrow2_tmp.CcAddress = row26.CcAddress;
+						copyOfrow2_tmp.BccAddress = row26.BccAddress;
+						copyOfrow2_tmp.Incoming = row26.Incoming;
+						copyOfrow2_tmp.HasAttachment = row26.HasAttachment;
+						copyOfrow2_tmp.Status = row26.Status;
+						copyOfrow2_tmp.MessageDate = row26.MessageDate;
+						copyOfrow2_tmp.IsDeleted = row26.IsDeleted;
+						copyOfrow2_tmp.ReplyToEmailMessageId = row26.ReplyToEmailMessageId;
+						copyOfrow2_tmp.IsExternallyVisible = row26.IsExternallyVisible;
+						copyOfrow2_tmp.MessageIdentifier = row26.MessageIdentifier;
+						copyOfrow2_tmp.ThreadIdentifier = row26.ThreadIdentifier;
+						copyOfrow2_tmp.RelatedToId = row26.RelatedToId;
+						copyOfrow2_tmp.ExternalIdSAMS__c = row26.ExternalIdSAMS__c;
+						copyOfrow2_tmp.Tech_UploadStatus__c = row26.Tech_UploadStatus__c;
+						copyOfrow2_tmp.TECH_OldEmailMessageID__c = row26.TECH_OldEmailMessageID__c;
+						copyOfrow2 = copyOfrow2_tmp;
 						// ###############################
 
 					} // end of Var scope
 
-					rejectedInnerJoin_tMap_5 = false;
+					rejectedInnerJoin_tMap_6 = false;
 
-					tos_count_tMap_5++;
+					tos_count_tMap_6++;
 
 					/**
-					 * [tMap_5 main ] stop
+					 * [tMap_6 main ] stop
 					 */
 
 					/**
-					 * [tMap_5 process_data_begin ] start
+					 * [tMap_6 process_data_begin ] start
 					 */
 
-					currentComponent = "tMap_5";
+					currentComponent = "tMap_6";
 
 					/**
-					 * [tMap_5 process_data_begin ] stop
+					 * [tMap_6 process_data_begin ] stop
 					 */
-					// Start of branch "row2"
-					if (row2 != null) {
-						row25 = null;
+					// Start of branch "copyOfrow2"
+					if (copyOfrow2 != null) {
+						row46 = null;
 
 						/**
-						 * [tMap_1 main ] start
+						 * [tMap_7 main ] start
 						 */
 
-						currentComponent = "tMap_1";
+						currentComponent = "tMap_7";
 
-						// row2
-						// row2
+						// copyOfrow2
+						// copyOfrow2
 
 						if (execStat) {
-							runStat.updateStatOnConnection("row2" + iterateId,
-									1, 1);
+							runStat.updateStatOnConnection("copyOfrow2"
+									+ iterateId, 1, 1);
 						}
 
-						boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
+						boolean hasCasePrimitiveKeyWithNull_tMap_7 = false;
 
 						// ###############################
 						// # Input tables (lookups)
-						boolean rejectedInnerJoin_tMap_1 = false;
-						boolean mainRowRejected_tMap_1 = false;
+						boolean rejectedInnerJoin_tMap_7 = false;
+						boolean mainRowRejected_tMap_7 = false;
 
 						// /////////////////////////////////////////////
-						// Starting Lookup Table "CreatedBy"
+						// Starting Lookup Table "row28"
 						// /////////////////////////////////////////////
 
-						boolean forceLoopCreatedBy = false;
+						boolean forceLooprow28 = false;
 
-						CreatedByStruct CreatedByObjectFromLookup = null;
+						row28Struct row28ObjectFromLookup = null;
 
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
 
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
 
-							CreatedByHashKey.ExternalIdSplit__c = row2.CreatedById;
+							row28HashKey.ExternalIdSplit__c = copyOfrow2.CreatedById;
 
-							CreatedByHashKey.hashCodeDirty = true;
+							row28HashKey.hashCodeDirty = true;
 
-							tHash_Lookup_CreatedBy.lookup(CreatedByHashKey);
+							tHash_Lookup_row28.lookup(row28HashKey);
 
 						} // G_TM_M_020
 
-						if (tHash_Lookup_CreatedBy != null
-								&& tHash_Lookup_CreatedBy
-										.getCount(CreatedByHashKey) > 1) { // G
-																			// 071
-
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'CreatedBy' and it contains more one result from keys :  CreatedBy.ExternalIdSplit__c = '"
-							// + CreatedByHashKey.ExternalIdSplit__c + "'");
-						} // G 071
-
-						CreatedByStruct CreatedBy = null;
-
-						CreatedByStruct fromLookup_CreatedBy = null;
-						CreatedBy = CreatedByDefault;
-
-						if (tHash_Lookup_CreatedBy != null
-								&& tHash_Lookup_CreatedBy.hasNext()) { // G 099
-
-							fromLookup_CreatedBy = tHash_Lookup_CreatedBy
-									.next();
-
-						} // G 099
-
-						if (fromLookup_CreatedBy != null) {
-							CreatedBy = fromLookup_CreatedBy;
-						}
-
-						// /////////////////////////////////////////////
-						// Starting Lookup Table "ModifiedBy"
-						// /////////////////////////////////////////////
-
-						boolean forceLoopModifiedBy = false;
-
-						ModifiedByStruct ModifiedByObjectFromLookup = null;
-
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
-
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
-
-							ModifiedByHashKey.ExternalIdSplit__c = row2.LastModifiedById;
-
-							ModifiedByHashKey.hashCodeDirty = true;
-
-							tHash_Lookup_ModifiedBy.lookup(ModifiedByHashKey);
-
-						} // G_TM_M_020
-
-						if (tHash_Lookup_ModifiedBy != null
-								&& tHash_Lookup_ModifiedBy
-										.getCount(ModifiedByHashKey) > 1) { // G
-																			// 071
-
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'ModifiedBy' and it contains more one result from keys :  ModifiedBy.ExternalIdSplit__c = '"
-							// + ModifiedByHashKey.ExternalIdSplit__c + "'");
-						} // G 071
-
-						ModifiedByStruct ModifiedBy = null;
-
-						ModifiedByStruct fromLookup_ModifiedBy = null;
-						ModifiedBy = ModifiedByDefault;
-
-						if (tHash_Lookup_ModifiedBy != null
-								&& tHash_Lookup_ModifiedBy.hasNext()) { // G 099
-
-							fromLookup_ModifiedBy = tHash_Lookup_ModifiedBy
-									.next();
-
-						} // G 099
-
-						if (fromLookup_ModifiedBy != null) {
-							ModifiedBy = fromLookup_ModifiedBy;
-						}
-
-						// /////////////////////////////////////////////
-						// Starting Lookup Table "Meeting_minute"
-						// /////////////////////////////////////////////
-
-						boolean forceLoopMeeting_minute = false;
-
-						Meeting_minuteStruct Meeting_minuteObjectFromLookup = null;
-
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
-
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
-
-							Meeting_minuteHashKey.ExternalIdSplit__c = row2.RelatedToId;
-
-							Meeting_minuteHashKey.hashCodeDirty = true;
-
-							tHash_Lookup_Meeting_minute
-									.lookup(Meeting_minuteHashKey);
-
-						} // G_TM_M_020
-
-						if (tHash_Lookup_Meeting_minute != null
-								&& tHash_Lookup_Meeting_minute
-										.getCount(Meeting_minuteHashKey) > 1) { // G
-																				// 071
-
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Meeting_minute' and it contains more one result from keys :  Meeting_minute.ExternalIdSplit__c = '"
-							// + Meeting_minuteHashKey.ExternalIdSplit__c +
-							// "'");
-						} // G 071
-
-						Meeting_minuteStruct Meeting_minute = null;
-
-						Meeting_minuteStruct fromLookup_Meeting_minute = null;
-						Meeting_minute = Meeting_minuteDefault;
-
-						if (tHash_Lookup_Meeting_minute != null
-								&& tHash_Lookup_Meeting_minute.hasNext()) { // G
-																			// 099
-
-							fromLookup_Meeting_minute = tHash_Lookup_Meeting_minute
-									.next();
-
-						} // G 099
-
-						if (fromLookup_Meeting_minute != null) {
-							Meeting_minute = fromLookup_Meeting_minute;
-						}
-
-						if (!rejectedInnerJoin_tMap_1 &&
-
-						!(
-
-						!Relational.ISNULL(row2.RelatedToId)
-
-						)
-
-						) { // G 016
-
-							fromLookup_Meeting_minute = null;
-							Meeting_minute = Meeting_minuteDefault;
-
-						} // G 016
-
-						// /////////////////////////////////////////////
-						// Starting Lookup Table "Opportunity"
-						// /////////////////////////////////////////////
-
-						boolean forceLoopOpportunity = false;
-
-						OpportunityStruct OpportunityObjectFromLookup = null;
-
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
-
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
-
-							OpportunityHashKey.ExternalIdSplit__c = row2.RelatedToId;
-
-							OpportunityHashKey.hashCodeDirty = true;
-
-							tHash_Lookup_Opportunity.lookup(OpportunityHashKey);
-
-						} // G_TM_M_020
-
-						if (tHash_Lookup_Opportunity != null
-								&& tHash_Lookup_Opportunity
-										.getCount(OpportunityHashKey) > 1) { // G
-																				// 071
-
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Opportunity' and it contains more one result from keys :  Opportunity.ExternalIdSplit__c = '"
-							// + OpportunityHashKey.ExternalIdSplit__c + "'");
-						} // G 071
-
-						OpportunityStruct Opportunity = null;
-
-						OpportunityStruct fromLookup_Opportunity = null;
-						Opportunity = OpportunityDefault;
-
-						if (tHash_Lookup_Opportunity != null
-								&& tHash_Lookup_Opportunity.hasNext()) { // G
-																			// 099
-
-							fromLookup_Opportunity = tHash_Lookup_Opportunity
-									.next();
-
-						} // G 099
-
-						if (fromLookup_Opportunity != null) {
-							Opportunity = fromLookup_Opportunity;
-						}
-
-						if (!rejectedInnerJoin_tMap_1 &&
-
-						!(
-
-						!Relational.ISNULL(row2.RelatedToId)
-
-						)
-
-						) { // G 016
-
-							fromLookup_Opportunity = null;
-							Opportunity = OpportunityDefault;
-
-						} // G 016
-
-						// /////////////////////////////////////////////
-						// Starting Lookup Table "CaseParentId"
-						// /////////////////////////////////////////////
-
-						boolean forceLoopCaseParentId = false;
-
-						CaseParentIdStruct CaseParentIdObjectFromLookup = null;
-
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
-
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
-
-							CaseParentIdHashKey.ExternalIdSplit__c = row2.ParentId;
-
-							CaseParentIdHashKey.hashCodeDirty = true;
-
-							tHash_Lookup_CaseParentId
-									.lookup(CaseParentIdHashKey);
-
-						} // G_TM_M_020
-
-						if (tHash_Lookup_CaseParentId != null
-								&& tHash_Lookup_CaseParentId
-										.getCount(CaseParentIdHashKey) > 1) { // G
-																				// 071
-
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'CaseParentId' and it contains more one result from keys :  CaseParentId.ExternalIdSplit__c = '"
-							// + CaseParentIdHashKey.ExternalIdSplit__c + "'");
-						} // G 071
-
-						CaseParentIdStruct CaseParentId = null;
-
-						CaseParentIdStruct fromLookup_CaseParentId = null;
-						CaseParentId = CaseParentIdDefault;
-
-						if (tHash_Lookup_CaseParentId != null
-								&& tHash_Lookup_CaseParentId.hasNext()) { // G
-																			// 099
-
-							fromLookup_CaseParentId = tHash_Lookup_CaseParentId
-									.next();
-
-						} // G 099
-
-						if (fromLookup_CaseParentId != null) {
-							CaseParentId = fromLookup_CaseParentId;
-						}
-
-						if (!rejectedInnerJoin_tMap_1 &&
-
-						!(
-
-						!Relational.ISNULL(row2.ParentId)
-
-						)
-
-						) { // G 016
-
-							fromLookup_CaseParentId = null;
-							CaseParentId = CaseParentIdDefault;
-
-						} // G 016
-
-						// /////////////////////////////////////////////
-						// Starting Lookup Table "Project"
-						// /////////////////////////////////////////////
-
-						boolean forceLoopProject = false;
-
-						ProjectStruct ProjectObjectFromLookup = null;
-
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
-
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
-
-							ProjectHashKey.ExternalIdSplit__c = row2.RelatedToId;
-
-							ProjectHashKey.hashCodeDirty = true;
-
-							tHash_Lookup_Project.lookup(ProjectHashKey);
-
-						} // G_TM_M_020
-
-						if (tHash_Lookup_Project != null
-								&& tHash_Lookup_Project
-										.getCount(ProjectHashKey) > 1) { // G
-																			// 071
-
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Project' and it contains more one result from keys :  Project.ExternalIdSplit__c = '"
-							// + ProjectHashKey.ExternalIdSplit__c + "'");
-						} // G 071
-
-						ProjectStruct Project = null;
-
-						ProjectStruct fromLookup_Project = null;
-						Project = ProjectDefault;
-
-						if (tHash_Lookup_Project != null
-								&& tHash_Lookup_Project.hasNext()) { // G 099
-
-							fromLookup_Project = tHash_Lookup_Project.next();
-
-						} // G 099
-
-						if (fromLookup_Project != null) {
-							Project = fromLookup_Project;
-						}
-
-						if (!rejectedInnerJoin_tMap_1 &&
-
-						!(
-
-						!Relational.ISNULL(row2.RelatedToId)
-
-						)
-
-						) { // G 016
-
-							fromLookup_Project = null;
-							Project = ProjectDefault;
-
-						} // G 016
-
-						// /////////////////////////////////////////////
-						// Starting Lookup Table "Task1"
-						// /////////////////////////////////////////////
-
-						boolean forceLoopTask1 = false;
-
-						Task1Struct Task1ObjectFromLookup = null;
-
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
-
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
-
-							Task1HashKey.ExternalIdSplit__c = row2.ActivityId;
-
-							Task1HashKey.hashCodeDirty = true;
-
-							tHash_Lookup_Task1.lookup(Task1HashKey);
-
-						} // G_TM_M_020
-
-						if (tHash_Lookup_Task1 != null
-								&& tHash_Lookup_Task1.getCount(Task1HashKey) > 1) { // G
+						if (tHash_Lookup_row28 != null
+								&& tHash_Lookup_row28.getCount(row28HashKey) > 1) { // G
 																					// 071
 
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Task1' and it contains more one result from keys :  Task1.ExternalIdSplit__c = '"
-							// + Task1HashKey.ExternalIdSplit__c + "'");
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row28' and it contains more one result from keys :  row28.ExternalIdSplit__c = '"
+							// + row28HashKey.ExternalIdSplit__c + "'");
 						} // G 071
 
-						Task1Struct Task1 = null;
+						row28Struct row28 = null;
 
-						Task1Struct fromLookup_Task1 = null;
-						Task1 = Task1Default;
+						row28Struct fromLookup_row28 = null;
+						row28 = row28Default;
 
-						if (tHash_Lookup_Task1 != null
-								&& tHash_Lookup_Task1.hasNext()) { // G 099
+						if (tHash_Lookup_row28 != null
+								&& tHash_Lookup_row28.hasNext()) { // G 099
 
-							fromLookup_Task1 = tHash_Lookup_Task1.next();
+							fromLookup_row28 = tHash_Lookup_row28.next();
 
 						} // G 099
 
-						if (fromLookup_Task1 != null) {
-							Task1 = fromLookup_Task1;
+						if (fromLookup_row28 != null) {
+							row28 = fromLookup_row28;
 						}
 
-						if (!rejectedInnerJoin_tMap_1 &&
-
-						!(
-
-						!Relational.ISNULL(row2.ActivityId)
-
-						)
-
-						) { // G 016
-
-							fromLookup_Task1 = null;
-							Task1 = Task1Default;
-
-						} // G 016
-
 						// /////////////////////////////////////////////
-						// Starting Lookup Table "Case"
+						// Starting Lookup Table "row33"
 						// /////////////////////////////////////////////
 
-						boolean forceLoopCase = false;
+						boolean forceLooprow33 = false;
 
-						CaseStruct CaseObjectFromLookup = null;
+						row33Struct row33ObjectFromLookup = null;
 
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
 
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
 
-							CaseHashKey.ExternalIdSplit__c = row2.RelatedToId;
+							row33HashKey.ExternalIdSplit__c = copyOfrow2.LastModifiedById;
 
-							CaseHashKey.hashCodeDirty = true;
+							row33HashKey.hashCodeDirty = true;
 
-							tHash_Lookup_Case.lookup(CaseHashKey);
+							tHash_Lookup_row33.lookup(row33HashKey);
 
 						} // G_TM_M_020
 
-						if (tHash_Lookup_Case != null
-								&& tHash_Lookup_Case.getCount(CaseHashKey) > 1) { // G
+						if (tHash_Lookup_row33 != null
+								&& tHash_Lookup_row33.getCount(row33HashKey) > 1) { // G
 																					// 071
 
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Case' and it contains more one result from keys :  Case.ExternalIdSplit__c = '"
-							// + CaseHashKey.ExternalIdSplit__c + "'");
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row33' and it contains more one result from keys :  row33.ExternalIdSplit__c = '"
+							// + row33HashKey.ExternalIdSplit__c + "'");
 						} // G 071
 
-						CaseStruct Case = null;
+						row33Struct row33 = null;
 
-						CaseStruct fromLookup_Case = null;
-						Case = CaseDefault;
+						row33Struct fromLookup_row33 = null;
+						row33 = row33Default;
 
-						if (tHash_Lookup_Case != null
-								&& tHash_Lookup_Case.hasNext()) { // G 099
+						if (tHash_Lookup_row33 != null
+								&& tHash_Lookup_row33.hasNext()) { // G 099
 
-							fromLookup_Case = tHash_Lookup_Case.next();
+							fromLookup_row33 = tHash_Lookup_row33.next();
 
 						} // G 099
 
-						if (fromLookup_Case != null) {
-							Case = fromLookup_Case;
+						if (fromLookup_row33 != null) {
+							row33 = fromLookup_row33;
 						}
 
-						if (!rejectedInnerJoin_tMap_1 &&
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "row35"
+						// /////////////////////////////////////////////
+
+						boolean forceLooprow35 = false;
+
+						row35Struct row35ObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
+
+							row35HashKey.ExternalIdSplit__c = copyOfrow2.RelatedToId;
+
+							row35HashKey.hashCodeDirty = true;
+
+							tHash_Lookup_row35.lookup(row35HashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_row35 != null
+								&& tHash_Lookup_row35.getCount(row35HashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row35' and it contains more one result from keys :  row35.ExternalIdSplit__c = '"
+							// + row35HashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						row35Struct row35 = null;
+
+						row35Struct fromLookup_row35 = null;
+						row35 = row35Default;
+
+						if (tHash_Lookup_row35 != null
+								&& tHash_Lookup_row35.hasNext()) { // G 099
+
+							fromLookup_row35 = tHash_Lookup_row35.next();
+
+						} // G 099
+
+						if (fromLookup_row35 != null) {
+							row35 = fromLookup_row35;
+						}
+
+						if (!rejectedInnerJoin_tMap_7 &&
 
 						!(
 
-						!Relational.ISNULL(row2.RelatedToId)
+						!Relational.ISNULL(copyOfrow2.RelatedToId)
 
 						)
 
 						) { // G 016
 
-							fromLookup_Case = null;
-							Case = CaseDefault;
+							fromLookup_row35 = null;
+							row35 = row35Default;
 
 						} // G 016
 
 						// /////////////////////////////////////////////
-						// Starting Lookup Table "Contract"
+						// Starting Lookup Table "row42"
 						// /////////////////////////////////////////////
 
-						boolean forceLoopContract = false;
+						boolean forceLooprow42 = false;
 
-						ContractStruct ContractObjectFromLookup = null;
+						row42Struct row42ObjectFromLookup = null;
 
-						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
 
-							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
 
-							ContractHashKey.ExternalIdSplit__c = row2.RelatedToId;
+							row42HashKey.ExternalIdSplit__c = copyOfrow2.RelatedToId;
 
-							ContractHashKey.hashCodeDirty = true;
+							row42HashKey.hashCodeDirty = true;
 
-							tHash_Lookup_Contract.lookup(ContractHashKey);
+							tHash_Lookup_row42.lookup(row42HashKey);
 
 						} // G_TM_M_020
 
-						if (tHash_Lookup_Contract != null
-								&& tHash_Lookup_Contract
-										.getCount(ContractHashKey) > 1) { // G
-																			// 071
+						if (tHash_Lookup_row42 != null
+								&& tHash_Lookup_row42.getCount(row42HashKey) > 1) { // G
+																					// 071
 
-							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Contract' and it contains more one result from keys :  Contract.ExternalIdSplit__c = '"
-							// + ContractHashKey.ExternalIdSplit__c + "'");
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row42' and it contains more one result from keys :  row42.ExternalIdSplit__c = '"
+							// + row42HashKey.ExternalIdSplit__c + "'");
 						} // G 071
 
-						ContractStruct Contract = null;
+						row42Struct row42 = null;
 
-						ContractStruct fromLookup_Contract = null;
-						Contract = ContractDefault;
+						row42Struct fromLookup_row42 = null;
+						row42 = row42Default;
 
-						if (tHash_Lookup_Contract != null
-								&& tHash_Lookup_Contract.hasNext()) { // G 099
+						if (tHash_Lookup_row42 != null
+								&& tHash_Lookup_row42.hasNext()) { // G 099
 
-							fromLookup_Contract = tHash_Lookup_Contract.next();
+							fromLookup_row42 = tHash_Lookup_row42.next();
 
 						} // G 099
 
-						if (fromLookup_Contract != null) {
-							Contract = fromLookup_Contract;
+						if (fromLookup_row42 != null) {
+							row42 = fromLookup_row42;
 						}
 
-						if (!rejectedInnerJoin_tMap_1 &&
+						if (!rejectedInnerJoin_tMap_7 &&
 
 						!(
 
-						!Relational.ISNULL(row2.RelatedToId)
+						!Relational.ISNULL(copyOfrow2.RelatedToId)
 
 						)
 
 						) { // G 016
 
-							fromLookup_Contract = null;
-							Contract = ContractDefault;
+							fromLookup_row42 = null;
+							row42 = row42Default;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "row40"
+						// /////////////////////////////////////////////
+
+						boolean forceLooprow40 = false;
+
+						row40Struct row40ObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
+
+							row40HashKey.ExternalIdSplit__c = copyOfrow2.ParentId;
+
+							row40HashKey.hashCodeDirty = true;
+
+							tHash_Lookup_row40.lookup(row40HashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_row40 != null
+								&& tHash_Lookup_row40.getCount(row40HashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row40' and it contains more one result from keys :  row40.ExternalIdSplit__c = '"
+							// + row40HashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						row40Struct row40 = null;
+
+						row40Struct fromLookup_row40 = null;
+						row40 = row40Default;
+
+						if (tHash_Lookup_row40 != null
+								&& tHash_Lookup_row40.hasNext()) { // G 099
+
+							fromLookup_row40 = tHash_Lookup_row40.next();
+
+						} // G 099
+
+						if (fromLookup_row40 != null) {
+							row40 = fromLookup_row40;
+						}
+
+						if (!rejectedInnerJoin_tMap_7 &&
+
+						!(
+
+						!Relational.ISNULL(copyOfrow2.ParentId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_row40 = null;
+							row40 = row40Default;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "row43"
+						// /////////////////////////////////////////////
+
+						boolean forceLooprow43 = false;
+
+						row43Struct row43ObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
+
+							row43HashKey.ExternalIdSplit__c = copyOfrow2.RelatedToId;
+
+							row43HashKey.hashCodeDirty = true;
+
+							tHash_Lookup_row43.lookup(row43HashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_row43 != null
+								&& tHash_Lookup_row43.getCount(row43HashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row43' and it contains more one result from keys :  row43.ExternalIdSplit__c = '"
+							// + row43HashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						row43Struct row43 = null;
+
+						row43Struct fromLookup_row43 = null;
+						row43 = row43Default;
+
+						if (tHash_Lookup_row43 != null
+								&& tHash_Lookup_row43.hasNext()) { // G 099
+
+							fromLookup_row43 = tHash_Lookup_row43.next();
+
+						} // G 099
+
+						if (fromLookup_row43 != null) {
+							row43 = fromLookup_row43;
+						}
+
+						if (!rejectedInnerJoin_tMap_7 &&
+
+						!(
+
+						!Relational.ISNULL(copyOfrow2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_row43 = null;
+							row43 = row43Default;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "row39"
+						// /////////////////////////////////////////////
+
+						boolean forceLooprow39 = false;
+
+						row39Struct row39ObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
+
+							row39HashKey.ExternalIdSplit__c = copyOfrow2.ActivityId;
+
+							row39HashKey.hashCodeDirty = true;
+
+							tHash_Lookup_row39.lookup(row39HashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_row39 != null
+								&& tHash_Lookup_row39.getCount(row39HashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row39' and it contains more one result from keys :  row39.ExternalIdSplit__c = '"
+							// + row39HashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						row39Struct row39 = null;
+
+						row39Struct fromLookup_row39 = null;
+						row39 = row39Default;
+
+						if (tHash_Lookup_row39 != null
+								&& tHash_Lookup_row39.hasNext()) { // G 099
+
+							fromLookup_row39 = tHash_Lookup_row39.next();
+
+						} // G 099
+
+						if (fromLookup_row39 != null) {
+							row39 = fromLookup_row39;
+						}
+
+						if (!rejectedInnerJoin_tMap_7 &&
+
+						!(
+
+						!Relational.ISNULL(copyOfrow2.ActivityId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_row39 = null;
+							row39 = row39Default;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "row41"
+						// /////////////////////////////////////////////
+
+						boolean forceLooprow41 = false;
+
+						row41Struct row41ObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
+
+							row41HashKey.ExternalIdSplit__c = copyOfrow2.RelatedToId;
+
+							row41HashKey.hashCodeDirty = true;
+
+							tHash_Lookup_row41.lookup(row41HashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_row41 != null
+								&& tHash_Lookup_row41.getCount(row41HashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row41' and it contains more one result from keys :  row41.ExternalIdSplit__c = '"
+							// + row41HashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						row41Struct row41 = null;
+
+						row41Struct fromLookup_row41 = null;
+						row41 = row41Default;
+
+						if (tHash_Lookup_row41 != null
+								&& tHash_Lookup_row41.hasNext()) { // G 099
+
+							fromLookup_row41 = tHash_Lookup_row41.next();
+
+						} // G 099
+
+						if (fromLookup_row41 != null) {
+							row41 = fromLookup_row41;
+						}
+
+						if (!rejectedInnerJoin_tMap_7 &&
+
+						!(
+
+						!Relational.ISNULL(copyOfrow2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_row41 = null;
+							row41 = row41Default;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "row44"
+						// /////////////////////////////////////////////
+
+						boolean forceLooprow44 = false;
+
+						row44Struct row44ObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_7) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_7 = false;
+
+							row44HashKey.ExternalIdSplit__c = copyOfrow2.RelatedToId;
+
+							row44HashKey.hashCodeDirty = true;
+
+							tHash_Lookup_row44.lookup(row44HashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_row44 != null
+								&& tHash_Lookup_row44.getCount(row44HashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row44' and it contains more one result from keys :  row44.ExternalIdSplit__c = '"
+							// + row44HashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						row44Struct row44 = null;
+
+						row44Struct fromLookup_row44 = null;
+						row44 = row44Default;
+
+						if (tHash_Lookup_row44 != null
+								&& tHash_Lookup_row44.hasNext()) { // G 099
+
+							fromLookup_row44 = tHash_Lookup_row44.next();
+
+						} // G 099
+
+						if (fromLookup_row44 != null) {
+							row44 = fromLookup_row44;
+						}
+
+						if (!rejectedInnerJoin_tMap_7 &&
+
+						!(
+
+						!Relational.ISNULL(copyOfrow2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_row44 = null;
+							row44 = row44Default;
 
 						} // G 016
 
@@ -8775,962 +12878,978 @@ public class LOAD_EmailMessage implements TalendJob {
 							// ###############################
 							// # Vars tables
 
-							Var__tMap_1__Struct Var = Var__tMap_1;
-							Var.RelatedToId = !Relational
-									.ISNULL(Meeting_minute.Id) ? Meeting_minute.Id
-									: !Relational.ISNULL(Opportunity.Id) ? Opportunity.Id
-											: !Relational.ISNULL(Project.Id) ? Project.Id
+							Var__tMap_7__Struct Var = Var__tMap_7;
+							Var.RelatedToId = !Relational.ISNULL(row35.Id) ? row35.Id
+									: !Relational.ISNULL(row42.Id) ? row42.Id
+											: !Relational.ISNULL(row43.Id) ? row43.Id
 													: !Relational
-															.ISNULL(Case.Id) ? Case.Id
+															.ISNULL(row41.Id) ? row41.Id
 															: !Relational
-																	.ISNULL(Contract.Id) ? Contract.Id
-																	: "";
-							Var.Status = row2.HasAttachment ? "5" : row2.Status;
-							Var.var1 = Relational.ISNULL(row2.ParentId) ? "5001j000003gU5BAAU"
-									: CaseParentId.Id;// ###############################
+																	.ISNULL(row44.Id) ? row44.Id
+																	: null;
+							Var.Status = copyOfrow2.HasAttachment ? "5"
+									: copyOfrow2.Status;
+							Var.var1 = Relational.ISNULL(copyOfrow2.ParentId) ? "5001j0000040aJUAAY"
+									: row40.Id;
+							Var.var2 = Relational.ISNULL(copyOfrow2.ActivityId) ? null
+									: row39.Id;// ###############################
 							// ###############################
 							// # Output tables
 
-							EmailMessage = null;
+							copyOfEmailMessage_0 = null;
 
-							// # Output table : 'EmailMessage'
-							EmailMessage_tmp.ParentId = Var.var1;
-							EmailMessage_tmp.ActivityId = Task1.Id;
-							EmailMessage_tmp.CreatedById = CreatedBy.Id;
-							EmailMessage_tmp.CreatedDate = row2.CreatedDate;
-							EmailMessage_tmp.LastModifiedDate = row2.LastModifiedDate;
-							EmailMessage_tmp.LastModifiedById = ModifiedBy.Id;
-							EmailMessage_tmp.TextBody = row2.TextBody;
-							EmailMessage_tmp.HtmlBody = row2.HtmlBody.length() < 131072 ? row2.HtmlBody
-									: row2.HtmlBody.substring(0, 131071);
-							EmailMessage_tmp.Subject = row2.Subject;
-							EmailMessage_tmp.FromName = row2.FromName;
-							EmailMessage_tmp.FromAddress = row2.FromAddress;
-							EmailMessage_tmp.ToAddress = row2.ToAddress;
-							EmailMessage_tmp.CcAddress = row2.CcAddress;
-							EmailMessage_tmp.BccAddress = row2.BccAddress;
-							EmailMessage_tmp.Incoming = row2.Incoming;
-							EmailMessage_tmp.Status = Var.Status;
-							EmailMessage_tmp.MessageDate = row2.MessageDate;
-							EmailMessage_tmp.RelatedToId = Var.RelatedToId;
-							EmailMessage_tmp.ExternalIdSplit__c = row2.Id;
-							EmailMessage = EmailMessage_tmp;
+							// # Output table : 'copyOfEmailMessage_0'
+							copyOfEmailMessage_0_tmp.ParentId = Var.var1;
+							copyOfEmailMessage_0_tmp.ActivityId = Var.var2;
+							copyOfEmailMessage_0_tmp.CreatedById = row28.Id;
+							copyOfEmailMessage_0_tmp.CreatedDate = copyOfrow2.CreatedDate;
+							copyOfEmailMessage_0_tmp.LastModifiedDate = copyOfrow2.LastModifiedDate;
+							copyOfEmailMessage_0_tmp.LastModifiedById = row33.Id;
+							copyOfEmailMessage_0_tmp.TextBody = copyOfrow2.TextBody;
+							copyOfEmailMessage_0_tmp.HtmlBody = copyOfrow2.HtmlBody
+									.length() < 131072 ? copyOfrow2.HtmlBody
+									: copyOfrow2.HtmlBody.substring(0, 131071);
+							copyOfEmailMessage_0_tmp.Subject = copyOfrow2.Subject;
+							copyOfEmailMessage_0_tmp.FromName = copyOfrow2.FromName;
+							copyOfEmailMessage_0_tmp.FromAddress = copyOfrow2.FromAddress;
+							copyOfEmailMessage_0_tmp.ToAddress = copyOfrow2.ToAddress;
+							copyOfEmailMessage_0_tmp.CcAddress = copyOfrow2.CcAddress;
+							copyOfEmailMessage_0_tmp.BccAddress = copyOfrow2.BccAddress;
+							copyOfEmailMessage_0_tmp.Incoming = copyOfrow2.Incoming;
+							copyOfEmailMessage_0_tmp.Status = Var.Status;
+							copyOfEmailMessage_0_tmp.MessageDate = copyOfrow2.MessageDate;
+							copyOfEmailMessage_0_tmp.RelatedToId = Relational
+									.ISNULL(copyOfrow2.RelatedToId) ? null
+									: Var.RelatedToId;
+							copyOfEmailMessage_0_tmp.ExternalIdSplit__c = copyOfrow2.Id;
+							copyOfEmailMessage_0 = copyOfEmailMessage_0_tmp;
 							// ###############################
 
 						} // end of Var scope
 
-						rejectedInnerJoin_tMap_1 = false;
+						rejectedInnerJoin_tMap_7 = false;
 
-						tos_count_tMap_1++;
+						tos_count_tMap_7++;
 
 						/**
-						 * [tMap_1 main ] stop
+						 * [tMap_7 main ] stop
 						 */
 
 						/**
-						 * [tMap_1 process_data_begin ] start
+						 * [tMap_7 process_data_begin ] start
 						 */
 
-						currentComponent = "tMap_1";
+						currentComponent = "tMap_7";
 
 						/**
-						 * [tMap_1 process_data_begin ] stop
+						 * [tMap_7 process_data_begin ] stop
 						 */
-						// Start of branch "EmailMessage"
-						if (EmailMessage != null) {
-							row25 = null;
+						// Start of branch "copyOfEmailMessage_0"
+						if (copyOfEmailMessage_0 != null) {
+							row46 = null;
 
 							/**
-							 * [tSalesforceOutput_1 main ] start
+							 * [tSalesforceOutput_3 main ] start
 							 */
 
-							currentComponent = "tSalesforceOutput_1";
+							currentComponent = "tSalesforceOutput_3";
 
-							// EmailMessage
-							// EmailMessage
+							// copyOfEmailMessage_0
+							// copyOfEmailMessage_0
 
 							if (execStat) {
-								runStat.updateStatOnConnection("EmailMessage"
-										+ iterateId, 1, 1);
+								runStat.updateStatOnConnection(
+										"copyOfEmailMessage_0" + iterateId, 1,
+										1);
 							}
 
-							incomingEnforcer_tSalesforceOutput_1
+							incomingEnforcer_tSalesforceOutput_3
 									.createNewRecord();
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("ParentId") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"ParentId", EmailMessage.ParentId);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"ParentId",
+										copyOfEmailMessage_0.ParentId);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("ActivityId") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"ActivityId", EmailMessage.ActivityId);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"ActivityId",
+										copyOfEmailMessage_0.ActivityId);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("CreatedById") != null) {
-								incomingEnforcer_tSalesforceOutput_1
-										.put("CreatedById",
-												EmailMessage.CreatedById);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"CreatedById",
+										copyOfEmailMessage_0.CreatedById);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("CreatedDate") != null) {
-								incomingEnforcer_tSalesforceOutput_1
-										.put("CreatedDate",
-												EmailMessage.CreatedDate);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"CreatedDate",
+										copyOfEmailMessage_0.CreatedDate);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField(
 											"LastModifiedDate") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
+								incomingEnforcer_tSalesforceOutput_3.put(
 										"LastModifiedDate",
-										EmailMessage.LastModifiedDate);
+										copyOfEmailMessage_0.LastModifiedDate);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField(
 											"LastModifiedById") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
+								incomingEnforcer_tSalesforceOutput_3.put(
 										"LastModifiedById",
-										EmailMessage.LastModifiedById);
+										copyOfEmailMessage_0.LastModifiedById);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("TextBody") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"TextBody", EmailMessage.TextBody);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"TextBody",
+										copyOfEmailMessage_0.TextBody);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("HtmlBody") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"HtmlBody", EmailMessage.HtmlBody);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"HtmlBody",
+										copyOfEmailMessage_0.HtmlBody);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("Subject") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"Subject", EmailMessage.Subject);
+								incomingEnforcer_tSalesforceOutput_3
+										.put("Subject",
+												copyOfEmailMessage_0.Subject);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("FromName") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"FromName", EmailMessage.FromName);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"FromName",
+										copyOfEmailMessage_0.FromName);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("FromAddress") != null) {
-								incomingEnforcer_tSalesforceOutput_1
-										.put("FromAddress",
-												EmailMessage.FromAddress);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"FromAddress",
+										copyOfEmailMessage_0.FromAddress);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("ToAddress") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"ToAddress", EmailMessage.ToAddress);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"ToAddress",
+										copyOfEmailMessage_0.ToAddress);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("CcAddress") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"CcAddress", EmailMessage.CcAddress);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"CcAddress",
+										copyOfEmailMessage_0.CcAddress);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("BccAddress") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"BccAddress", EmailMessage.BccAddress);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"BccAddress",
+										copyOfEmailMessage_0.BccAddress);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("Incoming") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"Incoming", EmailMessage.Incoming);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"Incoming",
+										copyOfEmailMessage_0.Incoming);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("Status") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"Status", EmailMessage.Status);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"Status", copyOfEmailMessage_0.Status);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("MessageDate") != null) {
-								incomingEnforcer_tSalesforceOutput_1
-										.put("MessageDate",
-												EmailMessage.MessageDate);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"MessageDate",
+										copyOfEmailMessage_0.MessageDate);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField("RelatedToId") != null) {
-								incomingEnforcer_tSalesforceOutput_1
-										.put("RelatedToId",
-												EmailMessage.RelatedToId);
+								incomingEnforcer_tSalesforceOutput_3.put(
+										"RelatedToId",
+										copyOfEmailMessage_0.RelatedToId);
 							}
 							// skip the put action if the input column doesn't
 							// appear in component runtime schema
-							if (incomingEnforcer_tSalesforceOutput_1
+							if (incomingEnforcer_tSalesforceOutput_3
 									.getRuntimeSchema().getField(
 											"ExternalIdSplit__c") != null) {
-								incomingEnforcer_tSalesforceOutput_1.put(
-										"ExternalIdSplit__c",
-										EmailMessage.ExternalIdSplit__c);
+								incomingEnforcer_tSalesforceOutput_3
+										.put("ExternalIdSplit__c",
+												copyOfEmailMessage_0.ExternalIdSplit__c);
 							}
-							org.apache.avro.generic.IndexedRecord data_tSalesforceOutput_1 = incomingEnforcer_tSalesforceOutput_1
+							org.apache.avro.generic.IndexedRecord data_tSalesforceOutput_3 = incomingEnforcer_tSalesforceOutput_3
 									.getCurrentRecord();
 
-							writer_tSalesforceOutput_1
-									.write(data_tSalesforceOutput_1);
+							writer_tSalesforceOutput_3
+									.write(data_tSalesforceOutput_3);
 
-							nb_line_tSalesforceOutput_1++;
-							if (!(writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback)) {
+							nb_line_tSalesforceOutput_3++;
+							if (!(writer_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.WriterWithFeedback)) {
 								// For no feedback writer,just pass the input
 								// record to the output
-								if (data_tSalesforceOutput_1 != null) {
-									outgoingMainRecordsList_tSalesforceOutput_1 = java.util.Arrays
-											.asList(data_tSalesforceOutput_1);
+								if (data_tSalesforceOutput_3 != null) {
+									outgoingMainRecordsList_tSalesforceOutput_3 = java.util.Arrays
+											.asList(data_tSalesforceOutput_3);
 								}
 							}
 
-							tos_count_tSalesforceOutput_1++;
+							tos_count_tSalesforceOutput_3++;
 
 							/**
-							 * [tSalesforceOutput_1 main ] stop
+							 * [tSalesforceOutput_3 main ] stop
 							 */
 
 							/**
-							 * [tSalesforceOutput_1 process_data_begin ] start
+							 * [tSalesforceOutput_3 process_data_begin ] start
 							 */
 
-							currentComponent = "tSalesforceOutput_1";
+							currentComponent = "tSalesforceOutput_3";
 
-							row25 = null;
-							row27 = null;
-							if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
-								org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackMain_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
-								writerWithFeedbackMain_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
-										writerWithFeedbackMain_tSalesforceOutput_1,
-										container_tSalesforceOutput_1);
-								java.lang.Iterable<?> outgoingRecs_tSalesforceOutput_1 = writerWithFeedbackMain_tSalesforceOutput_1
+							row46 = null;
+							row45 = null;
+							if (writer_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+								org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackMain_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_3;
+								writerWithFeedbackMain_tSalesforceOutput_3 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+										writerWithFeedbackMain_tSalesforceOutput_3,
+										container_tSalesforceOutput_3);
+								java.lang.Iterable<?> outgoingRecs_tSalesforceOutput_3 = writerWithFeedbackMain_tSalesforceOutput_3
 										.getSuccessfulWrites();
-								java.util.Iterator outgoingMainRecords_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1
+								java.util.Iterator outgoingMainRecords_tSalesforceOutput_3 = outgoingRecs_tSalesforceOutput_3
 										.iterator();
-								Object outgoingMain_tSalesforceOutput_1 = null;
-								if (outgoingMainRecords_tSalesforceOutput_1
+								Object outgoingMain_tSalesforceOutput_3 = null;
+								if (outgoingMainRecords_tSalesforceOutput_3
 										.hasNext()) {
-									outgoingMainRecordsList_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1;
+									outgoingMainRecordsList_tSalesforceOutput_3 = outgoingRecs_tSalesforceOutput_3;
 								}
 							}
-							java.lang.Iterable<?> outgoingRejectRecordsList_tSalesforceOutput_1 = new java.util.ArrayList<Object>();
-							if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
-								org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackReject_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
-								writerWithFeedbackReject_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
-										writerWithFeedbackReject_tSalesforceOutput_1,
-										container_tSalesforceOutput_1);
-								java.lang.Iterable<?> outgoingRejectRecs_tSalesforceOutput_1 = writerWithFeedbackReject_tSalesforceOutput_1
+							java.lang.Iterable<?> outgoingRejectRecordsList_tSalesforceOutput_3 = new java.util.ArrayList<Object>();
+							if (writer_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+								org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackReject_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_3;
+								writerWithFeedbackReject_tSalesforceOutput_3 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+										writerWithFeedbackReject_tSalesforceOutput_3,
+										container_tSalesforceOutput_3);
+								java.lang.Iterable<?> outgoingRejectRecs_tSalesforceOutput_3 = writerWithFeedbackReject_tSalesforceOutput_3
 										.getRejectedWrites();
-								java.util.Iterator outgoingRejectRecords_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1
+								java.util.Iterator outgoingRejectRecords_tSalesforceOutput_3 = outgoingRejectRecs_tSalesforceOutput_3
 										.iterator();
-								if (outgoingRejectRecords_tSalesforceOutput_1
+								if (outgoingRejectRecords_tSalesforceOutput_3
 										.hasNext()) {
-									outgoingRejectRecordsList_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1;
+									outgoingRejectRecordsList_tSalesforceOutput_3 = outgoingRejectRecs_tSalesforceOutput_3;
 								}
 							}
-							outgoingMainRecordsIt_tSalesforceOutput_1 = outgoingMainRecordsList_tSalesforceOutput_1
+							outgoingMainRecordsIt_tSalesforceOutput_3 = outgoingMainRecordsList_tSalesforceOutput_3
 									.iterator();
-							java.util.Iterator outgoingRejectRecordsIt_tSalesforceOutput_1 = outgoingRejectRecordsList_tSalesforceOutput_1
+							java.util.Iterator outgoingRejectRecordsIt_tSalesforceOutput_3 = outgoingRejectRecordsList_tSalesforceOutput_3
 									.iterator();
-							while (outgoingMainRecordsIt_tSalesforceOutput_1
+							while (outgoingMainRecordsIt_tSalesforceOutput_3
 									.hasNext()
-									|| outgoingRejectRecordsIt_tSalesforceOutput_1
+									|| outgoingRejectRecordsIt_tSalesforceOutput_3
 											.hasNext()) { // Start of data
 															// processing while
 															// block
 
-								if (outgoingMainRecordsIt_tSalesforceOutput_1
+								if (outgoingMainRecordsIt_tSalesforceOutput_3
 										.hasNext()) {
-									row27 = new row27Struct();
-									Object outgoingMain_tSalesforceOutput_1 = outgoingMainRecordsIt_tSalesforceOutput_1
+									row45 = new row45Struct();
+									Object outgoingMain_tSalesforceOutput_3 = outgoingMainRecordsIt_tSalesforceOutput_3
 											.next();
 
 									// Construct the factory once when the first
 									// data arrives.
-									if (factory_tSalesforceOutput_1OutMain == null) {
-										factory_tSalesforceOutput_1OutMain = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
-												.createIndexedRecordConverter(outgoingMain_tSalesforceOutput_1
+									if (factory_tSalesforceOutput_3OutMain == null) {
+										factory_tSalesforceOutput_3OutMain = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+												.createIndexedRecordConverter(outgoingMain_tSalesforceOutput_3
 														.getClass());
 									}
 
 									// Enforce the outgoing schema on the input.
-									outgoingEnforcer_tSalesforceOutput_1OutMain
-											.setWrapped(factory_tSalesforceOutput_1OutMain
-													.convertToAvro(outgoingMain_tSalesforceOutput_1));
-									Object columnValue_0_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									outgoingEnforcer_tSalesforceOutput_3OutMain
+											.setWrapped(factory_tSalesforceOutput_3OutMain
+													.convertToAvro(outgoingMain_tSalesforceOutput_3));
+									Object columnValue_0_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(0);
-									row27.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutMain);
-									Object columnValue_1_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.ParentId = (String) (columnValue_0_tSalesforceOutput_3OutMain);
+									Object columnValue_1_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(1);
-									row27.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutMain);
-									Object columnValue_2_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.ActivityId = (String) (columnValue_1_tSalesforceOutput_3OutMain);
+									Object columnValue_2_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(2);
-									row27.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutMain);
-									Object columnValue_3_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.CreatedById = (String) (columnValue_2_tSalesforceOutput_3OutMain);
+									Object columnValue_3_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(3);
-									row27.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutMain);
-									Object columnValue_4_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_3OutMain);
+									Object columnValue_4_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(4);
-									row27.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutMain);
-									Object columnValue_5_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_3OutMain);
+									Object columnValue_5_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(5);
-									row27.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutMain);
-									Object columnValue_6_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_3OutMain);
+									Object columnValue_6_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(6);
-									row27.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutMain);
-									Object columnValue_7_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.TextBody = (String) (columnValue_6_tSalesforceOutput_3OutMain);
+									Object columnValue_7_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(7);
-									row27.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutMain);
-									Object columnValue_8_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.HtmlBody = (String) (columnValue_7_tSalesforceOutput_3OutMain);
+									Object columnValue_8_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(8);
-									row27.Subject = (String) (columnValue_8_tSalesforceOutput_1OutMain);
-									Object columnValue_9_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.Subject = (String) (columnValue_8_tSalesforceOutput_3OutMain);
+									Object columnValue_9_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(9);
-									row27.FromName = (String) (columnValue_9_tSalesforceOutput_1OutMain);
-									Object columnValue_10_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.FromName = (String) (columnValue_9_tSalesforceOutput_3OutMain);
+									Object columnValue_10_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(10);
-									row27.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutMain);
-									Object columnValue_11_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.FromAddress = (String) (columnValue_10_tSalesforceOutput_3OutMain);
+									Object columnValue_11_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(11);
-									row27.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutMain);
-									Object columnValue_12_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.ToAddress = (String) (columnValue_11_tSalesforceOutput_3OutMain);
+									Object columnValue_12_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(12);
-									row27.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutMain);
-									Object columnValue_13_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.CcAddress = (String) (columnValue_12_tSalesforceOutput_3OutMain);
+									Object columnValue_13_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(13);
-									row27.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutMain);
-									Object columnValue_14_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.BccAddress = (String) (columnValue_13_tSalesforceOutput_3OutMain);
+									Object columnValue_14_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(14);
-									if (columnValue_14_tSalesforceOutput_1OutMain == null) {
-										row27.Incoming = false;
+									if (columnValue_14_tSalesforceOutput_3OutMain == null) {
+										row45.Incoming = false;
 									} else {
-										row27.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutMain);
+										row45.Incoming = (boolean) (columnValue_14_tSalesforceOutput_3OutMain);
 									}
-									Object columnValue_15_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									Object columnValue_15_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(15);
-									row27.Status = (String) (columnValue_15_tSalesforceOutput_1OutMain);
-									Object columnValue_16_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.Status = (String) (columnValue_15_tSalesforceOutput_3OutMain);
+									Object columnValue_16_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(16);
-									row27.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutMain);
-									Object columnValue_17_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_3OutMain);
+									Object columnValue_17_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(17);
-									row27.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutMain);
-									Object columnValue_18_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+									row45.RelatedToId = (String) (columnValue_17_tSalesforceOutput_3OutMain);
+									Object columnValue_18_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 											.get(18);
-									row27.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutMain);
+									row45.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_3OutMain);
 								} else {
-									row27 = null;
+									row45 = null;
 								}
 
-								if (outgoingRejectRecordsIt_tSalesforceOutput_1
+								if (outgoingRejectRecordsIt_tSalesforceOutput_3
 										.hasNext()) {
-									row25 = new row25Struct();
-									Object outgoingReject_tSalesforceOutput_1 = outgoingRejectRecordsIt_tSalesforceOutput_1
+									row46 = new row46Struct();
+									Object outgoingReject_tSalesforceOutput_3 = outgoingRejectRecordsIt_tSalesforceOutput_3
 											.next();
 
 									// Construct the factory once when the first
 									// data arrives.
-									if (factory_tSalesforceOutput_1OutReject == null) {
-										factory_tSalesforceOutput_1OutReject = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
-												.createIndexedRecordConverter(outgoingReject_tSalesforceOutput_1
+									if (factory_tSalesforceOutput_3OutReject == null) {
+										factory_tSalesforceOutput_3OutReject = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+												.createIndexedRecordConverter(outgoingReject_tSalesforceOutput_3
 														.getClass());
 									}
 
 									// Enforce the outgoing schema on the input.
-									outgoingEnforcer_tSalesforceOutput_1OutReject
-											.setWrapped(factory_tSalesforceOutput_1OutReject
-													.convertToAvro(outgoingReject_tSalesforceOutput_1));
-									Object columnValue_0_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									outgoingEnforcer_tSalesforceOutput_3OutReject
+											.setWrapped(factory_tSalesforceOutput_3OutReject
+													.convertToAvro(outgoingReject_tSalesforceOutput_3));
+									Object columnValue_0_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(0);
-									row25.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutReject);
-									Object columnValue_1_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.ParentId = (String) (columnValue_0_tSalesforceOutput_3OutReject);
+									Object columnValue_1_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(1);
-									row25.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutReject);
-									Object columnValue_2_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.ActivityId = (String) (columnValue_1_tSalesforceOutput_3OutReject);
+									Object columnValue_2_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(2);
-									row25.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutReject);
-									Object columnValue_3_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.CreatedById = (String) (columnValue_2_tSalesforceOutput_3OutReject);
+									Object columnValue_3_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(3);
-									row25.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutReject);
-									Object columnValue_4_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_3OutReject);
+									Object columnValue_4_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(4);
-									row25.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutReject);
-									Object columnValue_5_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_3OutReject);
+									Object columnValue_5_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(5);
-									row25.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutReject);
-									Object columnValue_6_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_3OutReject);
+									Object columnValue_6_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(6);
-									row25.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutReject);
-									Object columnValue_7_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.TextBody = (String) (columnValue_6_tSalesforceOutput_3OutReject);
+									Object columnValue_7_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(7);
-									row25.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutReject);
-									Object columnValue_8_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.HtmlBody = (String) (columnValue_7_tSalesforceOutput_3OutReject);
+									Object columnValue_8_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(8);
-									row25.Subject = (String) (columnValue_8_tSalesforceOutput_1OutReject);
-									Object columnValue_9_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.Subject = (String) (columnValue_8_tSalesforceOutput_3OutReject);
+									Object columnValue_9_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(9);
-									row25.FromName = (String) (columnValue_9_tSalesforceOutput_1OutReject);
-									Object columnValue_10_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.FromName = (String) (columnValue_9_tSalesforceOutput_3OutReject);
+									Object columnValue_10_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(10);
-									row25.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutReject);
-									Object columnValue_11_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.FromAddress = (String) (columnValue_10_tSalesforceOutput_3OutReject);
+									Object columnValue_11_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(11);
-									row25.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutReject);
-									Object columnValue_12_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.ToAddress = (String) (columnValue_11_tSalesforceOutput_3OutReject);
+									Object columnValue_12_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(12);
-									row25.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutReject);
-									Object columnValue_13_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.CcAddress = (String) (columnValue_12_tSalesforceOutput_3OutReject);
+									Object columnValue_13_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(13);
-									row25.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutReject);
-									Object columnValue_14_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.BccAddress = (String) (columnValue_13_tSalesforceOutput_3OutReject);
+									Object columnValue_14_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(14);
-									if (columnValue_14_tSalesforceOutput_1OutReject == null) {
-										row25.Incoming = false;
+									if (columnValue_14_tSalesforceOutput_3OutReject == null) {
+										row46.Incoming = false;
 									} else {
-										row25.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutReject);
+										row46.Incoming = (boolean) (columnValue_14_tSalesforceOutput_3OutReject);
 									}
-									Object columnValue_15_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									Object columnValue_15_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(15);
-									row25.Status = (String) (columnValue_15_tSalesforceOutput_1OutReject);
-									Object columnValue_16_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.Status = (String) (columnValue_15_tSalesforceOutput_3OutReject);
+									Object columnValue_16_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(16);
-									row25.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutReject);
-									Object columnValue_17_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_3OutReject);
+									Object columnValue_17_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(17);
-									row25.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutReject);
-									Object columnValue_18_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.RelatedToId = (String) (columnValue_17_tSalesforceOutput_3OutReject);
+									Object columnValue_18_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(18);
-									row25.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutReject);
-									Object columnValue_19_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_3OutReject);
+									Object columnValue_19_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(19);
-									row25.errorCode = (String) (columnValue_19_tSalesforceOutput_1OutReject);
-									Object columnValue_20_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.errorCode = (String) (columnValue_19_tSalesforceOutput_3OutReject);
+									Object columnValue_20_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(20);
-									row25.errorFields = (String) (columnValue_20_tSalesforceOutput_1OutReject);
-									Object columnValue_21_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+									row46.errorFields = (String) (columnValue_20_tSalesforceOutput_3OutReject);
+									Object columnValue_21_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 											.get(21);
-									row25.errorMessage = (String) (columnValue_21_tSalesforceOutput_1OutReject);
+									row46.errorMessage = (String) (columnValue_21_tSalesforceOutput_3OutReject);
 								} else {
-									row25 = null;
+									row46 = null;
 								}
 
 								/**
-								 * [tSalesforceOutput_1 process_data_begin ]
+								 * [tSalesforceOutput_3 process_data_begin ]
 								 * stop
 								 */
-								// Start of branch "row27"
-								if (row27 != null) {
+								// Start of branch "row45"
+								if (row45 != null) {
 
 									/**
-									 * [tFileOutputDelimited_6 main ] start
+									 * [tFileOutputDelimited_7 main ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_6";
+									currentComponent = "tFileOutputDelimited_7";
 
-									// row27
-									// row27
+									// row45
+									// row45
 
 									if (execStat) {
-										runStat.updateStatOnConnection("row27"
+										runStat.updateStatOnConnection("row45"
 												+ iterateId, 1, 1);
 									}
 
-									StringBuilder sb_tFileOutputDelimited_6 = new StringBuilder();
-									if (row27.ParentId != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.ParentId);
+									StringBuilder sb_tFileOutputDelimited_7 = new StringBuilder();
+									if (row45.ParentId != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.ParentId);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.ActivityId != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.ActivityId);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.ActivityId != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.ActivityId);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.CreatedById != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.CreatedById);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.CreatedById != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.CreatedById);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.CreatedDate != null) {
-										sb_tFileOutputDelimited_6
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.CreatedDate != null) {
+										sb_tFileOutputDelimited_7
 												.append(FormatterUtils
 														.format_Date(
-																row27.CreatedDate,
+																row45.CreatedDate,
 																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.LastModifiedDate != null) {
-										sb_tFileOutputDelimited_6
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.LastModifiedDate != null) {
+										sb_tFileOutputDelimited_7
 												.append(FormatterUtils
 														.format_Date(
-																row27.LastModifiedDate,
+																row45.LastModifiedDate,
 																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.LastModifiedById != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.LastModifiedById);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.LastModifiedById != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.LastModifiedById);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.Subject != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.Subject);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.Subject != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.Subject);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.FromName != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.FromName);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.FromName != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.FromName);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.FromAddress != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.FromAddress);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.FromAddress != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.FromAddress);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.ToAddress != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.ToAddress);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.ToAddress != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.ToAddress);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.CcAddress != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.CcAddress);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.CcAddress != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.CcAddress);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.BccAddress != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.BccAddress);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.BccAddress != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.BccAddress);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									sb_tFileOutputDelimited_6
-											.append(row27.Incoming);
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.Status != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.Status);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									sb_tFileOutputDelimited_7
+											.append(row45.Incoming);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.Status != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.Status);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.MessageDate != null) {
-										sb_tFileOutputDelimited_6
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.MessageDate != null) {
+										sb_tFileOutputDelimited_7
 												.append(FormatterUtils
 														.format_Date(
-																row27.MessageDate,
+																row45.MessageDate,
 																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.RelatedToId != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.RelatedToId);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.RelatedToId != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.RelatedToId);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_tFileOutputDelimited_6);
-									if (row27.ExternalIdSplit__c != null) {
-										sb_tFileOutputDelimited_6
-												.append(row27.ExternalIdSplit__c);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_tFileOutputDelimited_7);
+									if (row45.ExternalIdSplit__c != null) {
+										sb_tFileOutputDelimited_7
+												.append(row45.ExternalIdSplit__c);
 									}
-									sb_tFileOutputDelimited_6
-											.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_6);
+									sb_tFileOutputDelimited_7
+											.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_7);
 
-									nb_line_tFileOutputDelimited_6++;
+									nb_line_tFileOutputDelimited_7++;
 									resourceMap.put(
-											"nb_line_tFileOutputDelimited_6",
-											nb_line_tFileOutputDelimited_6);
+											"nb_line_tFileOutputDelimited_7",
+											nb_line_tFileOutputDelimited_7);
 
-									outtFileOutputDelimited_6
-											.write(sb_tFileOutputDelimited_6
+									outtFileOutputDelimited_7
+											.write(sb_tFileOutputDelimited_7
 													.toString());
 
-									tos_count_tFileOutputDelimited_6++;
+									tos_count_tFileOutputDelimited_7++;
 
 									/**
-									 * [tFileOutputDelimited_6 main ] stop
+									 * [tFileOutputDelimited_7 main ] stop
 									 */
 
 									/**
-									 * [tFileOutputDelimited_6
+									 * [tFileOutputDelimited_7
 									 * process_data_begin ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_6";
+									currentComponent = "tFileOutputDelimited_7";
 
 									/**
-									 * [tFileOutputDelimited_6
+									 * [tFileOutputDelimited_7
 									 * process_data_begin ] stop
 									 */
 
 									/**
-									 * [tFileOutputDelimited_6 process_data_end
+									 * [tFileOutputDelimited_7 process_data_end
 									 * ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_6";
+									currentComponent = "tFileOutputDelimited_7";
 
 									/**
-									 * [tFileOutputDelimited_6 process_data_end
+									 * [tFileOutputDelimited_7 process_data_end
 									 * ] stop
 									 */
 
-								} // End of branch "row27"
+								} // End of branch "row45"
 
-								// Start of branch "row25"
-								if (row25 != null) {
+								// Start of branch "row46"
+								if (row46 != null) {
 
 									/**
-									 * [tFileOutputDelimited_5 main ] start
+									 * [tFileOutputDelimited_8 main ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_5";
+									currentComponent = "tFileOutputDelimited_8";
 
-									// row25
-									// row25
+									// row46
+									// row46
 
 									if (execStat) {
-										runStat.updateStatOnConnection("row25"
+										runStat.updateStatOnConnection("row46"
 												+ iterateId, 1, 1);
 									}
 
-									StringBuilder sb_tFileOutputDelimited_5 = new StringBuilder();
-									if (row25.ParentId != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.ParentId);
+									StringBuilder sb_tFileOutputDelimited_8 = new StringBuilder();
+									if (row46.ParentId != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.ParentId);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.ActivityId != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.ActivityId);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.ActivityId != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.ActivityId);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.CreatedById != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.CreatedById);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.CreatedById != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.CreatedById);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.CreatedDate != null) {
-										sb_tFileOutputDelimited_5
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.CreatedDate != null) {
+										sb_tFileOutputDelimited_8
 												.append(FormatterUtils
 														.format_Date(
-																row25.CreatedDate,
+																row46.CreatedDate,
 																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.LastModifiedDate != null) {
-										sb_tFileOutputDelimited_5
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.LastModifiedDate != null) {
+										sb_tFileOutputDelimited_8
 												.append(FormatterUtils
 														.format_Date(
-																row25.LastModifiedDate,
+																row46.LastModifiedDate,
 																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.LastModifiedById != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.LastModifiedById);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.LastModifiedById != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.LastModifiedById);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.Subject != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.Subject);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.Subject != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.Subject);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.FromName != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.FromName);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.FromName != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.FromName);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.FromAddress != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.FromAddress);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.FromAddress != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.FromAddress);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.ToAddress != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.ToAddress);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.ToAddress != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.ToAddress);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.CcAddress != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.CcAddress);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.CcAddress != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.CcAddress);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.BccAddress != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.BccAddress);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.BccAddress != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.BccAddress);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									sb_tFileOutputDelimited_5
-											.append(row25.Incoming);
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.Status != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.Status);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									sb_tFileOutputDelimited_8
+											.append(row46.Incoming);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.Status != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.Status);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.MessageDate != null) {
-										sb_tFileOutputDelimited_5
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.MessageDate != null) {
+										sb_tFileOutputDelimited_8
 												.append(FormatterUtils
 														.format_Date(
-																row25.MessageDate,
+																row46.MessageDate,
 																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.RelatedToId != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.RelatedToId);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.RelatedToId != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.RelatedToId);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.ExternalIdSplit__c != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.ExternalIdSplit__c);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.ExternalIdSplit__c != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.ExternalIdSplit__c);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.errorCode != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.errorCode);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.errorCode != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.errorCode);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.errorFields != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.errorFields);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.errorFields != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.errorFields);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_tFileOutputDelimited_5);
-									if (row25.errorMessage != null) {
-										sb_tFileOutputDelimited_5
-												.append(row25.errorMessage);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_tFileOutputDelimited_8);
+									if (row46.errorMessage != null) {
+										sb_tFileOutputDelimited_8
+												.append(row46.errorMessage);
 									}
-									sb_tFileOutputDelimited_5
-											.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_5);
+									sb_tFileOutputDelimited_8
+											.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_8);
 
-									nb_line_tFileOutputDelimited_5++;
+									nb_line_tFileOutputDelimited_8++;
 									resourceMap.put(
-											"nb_line_tFileOutputDelimited_5",
-											nb_line_tFileOutputDelimited_5);
+											"nb_line_tFileOutputDelimited_8",
+											nb_line_tFileOutputDelimited_8);
 
-									outtFileOutputDelimited_5
-											.write(sb_tFileOutputDelimited_5
+									outtFileOutputDelimited_8
+											.write(sb_tFileOutputDelimited_8
 													.toString());
 
-									tos_count_tFileOutputDelimited_5++;
+									tos_count_tFileOutputDelimited_8++;
 
 									/**
-									 * [tFileOutputDelimited_5 main ] stop
+									 * [tFileOutputDelimited_8 main ] stop
 									 */
 
 									/**
-									 * [tFileOutputDelimited_5
+									 * [tFileOutputDelimited_8
 									 * process_data_begin ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_5";
+									currentComponent = "tFileOutputDelimited_8";
 
 									/**
-									 * [tFileOutputDelimited_5
+									 * [tFileOutputDelimited_8
 									 * process_data_begin ] stop
 									 */
 
 									/**
-									 * [tFileOutputDelimited_5 process_data_end
+									 * [tFileOutputDelimited_8 process_data_end
 									 * ] start
 									 */
 
-									currentComponent = "tFileOutputDelimited_5";
+									currentComponent = "tFileOutputDelimited_8";
 
 									/**
-									 * [tFileOutputDelimited_5 process_data_end
+									 * [tFileOutputDelimited_8 process_data_end
 									 * ] stop
 									 */
 
-								} // End of branch "row25"
+								} // End of branch "row46"
 
 								/**
-								 * [tSalesforceOutput_1 process_data_end ] start
+								 * [tSalesforceOutput_3 process_data_end ] start
 								 */
 
-								currentComponent = "tSalesforceOutput_1";
+								currentComponent = "tSalesforceOutput_3";
 
 							} // end of data processing while block
-							if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
-								((org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1)
+							if (writer_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+								((org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_3)
 										.cleanWrites();
 							}
 
 							/**
-							 * [tSalesforceOutput_1 process_data_end ] stop
+							 * [tSalesforceOutput_3 process_data_end ] stop
 							 */
 
-						} // End of branch "EmailMessage"
+						} // End of branch "copyOfEmailMessage_0"
 
 						/**
-						 * [tMap_1 process_data_end ] start
+						 * [tMap_7 process_data_end ] start
 						 */
 
-						currentComponent = "tMap_1";
+						currentComponent = "tMap_7";
 
 						/**
-						 * [tMap_1 process_data_end ] stop
+						 * [tMap_7 process_data_end ] stop
 						 */
 
-					} // End of branch "row2"
+					} // End of branch "copyOfrow2"
 
 					/**
-					 * [tMap_5 process_data_end ] start
+					 * [tMap_6 process_data_end ] start
 					 */
 
-					currentComponent = "tMap_5";
+					currentComponent = "tMap_6";
 
 					/**
-					 * [tMap_5 process_data_end ] stop
-					 */
-
-					/**
-					 * [tSalesforceInput_1 process_data_end ] start
-					 */
-
-					currentComponent = "tSalesforceInput_1";
-
-					/**
-					 * [tSalesforceInput_1 process_data_end ] stop
+					 * [tMap_6 process_data_end ] stop
 					 */
 
 					/**
-					 * [tSalesforceInput_1 end ] start
+					 * [tSalesforceInput_12 process_data_end ] start
 					 */
 
-					currentComponent = "tSalesforceInput_1";
+					currentComponent = "tSalesforceInput_12";
+
+					/**
+					 * [tSalesforceInput_12 process_data_end ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_12 end ] start
+					 */
+
+					currentComponent = "tSalesforceInput_12";
 
 					// end of generic
 
-					resourceMap.put("finish_tSalesforceInput_1", Boolean.TRUE);
+					resourceMap.put("finish_tSalesforceInput_12", Boolean.TRUE);
 
 				} // while
-				reader_tSalesforceInput_1.close();
-				final java.util.Map<String, Object> resultMap_tSalesforceInput_1 = reader_tSalesforceInput_1
+				reader_tSalesforceInput_12.close();
+				final java.util.Map<String, Object> resultMap_tSalesforceInput_12 = reader_tSalesforceInput_12
 						.getReturnValues();
-				if (resultMap_tSalesforceInput_1 != null) {
-					for (java.util.Map.Entry<String, Object> entry_tSalesforceInput_1 : resultMap_tSalesforceInput_1
+				if (resultMap_tSalesforceInput_12 != null) {
+					for (java.util.Map.Entry<String, Object> entry_tSalesforceInput_12 : resultMap_tSalesforceInput_12
 							.entrySet()) {
-						switch (entry_tSalesforceInput_1.getKey()) {
+						switch (entry_tSalesforceInput_12.getKey()) {
 						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
-							container_tSalesforceInput_1.setComponentData(
-									"tSalesforceInput_1", "ERROR_MESSAGE",
-									entry_tSalesforceInput_1.getValue());
+							container_tSalesforceInput_12.setComponentData(
+									"tSalesforceInput_12", "ERROR_MESSAGE",
+									entry_tSalesforceInput_12.getValue());
 							break;
 						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
-							container_tSalesforceInput_1.setComponentData(
-									"tSalesforceInput_1", "NB_LINE",
-									entry_tSalesforceInput_1.getValue());
+							container_tSalesforceInput_12.setComponentData(
+									"tSalesforceInput_12", "NB_LINE",
+									entry_tSalesforceInput_12.getValue());
 							break;
 						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
-							container_tSalesforceInput_1.setComponentData(
-									"tSalesforceInput_1", "NB_SUCCESS",
-									entry_tSalesforceInput_1.getValue());
+							container_tSalesforceInput_12.setComponentData(
+									"tSalesforceInput_12", "NB_SUCCESS",
+									entry_tSalesforceInput_12.getValue());
 							break;
 						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
-							container_tSalesforceInput_1.setComponentData(
-									"tSalesforceInput_1", "NB_REJECT",
-									entry_tSalesforceInput_1.getValue());
+							container_tSalesforceInput_12.setComponentData(
+									"tSalesforceInput_12", "NB_REJECT",
+									entry_tSalesforceInput_12.getValue());
 							break;
 						default:
-							StringBuilder studio_key_tSalesforceInput_1 = new StringBuilder();
-							for (int i_tSalesforceInput_1 = 0; i_tSalesforceInput_1 < entry_tSalesforceInput_1
-									.getKey().length(); i_tSalesforceInput_1++) {
-								char ch_tSalesforceInput_1 = entry_tSalesforceInput_1
-										.getKey().charAt(i_tSalesforceInput_1);
+							StringBuilder studio_key_tSalesforceInput_12 = new StringBuilder();
+							for (int i_tSalesforceInput_12 = 0; i_tSalesforceInput_12 < entry_tSalesforceInput_12
+									.getKey().length(); i_tSalesforceInput_12++) {
+								char ch_tSalesforceInput_12 = entry_tSalesforceInput_12
+										.getKey().charAt(i_tSalesforceInput_12);
 								if (Character
-										.isUpperCase(ch_tSalesforceInput_1)
-										&& i_tSalesforceInput_1 > 0) {
-									studio_key_tSalesforceInput_1.append('_');
+										.isUpperCase(ch_tSalesforceInput_12)
+										&& i_tSalesforceInput_12 > 0) {
+									studio_key_tSalesforceInput_12.append('_');
 								}
-								studio_key_tSalesforceInput_1
-										.append(ch_tSalesforceInput_1);
+								studio_key_tSalesforceInput_12
+										.append(ch_tSalesforceInput_12);
 							}
-							container_tSalesforceInput_1.setComponentData(
-									"tSalesforceInput_1",
-									studio_key_tSalesforceInput_1.toString()
+							container_tSalesforceInput_12.setComponentData(
+									"tSalesforceInput_12",
+									studio_key_tSalesforceInput_12.toString()
 											.toUpperCase(
 													java.util.Locale.ENGLISH),
-									entry_tSalesforceInput_1.getValue());
+									entry_tSalesforceInput_12.getValue());
 							break;
 						}
 					}
 				}
 
-				ok_Hash.put("tSalesforceInput_1", true);
-				end_Hash.put("tSalesforceInput_1", System.currentTimeMillis());
+				ok_Hash.put("tSalesforceInput_12", true);
+				end_Hash.put("tSalesforceInput_12", System.currentTimeMillis());
 
 				/**
-				 * [tSalesforceInput_1 end ] stop
+				 * [tSalesforceInput_12 end ] stop
 				 */
 
 				/**
-				 * [tMap_5 end ] start
+				 * [tMap_6 end ] start
 				 */
 
-				currentComponent = "tMap_5";
+				currentComponent = "tMap_6";
 
 				// ###############################
 				// # Lookup hashes releasing
@@ -9739,149 +13858,150 @@ public class LOAD_EmailMessage implements TalendJob {
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row222" + iterateId, 2,
+						runStat.updateStatOnConnection("row26" + iterateId, 2,
 								0);
 					}
 				}
 
-				ok_Hash.put("tMap_5", true);
-				end_Hash.put("tMap_5", System.currentTimeMillis());
+				ok_Hash.put("tMap_6", true);
+				end_Hash.put("tMap_6", System.currentTimeMillis());
 
 				/**
-				 * [tMap_5 end ] stop
+				 * [tMap_6 end ] stop
 				 */
 
 				/**
-				 * [tMap_1 end ] start
+				 * [tMap_7 end ] start
 				 */
 
-				currentComponent = "tMap_1";
+				currentComponent = "tMap_7";
 
 				// ###############################
 				// # Lookup hashes releasing
-				if (tHash_Lookup_CreatedBy != null) {
-					tHash_Lookup_CreatedBy.endGet();
+				if (tHash_Lookup_row28 != null) {
+					tHash_Lookup_row28.endGet();
 				}
-				globalMap.remove("tHash_Lookup_CreatedBy");
+				globalMap.remove("tHash_Lookup_row28");
 
-				if (tHash_Lookup_ModifiedBy != null) {
-					tHash_Lookup_ModifiedBy.endGet();
+				if (tHash_Lookup_row33 != null) {
+					tHash_Lookup_row33.endGet();
 				}
-				globalMap.remove("tHash_Lookup_ModifiedBy");
+				globalMap.remove("tHash_Lookup_row33");
 
-				if (tHash_Lookup_Meeting_minute != null) {
-					tHash_Lookup_Meeting_minute.endGet();
+				if (tHash_Lookup_row35 != null) {
+					tHash_Lookup_row35.endGet();
 				}
-				globalMap.remove("tHash_Lookup_Meeting_minute");
+				globalMap.remove("tHash_Lookup_row35");
 
-				if (tHash_Lookup_Opportunity != null) {
-					tHash_Lookup_Opportunity.endGet();
+				if (tHash_Lookup_row42 != null) {
+					tHash_Lookup_row42.endGet();
 				}
-				globalMap.remove("tHash_Lookup_Opportunity");
+				globalMap.remove("tHash_Lookup_row42");
 
-				if (tHash_Lookup_CaseParentId != null) {
-					tHash_Lookup_CaseParentId.endGet();
+				if (tHash_Lookup_row40 != null) {
+					tHash_Lookup_row40.endGet();
 				}
-				globalMap.remove("tHash_Lookup_CaseParentId");
+				globalMap.remove("tHash_Lookup_row40");
 
-				if (tHash_Lookup_Project != null) {
-					tHash_Lookup_Project.endGet();
+				if (tHash_Lookup_row43 != null) {
+					tHash_Lookup_row43.endGet();
 				}
-				globalMap.remove("tHash_Lookup_Project");
+				globalMap.remove("tHash_Lookup_row43");
 
-				if (tHash_Lookup_Task1 != null) {
-					tHash_Lookup_Task1.endGet();
+				if (tHash_Lookup_row39 != null) {
+					tHash_Lookup_row39.endGet();
 				}
-				globalMap.remove("tHash_Lookup_Task1");
+				globalMap.remove("tHash_Lookup_row39");
 
-				if (tHash_Lookup_Case != null) {
-					tHash_Lookup_Case.endGet();
+				if (tHash_Lookup_row41 != null) {
+					tHash_Lookup_row41.endGet();
 				}
-				globalMap.remove("tHash_Lookup_Case");
+				globalMap.remove("tHash_Lookup_row41");
 
-				if (tHash_Lookup_Contract != null) {
-					tHash_Lookup_Contract.endGet();
+				if (tHash_Lookup_row44 != null) {
+					tHash_Lookup_row44.endGet();
 				}
-				globalMap.remove("tHash_Lookup_Contract");
+				globalMap.remove("tHash_Lookup_row44");
 
 				// ###############################
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row2" + iterateId, 2, 0);
+						runStat.updateStatOnConnection(
+								"copyOfrow2" + iterateId, 2, 0);
 					}
 				}
 
-				ok_Hash.put("tMap_1", true);
-				end_Hash.put("tMap_1", System.currentTimeMillis());
+				ok_Hash.put("tMap_7", true);
+				end_Hash.put("tMap_7", System.currentTimeMillis());
 
 				/**
-				 * [tMap_1 end ] stop
+				 * [tMap_7 end ] stop
 				 */
 
 				/**
-				 * [tSalesforceOutput_1 end ] start
+				 * [tSalesforceOutput_3 end ] start
 				 */
 
-				currentComponent = "tSalesforceOutput_1";
+				currentComponent = "tSalesforceOutput_3";
 
 				// end of generic
 
-				resourceMap.put("finish_tSalesforceOutput_1", Boolean.TRUE);
+				resourceMap.put("finish_tSalesforceOutput_3", Boolean.TRUE);
 
-				org.talend.components.api.component.runtime.Result resultObject_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.Result) writer_tSalesforceOutput_1
+				org.talend.components.api.component.runtime.Result resultObject_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.Result) writer_tSalesforceOutput_3
 						.close();
-				final java.util.Map<String, Object> resultMap_tSalesforceOutput_1 = writer_tSalesforceOutput_1
+				final java.util.Map<String, Object> resultMap_tSalesforceOutput_3 = writer_tSalesforceOutput_3
 						.getWriteOperation()
 						.finalize(
 								java.util.Arrays
-										.<org.talend.components.api.component.runtime.Result> asList(resultObject_tSalesforceOutput_1),
-								container_tSalesforceOutput_1);
-				if (resultMap_tSalesforceOutput_1 != null) {
-					for (java.util.Map.Entry<String, Object> entry_tSalesforceOutput_1 : resultMap_tSalesforceOutput_1
+										.<org.talend.components.api.component.runtime.Result> asList(resultObject_tSalesforceOutput_3),
+								container_tSalesforceOutput_3);
+				if (resultMap_tSalesforceOutput_3 != null) {
+					for (java.util.Map.Entry<String, Object> entry_tSalesforceOutput_3 : resultMap_tSalesforceOutput_3
 							.entrySet()) {
-						switch (entry_tSalesforceOutput_1.getKey()) {
+						switch (entry_tSalesforceOutput_3.getKey()) {
 						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
-							container_tSalesforceOutput_1.setComponentData(
-									"tSalesforceOutput_1", "ERROR_MESSAGE",
-									entry_tSalesforceOutput_1.getValue());
+							container_tSalesforceOutput_3.setComponentData(
+									"tSalesforceOutput_3", "ERROR_MESSAGE",
+									entry_tSalesforceOutput_3.getValue());
 							break;
 						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
-							container_tSalesforceOutput_1.setComponentData(
-									"tSalesforceOutput_1", "NB_LINE",
-									entry_tSalesforceOutput_1.getValue());
+							container_tSalesforceOutput_3.setComponentData(
+									"tSalesforceOutput_3", "NB_LINE",
+									entry_tSalesforceOutput_3.getValue());
 							break;
 						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
-							container_tSalesforceOutput_1.setComponentData(
-									"tSalesforceOutput_1", "NB_SUCCESS",
-									entry_tSalesforceOutput_1.getValue());
+							container_tSalesforceOutput_3.setComponentData(
+									"tSalesforceOutput_3", "NB_SUCCESS",
+									entry_tSalesforceOutput_3.getValue());
 							break;
 						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
-							container_tSalesforceOutput_1.setComponentData(
-									"tSalesforceOutput_1", "NB_REJECT",
-									entry_tSalesforceOutput_1.getValue());
+							container_tSalesforceOutput_3.setComponentData(
+									"tSalesforceOutput_3", "NB_REJECT",
+									entry_tSalesforceOutput_3.getValue());
 							break;
 						default:
-							StringBuilder studio_key_tSalesforceOutput_1 = new StringBuilder();
-							for (int i_tSalesforceOutput_1 = 0; i_tSalesforceOutput_1 < entry_tSalesforceOutput_1
-									.getKey().length(); i_tSalesforceOutput_1++) {
-								char ch_tSalesforceOutput_1 = entry_tSalesforceOutput_1
-										.getKey().charAt(i_tSalesforceOutput_1);
+							StringBuilder studio_key_tSalesforceOutput_3 = new StringBuilder();
+							for (int i_tSalesforceOutput_3 = 0; i_tSalesforceOutput_3 < entry_tSalesforceOutput_3
+									.getKey().length(); i_tSalesforceOutput_3++) {
+								char ch_tSalesforceOutput_3 = entry_tSalesforceOutput_3
+										.getKey().charAt(i_tSalesforceOutput_3);
 								if (Character
-										.isUpperCase(ch_tSalesforceOutput_1)
-										&& i_tSalesforceOutput_1 > 0) {
-									studio_key_tSalesforceOutput_1.append('_');
+										.isUpperCase(ch_tSalesforceOutput_3)
+										&& i_tSalesforceOutput_3 > 0) {
+									studio_key_tSalesforceOutput_3.append('_');
 								}
-								studio_key_tSalesforceOutput_1
-										.append(ch_tSalesforceOutput_1);
+								studio_key_tSalesforceOutput_3
+										.append(ch_tSalesforceOutput_3);
 							}
-							container_tSalesforceOutput_1.setComponentData(
-									"tSalesforceOutput_1",
-									studio_key_tSalesforceOutput_1.toString()
+							container_tSalesforceOutput_3.setComponentData(
+									"tSalesforceOutput_3",
+									studio_key_tSalesforceOutput_3.toString()
 											.toUpperCase(
 													java.util.Locale.ENGLISH),
-									entry_tSalesforceOutput_1.getValue());
+									entry_tSalesforceOutput_3.getValue());
 							break;
 						}
 					}
@@ -9890,634 +14010,634 @@ public class LOAD_EmailMessage implements TalendJob {
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("EmailMessage"
+						runStat.updateStatOnConnection("copyOfEmailMessage_0"
 								+ iterateId, 2, 0);
 					}
 				}
 
-				ok_Hash.put("tSalesforceOutput_1", true);
-				end_Hash.put("tSalesforceOutput_1", System.currentTimeMillis());
+				ok_Hash.put("tSalesforceOutput_3", true);
+				end_Hash.put("tSalesforceOutput_3", System.currentTimeMillis());
 
 				/**
-				 * [tSalesforceOutput_1 end ] stop
+				 * [tSalesforceOutput_3 end ] stop
 				 */
 
 				/**
-				 * [tSalesforceOutput_1 process_data_begin ] start
+				 * [tSalesforceOutput_3 process_data_begin ] start
 				 */
 
-				currentComponent = "tSalesforceOutput_1";
+				currentComponent = "tSalesforceOutput_3";
 
-				row25 = null;
-				row27 = null;
-				if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
-					org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackMain_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
-					writerWithFeedbackMain_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
-							writerWithFeedbackMain_tSalesforceOutput_1,
-							container_tSalesforceOutput_1);
-					java.lang.Iterable<?> outgoingRecs_tSalesforceOutput_1 = writerWithFeedbackMain_tSalesforceOutput_1
+				row46 = null;
+				row45 = null;
+				if (writer_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+					org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackMain_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_3;
+					writerWithFeedbackMain_tSalesforceOutput_3 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+							writerWithFeedbackMain_tSalesforceOutput_3,
+							container_tSalesforceOutput_3);
+					java.lang.Iterable<?> outgoingRecs_tSalesforceOutput_3 = writerWithFeedbackMain_tSalesforceOutput_3
 							.getSuccessfulWrites();
-					java.util.Iterator outgoingMainRecords_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1
+					java.util.Iterator outgoingMainRecords_tSalesforceOutput_3 = outgoingRecs_tSalesforceOutput_3
 							.iterator();
-					Object outgoingMain_tSalesforceOutput_1 = null;
-					if (outgoingMainRecords_tSalesforceOutput_1.hasNext()) {
-						outgoingMainRecordsList_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1;
+					Object outgoingMain_tSalesforceOutput_3 = null;
+					if (outgoingMainRecords_tSalesforceOutput_3.hasNext()) {
+						outgoingMainRecordsList_tSalesforceOutput_3 = outgoingRecs_tSalesforceOutput_3;
 					}
 				}
-				java.lang.Iterable<?> outgoingRejectRecordsList_tSalesforceOutput_1 = new java.util.ArrayList<Object>();
-				if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
-					org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackReject_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
-					writerWithFeedbackReject_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
-							writerWithFeedbackReject_tSalesforceOutput_1,
-							container_tSalesforceOutput_1);
-					java.lang.Iterable<?> outgoingRejectRecs_tSalesforceOutput_1 = writerWithFeedbackReject_tSalesforceOutput_1
+				java.lang.Iterable<?> outgoingRejectRecordsList_tSalesforceOutput_3 = new java.util.ArrayList<Object>();
+				if (writer_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+					org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackReject_tSalesforceOutput_3 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_3;
+					writerWithFeedbackReject_tSalesforceOutput_3 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+							writerWithFeedbackReject_tSalesforceOutput_3,
+							container_tSalesforceOutput_3);
+					java.lang.Iterable<?> outgoingRejectRecs_tSalesforceOutput_3 = writerWithFeedbackReject_tSalesforceOutput_3
 							.getRejectedWrites();
-					java.util.Iterator outgoingRejectRecords_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1
+					java.util.Iterator outgoingRejectRecords_tSalesforceOutput_3 = outgoingRejectRecs_tSalesforceOutput_3
 							.iterator();
-					if (outgoingRejectRecords_tSalesforceOutput_1.hasNext()) {
-						outgoingRejectRecordsList_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1;
+					if (outgoingRejectRecords_tSalesforceOutput_3.hasNext()) {
+						outgoingRejectRecordsList_tSalesforceOutput_3 = outgoingRejectRecs_tSalesforceOutput_3;
 					}
 				}
-				outgoingMainRecordsIt_tSalesforceOutput_1 = outgoingMainRecordsList_tSalesforceOutput_1
+				outgoingMainRecordsIt_tSalesforceOutput_3 = outgoingMainRecordsList_tSalesforceOutput_3
 						.iterator();
-				java.util.Iterator outgoingRejectRecordsIt_tSalesforceOutput_1 = outgoingRejectRecordsList_tSalesforceOutput_1
+				java.util.Iterator outgoingRejectRecordsIt_tSalesforceOutput_3 = outgoingRejectRecordsList_tSalesforceOutput_3
 						.iterator();
-				while (outgoingMainRecordsIt_tSalesforceOutput_1.hasNext()
-						|| outgoingRejectRecordsIt_tSalesforceOutput_1
+				while (outgoingMainRecordsIt_tSalesforceOutput_3.hasNext()
+						|| outgoingRejectRecordsIt_tSalesforceOutput_3
 								.hasNext()) { // Start of data processing while
 												// block
 
-					if (outgoingMainRecordsIt_tSalesforceOutput_1.hasNext()) {
-						row27 = new row27Struct();
-						Object outgoingMain_tSalesforceOutput_1 = outgoingMainRecordsIt_tSalesforceOutput_1
+					if (outgoingMainRecordsIt_tSalesforceOutput_3.hasNext()) {
+						row45 = new row45Struct();
+						Object outgoingMain_tSalesforceOutput_3 = outgoingMainRecordsIt_tSalesforceOutput_3
 								.next();
 
 						// Construct the factory once when the first data
 						// arrives.
-						if (factory_tSalesforceOutput_1OutMain == null) {
-							factory_tSalesforceOutput_1OutMain = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
-									.createIndexedRecordConverter(outgoingMain_tSalesforceOutput_1
+						if (factory_tSalesforceOutput_3OutMain == null) {
+							factory_tSalesforceOutput_3OutMain = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(outgoingMain_tSalesforceOutput_3
 											.getClass());
 						}
 
 						// Enforce the outgoing schema on the input.
-						outgoingEnforcer_tSalesforceOutput_1OutMain
-								.setWrapped(factory_tSalesforceOutput_1OutMain
-										.convertToAvro(outgoingMain_tSalesforceOutput_1));
-						Object columnValue_0_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						outgoingEnforcer_tSalesforceOutput_3OutMain
+								.setWrapped(factory_tSalesforceOutput_3OutMain
+										.convertToAvro(outgoingMain_tSalesforceOutput_3));
+						Object columnValue_0_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(0);
-						row27.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutMain);
-						Object columnValue_1_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.ParentId = (String) (columnValue_0_tSalesforceOutput_3OutMain);
+						Object columnValue_1_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(1);
-						row27.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutMain);
-						Object columnValue_2_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.ActivityId = (String) (columnValue_1_tSalesforceOutput_3OutMain);
+						Object columnValue_2_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(2);
-						row27.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutMain);
-						Object columnValue_3_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.CreatedById = (String) (columnValue_2_tSalesforceOutput_3OutMain);
+						Object columnValue_3_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(3);
-						row27.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutMain);
-						Object columnValue_4_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_3OutMain);
+						Object columnValue_4_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(4);
-						row27.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutMain);
-						Object columnValue_5_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_3OutMain);
+						Object columnValue_5_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(5);
-						row27.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutMain);
-						Object columnValue_6_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_3OutMain);
+						Object columnValue_6_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(6);
-						row27.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutMain);
-						Object columnValue_7_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.TextBody = (String) (columnValue_6_tSalesforceOutput_3OutMain);
+						Object columnValue_7_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(7);
-						row27.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutMain);
-						Object columnValue_8_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.HtmlBody = (String) (columnValue_7_tSalesforceOutput_3OutMain);
+						Object columnValue_8_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(8);
-						row27.Subject = (String) (columnValue_8_tSalesforceOutput_1OutMain);
-						Object columnValue_9_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.Subject = (String) (columnValue_8_tSalesforceOutput_3OutMain);
+						Object columnValue_9_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(9);
-						row27.FromName = (String) (columnValue_9_tSalesforceOutput_1OutMain);
-						Object columnValue_10_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.FromName = (String) (columnValue_9_tSalesforceOutput_3OutMain);
+						Object columnValue_10_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(10);
-						row27.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutMain);
-						Object columnValue_11_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.FromAddress = (String) (columnValue_10_tSalesforceOutput_3OutMain);
+						Object columnValue_11_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(11);
-						row27.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutMain);
-						Object columnValue_12_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.ToAddress = (String) (columnValue_11_tSalesforceOutput_3OutMain);
+						Object columnValue_12_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(12);
-						row27.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutMain);
-						Object columnValue_13_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.CcAddress = (String) (columnValue_12_tSalesforceOutput_3OutMain);
+						Object columnValue_13_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(13);
-						row27.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutMain);
-						Object columnValue_14_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.BccAddress = (String) (columnValue_13_tSalesforceOutput_3OutMain);
+						Object columnValue_14_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(14);
-						if (columnValue_14_tSalesforceOutput_1OutMain == null) {
-							row27.Incoming = false;
+						if (columnValue_14_tSalesforceOutput_3OutMain == null) {
+							row45.Incoming = false;
 						} else {
-							row27.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutMain);
+							row45.Incoming = (boolean) (columnValue_14_tSalesforceOutput_3OutMain);
 						}
-						Object columnValue_15_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						Object columnValue_15_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(15);
-						row27.Status = (String) (columnValue_15_tSalesforceOutput_1OutMain);
-						Object columnValue_16_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.Status = (String) (columnValue_15_tSalesforceOutput_3OutMain);
+						Object columnValue_16_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(16);
-						row27.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutMain);
-						Object columnValue_17_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_3OutMain);
+						Object columnValue_17_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(17);
-						row27.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutMain);
-						Object columnValue_18_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+						row45.RelatedToId = (String) (columnValue_17_tSalesforceOutput_3OutMain);
+						Object columnValue_18_tSalesforceOutput_3OutMain = outgoingEnforcer_tSalesforceOutput_3OutMain
 								.get(18);
-						row27.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutMain);
+						row45.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_3OutMain);
 					} else {
-						row27 = null;
+						row45 = null;
 					}
 
-					if (outgoingRejectRecordsIt_tSalesforceOutput_1.hasNext()) {
-						row25 = new row25Struct();
-						Object outgoingReject_tSalesforceOutput_1 = outgoingRejectRecordsIt_tSalesforceOutput_1
+					if (outgoingRejectRecordsIt_tSalesforceOutput_3.hasNext()) {
+						row46 = new row46Struct();
+						Object outgoingReject_tSalesforceOutput_3 = outgoingRejectRecordsIt_tSalesforceOutput_3
 								.next();
 
 						// Construct the factory once when the first data
 						// arrives.
-						if (factory_tSalesforceOutput_1OutReject == null) {
-							factory_tSalesforceOutput_1OutReject = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
-									.createIndexedRecordConverter(outgoingReject_tSalesforceOutput_1
+						if (factory_tSalesforceOutput_3OutReject == null) {
+							factory_tSalesforceOutput_3OutReject = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(outgoingReject_tSalesforceOutput_3
 											.getClass());
 						}
 
 						// Enforce the outgoing schema on the input.
-						outgoingEnforcer_tSalesforceOutput_1OutReject
-								.setWrapped(factory_tSalesforceOutput_1OutReject
-										.convertToAvro(outgoingReject_tSalesforceOutput_1));
-						Object columnValue_0_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						outgoingEnforcer_tSalesforceOutput_3OutReject
+								.setWrapped(factory_tSalesforceOutput_3OutReject
+										.convertToAvro(outgoingReject_tSalesforceOutput_3));
+						Object columnValue_0_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(0);
-						row25.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutReject);
-						Object columnValue_1_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.ParentId = (String) (columnValue_0_tSalesforceOutput_3OutReject);
+						Object columnValue_1_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(1);
-						row25.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutReject);
-						Object columnValue_2_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.ActivityId = (String) (columnValue_1_tSalesforceOutput_3OutReject);
+						Object columnValue_2_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(2);
-						row25.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutReject);
-						Object columnValue_3_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.CreatedById = (String) (columnValue_2_tSalesforceOutput_3OutReject);
+						Object columnValue_3_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(3);
-						row25.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutReject);
-						Object columnValue_4_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_3OutReject);
+						Object columnValue_4_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(4);
-						row25.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutReject);
-						Object columnValue_5_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_3OutReject);
+						Object columnValue_5_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(5);
-						row25.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutReject);
-						Object columnValue_6_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_3OutReject);
+						Object columnValue_6_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(6);
-						row25.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutReject);
-						Object columnValue_7_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.TextBody = (String) (columnValue_6_tSalesforceOutput_3OutReject);
+						Object columnValue_7_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(7);
-						row25.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutReject);
-						Object columnValue_8_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.HtmlBody = (String) (columnValue_7_tSalesforceOutput_3OutReject);
+						Object columnValue_8_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(8);
-						row25.Subject = (String) (columnValue_8_tSalesforceOutput_1OutReject);
-						Object columnValue_9_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.Subject = (String) (columnValue_8_tSalesforceOutput_3OutReject);
+						Object columnValue_9_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(9);
-						row25.FromName = (String) (columnValue_9_tSalesforceOutput_1OutReject);
-						Object columnValue_10_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.FromName = (String) (columnValue_9_tSalesforceOutput_3OutReject);
+						Object columnValue_10_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(10);
-						row25.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutReject);
-						Object columnValue_11_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.FromAddress = (String) (columnValue_10_tSalesforceOutput_3OutReject);
+						Object columnValue_11_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(11);
-						row25.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutReject);
-						Object columnValue_12_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.ToAddress = (String) (columnValue_11_tSalesforceOutput_3OutReject);
+						Object columnValue_12_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(12);
-						row25.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutReject);
-						Object columnValue_13_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.CcAddress = (String) (columnValue_12_tSalesforceOutput_3OutReject);
+						Object columnValue_13_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(13);
-						row25.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutReject);
-						Object columnValue_14_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.BccAddress = (String) (columnValue_13_tSalesforceOutput_3OutReject);
+						Object columnValue_14_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(14);
-						if (columnValue_14_tSalesforceOutput_1OutReject == null) {
-							row25.Incoming = false;
+						if (columnValue_14_tSalesforceOutput_3OutReject == null) {
+							row46.Incoming = false;
 						} else {
-							row25.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutReject);
+							row46.Incoming = (boolean) (columnValue_14_tSalesforceOutput_3OutReject);
 						}
-						Object columnValue_15_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						Object columnValue_15_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(15);
-						row25.Status = (String) (columnValue_15_tSalesforceOutput_1OutReject);
-						Object columnValue_16_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.Status = (String) (columnValue_15_tSalesforceOutput_3OutReject);
+						Object columnValue_16_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(16);
-						row25.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutReject);
-						Object columnValue_17_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_3OutReject);
+						Object columnValue_17_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(17);
-						row25.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutReject);
-						Object columnValue_18_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.RelatedToId = (String) (columnValue_17_tSalesforceOutput_3OutReject);
+						Object columnValue_18_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(18);
-						row25.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutReject);
-						Object columnValue_19_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_3OutReject);
+						Object columnValue_19_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(19);
-						row25.errorCode = (String) (columnValue_19_tSalesforceOutput_1OutReject);
-						Object columnValue_20_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.errorCode = (String) (columnValue_19_tSalesforceOutput_3OutReject);
+						Object columnValue_20_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(20);
-						row25.errorFields = (String) (columnValue_20_tSalesforceOutput_1OutReject);
-						Object columnValue_21_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+						row46.errorFields = (String) (columnValue_20_tSalesforceOutput_3OutReject);
+						Object columnValue_21_tSalesforceOutput_3OutReject = outgoingEnforcer_tSalesforceOutput_3OutReject
 								.get(21);
-						row25.errorMessage = (String) (columnValue_21_tSalesforceOutput_1OutReject);
+						row46.errorMessage = (String) (columnValue_21_tSalesforceOutput_3OutReject);
 					} else {
-						row25 = null;
+						row46 = null;
 					}
 
 					/**
-					 * [tSalesforceOutput_1 process_data_begin ] stop
+					 * [tSalesforceOutput_3 process_data_begin ] stop
 					 */
-					// Start of branch "row27"
-					if (row27 != null) {
+					// Start of branch "row45"
+					if (row45 != null) {
 
 						/**
-						 * [tFileOutputDelimited_6 main ] start
+						 * [tFileOutputDelimited_7 main ] start
 						 */
 
-						currentComponent = "tFileOutputDelimited_6";
+						currentComponent = "tFileOutputDelimited_7";
 
-						// row27
-						// row27
+						// row45
+						// row45
 
 						if (execStat) {
-							runStat.updateStatOnConnection("row27" + iterateId,
+							runStat.updateStatOnConnection("row45" + iterateId,
 									1, 1);
 						}
 
-						StringBuilder sb_tFileOutputDelimited_6 = new StringBuilder();
-						if (row27.ParentId != null) {
-							sb_tFileOutputDelimited_6.append(row27.ParentId);
+						StringBuilder sb_tFileOutputDelimited_7 = new StringBuilder();
+						if (row45.ParentId != null) {
+							sb_tFileOutputDelimited_7.append(row45.ParentId);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.ActivityId != null) {
-							sb_tFileOutputDelimited_6.append(row27.ActivityId);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.ActivityId != null) {
+							sb_tFileOutputDelimited_7.append(row45.ActivityId);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.CreatedById != null) {
-							sb_tFileOutputDelimited_6.append(row27.CreatedById);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.CreatedById != null) {
+							sb_tFileOutputDelimited_7.append(row45.CreatedById);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.CreatedDate != null) {
-							sb_tFileOutputDelimited_6.append(FormatterUtils
-									.format_Date(row27.CreatedDate,
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.CreatedDate != null) {
+							sb_tFileOutputDelimited_7.append(FormatterUtils
+									.format_Date(row45.CreatedDate,
 											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.LastModifiedDate != null) {
-							sb_tFileOutputDelimited_6.append(FormatterUtils
-									.format_Date(row27.LastModifiedDate,
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.LastModifiedDate != null) {
+							sb_tFileOutputDelimited_7.append(FormatterUtils
+									.format_Date(row45.LastModifiedDate,
 											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.LastModifiedById != null) {
-							sb_tFileOutputDelimited_6
-									.append(row27.LastModifiedById);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.LastModifiedById != null) {
+							sb_tFileOutputDelimited_7
+									.append(row45.LastModifiedById);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.Subject != null) {
-							sb_tFileOutputDelimited_6.append(row27.Subject);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.Subject != null) {
+							sb_tFileOutputDelimited_7.append(row45.Subject);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.FromName != null) {
-							sb_tFileOutputDelimited_6.append(row27.FromName);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.FromName != null) {
+							sb_tFileOutputDelimited_7.append(row45.FromName);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.FromAddress != null) {
-							sb_tFileOutputDelimited_6.append(row27.FromAddress);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.FromAddress != null) {
+							sb_tFileOutputDelimited_7.append(row45.FromAddress);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.ToAddress != null) {
-							sb_tFileOutputDelimited_6.append(row27.ToAddress);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.ToAddress != null) {
+							sb_tFileOutputDelimited_7.append(row45.ToAddress);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.CcAddress != null) {
-							sb_tFileOutputDelimited_6.append(row27.CcAddress);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.CcAddress != null) {
+							sb_tFileOutputDelimited_7.append(row45.CcAddress);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.BccAddress != null) {
-							sb_tFileOutputDelimited_6.append(row27.BccAddress);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.BccAddress != null) {
+							sb_tFileOutputDelimited_7.append(row45.BccAddress);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						sb_tFileOutputDelimited_6.append(row27.Incoming);
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.Status != null) {
-							sb_tFileOutputDelimited_6.append(row27.Status);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						sb_tFileOutputDelimited_7.append(row45.Incoming);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.Status != null) {
+							sb_tFileOutputDelimited_7.append(row45.Status);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.MessageDate != null) {
-							sb_tFileOutputDelimited_6.append(FormatterUtils
-									.format_Date(row27.MessageDate,
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.MessageDate != null) {
+							sb_tFileOutputDelimited_7.append(FormatterUtils
+									.format_Date(row45.MessageDate,
 											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.RelatedToId != null) {
-							sb_tFileOutputDelimited_6.append(row27.RelatedToId);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.RelatedToId != null) {
+							sb_tFileOutputDelimited_7.append(row45.RelatedToId);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_tFileOutputDelimited_6);
-						if (row27.ExternalIdSplit__c != null) {
-							sb_tFileOutputDelimited_6
-									.append(row27.ExternalIdSplit__c);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_tFileOutputDelimited_7);
+						if (row45.ExternalIdSplit__c != null) {
+							sb_tFileOutputDelimited_7
+									.append(row45.ExternalIdSplit__c);
 						}
-						sb_tFileOutputDelimited_6
-								.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_6);
+						sb_tFileOutputDelimited_7
+								.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_7);
 
-						nb_line_tFileOutputDelimited_6++;
-						resourceMap.put("nb_line_tFileOutputDelimited_6",
-								nb_line_tFileOutputDelimited_6);
+						nb_line_tFileOutputDelimited_7++;
+						resourceMap.put("nb_line_tFileOutputDelimited_7",
+								nb_line_tFileOutputDelimited_7);
 
-						outtFileOutputDelimited_6
-								.write(sb_tFileOutputDelimited_6.toString());
+						outtFileOutputDelimited_7
+								.write(sb_tFileOutputDelimited_7.toString());
 
-						tos_count_tFileOutputDelimited_6++;
+						tos_count_tFileOutputDelimited_7++;
 
 						/**
-						 * [tFileOutputDelimited_6 main ] stop
+						 * [tFileOutputDelimited_7 main ] stop
 						 */
 
 						/**
-						 * [tFileOutputDelimited_6 process_data_begin ] start
+						 * [tFileOutputDelimited_7 process_data_begin ] start
 						 */
 
-						currentComponent = "tFileOutputDelimited_6";
+						currentComponent = "tFileOutputDelimited_7";
 
 						/**
-						 * [tFileOutputDelimited_6 process_data_begin ] stop
+						 * [tFileOutputDelimited_7 process_data_begin ] stop
 						 */
 
 						/**
-						 * [tFileOutputDelimited_6 process_data_end ] start
+						 * [tFileOutputDelimited_7 process_data_end ] start
 						 */
 
-						currentComponent = "tFileOutputDelimited_6";
+						currentComponent = "tFileOutputDelimited_7";
 
 						/**
-						 * [tFileOutputDelimited_6 process_data_end ] stop
+						 * [tFileOutputDelimited_7 process_data_end ] stop
 						 */
 
-					} // End of branch "row27"
+					} // End of branch "row45"
 
-					// Start of branch "row25"
-					if (row25 != null) {
+					// Start of branch "row46"
+					if (row46 != null) {
 
 						/**
-						 * [tFileOutputDelimited_5 main ] start
+						 * [tFileOutputDelimited_8 main ] start
 						 */
 
-						currentComponent = "tFileOutputDelimited_5";
+						currentComponent = "tFileOutputDelimited_8";
 
-						// row25
-						// row25
+						// row46
+						// row46
 
 						if (execStat) {
-							runStat.updateStatOnConnection("row25" + iterateId,
+							runStat.updateStatOnConnection("row46" + iterateId,
 									1, 1);
 						}
 
-						StringBuilder sb_tFileOutputDelimited_5 = new StringBuilder();
-						if (row25.ParentId != null) {
-							sb_tFileOutputDelimited_5.append(row25.ParentId);
+						StringBuilder sb_tFileOutputDelimited_8 = new StringBuilder();
+						if (row46.ParentId != null) {
+							sb_tFileOutputDelimited_8.append(row46.ParentId);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.ActivityId != null) {
-							sb_tFileOutputDelimited_5.append(row25.ActivityId);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.ActivityId != null) {
+							sb_tFileOutputDelimited_8.append(row46.ActivityId);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.CreatedById != null) {
-							sb_tFileOutputDelimited_5.append(row25.CreatedById);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.CreatedById != null) {
+							sb_tFileOutputDelimited_8.append(row46.CreatedById);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.CreatedDate != null) {
-							sb_tFileOutputDelimited_5.append(FormatterUtils
-									.format_Date(row25.CreatedDate,
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.CreatedDate != null) {
+							sb_tFileOutputDelimited_8.append(FormatterUtils
+									.format_Date(row46.CreatedDate,
 											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.LastModifiedDate != null) {
-							sb_tFileOutputDelimited_5.append(FormatterUtils
-									.format_Date(row25.LastModifiedDate,
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.LastModifiedDate != null) {
+							sb_tFileOutputDelimited_8.append(FormatterUtils
+									.format_Date(row46.LastModifiedDate,
 											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.LastModifiedById != null) {
-							sb_tFileOutputDelimited_5
-									.append(row25.LastModifiedById);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.LastModifiedById != null) {
+							sb_tFileOutputDelimited_8
+									.append(row46.LastModifiedById);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.Subject != null) {
-							sb_tFileOutputDelimited_5.append(row25.Subject);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.Subject != null) {
+							sb_tFileOutputDelimited_8.append(row46.Subject);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.FromName != null) {
-							sb_tFileOutputDelimited_5.append(row25.FromName);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.FromName != null) {
+							sb_tFileOutputDelimited_8.append(row46.FromName);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.FromAddress != null) {
-							sb_tFileOutputDelimited_5.append(row25.FromAddress);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.FromAddress != null) {
+							sb_tFileOutputDelimited_8.append(row46.FromAddress);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.ToAddress != null) {
-							sb_tFileOutputDelimited_5.append(row25.ToAddress);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.ToAddress != null) {
+							sb_tFileOutputDelimited_8.append(row46.ToAddress);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.CcAddress != null) {
-							sb_tFileOutputDelimited_5.append(row25.CcAddress);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.CcAddress != null) {
+							sb_tFileOutputDelimited_8.append(row46.CcAddress);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.BccAddress != null) {
-							sb_tFileOutputDelimited_5.append(row25.BccAddress);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.BccAddress != null) {
+							sb_tFileOutputDelimited_8.append(row46.BccAddress);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						sb_tFileOutputDelimited_5.append(row25.Incoming);
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.Status != null) {
-							sb_tFileOutputDelimited_5.append(row25.Status);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						sb_tFileOutputDelimited_8.append(row46.Incoming);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.Status != null) {
+							sb_tFileOutputDelimited_8.append(row46.Status);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.MessageDate != null) {
-							sb_tFileOutputDelimited_5.append(FormatterUtils
-									.format_Date(row25.MessageDate,
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.MessageDate != null) {
+							sb_tFileOutputDelimited_8.append(FormatterUtils
+									.format_Date(row46.MessageDate,
 											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.RelatedToId != null) {
-							sb_tFileOutputDelimited_5.append(row25.RelatedToId);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.RelatedToId != null) {
+							sb_tFileOutputDelimited_8.append(row46.RelatedToId);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.ExternalIdSplit__c != null) {
-							sb_tFileOutputDelimited_5
-									.append(row25.ExternalIdSplit__c);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.ExternalIdSplit__c != null) {
+							sb_tFileOutputDelimited_8
+									.append(row46.ExternalIdSplit__c);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.errorCode != null) {
-							sb_tFileOutputDelimited_5.append(row25.errorCode);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.errorCode != null) {
+							sb_tFileOutputDelimited_8.append(row46.errorCode);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.errorFields != null) {
-							sb_tFileOutputDelimited_5.append(row25.errorFields);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.errorFields != null) {
+							sb_tFileOutputDelimited_8.append(row46.errorFields);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_tFileOutputDelimited_5);
-						if (row25.errorMessage != null) {
-							sb_tFileOutputDelimited_5
-									.append(row25.errorMessage);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_tFileOutputDelimited_8);
+						if (row46.errorMessage != null) {
+							sb_tFileOutputDelimited_8
+									.append(row46.errorMessage);
 						}
-						sb_tFileOutputDelimited_5
-								.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_5);
+						sb_tFileOutputDelimited_8
+								.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_8);
 
-						nb_line_tFileOutputDelimited_5++;
-						resourceMap.put("nb_line_tFileOutputDelimited_5",
-								nb_line_tFileOutputDelimited_5);
+						nb_line_tFileOutputDelimited_8++;
+						resourceMap.put("nb_line_tFileOutputDelimited_8",
+								nb_line_tFileOutputDelimited_8);
 
-						outtFileOutputDelimited_5
-								.write(sb_tFileOutputDelimited_5.toString());
+						outtFileOutputDelimited_8
+								.write(sb_tFileOutputDelimited_8.toString());
 
-						tos_count_tFileOutputDelimited_5++;
+						tos_count_tFileOutputDelimited_8++;
 
 						/**
-						 * [tFileOutputDelimited_5 main ] stop
+						 * [tFileOutputDelimited_8 main ] stop
 						 */
 
 						/**
-						 * [tFileOutputDelimited_5 process_data_begin ] start
+						 * [tFileOutputDelimited_8 process_data_begin ] start
 						 */
 
-						currentComponent = "tFileOutputDelimited_5";
+						currentComponent = "tFileOutputDelimited_8";
 
 						/**
-						 * [tFileOutputDelimited_5 process_data_begin ] stop
+						 * [tFileOutputDelimited_8 process_data_begin ] stop
 						 */
 
 						/**
-						 * [tFileOutputDelimited_5 process_data_end ] start
+						 * [tFileOutputDelimited_8 process_data_end ] start
 						 */
 
-						currentComponent = "tFileOutputDelimited_5";
+						currentComponent = "tFileOutputDelimited_8";
 
 						/**
-						 * [tFileOutputDelimited_5 process_data_end ] stop
+						 * [tFileOutputDelimited_8 process_data_end ] stop
 						 */
 
-					} // End of branch "row25"
+					} // End of branch "row46"
 
 					/**
-					 * [tSalesforceOutput_1 process_data_end ] start
+					 * [tSalesforceOutput_3 process_data_end ] start
 					 */
 
-					currentComponent = "tSalesforceOutput_1";
+					currentComponent = "tSalesforceOutput_3";
 
 				} // end of data processing while block
-				if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
-					((org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1)
+				if (writer_tSalesforceOutput_3 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+					((org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_3)
 							.cleanWrites();
 				}
 
 				/**
-				 * [tSalesforceOutput_1 process_data_end ] stop
+				 * [tSalesforceOutput_3 process_data_end ] stop
 				 */
 
 				/**
-				 * [tFileOutputDelimited_6 end ] start
+				 * [tFileOutputDelimited_7 end ] start
 				 */
 
-				currentComponent = "tFileOutputDelimited_6";
+				currentComponent = "tFileOutputDelimited_7";
 
-				if (outtFileOutputDelimited_6 != null) {
-					outtFileOutputDelimited_6.flush();
-					outtFileOutputDelimited_6.close();
+				if (outtFileOutputDelimited_7 != null) {
+					outtFileOutputDelimited_7.flush();
+					outtFileOutputDelimited_7.close();
 				}
 
-				globalMap.put("tFileOutputDelimited_6_NB_LINE",
-						nb_line_tFileOutputDelimited_6);
-				globalMap.put("tFileOutputDelimited_6_FILE_NAME",
-						fileName_tFileOutputDelimited_6);
+				globalMap.put("tFileOutputDelimited_7_NB_LINE",
+						nb_line_tFileOutputDelimited_7);
+				globalMap.put("tFileOutputDelimited_7_FILE_NAME",
+						fileName_tFileOutputDelimited_7);
 
-				resourceMap.put("finish_tFileOutputDelimited_6", true);
+				resourceMap.put("finish_tFileOutputDelimited_7", true);
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row27" + iterateId, 2,
+						runStat.updateStatOnConnection("row45" + iterateId, 2,
 								0);
 					}
 				}
 
-				ok_Hash.put("tFileOutputDelimited_6", true);
-				end_Hash.put("tFileOutputDelimited_6",
+				ok_Hash.put("tFileOutputDelimited_7", true);
+				end_Hash.put("tFileOutputDelimited_7",
 						System.currentTimeMillis());
 
 				/**
-				 * [tFileOutputDelimited_6 end ] stop
+				 * [tFileOutputDelimited_7 end ] stop
 				 */
 
 				/**
-				 * [tFileOutputDelimited_5 end ] start
+				 * [tFileOutputDelimited_8 end ] start
 				 */
 
-				currentComponent = "tFileOutputDelimited_5";
+				currentComponent = "tFileOutputDelimited_8";
 
-				if (outtFileOutputDelimited_5 != null) {
-					outtFileOutputDelimited_5.flush();
-					outtFileOutputDelimited_5.close();
+				if (outtFileOutputDelimited_8 != null) {
+					outtFileOutputDelimited_8.flush();
+					outtFileOutputDelimited_8.close();
 				}
 
-				globalMap.put("tFileOutputDelimited_5_NB_LINE",
-						nb_line_tFileOutputDelimited_5);
-				globalMap.put("tFileOutputDelimited_5_FILE_NAME",
-						fileName_tFileOutputDelimited_5);
+				globalMap.put("tFileOutputDelimited_8_NB_LINE",
+						nb_line_tFileOutputDelimited_8);
+				globalMap.put("tFileOutputDelimited_8_FILE_NAME",
+						fileName_tFileOutputDelimited_8);
 
-				if (isFileGenerated_tFileOutputDelimited_5
-						&& nb_line_tFileOutputDelimited_5 == 0) {
+				if (isFileGenerated_tFileOutputDelimited_8
+						&& nb_line_tFileOutputDelimited_8 == 0) {
 
-					filetFileOutputDelimited_5.delete();
+					filetFileOutputDelimited_8.delete();
 
 				}
 
-				resourceMap.put("finish_tFileOutputDelimited_5", true);
+				resourceMap.put("finish_tFileOutputDelimited_8", true);
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row25" + iterateId, 2,
+						runStat.updateStatOnConnection("row46" + iterateId, 2,
 								0);
 					}
 				}
 
-				ok_Hash.put("tFileOutputDelimited_5", true);
-				end_Hash.put("tFileOutputDelimited_5",
+				ok_Hash.put("tFileOutputDelimited_8", true);
+				end_Hash.put("tFileOutputDelimited_8",
 						System.currentTimeMillis());
 
 				/**
-				 * [tFileOutputDelimited_5 end ] stop
+				 * [tFileOutputDelimited_8 end ] stop
 				 */
 
 			}// end the resume
@@ -10535,156 +14655,157 @@ public class LOAD_EmailMessage implements TalendJob {
 			throw error;
 		} finally {
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_Meeting_minute");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row28");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_CreatedBy");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row33");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_ModifiedBy");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row35");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_Project");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row39");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_Task1");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row40");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_CaseParentId");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row41");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_Opportunity");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row42");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_Case");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row43");
 
-			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_Contract");
+			// free memory for "tMap_7"
+			globalMap.remove("tHash_Lookup_row44");
 
 			try {
 
 				/**
-				 * [tSalesforceInput_1 finally ] start
+				 * [tSalesforceInput_12 finally ] start
 				 */
 
-				currentComponent = "tSalesforceInput_1";
+				currentComponent = "tSalesforceInput_12";
 
 				// finally of generic
 
-				if (resourceMap.get("finish_tSalesforceInput_1") == null) {
-					if (resourceMap.get("reader_tSalesforceInput_1") != null) {
+				if (resourceMap.get("finish_tSalesforceInput_12") == null) {
+					if (resourceMap.get("reader_tSalesforceInput_12") != null) {
 						try {
 							((org.talend.components.api.component.runtime.Reader) resourceMap
-									.get("reader_tSalesforceInput_1")).close();
-						} catch (java.io.IOException e_tSalesforceInput_1) {
-							String errorMessage_tSalesforceInput_1 = "failed to release the resource in tSalesforceInput_1 :"
-									+ e_tSalesforceInput_1.getMessage();
-							System.err.println(errorMessage_tSalesforceInput_1);
+									.get("reader_tSalesforceInput_12")).close();
+						} catch (java.io.IOException e_tSalesforceInput_12) {
+							String errorMessage_tSalesforceInput_12 = "failed to release the resource in tSalesforceInput_12 :"
+									+ e_tSalesforceInput_12.getMessage();
+							System.err
+									.println(errorMessage_tSalesforceInput_12);
 						}
 					}
 				}
 
 				/**
-				 * [tSalesforceInput_1 finally ] stop
+				 * [tSalesforceInput_12 finally ] stop
 				 */
 
 				/**
-				 * [tMap_5 finally ] start
+				 * [tMap_6 finally ] start
 				 */
 
-				currentComponent = "tMap_5";
+				currentComponent = "tMap_6";
 
 				/**
-				 * [tMap_5 finally ] stop
-				 */
-
-				/**
-				 * [tMap_1 finally ] start
-				 */
-
-				currentComponent = "tMap_1";
-
-				/**
-				 * [tMap_1 finally ] stop
+				 * [tMap_6 finally ] stop
 				 */
 
 				/**
-				 * [tSalesforceOutput_1 finally ] start
+				 * [tMap_7 finally ] start
 				 */
 
-				currentComponent = "tSalesforceOutput_1";
+				currentComponent = "tMap_7";
+
+				/**
+				 * [tMap_7 finally ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutput_3 finally ] start
+				 */
+
+				currentComponent = "tSalesforceOutput_3";
 
 				// finally of generic
 
-				if (resourceMap.get("finish_tSalesforceOutput_1") == null) {
-					if (resourceMap.get("writer_tSalesforceOutput_1") != null) {
+				if (resourceMap.get("finish_tSalesforceOutput_3") == null) {
+					if (resourceMap.get("writer_tSalesforceOutput_3") != null) {
 						try {
 							((org.talend.components.api.component.runtime.Writer) resourceMap
-									.get("writer_tSalesforceOutput_1")).close();
-						} catch (java.io.IOException e_tSalesforceOutput_1) {
-							String errorMessage_tSalesforceOutput_1 = "failed to release the resource in tSalesforceOutput_1 :"
-									+ e_tSalesforceOutput_1.getMessage();
+									.get("writer_tSalesforceOutput_3")).close();
+						} catch (java.io.IOException e_tSalesforceOutput_3) {
+							String errorMessage_tSalesforceOutput_3 = "failed to release the resource in tSalesforceOutput_3 :"
+									+ e_tSalesforceOutput_3.getMessage();
 							System.err
-									.println(errorMessage_tSalesforceOutput_1);
+									.println(errorMessage_tSalesforceOutput_3);
 						}
 					}
 				}
 
 				/**
-				 * [tSalesforceOutput_1 finally ] stop
+				 * [tSalesforceOutput_3 finally ] stop
 				 */
 
 				/**
-				 * [tFileOutputDelimited_6 finally ] start
+				 * [tFileOutputDelimited_7 finally ] start
 				 */
 
-				currentComponent = "tFileOutputDelimited_6";
+				currentComponent = "tFileOutputDelimited_7";
 
-				if (resourceMap.get("finish_tFileOutputDelimited_6") == null) {
+				if (resourceMap.get("finish_tFileOutputDelimited_7") == null) {
 
-					java.io.Writer outtFileOutputDelimited_6 = (java.io.Writer) resourceMap
-							.get("out_tFileOutputDelimited_6");
-					if (outtFileOutputDelimited_6 != null) {
-						outtFileOutputDelimited_6.flush();
-						outtFileOutputDelimited_6.close();
+					java.io.Writer outtFileOutputDelimited_7 = (java.io.Writer) resourceMap
+							.get("out_tFileOutputDelimited_7");
+					if (outtFileOutputDelimited_7 != null) {
+						outtFileOutputDelimited_7.flush();
+						outtFileOutputDelimited_7.close();
 					}
 
 				}
 
 				/**
-				 * [tFileOutputDelimited_6 finally ] stop
+				 * [tFileOutputDelimited_7 finally ] stop
 				 */
 
 				/**
-				 * [tFileOutputDelimited_5 finally ] start
+				 * [tFileOutputDelimited_8 finally ] start
 				 */
 
-				currentComponent = "tFileOutputDelimited_5";
+				currentComponent = "tFileOutputDelimited_8";
 
-				if (resourceMap.get("finish_tFileOutputDelimited_5") == null) {
+				if (resourceMap.get("finish_tFileOutputDelimited_8") == null) {
 
-					java.io.Writer outtFileOutputDelimited_5 = (java.io.Writer) resourceMap
-							.get("out_tFileOutputDelimited_5");
-					if (outtFileOutputDelimited_5 != null) {
-						outtFileOutputDelimited_5.flush();
-						outtFileOutputDelimited_5.close();
+					java.io.Writer outtFileOutputDelimited_8 = (java.io.Writer) resourceMap
+							.get("out_tFileOutputDelimited_8");
+					if (outtFileOutputDelimited_8 != null) {
+						outtFileOutputDelimited_8.flush();
+						outtFileOutputDelimited_8.close();
 					}
 
 					if (Boolean.valueOf(String.valueOf(resourceMap
-							.get("isFileGenerated_tFileOutputDelimited_5")))
+							.get("isFileGenerated_tFileOutputDelimited_8")))
 							&& Integer.valueOf(String.valueOf(resourceMap
-									.get("nb_line_tFileOutputDelimited_5"))) == 0) {
+									.get("nb_line_tFileOutputDelimited_8"))) == 0) {
 
 						((java.io.File) resourceMap
-								.get("filetFileOutputDelimited_5")).delete();
+								.get("filetFileOutputDelimited_8")).delete();
 
 					}
 
 				}
 
 				/**
-				 * [tFileOutputDelimited_5 finally ] stop
+				 * [tFileOutputDelimited_8 finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -10695,7 +14816,7 @@ public class LOAD_EmailMessage implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tSalesforceInput_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tSalesforceInput_12_SUBPROCESS_STATE", 1);
 	}
 
 	public static class Meeting_minuteStruct
@@ -11002,7 +15123,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// node:tAdvancedHash_Meeting_minute - inputs:(Meeting_minute)
 				// outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_Meeting_minute = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -11527,7 +15648,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// outputs:(CreatedBy,CreatedBy) | target
 				// node:tAdvancedHash_CreatedBy - inputs:(CreatedBy) outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_CreatedBy = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -12052,7 +16173,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// node:tAdvancedHash_ModifiedBy - inputs:(ModifiedBy)
 				// outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_ModifiedBy = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -12577,7 +16698,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// outputs:(Project,Project) | target node:tAdvancedHash_Project
 				// - inputs:(Project) outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_Project = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -13101,7 +17222,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// outputs:(Task1,Task1) | target node:tAdvancedHash_Task1 -
 				// inputs:(Task1) outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_Task1 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -13625,7 +17746,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// node:tAdvancedHash_CaseParentId - inputs:(CaseParentId)
 				// outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_CaseParentId = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -14151,7 +18272,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// node:tAdvancedHash_Opportunity - inputs:(Opportunity)
 				// outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_Opportunity = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -14675,7 +18796,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// outputs:(Case,Case) | target node:tAdvancedHash_Case -
 				// inputs:(Case) outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_Case = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -15196,7 +19317,7 @@ public class LOAD_EmailMessage implements TalendJob {
 				// outputs:(Contract,Contract) | target
 				// node:tAdvancedHash_Contract - inputs:(Contract) outputs:()
 				// linked node: tMap_1 -
-				// inputs:(row2,Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract)
+				// inputs:(Meeting_minute,CreatedBy,ModifiedBy,Project,Task1,CaseParentId,Opportunity,Case,Contract,row2)
 				// outputs:(EmailMessage)
 
 				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_Contract = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
@@ -15417,6 +19538,4722 @@ public class LOAD_EmailMessage implements TalendJob {
 		}
 
 		globalMap.put("tHashInput_9_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row28Struct implements
+			routines.system.IPersistableComparableLookupRow<row28Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row28Struct other = (row28Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row28Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row28Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row28Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_21Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_21_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row28Struct row28 = new row28Struct();
+
+				/**
+				 * [tAdvancedHash_row28 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row28", false);
+				start_Hash.put("tAdvancedHash_row28",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row28";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row28" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row28 = 0;
+
+				// connection name:row28
+				// source node:tHashInput_21 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row28,row28) |
+				// target node:tAdvancedHash_row28 - inputs:(row28) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row28 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row28Struct> tHash_Lookup_row28 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row28Struct> getLookup(matchingModeEnum_row28);
+
+				globalMap.put("tHash_Lookup_row28", tHash_Lookup_row28);
+
+				/**
+				 * [tAdvancedHash_row28 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_21 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_21", false);
+				start_Hash.put("tHashInput_21", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_21";
+
+				int tos_count_tHashInput_21 = 0;
+
+				int nb_line_tHashInput_21 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_21 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row7Struct> tHashFile_tHashInput_21 = mf_tHashInput_21
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_3");
+				if (tHashFile_tHashInput_21 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row7Struct> iterator_tHashInput_21 = tHashFile_tHashInput_21
+						.iterator();
+				while (iterator_tHashInput_21.hasNext()) {
+					row7Struct next_tHashInput_21 = iterator_tHashInput_21
+							.next();
+
+					row28.Id = next_tHashInput_21.Id;
+					row28.ExternalIdSplit__c = next_tHashInput_21.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_21 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_21 main ] start
+					 */
+
+					currentComponent = "tHashInput_21";
+
+					tos_count_tHashInput_21++;
+
+					/**
+					 * [tHashInput_21 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_21 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_21";
+
+					/**
+					 * [tHashInput_21 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row28 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row28";
+
+					// row28
+					// row28
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row28" + iterateId, 1,
+								1);
+					}
+
+					row28Struct row28_HashRow = new row28Struct();
+
+					row28_HashRow.Id = row28.Id;
+
+					row28_HashRow.ExternalIdSplit__c = row28.ExternalIdSplit__c;
+
+					tHash_Lookup_row28.put(row28_HashRow);
+
+					tos_count_tAdvancedHash_row28++;
+
+					/**
+					 * [tAdvancedHash_row28 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row28 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row28";
+
+					/**
+					 * [tAdvancedHash_row28 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row28 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row28";
+
+					/**
+					 * [tAdvancedHash_row28 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_21 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_21";
+
+					/**
+					 * [tHashInput_21 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_21 end ] start
+					 */
+
+					currentComponent = "tHashInput_21";
+
+					nb_line_tHashInput_21++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_3");
+
+				globalMap.put("tHashInput_21_NB_LINE", nb_line_tHashInput_21);
+
+				ok_Hash.put("tHashInput_21", true);
+				end_Hash.put("tHashInput_21", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_21 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row28 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row28";
+
+				tHash_Lookup_row28.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row28" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row28", true);
+				end_Hash.put("tAdvancedHash_row28", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row28 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_21 finally ] start
+				 */
+
+				currentComponent = "tHashInput_21";
+
+				/**
+				 * [tHashInput_21 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row28 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row28";
+
+				/**
+				 * [tAdvancedHash_row28 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_21_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row33Struct implements
+			routines.system.IPersistableComparableLookupRow<row33Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row33Struct other = (row33Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row33Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row33Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row33Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_22Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_22_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row33Struct row33 = new row33Struct();
+
+				/**
+				 * [tAdvancedHash_row33 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row33", false);
+				start_Hash.put("tAdvancedHash_row33",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row33";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row33" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row33 = 0;
+
+				// connection name:row33
+				// source node:tHashInput_22 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row33,row33) |
+				// target node:tAdvancedHash_row33 - inputs:(row33) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row33 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row33Struct> tHash_Lookup_row33 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row33Struct> getLookup(matchingModeEnum_row33);
+
+				globalMap.put("tHash_Lookup_row33", tHash_Lookup_row33);
+
+				/**
+				 * [tAdvancedHash_row33 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_22 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_22", false);
+				start_Hash.put("tHashInput_22", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_22";
+
+				int tos_count_tHashInput_22 = 0;
+
+				int nb_line_tHashInput_22 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_22 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row7Struct> tHashFile_tHashInput_22 = mf_tHashInput_22
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_3");
+				if (tHashFile_tHashInput_22 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row7Struct> iterator_tHashInput_22 = tHashFile_tHashInput_22
+						.iterator();
+				while (iterator_tHashInput_22.hasNext()) {
+					row7Struct next_tHashInput_22 = iterator_tHashInput_22
+							.next();
+
+					row33.Id = next_tHashInput_22.Id;
+					row33.ExternalIdSplit__c = next_tHashInput_22.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_22 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_22 main ] start
+					 */
+
+					currentComponent = "tHashInput_22";
+
+					tos_count_tHashInput_22++;
+
+					/**
+					 * [tHashInput_22 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_22 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_22";
+
+					/**
+					 * [tHashInput_22 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row33 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row33";
+
+					// row33
+					// row33
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row33" + iterateId, 1,
+								1);
+					}
+
+					row33Struct row33_HashRow = new row33Struct();
+
+					row33_HashRow.Id = row33.Id;
+
+					row33_HashRow.ExternalIdSplit__c = row33.ExternalIdSplit__c;
+
+					tHash_Lookup_row33.put(row33_HashRow);
+
+					tos_count_tAdvancedHash_row33++;
+
+					/**
+					 * [tAdvancedHash_row33 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row33 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row33";
+
+					/**
+					 * [tAdvancedHash_row33 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row33 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row33";
+
+					/**
+					 * [tAdvancedHash_row33 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_22 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_22";
+
+					/**
+					 * [tHashInput_22 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_22 end ] start
+					 */
+
+					currentComponent = "tHashInput_22";
+
+					nb_line_tHashInput_22++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_3");
+
+				globalMap.put("tHashInput_22_NB_LINE", nb_line_tHashInput_22);
+
+				ok_Hash.put("tHashInput_22", true);
+				end_Hash.put("tHashInput_22", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_22 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row33 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row33";
+
+				tHash_Lookup_row33.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row33" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row33", true);
+				end_Hash.put("tAdvancedHash_row33", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row33 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_22 finally ] start
+				 */
+
+				currentComponent = "tHashInput_22";
+
+				/**
+				 * [tHashInput_22 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row33 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row33";
+
+				/**
+				 * [tAdvancedHash_row33 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_22_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row35Struct implements
+			routines.system.IPersistableComparableLookupRow<row35Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row35Struct other = (row35Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row35Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row35Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row35Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_23Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_23_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row35Struct row35 = new row35Struct();
+
+				/**
+				 * [tAdvancedHash_row35 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row35", false);
+				start_Hash.put("tAdvancedHash_row35",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row35";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row35" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row35 = 0;
+
+				// connection name:row35
+				// source node:tHashInput_23 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row35,row35) |
+				// target node:tAdvancedHash_row35 - inputs:(row35) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row35 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row35Struct> tHash_Lookup_row35 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row35Struct> getLookup(matchingModeEnum_row35);
+
+				globalMap.put("tHash_Lookup_row35", tHash_Lookup_row35);
+
+				/**
+				 * [tAdvancedHash_row35 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_23 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_23", false);
+				start_Hash.put("tHashInput_23", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_23";
+
+				int tos_count_tHashInput_23 = 0;
+
+				int nb_line_tHashInput_23 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_23 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row1Struct> tHashFile_tHashInput_23 = mf_tHashInput_23
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_1");
+				if (tHashFile_tHashInput_23 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row1Struct> iterator_tHashInput_23 = tHashFile_tHashInput_23
+						.iterator();
+				while (iterator_tHashInput_23.hasNext()) {
+					row1Struct next_tHashInput_23 = iterator_tHashInput_23
+							.next();
+
+					row35.Id = next_tHashInput_23.Id;
+					row35.ExternalIdSplit__c = next_tHashInput_23.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_23 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_23 main ] start
+					 */
+
+					currentComponent = "tHashInput_23";
+
+					tos_count_tHashInput_23++;
+
+					/**
+					 * [tHashInput_23 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_23 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_23";
+
+					/**
+					 * [tHashInput_23 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row35 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row35";
+
+					// row35
+					// row35
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row35" + iterateId, 1,
+								1);
+					}
+
+					row35Struct row35_HashRow = new row35Struct();
+
+					row35_HashRow.Id = row35.Id;
+
+					row35_HashRow.ExternalIdSplit__c = row35.ExternalIdSplit__c;
+
+					tHash_Lookup_row35.put(row35_HashRow);
+
+					tos_count_tAdvancedHash_row35++;
+
+					/**
+					 * [tAdvancedHash_row35 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row35 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row35";
+
+					/**
+					 * [tAdvancedHash_row35 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row35 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row35";
+
+					/**
+					 * [tAdvancedHash_row35 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_23 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_23";
+
+					/**
+					 * [tHashInput_23 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_23 end ] start
+					 */
+
+					currentComponent = "tHashInput_23";
+
+					nb_line_tHashInput_23++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_1");
+
+				globalMap.put("tHashInput_23_NB_LINE", nb_line_tHashInput_23);
+
+				ok_Hash.put("tHashInput_23", true);
+				end_Hash.put("tHashInput_23", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_23 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row35 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row35";
+
+				tHash_Lookup_row35.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row35" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row35", true);
+				end_Hash.put("tAdvancedHash_row35", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row35 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_23 finally ] start
+				 */
+
+				currentComponent = "tHashInput_23";
+
+				/**
+				 * [tHashInput_23 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row35 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row35";
+
+				/**
+				 * [tAdvancedHash_row35 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_23_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row39Struct implements
+			routines.system.IPersistableComparableLookupRow<row39Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row39Struct other = (row39Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row39Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row39Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row39Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_24Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_24_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row39Struct row39 = new row39Struct();
+
+				/**
+				 * [tAdvancedHash_row39 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row39", false);
+				start_Hash.put("tAdvancedHash_row39",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row39";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row39" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row39 = 0;
+
+				// connection name:row39
+				// source node:tHashInput_24 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row39,row39) |
+				// target node:tAdvancedHash_row39 - inputs:(row39) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row39 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row39Struct> tHash_Lookup_row39 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row39Struct> getLookup(matchingModeEnum_row39);
+
+				globalMap.put("tHash_Lookup_row39", tHash_Lookup_row39);
+
+				/**
+				 * [tAdvancedHash_row39 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_24 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_24", false);
+				start_Hash.put("tHashInput_24", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_24";
+
+				int tos_count_tHashInput_24 = 0;
+
+				int nb_line_tHashInput_24 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_24 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row9Struct> tHashFile_tHashInput_24 = mf_tHashInput_24
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_4");
+				if (tHashFile_tHashInput_24 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row9Struct> iterator_tHashInput_24 = tHashFile_tHashInput_24
+						.iterator();
+				while (iterator_tHashInput_24.hasNext()) {
+					row9Struct next_tHashInput_24 = iterator_tHashInput_24
+							.next();
+
+					row39.Id = next_tHashInput_24.Id;
+					row39.ExternalIdSplit__c = next_tHashInput_24.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_24 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_24 main ] start
+					 */
+
+					currentComponent = "tHashInput_24";
+
+					tos_count_tHashInput_24++;
+
+					/**
+					 * [tHashInput_24 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_24 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_24";
+
+					/**
+					 * [tHashInput_24 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row39 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row39";
+
+					// row39
+					// row39
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row39" + iterateId, 1,
+								1);
+					}
+
+					row39Struct row39_HashRow = new row39Struct();
+
+					row39_HashRow.Id = row39.Id;
+
+					row39_HashRow.ExternalIdSplit__c = row39.ExternalIdSplit__c;
+
+					tHash_Lookup_row39.put(row39_HashRow);
+
+					tos_count_tAdvancedHash_row39++;
+
+					/**
+					 * [tAdvancedHash_row39 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row39 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row39";
+
+					/**
+					 * [tAdvancedHash_row39 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row39 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row39";
+
+					/**
+					 * [tAdvancedHash_row39 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_24 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_24";
+
+					/**
+					 * [tHashInput_24 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_24 end ] start
+					 */
+
+					currentComponent = "tHashInput_24";
+
+					nb_line_tHashInput_24++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_4");
+
+				globalMap.put("tHashInput_24_NB_LINE", nb_line_tHashInput_24);
+
+				ok_Hash.put("tHashInput_24", true);
+				end_Hash.put("tHashInput_24", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_24 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row39 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row39";
+
+				tHash_Lookup_row39.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row39" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row39", true);
+				end_Hash.put("tAdvancedHash_row39", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row39 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_24 finally ] start
+				 */
+
+				currentComponent = "tHashInput_24";
+
+				/**
+				 * [tHashInput_24 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row39 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row39";
+
+				/**
+				 * [tAdvancedHash_row39 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_24_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row40Struct implements
+			routines.system.IPersistableComparableLookupRow<row40Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row40Struct other = (row40Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row40Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row40Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row40Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_25Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_25_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row40Struct row40 = new row40Struct();
+
+				/**
+				 * [tAdvancedHash_row40 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row40", false);
+				start_Hash.put("tAdvancedHash_row40",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row40";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row40" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row40 = 0;
+
+				// connection name:row40
+				// source node:tHashInput_25 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row40,row40) |
+				// target node:tAdvancedHash_row40 - inputs:(row40) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row40 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row40Struct> tHash_Lookup_row40 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row40Struct> getLookup(matchingModeEnum_row40);
+
+				globalMap.put("tHash_Lookup_row40", tHash_Lookup_row40);
+
+				/**
+				 * [tAdvancedHash_row40 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_25 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_25", false);
+				start_Hash.put("tHashInput_25", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_25";
+
+				int tos_count_tHashInput_25 = 0;
+
+				int nb_line_tHashInput_25 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_25 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row3Struct> tHashFile_tHashInput_25 = mf_tHashInput_25
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_2");
+				if (tHashFile_tHashInput_25 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row3Struct> iterator_tHashInput_25 = tHashFile_tHashInput_25
+						.iterator();
+				while (iterator_tHashInput_25.hasNext()) {
+					row3Struct next_tHashInput_25 = iterator_tHashInput_25
+							.next();
+
+					row40.Id = next_tHashInput_25.Id;
+					row40.ExternalIdSplit__c = next_tHashInput_25.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_25 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_25 main ] start
+					 */
+
+					currentComponent = "tHashInput_25";
+
+					tos_count_tHashInput_25++;
+
+					/**
+					 * [tHashInput_25 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_25 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_25";
+
+					/**
+					 * [tHashInput_25 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row40 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row40";
+
+					// row40
+					// row40
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row40" + iterateId, 1,
+								1);
+					}
+
+					row40Struct row40_HashRow = new row40Struct();
+
+					row40_HashRow.Id = row40.Id;
+
+					row40_HashRow.ExternalIdSplit__c = row40.ExternalIdSplit__c;
+
+					tHash_Lookup_row40.put(row40_HashRow);
+
+					tos_count_tAdvancedHash_row40++;
+
+					/**
+					 * [tAdvancedHash_row40 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row40 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row40";
+
+					/**
+					 * [tAdvancedHash_row40 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row40 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row40";
+
+					/**
+					 * [tAdvancedHash_row40 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_25 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_25";
+
+					/**
+					 * [tHashInput_25 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_25 end ] start
+					 */
+
+					currentComponent = "tHashInput_25";
+
+					nb_line_tHashInput_25++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_2");
+
+				globalMap.put("tHashInput_25_NB_LINE", nb_line_tHashInput_25);
+
+				ok_Hash.put("tHashInput_25", true);
+				end_Hash.put("tHashInput_25", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_25 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row40 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row40";
+
+				tHash_Lookup_row40.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row40" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row40", true);
+				end_Hash.put("tAdvancedHash_row40", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row40 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_25 finally ] start
+				 */
+
+				currentComponent = "tHashInput_25";
+
+				/**
+				 * [tHashInput_25 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row40 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row40";
+
+				/**
+				 * [tAdvancedHash_row40 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_25_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row41Struct implements
+			routines.system.IPersistableComparableLookupRow<row41Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row41Struct other = (row41Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row41Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row41Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row41Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_26Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_26_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row41Struct row41 = new row41Struct();
+
+				/**
+				 * [tAdvancedHash_row41 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row41", false);
+				start_Hash.put("tAdvancedHash_row41",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row41";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row41" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row41 = 0;
+
+				// connection name:row41
+				// source node:tHashInput_26 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row41,row41) |
+				// target node:tAdvancedHash_row41 - inputs:(row41) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row41 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row41Struct> tHash_Lookup_row41 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row41Struct> getLookup(matchingModeEnum_row41);
+
+				globalMap.put("tHash_Lookup_row41", tHash_Lookup_row41);
+
+				/**
+				 * [tAdvancedHash_row41 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_26 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_26", false);
+				start_Hash.put("tHashInput_26", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_26";
+
+				int tos_count_tHashInput_26 = 0;
+
+				int nb_line_tHashInput_26 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_26 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row3Struct> tHashFile_tHashInput_26 = mf_tHashInput_26
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_2");
+				if (tHashFile_tHashInput_26 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row3Struct> iterator_tHashInput_26 = tHashFile_tHashInput_26
+						.iterator();
+				while (iterator_tHashInput_26.hasNext()) {
+					row3Struct next_tHashInput_26 = iterator_tHashInput_26
+							.next();
+
+					row41.Id = next_tHashInput_26.Id;
+					row41.ExternalIdSplit__c = next_tHashInput_26.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_26 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_26 main ] start
+					 */
+
+					currentComponent = "tHashInput_26";
+
+					tos_count_tHashInput_26++;
+
+					/**
+					 * [tHashInput_26 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_26 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_26";
+
+					/**
+					 * [tHashInput_26 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row41 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row41";
+
+					// row41
+					// row41
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row41" + iterateId, 1,
+								1);
+					}
+
+					row41Struct row41_HashRow = new row41Struct();
+
+					row41_HashRow.Id = row41.Id;
+
+					row41_HashRow.ExternalIdSplit__c = row41.ExternalIdSplit__c;
+
+					tHash_Lookup_row41.put(row41_HashRow);
+
+					tos_count_tAdvancedHash_row41++;
+
+					/**
+					 * [tAdvancedHash_row41 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row41 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row41";
+
+					/**
+					 * [tAdvancedHash_row41 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row41 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row41";
+
+					/**
+					 * [tAdvancedHash_row41 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_26 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_26";
+
+					/**
+					 * [tHashInput_26 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_26 end ] start
+					 */
+
+					currentComponent = "tHashInput_26";
+
+					nb_line_tHashInput_26++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_2");
+
+				globalMap.put("tHashInput_26_NB_LINE", nb_line_tHashInput_26);
+
+				ok_Hash.put("tHashInput_26", true);
+				end_Hash.put("tHashInput_26", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_26 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row41 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row41";
+
+				tHash_Lookup_row41.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row41" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row41", true);
+				end_Hash.put("tAdvancedHash_row41", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row41 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_26 finally ] start
+				 */
+
+				currentComponent = "tHashInput_26";
+
+				/**
+				 * [tHashInput_26 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row41 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row41";
+
+				/**
+				 * [tAdvancedHash_row41 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_26_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row42Struct implements
+			routines.system.IPersistableComparableLookupRow<row42Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row42Struct other = (row42Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row42Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row42Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row42Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_27Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_27_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row42Struct row42 = new row42Struct();
+
+				/**
+				 * [tAdvancedHash_row42 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row42", false);
+				start_Hash.put("tAdvancedHash_row42",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row42";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row42" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row42 = 0;
+
+				// connection name:row42
+				// source node:tHashInput_27 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row42,row42) |
+				// target node:tAdvancedHash_row42 - inputs:(row42) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row42 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row42Struct> tHash_Lookup_row42 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row42Struct> getLookup(matchingModeEnum_row42);
+
+				globalMap.put("tHash_Lookup_row42", tHash_Lookup_row42);
+
+				/**
+				 * [tAdvancedHash_row42 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_27 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_27", false);
+				start_Hash.put("tHashInput_27", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_27";
+
+				int tos_count_tHashInput_27 = 0;
+
+				int nb_line_tHashInput_27 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_27 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row4Struct> tHashFile_tHashInput_27 = mf_tHashInput_27
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_6");
+				if (tHashFile_tHashInput_27 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row4Struct> iterator_tHashInput_27 = tHashFile_tHashInput_27
+						.iterator();
+				while (iterator_tHashInput_27.hasNext()) {
+					row4Struct next_tHashInput_27 = iterator_tHashInput_27
+							.next();
+
+					row42.Id = next_tHashInput_27.Id;
+					row42.ExternalIdSplit__c = next_tHashInput_27.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_27 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_27 main ] start
+					 */
+
+					currentComponent = "tHashInput_27";
+
+					tos_count_tHashInput_27++;
+
+					/**
+					 * [tHashInput_27 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_27 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_27";
+
+					/**
+					 * [tHashInput_27 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row42 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row42";
+
+					// row42
+					// row42
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row42" + iterateId, 1,
+								1);
+					}
+
+					row42Struct row42_HashRow = new row42Struct();
+
+					row42_HashRow.Id = row42.Id;
+
+					row42_HashRow.ExternalIdSplit__c = row42.ExternalIdSplit__c;
+
+					tHash_Lookup_row42.put(row42_HashRow);
+
+					tos_count_tAdvancedHash_row42++;
+
+					/**
+					 * [tAdvancedHash_row42 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row42 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row42";
+
+					/**
+					 * [tAdvancedHash_row42 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row42 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row42";
+
+					/**
+					 * [tAdvancedHash_row42 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_27 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_27";
+
+					/**
+					 * [tHashInput_27 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_27 end ] start
+					 */
+
+					currentComponent = "tHashInput_27";
+
+					nb_line_tHashInput_27++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_6");
+
+				globalMap.put("tHashInput_27_NB_LINE", nb_line_tHashInput_27);
+
+				ok_Hash.put("tHashInput_27", true);
+				end_Hash.put("tHashInput_27", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_27 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row42 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row42";
+
+				tHash_Lookup_row42.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row42" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row42", true);
+				end_Hash.put("tAdvancedHash_row42", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row42 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_27 finally ] start
+				 */
+
+				currentComponent = "tHashInput_27";
+
+				/**
+				 * [tHashInput_27 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row42 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row42";
+
+				/**
+				 * [tAdvancedHash_row42 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_27_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row43Struct implements
+			routines.system.IPersistableComparableLookupRow<row43Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row43Struct other = (row43Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row43Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row43Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row43Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_28Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_28_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row43Struct row43 = new row43Struct();
+
+				/**
+				 * [tAdvancedHash_row43 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row43", false);
+				start_Hash.put("tAdvancedHash_row43",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row43";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row43" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row43 = 0;
+
+				// connection name:row43
+				// source node:tHashInput_28 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row43,row43) |
+				// target node:tAdvancedHash_row43 - inputs:(row43) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row43 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row43Struct> tHash_Lookup_row43 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row43Struct> getLookup(matchingModeEnum_row43);
+
+				globalMap.put("tHash_Lookup_row43", tHash_Lookup_row43);
+
+				/**
+				 * [tAdvancedHash_row43 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_28 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_28", false);
+				start_Hash.put("tHashInput_28", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_28";
+
+				int tos_count_tHashInput_28 = 0;
+
+				int nb_line_tHashInput_28 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_28 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row5Struct> tHashFile_tHashInput_28 = mf_tHashInput_28
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_8");
+				if (tHashFile_tHashInput_28 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row5Struct> iterator_tHashInput_28 = tHashFile_tHashInput_28
+						.iterator();
+				while (iterator_tHashInput_28.hasNext()) {
+					row5Struct next_tHashInput_28 = iterator_tHashInput_28
+							.next();
+
+					row43.Id = next_tHashInput_28.Id;
+					row43.ExternalIdSplit__c = next_tHashInput_28.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_28 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_28 main ] start
+					 */
+
+					currentComponent = "tHashInput_28";
+
+					tos_count_tHashInput_28++;
+
+					/**
+					 * [tHashInput_28 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_28 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_28";
+
+					/**
+					 * [tHashInput_28 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row43 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row43";
+
+					// row43
+					// row43
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row43" + iterateId, 1,
+								1);
+					}
+
+					row43Struct row43_HashRow = new row43Struct();
+
+					row43_HashRow.Id = row43.Id;
+
+					row43_HashRow.ExternalIdSplit__c = row43.ExternalIdSplit__c;
+
+					tHash_Lookup_row43.put(row43_HashRow);
+
+					tos_count_tAdvancedHash_row43++;
+
+					/**
+					 * [tAdvancedHash_row43 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row43 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row43";
+
+					/**
+					 * [tAdvancedHash_row43 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row43 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row43";
+
+					/**
+					 * [tAdvancedHash_row43 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_28 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_28";
+
+					/**
+					 * [tHashInput_28 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_28 end ] start
+					 */
+
+					currentComponent = "tHashInput_28";
+
+					nb_line_tHashInput_28++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_8");
+
+				globalMap.put("tHashInput_28_NB_LINE", nb_line_tHashInput_28);
+
+				ok_Hash.put("tHashInput_28", true);
+				end_Hash.put("tHashInput_28", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_28 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row43 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row43";
+
+				tHash_Lookup_row43.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row43" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row43", true);
+				end_Hash.put("tAdvancedHash_row43", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row43 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_28 finally ] start
+				 */
+
+				currentComponent = "tHashInput_28";
+
+				/**
+				 * [tHashInput_28 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row43 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row43";
+
+				/**
+				 * [tAdvancedHash_row43 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_28_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row44Struct implements
+			routines.system.IPersistableComparableLookupRow<row44Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+		protected static final int DEFAULT_HASHCODE = 1;
+		protected static final int PRIME = 31;
+		protected int hashCode = DEFAULT_HASHCODE;
+		public boolean hashCodeDirty = true;
+
+		public String loopKey;
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		@Override
+		public int hashCode() {
+			if (this.hashCodeDirty) {
+				final int prime = PRIME;
+				int result = DEFAULT_HASHCODE;
+
+				result = prime
+						* result
+						+ ((this.ExternalIdSplit__c == null) ? 0
+								: this.ExternalIdSplit__c.hashCode());
+
+				this.hashCode = result;
+				this.hashCodeDirty = false;
+			}
+			return this.hashCode;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			final row44Struct other = (row44Struct) obj;
+
+			if (this.ExternalIdSplit__c == null) {
+				if (other.ExternalIdSplit__c != null)
+					return false;
+
+			} else if (!this.ExternalIdSplit__c
+					.equals(other.ExternalIdSplit__c))
+
+				return false;
+
+			return true;
+		}
+
+		public void copyDataTo(row44Struct other) {
+
+			other.Id = this.Id;
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		public void copyKeysDataTo(row44Struct other) {
+
+			other.ExternalIdSplit__c = this.ExternalIdSplit__c;
+
+		}
+
+		private String readString(DataInputStream dis, ObjectInputStream ois)
+				throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				byte[] byteArray = new byte[length];
+				dis.read(byteArray);
+				strReturn = new String(byteArray, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, DataOutputStream dos,
+				ObjectOutputStream oos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readKeysData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeKeysData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		/**
+		 * Fill Values data by reading ObjectInputStream.
+		 */
+		public void readValuesData(DataInputStream dis, ObjectInputStream ois) {
+			try {
+
+				int length = 0;
+
+				this.Id = readString(dis, ois);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+
+			}
+
+		}
+
+		/**
+		 * Return a byte array which represents Values data.
+		 */
+		public void writeValuesData(DataOutputStream dos, ObjectOutputStream oos) {
+			try {
+
+				writeString(this.Id, dos, oos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row44Struct other) {
+
+			int returnValue = -1;
+
+			returnValue = checkNullsAndCompare(this.ExternalIdSplit__c,
+					other.ExternalIdSplit__c);
+			if (returnValue != 0) {
+				return returnValue;
+			}
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tHashInput_29Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tHashInput_29_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row44Struct row44 = new row44Struct();
+
+				/**
+				 * [tAdvancedHash_row44 begin ] start
+				 */
+
+				ok_Hash.put("tAdvancedHash_row44", false);
+				start_Hash.put("tAdvancedHash_row44",
+						System.currentTimeMillis());
+
+				currentComponent = "tAdvancedHash_row44";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row44" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tAdvancedHash_row44 = 0;
+
+				// connection name:row44
+				// source node:tHashInput_29 -
+				// inputs:(after_tSalesforceInput_12) outputs:(row44,row44) |
+				// target node:tAdvancedHash_row44 - inputs:(row44) outputs:()
+				// linked node: tMap_7 -
+				// inputs:(copyOfrow2,row28,row33,row35,row39,row40,row41,row42,row43,row44)
+				// outputs:(copyOfEmailMessage_0)
+
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row44 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row44Struct> tHash_Lookup_row44 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row44Struct> getLookup(matchingModeEnum_row44);
+
+				globalMap.put("tHash_Lookup_row44", tHash_Lookup_row44);
+
+				/**
+				 * [tAdvancedHash_row44 begin ] stop
+				 */
+
+				/**
+				 * [tHashInput_29 begin ] start
+				 */
+
+				ok_Hash.put("tHashInput_29", false);
+				start_Hash.put("tHashInput_29", System.currentTimeMillis());
+
+				currentComponent = "tHashInput_29";
+
+				int tos_count_tHashInput_29 = 0;
+
+				int nb_line_tHashInput_29 = 0;
+
+				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_29 = org.talend.designer.components.hashfile.common.MapHashFile
+						.getMapHashFile();
+				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row10Struct> tHashFile_tHashInput_29 = mf_tHashInput_29
+						.getAdvancedMemoryHashFile("tHashFile_LOAD_EmailMessage_"
+								+ pid + "_tHashOutput_5");
+				if (tHashFile_tHashInput_29 == null) {
+					throw new RuntimeException(
+							"The hash is not initialized : The hash must exist before you read from it");
+				}
+				java.util.Iterator<row10Struct> iterator_tHashInput_29 = tHashFile_tHashInput_29
+						.iterator();
+				while (iterator_tHashInput_29.hasNext()) {
+					row10Struct next_tHashInput_29 = iterator_tHashInput_29
+							.next();
+
+					row44.Id = next_tHashInput_29.Id;
+					row44.ExternalIdSplit__c = next_tHashInput_29.ExternalIdSplit__c;
+
+					/**
+					 * [tHashInput_29 begin ] stop
+					 */
+
+					/**
+					 * [tHashInput_29 main ] start
+					 */
+
+					currentComponent = "tHashInput_29";
+
+					tos_count_tHashInput_29++;
+
+					/**
+					 * [tHashInput_29 main ] stop
+					 */
+
+					/**
+					 * [tHashInput_29 process_data_begin ] start
+					 */
+
+					currentComponent = "tHashInput_29";
+
+					/**
+					 * [tHashInput_29 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row44 main ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row44";
+
+					// row44
+					// row44
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row44" + iterateId, 1,
+								1);
+					}
+
+					row44Struct row44_HashRow = new row44Struct();
+
+					row44_HashRow.Id = row44.Id;
+
+					row44_HashRow.ExternalIdSplit__c = row44.ExternalIdSplit__c;
+
+					tHash_Lookup_row44.put(row44_HashRow);
+
+					tos_count_tAdvancedHash_row44++;
+
+					/**
+					 * [tAdvancedHash_row44 main ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row44 process_data_begin ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row44";
+
+					/**
+					 * [tAdvancedHash_row44 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tAdvancedHash_row44 process_data_end ] start
+					 */
+
+					currentComponent = "tAdvancedHash_row44";
+
+					/**
+					 * [tAdvancedHash_row44 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_29 process_data_end ] start
+					 */
+
+					currentComponent = "tHashInput_29";
+
+					/**
+					 * [tHashInput_29 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHashInput_29 end ] start
+					 */
+
+					currentComponent = "tHashInput_29";
+
+					nb_line_tHashInput_29++;
+				}
+
+				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
+						.remove("tHashFile_LOAD_EmailMessage_" + pid
+								+ "_tHashOutput_5");
+
+				globalMap.put("tHashInput_29_NB_LINE", nb_line_tHashInput_29);
+
+				ok_Hash.put("tHashInput_29", true);
+				end_Hash.put("tHashInput_29", System.currentTimeMillis());
+
+				/**
+				 * [tHashInput_29 end ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row44 end ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row44";
+
+				tHash_Lookup_row44.endPut();
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row44" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tAdvancedHash_row44", true);
+				end_Hash.put("tAdvancedHash_row44", System.currentTimeMillis());
+
+				/**
+				 * [tAdvancedHash_row44 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tHashInput_29 finally ] start
+				 */
+
+				currentComponent = "tHashInput_29";
+
+				/**
+				 * [tHashInput_29 finally ] stop
+				 */
+
+				/**
+				 * [tAdvancedHash_row44 finally ] start
+				 */
+
+				currentComponent = "tAdvancedHash_row44";
+
+				/**
+				 * [tAdvancedHash_row44 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tHashInput_29_SUBPROCESS_STATE", 1);
 	}
 
 	public static class errorStruct implements
@@ -17368,6 +26205,20 @@ public class LOAD_EmailMessage implements TalendJob {
 				 * [tSalesforceConnection_2 end ] stop
 				 */
 			}// end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil
+						.addLog("CHECKPOINT",
+								"CONNECTION:SUBJOB_OK:tSalesforceConnection_2:OnSubjobOk",
+								"", Thread.currentThread().getId() + "", "",
+								"", "", "", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk10", 0, "ok");
+			}
+
+			tSalesforceInput_2Process(globalMap);
 
 		} catch (java.lang.Exception e) {
 
@@ -22687,19 +31538,6 @@ public class LOAD_EmailMessage implements TalendJob {
 
 			}// end the resume
 
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT",
-						"CONNECTION:SUBJOB_OK:tSalesforceInput_9:OnSubjobOk",
-						"", Thread.currentThread().getId() + "", "", "", "",
-						"", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk10", 0, "ok");
-			}
-
-			tFileInputDelimited_6Process(globalMap);
-
 		} catch (java.lang.Exception e) {
 
 			TalendException te = new TalendException(e, currentComponent,
@@ -22759,6 +31597,6945 @@ public class LOAD_EmailMessage implements TalendJob {
 		}
 
 		globalMap.put("tSalesforceInput_9_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row27Struct implements
+			routines.system.IPersistableRow<row27Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public String TextBody;
+
+		public String getTextBody() {
+			return this.TextBody;
+		}
+
+		public String HtmlBody;
+
+		public String getHtmlBody() {
+			return this.HtmlBody;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public boolean Incoming;
+
+		public boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.TextBody = readString(dis);
+
+					this.HtmlBody = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					this.Incoming = dis.readBoolean();
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// String
+
+				writeString(this.TextBody, dos);
+
+				// String
+
+				writeString(this.HtmlBody, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.Incoming);
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",TextBody=" + TextBody);
+			sb.append(",HtmlBody=" + HtmlBody);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row27Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row25Struct implements
+			routines.system.IPersistableRow<row25Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public String TextBody;
+
+		public String getTextBody() {
+			return this.TextBody;
+		}
+
+		public String HtmlBody;
+
+		public String getHtmlBody() {
+			return this.HtmlBody;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public boolean Incoming;
+
+		public boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		public String errorCode;
+
+		public String getErrorCode() {
+			return this.errorCode;
+		}
+
+		public String errorFields;
+
+		public String getErrorFields() {
+			return this.errorFields;
+		}
+
+		public String errorMessage;
+
+		public String getErrorMessage() {
+			return this.errorMessage;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.TextBody = readString(dis);
+
+					this.HtmlBody = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					this.Incoming = dis.readBoolean();
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSplit__c = readString(dis);
+
+					this.errorCode = readString(dis);
+
+					this.errorFields = readString(dis);
+
+					this.errorMessage = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// String
+
+				writeString(this.TextBody, dos);
+
+				// String
+
+				writeString(this.HtmlBody, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.Incoming);
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+				// String
+
+				writeString(this.errorCode, dos);
+
+				// String
+
+				writeString(this.errorFields, dos);
+
+				// String
+
+				writeString(this.errorMessage, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",TextBody=" + TextBody);
+			sb.append(",HtmlBody=" + HtmlBody);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append(",errorCode=" + errorCode);
+			sb.append(",errorFields=" + errorFields);
+			sb.append(",errorMessage=" + errorMessage);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row25Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class EmailMessageStruct implements
+			routines.system.IPersistableRow<EmailMessageStruct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public String TextBody;
+
+		public String getTextBody() {
+			return this.TextBody;
+		}
+
+		public String HtmlBody;
+
+		public String getHtmlBody() {
+			return this.HtmlBody;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public boolean Incoming;
+
+		public boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSplit__c;
+
+		public String getExternalIdSplit__c() {
+			return this.ExternalIdSplit__c;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.TextBody = readString(dis);
+
+					this.HtmlBody = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					this.Incoming = dis.readBoolean();
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSplit__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// String
+
+				writeString(this.TextBody, dos);
+
+				// String
+
+				writeString(this.HtmlBody, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.Incoming);
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSplit__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",TextBody=" + TextBody);
+			sb.append(",HtmlBody=" + HtmlBody);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSplit__c=" + ExternalIdSplit__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(EmailMessageStruct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row2Struct implements
+			routines.system.IPersistableRow<row2Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public java.util.Date SystemModstamp;
+
+		public java.util.Date getSystemModstamp() {
+			return this.SystemModstamp;
+		}
+
+		public String TextBody;
+
+		public String getTextBody() {
+			return this.TextBody;
+		}
+
+		public String HtmlBody;
+
+		public String getHtmlBody() {
+			return this.HtmlBody;
+		}
+
+		public String Headers;
+
+		public String getHeaders() {
+			return this.Headers;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ValidatedFromAddress;
+
+		public String getValidatedFromAddress() {
+			return this.ValidatedFromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public boolean Incoming;
+
+		public boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public boolean HasAttachment;
+
+		public boolean getHasAttachment() {
+			return this.HasAttachment;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public boolean IsDeleted;
+
+		public boolean getIsDeleted() {
+			return this.IsDeleted;
+		}
+
+		public String ReplyToEmailMessageId;
+
+		public String getReplyToEmailMessageId() {
+			return this.ReplyToEmailMessageId;
+		}
+
+		public boolean IsExternallyVisible;
+
+		public boolean getIsExternallyVisible() {
+			return this.IsExternallyVisible;
+		}
+
+		public String MessageIdentifier;
+
+		public String getMessageIdentifier() {
+			return this.MessageIdentifier;
+		}
+
+		public String ThreadIdentifier;
+
+		public String getThreadIdentifier() {
+			return this.ThreadIdentifier;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSAMS__c;
+
+		public String getExternalIdSAMS__c() {
+			return this.ExternalIdSAMS__c;
+		}
+
+		public String Tech_UploadStatus__c;
+
+		public String getTech_UploadStatus__c() {
+			return this.Tech_UploadStatus__c;
+		}
+
+		public String TECH_OldEmailMessageID__c;
+
+		public String getTECH_OldEmailMessageID__c() {
+			return this.TECH_OldEmailMessageID__c;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.Id = readString(dis);
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.SystemModstamp = readDate(dis);
+
+					this.TextBody = readString(dis);
+
+					this.HtmlBody = readString(dis);
+
+					this.Headers = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ValidatedFromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					this.Incoming = dis.readBoolean();
+
+					this.HasAttachment = dis.readBoolean();
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.IsDeleted = dis.readBoolean();
+
+					this.ReplyToEmailMessageId = readString(dis);
+
+					this.IsExternallyVisible = dis.readBoolean();
+
+					this.MessageIdentifier = readString(dis);
+
+					this.ThreadIdentifier = readString(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSAMS__c = readString(dis);
+
+					this.Tech_UploadStatus__c = readString(dis);
+
+					this.TECH_OldEmailMessageID__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.Id, dos);
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.SystemModstamp, dos);
+
+				// String
+
+				writeString(this.TextBody, dos);
+
+				// String
+
+				writeString(this.HtmlBody, dos);
+
+				// String
+
+				writeString(this.Headers, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ValidatedFromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.Incoming);
+
+				// boolean
+
+				dos.writeBoolean(this.HasAttachment);
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.IsDeleted);
+
+				// String
+
+				writeString(this.ReplyToEmailMessageId, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.IsExternallyVisible);
+
+				// String
+
+				writeString(this.MessageIdentifier, dos);
+
+				// String
+
+				writeString(this.ThreadIdentifier, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSAMS__c, dos);
+
+				// String
+
+				writeString(this.Tech_UploadStatus__c, dos);
+
+				// String
+
+				writeString(this.TECH_OldEmailMessageID__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",SystemModstamp=" + String.valueOf(SystemModstamp));
+			sb.append(",TextBody=" + TextBody);
+			sb.append(",HtmlBody=" + HtmlBody);
+			sb.append(",Headers=" + Headers);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ValidatedFromAddress=" + ValidatedFromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",HasAttachment=" + String.valueOf(HasAttachment));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",IsDeleted=" + String.valueOf(IsDeleted));
+			sb.append(",ReplyToEmailMessageId=" + ReplyToEmailMessageId);
+			sb.append(",IsExternallyVisible="
+					+ String.valueOf(IsExternallyVisible));
+			sb.append(",MessageIdentifier=" + MessageIdentifier);
+			sb.append(",ThreadIdentifier=" + ThreadIdentifier);
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSAMS__c=" + ExternalIdSAMS__c);
+			sb.append(",Tech_UploadStatus__c=" + Tech_UploadStatus__c);
+			sb.append(",TECH_OldEmailMessageID__c=" + TECH_OldEmailMessageID__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row2Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row222Struct implements
+			routines.system.IPersistableRow<row222Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public java.util.Date SystemModstamp;
+
+		public java.util.Date getSystemModstamp() {
+			return this.SystemModstamp;
+		}
+
+		public String TextBody;
+
+		public String getTextBody() {
+			return this.TextBody;
+		}
+
+		public String HtmlBody;
+
+		public String getHtmlBody() {
+			return this.HtmlBody;
+		}
+
+		public String Headers;
+
+		public String getHeaders() {
+			return this.Headers;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ValidatedFromAddress;
+
+		public String getValidatedFromAddress() {
+			return this.ValidatedFromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public boolean Incoming;
+
+		public boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public boolean HasAttachment;
+
+		public boolean getHasAttachment() {
+			return this.HasAttachment;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public boolean IsDeleted;
+
+		public boolean getIsDeleted() {
+			return this.IsDeleted;
+		}
+
+		public String ReplyToEmailMessageId;
+
+		public String getReplyToEmailMessageId() {
+			return this.ReplyToEmailMessageId;
+		}
+
+		public boolean IsExternallyVisible;
+
+		public boolean getIsExternallyVisible() {
+			return this.IsExternallyVisible;
+		}
+
+		public String MessageIdentifier;
+
+		public String getMessageIdentifier() {
+			return this.MessageIdentifier;
+		}
+
+		public String ThreadIdentifier;
+
+		public String getThreadIdentifier() {
+			return this.ThreadIdentifier;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSAMS__c;
+
+		public String getExternalIdSAMS__c() {
+			return this.ExternalIdSAMS__c;
+		}
+
+		public String Tech_UploadStatus__c;
+
+		public String getTech_UploadStatus__c() {
+			return this.Tech_UploadStatus__c;
+		}
+
+		public String TECH_OldEmailMessageID__c;
+
+		public String getTECH_OldEmailMessageID__c() {
+			return this.TECH_OldEmailMessageID__c;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.Id = readString(dis);
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.SystemModstamp = readDate(dis);
+
+					this.TextBody = readString(dis);
+
+					this.HtmlBody = readString(dis);
+
+					this.Headers = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ValidatedFromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					this.Incoming = dis.readBoolean();
+
+					this.HasAttachment = dis.readBoolean();
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.IsDeleted = dis.readBoolean();
+
+					this.ReplyToEmailMessageId = readString(dis);
+
+					this.IsExternallyVisible = dis.readBoolean();
+
+					this.MessageIdentifier = readString(dis);
+
+					this.ThreadIdentifier = readString(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSAMS__c = readString(dis);
+
+					this.Tech_UploadStatus__c = readString(dis);
+
+					this.TECH_OldEmailMessageID__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.Id, dos);
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.SystemModstamp, dos);
+
+				// String
+
+				writeString(this.TextBody, dos);
+
+				// String
+
+				writeString(this.HtmlBody, dos);
+
+				// String
+
+				writeString(this.Headers, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ValidatedFromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.Incoming);
+
+				// boolean
+
+				dos.writeBoolean(this.HasAttachment);
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.IsDeleted);
+
+				// String
+
+				writeString(this.ReplyToEmailMessageId, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.IsExternallyVisible);
+
+				// String
+
+				writeString(this.MessageIdentifier, dos);
+
+				// String
+
+				writeString(this.ThreadIdentifier, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSAMS__c, dos);
+
+				// String
+
+				writeString(this.Tech_UploadStatus__c, dos);
+
+				// String
+
+				writeString(this.TECH_OldEmailMessageID__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",SystemModstamp=" + String.valueOf(SystemModstamp));
+			sb.append(",TextBody=" + TextBody);
+			sb.append(",HtmlBody=" + HtmlBody);
+			sb.append(",Headers=" + Headers);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ValidatedFromAddress=" + ValidatedFromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",HasAttachment=" + String.valueOf(HasAttachment));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",IsDeleted=" + String.valueOf(IsDeleted));
+			sb.append(",ReplyToEmailMessageId=" + ReplyToEmailMessageId);
+			sb.append(",IsExternallyVisible="
+					+ String.valueOf(IsExternallyVisible));
+			sb.append(",MessageIdentifier=" + MessageIdentifier);
+			sb.append(",ThreadIdentifier=" + ThreadIdentifier);
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSAMS__c=" + ExternalIdSAMS__c);
+			sb.append(",Tech_UploadStatus__c=" + Tech_UploadStatus__c);
+			sb.append(",TECH_OldEmailMessageID__c=" + TECH_OldEmailMessageID__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row222Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class after_tSalesforceInput_1Struct implements
+			routines.system.IPersistableRow<after_tSalesforceInput_1Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_LOAD_EmailMessage = new byte[0];
+		static byte[] commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[0];
+
+		public String Id;
+
+		public String getId() {
+			return this.Id;
+		}
+
+		public String ParentId;
+
+		public String getParentId() {
+			return this.ParentId;
+		}
+
+		public String ActivityId;
+
+		public String getActivityId() {
+			return this.ActivityId;
+		}
+
+		public String CreatedById;
+
+		public String getCreatedById() {
+			return this.CreatedById;
+		}
+
+		public java.util.Date CreatedDate;
+
+		public java.util.Date getCreatedDate() {
+			return this.CreatedDate;
+		}
+
+		public java.util.Date LastModifiedDate;
+
+		public java.util.Date getLastModifiedDate() {
+			return this.LastModifiedDate;
+		}
+
+		public String LastModifiedById;
+
+		public String getLastModifiedById() {
+			return this.LastModifiedById;
+		}
+
+		public java.util.Date SystemModstamp;
+
+		public java.util.Date getSystemModstamp() {
+			return this.SystemModstamp;
+		}
+
+		public String TextBody;
+
+		public String getTextBody() {
+			return this.TextBody;
+		}
+
+		public String HtmlBody;
+
+		public String getHtmlBody() {
+			return this.HtmlBody;
+		}
+
+		public String Headers;
+
+		public String getHeaders() {
+			return this.Headers;
+		}
+
+		public String Subject;
+
+		public String getSubject() {
+			return this.Subject;
+		}
+
+		public String FromName;
+
+		public String getFromName() {
+			return this.FromName;
+		}
+
+		public String FromAddress;
+
+		public String getFromAddress() {
+			return this.FromAddress;
+		}
+
+		public String ValidatedFromAddress;
+
+		public String getValidatedFromAddress() {
+			return this.ValidatedFromAddress;
+		}
+
+		public String ToAddress;
+
+		public String getToAddress() {
+			return this.ToAddress;
+		}
+
+		public String CcAddress;
+
+		public String getCcAddress() {
+			return this.CcAddress;
+		}
+
+		public String BccAddress;
+
+		public String getBccAddress() {
+			return this.BccAddress;
+		}
+
+		public boolean Incoming;
+
+		public boolean getIncoming() {
+			return this.Incoming;
+		}
+
+		public boolean HasAttachment;
+
+		public boolean getHasAttachment() {
+			return this.HasAttachment;
+		}
+
+		public String Status;
+
+		public String getStatus() {
+			return this.Status;
+		}
+
+		public java.util.Date MessageDate;
+
+		public java.util.Date getMessageDate() {
+			return this.MessageDate;
+		}
+
+		public boolean IsDeleted;
+
+		public boolean getIsDeleted() {
+			return this.IsDeleted;
+		}
+
+		public String ReplyToEmailMessageId;
+
+		public String getReplyToEmailMessageId() {
+			return this.ReplyToEmailMessageId;
+		}
+
+		public boolean IsExternallyVisible;
+
+		public boolean getIsExternallyVisible() {
+			return this.IsExternallyVisible;
+		}
+
+		public String MessageIdentifier;
+
+		public String getMessageIdentifier() {
+			return this.MessageIdentifier;
+		}
+
+		public String ThreadIdentifier;
+
+		public String getThreadIdentifier() {
+			return this.ThreadIdentifier;
+		}
+
+		public String RelatedToId;
+
+		public String getRelatedToId() {
+			return this.RelatedToId;
+		}
+
+		public String ExternalIdSAMS__c;
+
+		public String getExternalIdSAMS__c() {
+			return this.ExternalIdSAMS__c;
+		}
+
+		public String Tech_UploadStatus__c;
+
+		public String getTech_UploadStatus__c() {
+			return this.Tech_UploadStatus__c;
+		}
+
+		public String TECH_OldEmailMessageID__c;
+
+		public String getTECH_OldEmailMessageID__c() {
+			return this.TECH_OldEmailMessageID__c;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_LOAD_EmailMessage.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_LOAD_EmailMessage.length == 0) {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_LOAD_EmailMessage = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_LOAD_EmailMessage, 0,
+						length);
+				strReturn = new String(
+						commonByteArray_TECHNIP_LOAD_EmailMessage, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		private java.util.Date readDate(ObjectInputStream dis)
+				throws IOException {
+			java.util.Date dateReturn = null;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				dateReturn = null;
+			} else {
+				dateReturn = new Date(dis.readLong());
+			}
+			return dateReturn;
+		}
+
+		private void writeDate(java.util.Date date1, ObjectOutputStream dos)
+				throws IOException {
+			if (date1 == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeLong(date1.getTime());
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_LOAD_EmailMessage) {
+
+				try {
+
+					int length = 0;
+
+					this.Id = readString(dis);
+
+					this.ParentId = readString(dis);
+
+					this.ActivityId = readString(dis);
+
+					this.CreatedById = readString(dis);
+
+					this.CreatedDate = readDate(dis);
+
+					this.LastModifiedDate = readDate(dis);
+
+					this.LastModifiedById = readString(dis);
+
+					this.SystemModstamp = readDate(dis);
+
+					this.TextBody = readString(dis);
+
+					this.HtmlBody = readString(dis);
+
+					this.Headers = readString(dis);
+
+					this.Subject = readString(dis);
+
+					this.FromName = readString(dis);
+
+					this.FromAddress = readString(dis);
+
+					this.ValidatedFromAddress = readString(dis);
+
+					this.ToAddress = readString(dis);
+
+					this.CcAddress = readString(dis);
+
+					this.BccAddress = readString(dis);
+
+					this.Incoming = dis.readBoolean();
+
+					this.HasAttachment = dis.readBoolean();
+
+					this.Status = readString(dis);
+
+					this.MessageDate = readDate(dis);
+
+					this.IsDeleted = dis.readBoolean();
+
+					this.ReplyToEmailMessageId = readString(dis);
+
+					this.IsExternallyVisible = dis.readBoolean();
+
+					this.MessageIdentifier = readString(dis);
+
+					this.ThreadIdentifier = readString(dis);
+
+					this.RelatedToId = readString(dis);
+
+					this.ExternalIdSAMS__c = readString(dis);
+
+					this.Tech_UploadStatus__c = readString(dis);
+
+					this.TECH_OldEmailMessageID__c = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.Id, dos);
+
+				// String
+
+				writeString(this.ParentId, dos);
+
+				// String
+
+				writeString(this.ActivityId, dos);
+
+				// String
+
+				writeString(this.CreatedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.CreatedDate, dos);
+
+				// java.util.Date
+
+				writeDate(this.LastModifiedDate, dos);
+
+				// String
+
+				writeString(this.LastModifiedById, dos);
+
+				// java.util.Date
+
+				writeDate(this.SystemModstamp, dos);
+
+				// String
+
+				writeString(this.TextBody, dos);
+
+				// String
+
+				writeString(this.HtmlBody, dos);
+
+				// String
+
+				writeString(this.Headers, dos);
+
+				// String
+
+				writeString(this.Subject, dos);
+
+				// String
+
+				writeString(this.FromName, dos);
+
+				// String
+
+				writeString(this.FromAddress, dos);
+
+				// String
+
+				writeString(this.ValidatedFromAddress, dos);
+
+				// String
+
+				writeString(this.ToAddress, dos);
+
+				// String
+
+				writeString(this.CcAddress, dos);
+
+				// String
+
+				writeString(this.BccAddress, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.Incoming);
+
+				// boolean
+
+				dos.writeBoolean(this.HasAttachment);
+
+				// String
+
+				writeString(this.Status, dos);
+
+				// java.util.Date
+
+				writeDate(this.MessageDate, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.IsDeleted);
+
+				// String
+
+				writeString(this.ReplyToEmailMessageId, dos);
+
+				// boolean
+
+				dos.writeBoolean(this.IsExternallyVisible);
+
+				// String
+
+				writeString(this.MessageIdentifier, dos);
+
+				// String
+
+				writeString(this.ThreadIdentifier, dos);
+
+				// String
+
+				writeString(this.RelatedToId, dos);
+
+				// String
+
+				writeString(this.ExternalIdSAMS__c, dos);
+
+				// String
+
+				writeString(this.Tech_UploadStatus__c, dos);
+
+				// String
+
+				writeString(this.TECH_OldEmailMessageID__c, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("Id=" + Id);
+			sb.append(",ParentId=" + ParentId);
+			sb.append(",ActivityId=" + ActivityId);
+			sb.append(",CreatedById=" + CreatedById);
+			sb.append(",CreatedDate=" + String.valueOf(CreatedDate));
+			sb.append(",LastModifiedDate=" + String.valueOf(LastModifiedDate));
+			sb.append(",LastModifiedById=" + LastModifiedById);
+			sb.append(",SystemModstamp=" + String.valueOf(SystemModstamp));
+			sb.append(",TextBody=" + TextBody);
+			sb.append(",HtmlBody=" + HtmlBody);
+			sb.append(",Headers=" + Headers);
+			sb.append(",Subject=" + Subject);
+			sb.append(",FromName=" + FromName);
+			sb.append(",FromAddress=" + FromAddress);
+			sb.append(",ValidatedFromAddress=" + ValidatedFromAddress);
+			sb.append(",ToAddress=" + ToAddress);
+			sb.append(",CcAddress=" + CcAddress);
+			sb.append(",BccAddress=" + BccAddress);
+			sb.append(",Incoming=" + String.valueOf(Incoming));
+			sb.append(",HasAttachment=" + String.valueOf(HasAttachment));
+			sb.append(",Status=" + Status);
+			sb.append(",MessageDate=" + String.valueOf(MessageDate));
+			sb.append(",IsDeleted=" + String.valueOf(IsDeleted));
+			sb.append(",ReplyToEmailMessageId=" + ReplyToEmailMessageId);
+			sb.append(",IsExternallyVisible="
+					+ String.valueOf(IsExternallyVisible));
+			sb.append(",MessageIdentifier=" + MessageIdentifier);
+			sb.append(",ThreadIdentifier=" + ThreadIdentifier);
+			sb.append(",RelatedToId=" + RelatedToId);
+			sb.append(",ExternalIdSAMS__c=" + ExternalIdSAMS__c);
+			sb.append(",Tech_UploadStatus__c=" + Tech_UploadStatus__c);
+			sb.append(",TECH_OldEmailMessageID__c=" + TECH_OldEmailMessageID__c);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(after_tSalesforceInput_1Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tSalesforceInput_1Process(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tSalesforceInput_1_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				tHashInput_1Process(globalMap);
+				tHashInput_2Process(globalMap);
+				tHashInput_3Process(globalMap);
+				tHashInput_4Process(globalMap);
+				tHashInput_5Process(globalMap);
+				tHashInput_6Process(globalMap);
+				tHashInput_7Process(globalMap);
+				tHashInput_8Process(globalMap);
+				tHashInput_9Process(globalMap);
+
+				row222Struct row222 = new row222Struct();
+				row2Struct row2 = new row2Struct();
+				EmailMessageStruct EmailMessage = new EmailMessageStruct();
+				row27Struct row27 = new row27Struct();
+				row25Struct row25 = new row25Struct();
+
+				/**
+				 * [tFileOutputDelimited_6 begin ] start
+				 */
+
+				ok_Hash.put("tFileOutputDelimited_6", false);
+				start_Hash.put("tFileOutputDelimited_6",
+						System.currentTimeMillis());
+
+				currentComponent = "tFileOutputDelimited_6";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row27" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tFileOutputDelimited_6 = 0;
+
+				String fileName_tFileOutputDelimited_6 = "";
+				fileName_tFileOutputDelimited_6 = (new java.io.File(
+						context.ProjetFolder + context.OutFileFolder
+								+ context.Success
+								+ TalendDate.getDate("YYYYMMDDhhmm") + jobName
+								+ "_Success.csv")).getAbsolutePath().replace(
+						"\\", "/");
+				String fullName_tFileOutputDelimited_6 = null;
+				String extension_tFileOutputDelimited_6 = null;
+				String directory_tFileOutputDelimited_6 = null;
+				if ((fileName_tFileOutputDelimited_6.indexOf("/") != -1)) {
+					if (fileName_tFileOutputDelimited_6.lastIndexOf(".") < fileName_tFileOutputDelimited_6
+							.lastIndexOf("/")) {
+						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6;
+						extension_tFileOutputDelimited_6 = "";
+					} else {
+						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
+								.substring(0, fileName_tFileOutputDelimited_6
+										.lastIndexOf("."));
+						extension_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
+								.substring(fileName_tFileOutputDelimited_6
+										.lastIndexOf("."));
+					}
+					directory_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
+							.substring(0, fileName_tFileOutputDelimited_6
+									.lastIndexOf("/"));
+				} else {
+					if (fileName_tFileOutputDelimited_6.lastIndexOf(".") != -1) {
+						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
+								.substring(0, fileName_tFileOutputDelimited_6
+										.lastIndexOf("."));
+						extension_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6
+								.substring(fileName_tFileOutputDelimited_6
+										.lastIndexOf("."));
+					} else {
+						fullName_tFileOutputDelimited_6 = fileName_tFileOutputDelimited_6;
+						extension_tFileOutputDelimited_6 = "";
+					}
+					directory_tFileOutputDelimited_6 = "";
+				}
+				boolean isFileGenerated_tFileOutputDelimited_6 = true;
+				java.io.File filetFileOutputDelimited_6 = new java.io.File(
+						fileName_tFileOutputDelimited_6);
+				globalMap.put("tFileOutputDelimited_6_FILE_NAME",
+						fileName_tFileOutputDelimited_6);
+				if (filetFileOutputDelimited_6.exists()) {
+					throw new RuntimeException(
+							"The particular file \""
+									+ filetFileOutputDelimited_6
+											.getAbsoluteFile()
+									+ "\" already exist. If you want to overwrite the file, please uncheck the"
+									+ " \"Throw an error if the file already exist\" option in Advanced settings.");
+				}
+				int nb_line_tFileOutputDelimited_6 = 0;
+				int splitedFileNo_tFileOutputDelimited_6 = 0;
+				int currentRow_tFileOutputDelimited_6 = 0;
+
+				final String OUT_DELIM_tFileOutputDelimited_6 = /**
+				 * Start field
+				 * tFileOutputDelimited_6:FIELDSEPARATOR
+				 */
+				";"/** End field tFileOutputDelimited_6:FIELDSEPARATOR */
+				;
+
+				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_6 = /**
+				 * Start
+				 * field tFileOutputDelimited_6:ROWSEPARATOR
+				 */
+				"\n"/** End field tFileOutputDelimited_6:ROWSEPARATOR */
+				;
+
+				// create directory only if not exists
+				if (directory_tFileOutputDelimited_6 != null
+						&& directory_tFileOutputDelimited_6.trim().length() != 0) {
+					java.io.File dir_tFileOutputDelimited_6 = new java.io.File(
+							directory_tFileOutputDelimited_6);
+					if (!dir_tFileOutputDelimited_6.exists()) {
+						dir_tFileOutputDelimited_6.mkdirs();
+					}
+				}
+
+				// routines.system.Row
+				java.io.Writer outtFileOutputDelimited_6 = null;
+
+				java.io.File fileToDelete_tFileOutputDelimited_6 = new java.io.File(
+						fileName_tFileOutputDelimited_6);
+				if (fileToDelete_tFileOutputDelimited_6.exists()) {
+					fileToDelete_tFileOutputDelimited_6.delete();
+				}
+				outtFileOutputDelimited_6 = new java.io.BufferedWriter(
+						new java.io.OutputStreamWriter(
+								new java.io.FileOutputStream(
+										fileName_tFileOutputDelimited_6, false),
+								"ISO-8859-15"));
+				if (filetFileOutputDelimited_6.length() == 0) {
+					outtFileOutputDelimited_6.write("ParentId");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("ActivityId");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("CreatedById");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("CreatedDate");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("LastModifiedDate");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("LastModifiedById");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("Subject");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("FromName");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("FromAddress");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("ToAddress");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("CcAddress");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("BccAddress");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("Incoming");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("Status");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("MessageDate");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("RelatedToId");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.write("ExternalIdSplit__c");
+					outtFileOutputDelimited_6
+							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_6);
+					outtFileOutputDelimited_6.flush();
+				}
+
+				resourceMap.put("out_tFileOutputDelimited_6",
+						outtFileOutputDelimited_6);
+				resourceMap.put("nb_line_tFileOutputDelimited_6",
+						nb_line_tFileOutputDelimited_6);
+
+				/**
+				 * [tFileOutputDelimited_6 begin ] stop
+				 */
+
+				/**
+				 * [tFileOutputDelimited_5 begin ] start
+				 */
+
+				ok_Hash.put("tFileOutputDelimited_5", false);
+				start_Hash.put("tFileOutputDelimited_5",
+						System.currentTimeMillis());
+
+				currentComponent = "tFileOutputDelimited_5";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row25" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tFileOutputDelimited_5 = 0;
+
+				String fileName_tFileOutputDelimited_5 = "";
+				fileName_tFileOutputDelimited_5 = (new java.io.File(
+						context.ProjetFolder + context.OutFileFolder
+								+ context.Error + jobName
+								+ "_ErrorParentIdNotNull.csv"))
+						.getAbsolutePath().replace("\\", "/");
+				String fullName_tFileOutputDelimited_5 = null;
+				String extension_tFileOutputDelimited_5 = null;
+				String directory_tFileOutputDelimited_5 = null;
+				if ((fileName_tFileOutputDelimited_5.indexOf("/") != -1)) {
+					if (fileName_tFileOutputDelimited_5.lastIndexOf(".") < fileName_tFileOutputDelimited_5
+							.lastIndexOf("/")) {
+						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5;
+						extension_tFileOutputDelimited_5 = "";
+					} else {
+						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
+								.substring(0, fileName_tFileOutputDelimited_5
+										.lastIndexOf("."));
+						extension_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
+								.substring(fileName_tFileOutputDelimited_5
+										.lastIndexOf("."));
+					}
+					directory_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
+							.substring(0, fileName_tFileOutputDelimited_5
+									.lastIndexOf("/"));
+				} else {
+					if (fileName_tFileOutputDelimited_5.lastIndexOf(".") != -1) {
+						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
+								.substring(0, fileName_tFileOutputDelimited_5
+										.lastIndexOf("."));
+						extension_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5
+								.substring(fileName_tFileOutputDelimited_5
+										.lastIndexOf("."));
+					} else {
+						fullName_tFileOutputDelimited_5 = fileName_tFileOutputDelimited_5;
+						extension_tFileOutputDelimited_5 = "";
+					}
+					directory_tFileOutputDelimited_5 = "";
+				}
+				boolean isFileGenerated_tFileOutputDelimited_5 = true;
+				java.io.File filetFileOutputDelimited_5 = new java.io.File(
+						fileName_tFileOutputDelimited_5);
+				globalMap.put("tFileOutputDelimited_5_FILE_NAME",
+						fileName_tFileOutputDelimited_5);
+				int nb_line_tFileOutputDelimited_5 = 0;
+				int splitedFileNo_tFileOutputDelimited_5 = 0;
+				int currentRow_tFileOutputDelimited_5 = 0;
+
+				final String OUT_DELIM_tFileOutputDelimited_5 = /**
+				 * Start field
+				 * tFileOutputDelimited_5:FIELDSEPARATOR
+				 */
+				"#"/** End field tFileOutputDelimited_5:FIELDSEPARATOR */
+				;
+
+				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_5 = /**
+				 * Start
+				 * field tFileOutputDelimited_5:ROWSEPARATOR
+				 */
+				"\n"/** End field tFileOutputDelimited_5:ROWSEPARATOR */
+				;
+
+				// create directory only if not exists
+				if (directory_tFileOutputDelimited_5 != null
+						&& directory_tFileOutputDelimited_5.trim().length() != 0) {
+					java.io.File dir_tFileOutputDelimited_5 = new java.io.File(
+							directory_tFileOutputDelimited_5);
+					if (!dir_tFileOutputDelimited_5.exists()) {
+						dir_tFileOutputDelimited_5.mkdirs();
+					}
+				}
+
+				// routines.system.Row
+				java.io.Writer outtFileOutputDelimited_5 = null;
+
+				java.io.File fileToDelete_tFileOutputDelimited_5 = new java.io.File(
+						fileName_tFileOutputDelimited_5);
+				if (fileToDelete_tFileOutputDelimited_5.exists()) {
+					fileToDelete_tFileOutputDelimited_5.delete();
+				}
+				outtFileOutputDelimited_5 = new java.io.BufferedWriter(
+						new java.io.OutputStreamWriter(
+								new java.io.FileOutputStream(
+										fileName_tFileOutputDelimited_5, false),
+								"UTF-8"));
+				if (filetFileOutputDelimited_5.length() == 0) {
+					outtFileOutputDelimited_5.write("ParentId");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("ActivityId");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("CreatedById");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("CreatedDate");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("LastModifiedDate");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("LastModifiedById");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("Subject");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("FromName");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("FromAddress");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("ToAddress");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("CcAddress");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("BccAddress");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("Incoming");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("Status");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("MessageDate");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("RelatedToId");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("ExternalIdSplit__c");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("errorCode");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("errorFields");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.write("errorMessage");
+					outtFileOutputDelimited_5
+							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_5);
+					outtFileOutputDelimited_5.flush();
+				}
+
+				resourceMap.put("out_tFileOutputDelimited_5",
+						outtFileOutputDelimited_5);
+				resourceMap.put("nb_line_tFileOutputDelimited_5",
+						nb_line_tFileOutputDelimited_5);
+				resourceMap.put("isFileGenerated_tFileOutputDelimited_5",
+						isFileGenerated_tFileOutputDelimited_5);
+				resourceMap.put("filetFileOutputDelimited_5",
+						filetFileOutputDelimited_5);
+
+				/**
+				 * [tFileOutputDelimited_5 begin ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutput_1 begin ] start
+				 */
+
+				ok_Hash.put("tSalesforceOutput_1", false);
+				start_Hash.put("tSalesforceOutput_1",
+						System.currentTimeMillis());
+
+				currentComponent = "tSalesforceOutput_1";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("EmailMessage"
+								+ iterateId, 0, 0);
+
+					}
+				}
+
+				int tos_count_tSalesforceOutput_1 = 0;
+
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceOutput_1 = new org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputDefinition();
+
+				org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputProperties props_tSalesforceOutput_1 = (org.talend.components.salesforce.tsalesforceoutput.TSalesforceOutputProperties) def_tSalesforceOutput_1
+						.createRuntimeProperties();
+				props_tSalesforceOutput_1.setValue("extendInsert", true);
+
+				props_tSalesforceOutput_1.setValue("ceaseForError", false);
+
+				props_tSalesforceOutput_1.setValue("ignoreNull", true);
+
+				props_tSalesforceOutput_1.setValue("commitLevel", 100);
+
+				props_tSalesforceOutput_1.setValue("logFileName", "");
+
+				props_tSalesforceOutput_1
+						.setValue(
+								"outputAction",
+								org.talend.components.salesforce.SalesforceOutputProperties.OutputAction.UPSERT);
+
+				props_tSalesforceOutput_1.setValue("upsertKeyColumn",
+						"ExternalIdSplit__c");
+
+				props_tSalesforceOutput_1.upsertRelationTable.setValue(
+						"columnName", "ParentId");
+
+				class SchemaSettingTool_tSalesforceOutput_1_1_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"EmailMessage\",\"fields\":[{", s);
+
+						a("\"name\":\"ParentId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ParentId\",\"talend.field.dbColumnName\":\"ParentId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ParentId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ActivityId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ActivityId\",\"talend.field.dbColumnName\":\"ActivityId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ActivityId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CreatedById\",\"talend.field.dbColumnName\":\"CreatedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"CreatedDate\",\"talend.field.dbColumnName\":\"CreatedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedDate\",\"talend.field.dbColumnName\":\"LastModifiedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedById\",\"talend.field.dbColumnName\":\"LastModifiedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"TextBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"TextBody\",\"talend.field.dbColumnName\":\"TextBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.column.originalLength\":\"131072\",\"di.table.label\":\"TextBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"HtmlBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"HtmlBody\",\"talend.field.dbColumnName\":\"HtmlBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.column.originalLength\":\"131072\",\"di.table.label\":\"HtmlBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Subject\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Subject\",\"talend.field.dbColumnName\":\"Subject\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"3000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Subject\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromName\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromName\",\"talend.field.dbColumnName\":\"FromName\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromName\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromAddress\",\"talend.field.dbColumnName\":\"FromAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ToAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ToAddress\",\"talend.field.dbColumnName\":\"ToAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ToAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CcAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CcAddress\",\"talend.field.dbColumnName\":\"CcAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CcAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"BccAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"BccAddress\",\"talend.field.dbColumnName\":\"BccAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"BccAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Incoming\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Incoming\",\"talend.field.dbColumnName\":\"Incoming\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Incoming\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"MessageDate\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"MessageDate\",\"talend.field.dbColumnName\":\"MessageDate\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"MessageDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"RelatedToId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"RelatedToId\",\"talend.field.dbColumnName\":\"RelatedToId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"RelatedToId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ExternalIdSplit__c\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"ExternalIdSplit__c\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ExternalIdSplit__c\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"EmailMessage\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceOutput_1_1_fisrt sst_tSalesforceOutput_1_1_fisrt = new SchemaSettingTool_tSalesforceOutput_1_1_fisrt();
+
+				props_tSalesforceOutput_1.schemaFlow.setValue("schema",
+						new org.apache.avro.Schema.Parser()
+								.parse(sst_tSalesforceOutput_1_1_fisrt
+										.getSchemaValue()));
+
+				class SchemaSettingTool_tSalesforceOutput_1_2_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"rejectOutput\",\"fields\":[{", s);
+
+						a("\"name\":\"ParentId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ParentId\",\"talend.field.dbColumnName\":\"ParentId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ParentId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ActivityId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ActivityId\",\"talend.field.dbColumnName\":\"ActivityId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ActivityId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CreatedById\",\"talend.field.dbColumnName\":\"CreatedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"CreatedDate\",\"talend.field.dbColumnName\":\"CreatedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedDate\",\"talend.field.dbColumnName\":\"LastModifiedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedById\",\"talend.field.dbColumnName\":\"LastModifiedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"TextBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"TextBody\",\"talend.field.dbColumnName\":\"TextBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.column.originalLength\":\"131072\",\"di.table.label\":\"TextBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"HtmlBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"HtmlBody\",\"talend.field.dbColumnName\":\"HtmlBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.column.originalLength\":\"131072\",\"di.table.label\":\"HtmlBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Subject\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Subject\",\"talend.field.dbColumnName\":\"Subject\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"3000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Subject\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromName\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromName\",\"talend.field.dbColumnName\":\"FromName\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromName\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromAddress\",\"talend.field.dbColumnName\":\"FromAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ToAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ToAddress\",\"talend.field.dbColumnName\":\"ToAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ToAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CcAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CcAddress\",\"talend.field.dbColumnName\":\"CcAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CcAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"BccAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"BccAddress\",\"talend.field.dbColumnName\":\"BccAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"BccAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Incoming\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Incoming\",\"talend.field.dbColumnName\":\"Incoming\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Incoming\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"MessageDate\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"MessageDate\",\"talend.field.dbColumnName\":\"MessageDate\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"MessageDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"RelatedToId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"RelatedToId\",\"talend.field.dbColumnName\":\"RelatedToId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"RelatedToId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ExternalIdSplit__c\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"ExternalIdSplit__c\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ExternalIdSplit__c\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"errorCode\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+								s);
+
+						a("\"name\":\"errorFields\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"},{",
+								s);
+
+						a("\"name\":\"errorMessage\",\"type\":\"string\",\"talend.isLocked\":\"false\",\"talend.field.generated\":\"true\",\"talend.field.length\":\"255\"}],\"di.table.name\":\"EmailMessage\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceOutput_1_2_fisrt sst_tSalesforceOutput_1_2_fisrt = new SchemaSettingTool_tSalesforceOutput_1_2_fisrt();
+
+				props_tSalesforceOutput_1.schemaReject.setValue("schema",
+						new org.apache.avro.Schema.Parser()
+								.parse(sst_tSalesforceOutput_1_2_fisrt
+										.getSchemaValue()));
+
+				props_tSalesforceOutput_1.connection.userPassword.setValue(
+						"useAuth", false);
+
+				props_tSalesforceOutput_1.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceOutput_1.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceOutput_1.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceOutput_1.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				props_tSalesforceOutput_1.module.setValue("moduleName",
+						"EmailMessage");
+
+				props_tSalesforceOutput_1.module.connection.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceOutput_1.module.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceOutput_1.module.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceOutput_1.module.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_2");
+
+				props_tSalesforceOutput_1.module.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				class SchemaSettingTool_tSalesforceOutput_1_3_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"EmailMessage\",\"fields\":[{", s);
+
+						a("\"name\":\"ParentId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ParentId\",\"talend.field.dbColumnName\":\"ParentId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ParentId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ActivityId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ActivityId\",\"talend.field.dbColumnName\":\"ActivityId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ActivityId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CreatedById\",\"talend.field.dbColumnName\":\"CreatedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"CreatedDate\",\"talend.field.dbColumnName\":\"CreatedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedDate\",\"talend.field.dbColumnName\":\"LastModifiedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedById\",\"talend.field.dbColumnName\":\"LastModifiedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"TextBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"TextBody\",\"talend.field.dbColumnName\":\"TextBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.column.originalLength\":\"131072\",\"di.table.label\":\"TextBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"HtmlBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"HtmlBody\",\"talend.field.dbColumnName\":\"HtmlBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.column.originalLength\":\"131072\",\"di.table.label\":\"HtmlBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Subject\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Subject\",\"talend.field.dbColumnName\":\"Subject\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"3000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Subject\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromName\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromName\",\"talend.field.dbColumnName\":\"FromName\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromName\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromAddress\",\"talend.field.dbColumnName\":\"FromAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ToAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ToAddress\",\"talend.field.dbColumnName\":\"ToAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ToAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CcAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CcAddress\",\"talend.field.dbColumnName\":\"CcAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CcAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"BccAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"BccAddress\",\"talend.field.dbColumnName\":\"BccAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"BccAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Incoming\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Incoming\",\"talend.field.dbColumnName\":\"Incoming\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Incoming\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"MessageDate\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"MessageDate\",\"talend.field.dbColumnName\":\"MessageDate\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"MessageDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"RelatedToId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"RelatedToId\",\"talend.field.dbColumnName\":\"RelatedToId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"RelatedToId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ExternalIdSplit__c\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"ExternalIdSplit__c\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ExternalIdSplit__c\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"EmailMessage\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceOutput_1_3_fisrt sst_tSalesforceOutput_1_3_fisrt = new SchemaSettingTool_tSalesforceOutput_1_3_fisrt();
+
+				props_tSalesforceOutput_1.module.main.setValue("schema",
+						new org.apache.avro.Schema.Parser()
+								.parse(sst_tSalesforceOutput_1_3_fisrt
+										.getSchemaValue()));
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutput_1.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceOutput_1 = props_tSalesforceOutput_1.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceOutput_1 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutput_1 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceOutput_1
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceOutput_1.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceOutput_1);
+					}
+				}
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceOutput_1.module.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceOutput_1 = props_tSalesforceOutput_1.module.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceOutput_1 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceOutput_1 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceOutput_1
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceOutput_1.module.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceOutput_1);
+					}
+				}
+				globalMap.put(
+						"tSalesforceOutput_1_COMPONENT_RUNTIME_PROPERTIES",
+						props_tSalesforceOutput_1);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
+				java.net.URL mappings_url_tSalesforceOutput_1 = this.getClass()
+						.getResource("/xmlMappings");
+				globalMap.put("tSalesforceOutput_1_MAPPINGS_URL",
+						mappings_url_tSalesforceOutput_1);
+
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceOutput_1 = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId,
+							String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId,
+							String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tSalesforceOutput_1";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tSalesforceOutput_1 = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceOutput_1 = null;
+				topology_tSalesforceOutput_1 = org.talend.components.api.component.ConnectorTopology.INCOMING_AND_OUTGOING;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceOutput_1 = def_tSalesforceOutput_1
+						.getRuntimeInfo(
+								org.talend.components.api.component.runtime.ExecutionEngine.DI,
+								props_tSalesforceOutput_1,
+								topology_tSalesforceOutput_1);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceOutput_1 = def_tSalesforceOutput_1
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceOutput_1
+								.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceOutput_1 = componentRuntime_tSalesforceOutput_1
+						.initialize(container_tSalesforceOutput_1,
+								props_tSalesforceOutput_1);
+
+				if (initVr_tSalesforceOutput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(
+							initVr_tSalesforceOutput_1.getMessage());
+				}
+
+				if (componentRuntime_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceOutput_1;
+					compDriverInitialization_tSalesforceOutput_1
+							.runAtDriver(container_tSalesforceOutput_1);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceOutput_1 = null;
+				if (componentRuntime_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceOutput_1;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceOutput_1 = sourceOrSink_tSalesforceOutput_1
+							.validate(container_tSalesforceOutput_1);
+					if (vr_tSalesforceOutput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+						throw new RuntimeException(
+								vr_tSalesforceOutput_1.getMessage());
+					}
+				}
+
+				org.talend.components.api.component.runtime.Sink sink_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.Sink) sourceOrSink_tSalesforceOutput_1;
+				org.talend.components.api.component.runtime.WriteOperation writeOperation_tSalesforceOutput_1 = sink_tSalesforceOutput_1
+						.createWriteOperation();
+				writeOperation_tSalesforceOutput_1
+						.initialize(container_tSalesforceOutput_1);
+				org.talend.components.api.component.runtime.Writer writer_tSalesforceOutput_1 = writeOperation_tSalesforceOutput_1
+						.createWriter(container_tSalesforceOutput_1);
+				writer_tSalesforceOutput_1.open("tSalesforceOutput_1");
+
+				resourceMap.put("writer_tSalesforceOutput_1",
+						writer_tSalesforceOutput_1);
+
+				org.talend.components.api.component.Connector c_tSalesforceOutput_1 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_1
+						.getAvailableConnectors(null, false)) {
+					if (currentConnector.getName().equals("MAIN")) {
+						c_tSalesforceOutput_1 = currentConnector;
+						break;
+					}
+				}
+				org.apache.avro.Schema designSchema_tSalesforceOutput_1 = props_tSalesforceOutput_1
+						.getSchema(c_tSalesforceOutput_1, false);
+				org.talend.codegen.enforcer.IncomingSchemaEnforcer incomingEnforcer_tSalesforceOutput_1 = new org.talend.codegen.enforcer.IncomingSchemaEnforcer(
+						designSchema_tSalesforceOutput_1);
+				c_tSalesforceOutput_1 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_1
+						.getAvailableConnectors(null, true)) {
+					if (currentConnector.getName().equals("REJECT")) {
+						c_tSalesforceOutput_1 = currentConnector;
+					}
+				}
+				org.apache.avro.Schema rejectSchema_tSalesforceOutput_1 = props_tSalesforceOutput_1
+						.getSchema(c_tSalesforceOutput_1, true);
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceOutput_1OutReject = org.talend.codegen.enforcer.EnforcerCreator
+						.createOutgoingEnforcer(
+								rejectSchema_tSalesforceOutput_1, false);
+
+				// Create a reusable factory that converts the output of the
+				// reader to an IndexedRecord.
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceOutput_1OutReject = null;
+				c_tSalesforceOutput_1 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceOutput_1
+						.getAvailableConnectors(null, true)) {
+					if (currentConnector.getName().equals("MAIN")) {
+						c_tSalesforceOutput_1 = currentConnector;
+					}
+				}
+				org.apache.avro.Schema mainSchema_tSalesforceOutput_1 = props_tSalesforceOutput_1
+						.getSchema(c_tSalesforceOutput_1, true);
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceOutput_1OutMain = org.talend.codegen.enforcer.EnforcerCreator
+						.createOutgoingEnforcer(mainSchema_tSalesforceOutput_1,
+								false);
+
+				// Create a reusable factory that converts the output of the
+				// reader to an IndexedRecord.
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceOutput_1OutMain = null;
+				java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceOutput_1 = new java.util.ArrayList<Object>();
+				java.util.Iterator outgoingMainRecordsIt_tSalesforceOutput_1 = null;
+
+				/**
+				 * [tSalesforceOutput_1 begin ] stop
+				 */
+
+				/**
+				 * [tMap_1 begin ] start
+				 */
+
+				ok_Hash.put("tMap_1", false);
+				start_Hash.put("tMap_1", System.currentTimeMillis());
+
+				currentComponent = "tMap_1";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row2" + iterateId, 0, 0);
+
+					}
+				}
+
+				int tos_count_tMap_1 = 0;
+
+				// ###############################
+				// # Lookup's keys initialization
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CreatedByStruct> tHash_Lookup_CreatedBy = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CreatedByStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CreatedByStruct>) globalMap
+						.get("tHash_Lookup_CreatedBy"));
+
+				CreatedByStruct CreatedByHashKey = new CreatedByStruct();
+				CreatedByStruct CreatedByDefault = new CreatedByStruct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ModifiedByStruct> tHash_Lookup_ModifiedBy = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ModifiedByStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ModifiedByStruct>) globalMap
+						.get("tHash_Lookup_ModifiedBy"));
+
+				ModifiedByStruct ModifiedByHashKey = new ModifiedByStruct();
+				ModifiedByStruct ModifiedByDefault = new ModifiedByStruct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Meeting_minuteStruct> tHash_Lookup_Meeting_minute = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Meeting_minuteStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Meeting_minuteStruct>) globalMap
+						.get("tHash_Lookup_Meeting_minute"));
+
+				Meeting_minuteStruct Meeting_minuteHashKey = new Meeting_minuteStruct();
+				Meeting_minuteStruct Meeting_minuteDefault = new Meeting_minuteStruct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<OpportunityStruct> tHash_Lookup_Opportunity = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<OpportunityStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<OpportunityStruct>) globalMap
+						.get("tHash_Lookup_Opportunity"));
+
+				OpportunityStruct OpportunityHashKey = new OpportunityStruct();
+				OpportunityStruct OpportunityDefault = new OpportunityStruct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseParentIdStruct> tHash_Lookup_CaseParentId = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseParentIdStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseParentIdStruct>) globalMap
+						.get("tHash_Lookup_CaseParentId"));
+
+				CaseParentIdStruct CaseParentIdHashKey = new CaseParentIdStruct();
+				CaseParentIdStruct CaseParentIdDefault = new CaseParentIdStruct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ProjectStruct> tHash_Lookup_Project = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ProjectStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ProjectStruct>) globalMap
+						.get("tHash_Lookup_Project"));
+
+				ProjectStruct ProjectHashKey = new ProjectStruct();
+				ProjectStruct ProjectDefault = new ProjectStruct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Task1Struct> tHash_Lookup_Task1 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Task1Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<Task1Struct>) globalMap
+						.get("tHash_Lookup_Task1"));
+
+				Task1Struct Task1HashKey = new Task1Struct();
+				Task1Struct Task1Default = new Task1Struct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseStruct> tHash_Lookup_Case = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<CaseStruct>) globalMap
+						.get("tHash_Lookup_Case"));
+
+				CaseStruct CaseHashKey = new CaseStruct();
+				CaseStruct CaseDefault = new CaseStruct();
+
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ContractStruct> tHash_Lookup_Contract = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ContractStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<ContractStruct>) globalMap
+						.get("tHash_Lookup_Contract"));
+
+				ContractStruct ContractHashKey = new ContractStruct();
+				ContractStruct ContractDefault = new ContractStruct();
+				// ###############################
+
+				// ###############################
+				// # Vars initialization
+				class Var__tMap_1__Struct {
+					String RelatedToId;
+					String Status;
+					String var1;
+					String var2;
+				}
+				Var__tMap_1__Struct Var__tMap_1 = new Var__tMap_1__Struct();
+				// ###############################
+
+				// ###############################
+				// # Outputs initialization
+				EmailMessageStruct EmailMessage_tmp = new EmailMessageStruct();
+				// ###############################
+
+				/**
+				 * [tMap_1 begin ] stop
+				 */
+
+				/**
+				 * [tMap_5 begin ] start
+				 */
+
+				ok_Hash.put("tMap_5", false);
+				start_Hash.put("tMap_5", System.currentTimeMillis());
+
+				currentComponent = "tMap_5";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row222" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tMap_5 = 0;
+
+				// ###############################
+				// # Lookup's keys initialization
+				// ###############################
+
+				// ###############################
+				// # Vars initialization
+				class Var__tMap_5__Struct {
+				}
+				Var__tMap_5__Struct Var__tMap_5 = new Var__tMap_5__Struct();
+				// ###############################
+
+				// ###############################
+				// # Outputs initialization
+				row2Struct row2_tmp = new row2Struct();
+				// ###############################
+
+				/**
+				 * [tMap_5 begin ] stop
+				 */
+
+				/**
+				 * [tSalesforceInput_1 begin ] start
+				 */
+
+				ok_Hash.put("tSalesforceInput_1", false);
+				start_Hash
+						.put("tSalesforceInput_1", System.currentTimeMillis());
+
+				currentComponent = "tSalesforceInput_1";
+
+				int tos_count_tSalesforceInput_1 = 0;
+
+				org.talend.components.api.component.ComponentDefinition def_tSalesforceInput_1 = new org.talend.components.salesforce.tsalesforceinput.TSalesforceInputDefinition();
+
+				org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties props_tSalesforceInput_1 = (org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties) def_tSalesforceInput_1
+						.createRuntimeProperties();
+				props_tSalesforceInput_1
+						.setValue(
+								"queryMode",
+								org.talend.components.salesforce.tsalesforceinput.TSalesforceInputProperties.QueryMode.Query);
+
+				props_tSalesforceInput_1.setValue("manualQuery", true);
+
+				props_tSalesforceInput_1
+						.setValue(
+								"query",
+								"SELECT Id, ParentId, ActivityId, CreatedById, CreatedDate, LastModifiedDate, LastModifiedById, SystemModstamp, TextBody, HtmlBody, Headers, Subject, FromName, FromAddress, ValidatedFromAddress, ToAddress, CcAddress, BccAddress, Incoming, HasAttachment, Status, MessageDate, IsDeleted, ReplyToEmailMessageId, IsExternallyVisible, MessageIdentifier, ThreadIdentifier, RelatedToId, ExternalIdSAMS__c, Tech_UploadStatus__c, TECH_OldEmailMessageID__c FROM EmailMessage  where Id='02s1i000004M6WIAA0' ");
+
+				props_tSalesforceInput_1.setValue("includeDeleted", false);
+
+				props_tSalesforceInput_1.setValue("batchSize", 1000);
+
+				props_tSalesforceInput_1.setValue("normalizeDelimiter", ";");
+
+				props_tSalesforceInput_1.setValue("columnNameDelimiter", "_");
+
+				props_tSalesforceInput_1.connection.userPassword.setValue(
+						"useAuth", false);
+
+				props_tSalesforceInput_1.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_1.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceInput_1.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_1");
+
+				props_tSalesforceInput_1.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				props_tSalesforceInput_1.module.setValue("moduleName",
+						"EmailMessage");
+
+				props_tSalesforceInput_1.module.connection.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_1.module.connection.proxy.userPassword
+						.setValue("useAuth", false);
+
+				props_tSalesforceInput_1.module.connection.referencedComponent
+						.setValue(
+								"referenceType",
+								org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE);
+
+				props_tSalesforceInput_1.module.connection.referencedComponent
+						.setValue("componentInstanceId",
+								"tSalesforceConnection_1");
+
+				props_tSalesforceInput_1.module.connection.referencedComponent
+						.setValue("referenceDefinitionName",
+								"tSalesforceConnection");
+
+				class SchemaSettingTool_tSalesforceInput_1_1_fisrt {
+
+					String getSchemaValue() {
+
+						StringBuilder s = new StringBuilder();
+
+						a("{\"type\":\"record\",", s);
+
+						a("\"name\":\"EmailMessage\",\"fields\":[{", s);
+
+						a("\"name\":\"Id\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Id\",\"talend.field.dbColumnName\":\"Id\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Id\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ParentId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ParentId\",\"talend.field.dbColumnName\":\"ParentId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ParentId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ActivityId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ActivityId\",\"talend.field.dbColumnName\":\"ActivityId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ActivityId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CreatedById\",\"talend.field.dbColumnName\":\"CreatedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CreatedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"CreatedDate\",\"talend.field.dbColumnName\":\"CreatedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CreatedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedDate\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedDate\",\"talend.field.dbColumnName\":\"LastModifiedDate\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"LastModifiedById\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"LastModifiedById\",\"talend.field.dbColumnName\":\"LastModifiedById\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"LastModifiedById\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"SystemModstamp\",\"type\":{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"SystemModstamp\",\"talend.field.dbColumnName\":\"SystemModstamp\",\"di.column.talendType\":\"id_Date\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"SystemModstamp\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"TextBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"TextBody\",\"talend.field.dbColumnName\":\"TextBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"TextBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"HtmlBody\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"HtmlBody\",\"talend.field.dbColumnName\":\"HtmlBody\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"131072\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"HtmlBody\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Headers\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Headers\",\"talend.field.dbColumnName\":\"Headers\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"32000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Headers\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Subject\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Subject\",\"talend.field.dbColumnName\":\"Subject\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"3000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Subject\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromName\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromName\",\"talend.field.dbColumnName\":\"FromName\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromName\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"FromAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"FromAddress\",\"talend.field.dbColumnName\":\"FromAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"1000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"FromAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ValidatedFromAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ValidatedFromAddress\",\"talend.field.dbColumnName\":\"ValidatedFromAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"255\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ValidatedFromAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ToAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ToAddress\",\"talend.field.dbColumnName\":\"ToAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ToAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"CcAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"CcAddress\",\"talend.field.dbColumnName\":\"CcAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"CcAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"BccAddress\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"BccAddress\",\"talend.field.dbColumnName\":\"BccAddress\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"4000\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"BccAddress\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Incoming\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Incoming\",\"talend.field.dbColumnName\":\"Incoming\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Incoming\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"HasAttachment\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"HasAttachment\",\"talend.field.dbColumnName\":\"HasAttachment\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"HasAttachment\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Status\",\"type\":\"string\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Status\",\"talend.field.dbColumnName\":\"Status\",\"di.column.talendType\":\"id_String\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"40\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Status\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"MessageDate\",\"type\":[{\"type\":\"long\",\"java-class\":\"java.util.Date\"},\"null\"],\"di.table.comment\":\"\",\"di.prop.di.date.noLogicalType\":\"true\",\"AVRO_TECHNICAL_KEY\":\"MessageDate\",\"talend.field.dbColumnName\":\"MessageDate\",\"di.column.talendType\":\"id_Date\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"yyyy-MM-dd'T'HH:mm:ss'.000Z'\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"MessageDate\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"IsDeleted\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"IsDeleted\",\"talend.field.dbColumnName\":\"IsDeleted\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"IsDeleted\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ReplyToEmailMessageId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ReplyToEmailMessageId\",\"talend.field.dbColumnName\":\"ReplyToEmailMessageId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ReplyToEmailMessageId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"IsExternallyVisible\",\"type\":\"boolean\",\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"IsExternallyVisible\",\"talend.field.dbColumnName\":\"IsExternallyVisible\",\"di.column.talendType\":\"id_Boolean\",\"talend.field.pattern\":\"\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"IsExternallyVisible\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"MessageIdentifier\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"MessageIdentifier\",\"talend.field.dbColumnName\":\"MessageIdentifier\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"255\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"MessageIdentifier\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ThreadIdentifier\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ThreadIdentifier\",\"talend.field.dbColumnName\":\"ThreadIdentifier\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"255\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ThreadIdentifier\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"RelatedToId\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"RelatedToId\",\"talend.field.dbColumnName\":\"RelatedToId\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"RelatedToId\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"ExternalIdSAMS__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"ExternalIdSAMS__c\",\"talend.field.dbColumnName\":\"ExternalIdSAMS__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"ExternalIdSAMS__c\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"Tech_UploadStatus__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"Tech_UploadStatus__c\",\"talend.field.dbColumnName\":\"Tech_UploadStatus__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"255\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"Tech_UploadStatus__c\",\"di.column.relatedEntity\":\"\"},{",
+								s);
+
+						a("\"name\":\"TECH_OldEmailMessageID__c\",\"type\":[\"string\",\"null\"],\"di.table.comment\":\"\",\"AVRO_TECHNICAL_KEY\":\"TECH_OldEmailMessageID__c\",\"talend.field.dbColumnName\":\"TECH_OldEmailMessageID__c\",\"di.column.talendType\":\"id_String\",\"di.column.isNullable\":\"true\",\"talend.field.pattern\":\"\",\"talend.field.length\":\"18\",\"di.column.relationshipType\":\"\",\"di.table.label\":\"TECH_OldEmailMessageID__c\",\"di.column.relatedEntity\":\"\"}],\"di.table.name\":\"MAIN\",\"di.table.label\":\"EmailMessage\"}",
+								s);
+
+						return s.toString();
+
+					}
+
+					void a(String part, StringBuilder strB) {
+						strB.append(part);
+					}
+
+				}
+
+				SchemaSettingTool_tSalesforceInput_1_1_fisrt sst_tSalesforceInput_1_1_fisrt = new SchemaSettingTool_tSalesforceInput_1_1_fisrt();
+
+				props_tSalesforceInput_1.module.main.setValue("schema",
+						new org.apache.avro.Schema.Parser()
+								.parse(sst_tSalesforceInput_1_1_fisrt
+										.getSchemaValue()));
+
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_1.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceInput_1 = props_tSalesforceInput_1.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceInput_1 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_1 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_1
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceInput_1.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_1);
+					}
+				}
+				if (org.talend.components.api.properties.ComponentReferenceProperties.ReferenceType.COMPONENT_INSTANCE == props_tSalesforceInput_1.module.connection.referencedComponent.referenceType
+						.getValue()) {
+					final String referencedComponentInstanceId_tSalesforceInput_1 = props_tSalesforceInput_1.module.connection.referencedComponent.componentInstanceId
+							.getStringValue();
+					if (referencedComponentInstanceId_tSalesforceInput_1 != null) {
+						org.talend.daikon.properties.Properties referencedComponentProperties_tSalesforceInput_1 = (org.talend.daikon.properties.Properties) globalMap
+								.get(referencedComponentInstanceId_tSalesforceInput_1
+										+ "_COMPONENT_RUNTIME_PROPERTIES");
+						props_tSalesforceInput_1.module.connection.referencedComponent
+								.setReference(referencedComponentProperties_tSalesforceInput_1);
+					}
+				}
+				globalMap.put(
+						"tSalesforceInput_1_COMPONENT_RUNTIME_PROPERTIES",
+						props_tSalesforceInput_1);
+				globalMap.putIfAbsent("TALEND_PRODUCT_VERSION", "7.1");
+				globalMap.put("TALEND_COMPONENTS_VERSION", "0.25.3");
+				java.net.URL mappings_url_tSalesforceInput_1 = this.getClass()
+						.getResource("/xmlMappings");
+				globalMap.put("tSalesforceInput_1_MAPPINGS_URL",
+						mappings_url_tSalesforceInput_1);
+
+				org.talend.components.api.container.RuntimeContainer container_tSalesforceInput_1 = new org.talend.components.api.container.RuntimeContainer() {
+					public Object getComponentData(String componentId,
+							String key) {
+						return globalMap.get(componentId + "_" + key);
+					}
+
+					public void setComponentData(String componentId,
+							String key, Object data) {
+						globalMap.put(componentId + "_" + key, data);
+					}
+
+					public String getCurrentComponentId() {
+						return "tSalesforceInput_1";
+					}
+
+					public Object getGlobalData(String key) {
+						return globalMap.get(key);
+					}
+				};
+
+				int nb_line_tSalesforceInput_1 = 0;
+
+				org.talend.components.api.component.ConnectorTopology topology_tSalesforceInput_1 = null;
+				topology_tSalesforceInput_1 = org.talend.components.api.component.ConnectorTopology.OUTGOING;
+
+				org.talend.daikon.runtime.RuntimeInfo runtime_info_tSalesforceInput_1 = def_tSalesforceInput_1
+						.getRuntimeInfo(
+								org.talend.components.api.component.runtime.ExecutionEngine.DI,
+								props_tSalesforceInput_1,
+								topology_tSalesforceInput_1);
+				java.util.Set<org.talend.components.api.component.ConnectorTopology> supported_connector_topologies_tSalesforceInput_1 = def_tSalesforceInput_1
+						.getSupportedConnectorTopologies();
+
+				org.talend.components.api.component.runtime.RuntimableRuntime componentRuntime_tSalesforceInput_1 = (org.talend.components.api.component.runtime.RuntimableRuntime) (Class
+						.forName(runtime_info_tSalesforceInput_1
+								.getRuntimeClassName()).newInstance());
+				org.talend.daikon.properties.ValidationResult initVr_tSalesforceInput_1 = componentRuntime_tSalesforceInput_1
+						.initialize(container_tSalesforceInput_1,
+								props_tSalesforceInput_1);
+
+				if (initVr_tSalesforceInput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+					throw new RuntimeException(
+							initVr_tSalesforceInput_1.getMessage());
+				}
+
+				if (componentRuntime_tSalesforceInput_1 instanceof org.talend.components.api.component.runtime.ComponentDriverInitialization) {
+					org.talend.components.api.component.runtime.ComponentDriverInitialization compDriverInitialization_tSalesforceInput_1 = (org.talend.components.api.component.runtime.ComponentDriverInitialization) componentRuntime_tSalesforceInput_1;
+					compDriverInitialization_tSalesforceInput_1
+							.runAtDriver(container_tSalesforceInput_1);
+				}
+
+				org.talend.components.api.component.runtime.SourceOrSink sourceOrSink_tSalesforceInput_1 = null;
+				if (componentRuntime_tSalesforceInput_1 instanceof org.talend.components.api.component.runtime.SourceOrSink) {
+					sourceOrSink_tSalesforceInput_1 = (org.talend.components.api.component.runtime.SourceOrSink) componentRuntime_tSalesforceInput_1;
+					org.talend.daikon.properties.ValidationResult vr_tSalesforceInput_1 = sourceOrSink_tSalesforceInput_1
+							.validate(container_tSalesforceInput_1);
+					if (vr_tSalesforceInput_1.getStatus() == org.talend.daikon.properties.ValidationResult.Result.ERROR) {
+						throw new RuntimeException(
+								vr_tSalesforceInput_1.getMessage());
+					}
+				}
+
+				org.talend.components.api.component.runtime.Source source_tSalesforceInput_1 = (org.talend.components.api.component.runtime.Source) sourceOrSink_tSalesforceInput_1;
+				org.talend.components.api.component.runtime.Reader reader_tSalesforceInput_1 = source_tSalesforceInput_1
+						.createReader(container_tSalesforceInput_1);
+				reader_tSalesforceInput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesReader(
+						reader_tSalesforceInput_1, container_tSalesforceInput_1);
+
+				boolean multi_output_is_allowed_tSalesforceInput_1 = false;
+				org.talend.components.api.component.Connector c_tSalesforceInput_1 = null;
+				for (org.talend.components.api.component.Connector currentConnector : props_tSalesforceInput_1
+						.getAvailableConnectors(null, true)) {
+					if (currentConnector.getName().equals("MAIN")) {
+						c_tSalesforceInput_1 = currentConnector;
+					}
+
+					if (currentConnector.getName().equals("REJECT")) {// it's
+																		// better
+																		// to
+																		// move
+																		// the
+																		// code
+																		// to
+																		// javajet
+						multi_output_is_allowed_tSalesforceInput_1 = true;
+					}
+				}
+				org.apache.avro.Schema schema_tSalesforceInput_1 = props_tSalesforceInput_1
+						.getSchema(c_tSalesforceInput_1, true);
+
+				org.talend.codegen.enforcer.OutgoingSchemaEnforcer outgoingEnforcer_tSalesforceInput_1 = org.talend.codegen.enforcer.EnforcerCreator
+						.createOutgoingEnforcer(schema_tSalesforceInput_1,
+								false);
+
+				// Create a reusable factory that converts the output of the
+				// reader to an IndexedRecord.
+				org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord> factory_tSalesforceInput_1 = null;
+
+				// Iterate through the incoming data.
+				boolean available_tSalesforceInput_1 = reader_tSalesforceInput_1
+						.start();
+
+				resourceMap.put("reader_tSalesforceInput_1",
+						reader_tSalesforceInput_1);
+
+				for (; available_tSalesforceInput_1; available_tSalesforceInput_1 = reader_tSalesforceInput_1
+						.advance()) {
+					nb_line_tSalesforceInput_1++;
+
+					if (multi_output_is_allowed_tSalesforceInput_1) {
+						row222 = null;
+
+					}
+
+					try {
+						Object data_tSalesforceInput_1 = reader_tSalesforceInput_1
+								.getCurrent();
+
+						if (multi_output_is_allowed_tSalesforceInput_1) {
+							row222 = new row222Struct();
+						}
+
+						// Construct the factory once when the first data
+						// arrives.
+						if (factory_tSalesforceInput_1 == null) {
+							factory_tSalesforceInput_1 = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(data_tSalesforceInput_1
+											.getClass());
+						}
+
+						// Enforce the outgoing schema on the input.
+						outgoingEnforcer_tSalesforceInput_1
+								.setWrapped(factory_tSalesforceInput_1
+										.convertToAvro(data_tSalesforceInput_1));
+						Object columnValue_0_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(0);
+						row222.Id = (String) (columnValue_0_tSalesforceInput_1);
+						Object columnValue_1_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(1);
+						row222.ParentId = (String) (columnValue_1_tSalesforceInput_1);
+						Object columnValue_2_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(2);
+						row222.ActivityId = (String) (columnValue_2_tSalesforceInput_1);
+						Object columnValue_3_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(3);
+						row222.CreatedById = (String) (columnValue_3_tSalesforceInput_1);
+						Object columnValue_4_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(4);
+						row222.CreatedDate = (java.util.Date) (columnValue_4_tSalesforceInput_1);
+						Object columnValue_5_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(5);
+						row222.LastModifiedDate = (java.util.Date) (columnValue_5_tSalesforceInput_1);
+						Object columnValue_6_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(6);
+						row222.LastModifiedById = (String) (columnValue_6_tSalesforceInput_1);
+						Object columnValue_7_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(7);
+						row222.SystemModstamp = (java.util.Date) (columnValue_7_tSalesforceInput_1);
+						Object columnValue_8_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(8);
+						row222.TextBody = (String) (columnValue_8_tSalesforceInput_1);
+						Object columnValue_9_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(9);
+						row222.HtmlBody = (String) (columnValue_9_tSalesforceInput_1);
+						Object columnValue_10_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(10);
+						row222.Headers = (String) (columnValue_10_tSalesforceInput_1);
+						Object columnValue_11_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(11);
+						row222.Subject = (String) (columnValue_11_tSalesforceInput_1);
+						Object columnValue_12_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(12);
+						row222.FromName = (String) (columnValue_12_tSalesforceInput_1);
+						Object columnValue_13_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(13);
+						row222.FromAddress = (String) (columnValue_13_tSalesforceInput_1);
+						Object columnValue_14_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(14);
+						row222.ValidatedFromAddress = (String) (columnValue_14_tSalesforceInput_1);
+						Object columnValue_15_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(15);
+						row222.ToAddress = (String) (columnValue_15_tSalesforceInput_1);
+						Object columnValue_16_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(16);
+						row222.CcAddress = (String) (columnValue_16_tSalesforceInput_1);
+						Object columnValue_17_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(17);
+						row222.BccAddress = (String) (columnValue_17_tSalesforceInput_1);
+						Object columnValue_18_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(18);
+						if (columnValue_18_tSalesforceInput_1 == null) {
+							row222.Incoming = false;
+						} else {
+							row222.Incoming = (boolean) (columnValue_18_tSalesforceInput_1);
+						}
+						Object columnValue_19_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(19);
+						if (columnValue_19_tSalesforceInput_1 == null) {
+							row222.HasAttachment = false;
+						} else {
+							row222.HasAttachment = (boolean) (columnValue_19_tSalesforceInput_1);
+						}
+						Object columnValue_20_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(20);
+						row222.Status = (String) (columnValue_20_tSalesforceInput_1);
+						Object columnValue_21_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(21);
+						row222.MessageDate = (java.util.Date) (columnValue_21_tSalesforceInput_1);
+						Object columnValue_22_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(22);
+						if (columnValue_22_tSalesforceInput_1 == null) {
+							row222.IsDeleted = false;
+						} else {
+							row222.IsDeleted = (boolean) (columnValue_22_tSalesforceInput_1);
+						}
+						Object columnValue_23_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(23);
+						row222.ReplyToEmailMessageId = (String) (columnValue_23_tSalesforceInput_1);
+						Object columnValue_24_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(24);
+						if (columnValue_24_tSalesforceInput_1 == null) {
+							row222.IsExternallyVisible = false;
+						} else {
+							row222.IsExternallyVisible = (boolean) (columnValue_24_tSalesforceInput_1);
+						}
+						Object columnValue_25_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(25);
+						row222.MessageIdentifier = (String) (columnValue_25_tSalesforceInput_1);
+						Object columnValue_26_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(26);
+						row222.ThreadIdentifier = (String) (columnValue_26_tSalesforceInput_1);
+						Object columnValue_27_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(27);
+						row222.RelatedToId = (String) (columnValue_27_tSalesforceInput_1);
+						Object columnValue_28_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(28);
+						row222.ExternalIdSAMS__c = (String) (columnValue_28_tSalesforceInput_1);
+						Object columnValue_29_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(29);
+						row222.Tech_UploadStatus__c = (String) (columnValue_29_tSalesforceInput_1);
+						Object columnValue_30_tSalesforceInput_1 = outgoingEnforcer_tSalesforceInput_1
+								.get(30);
+						row222.TECH_OldEmailMessageID__c = (String) (columnValue_30_tSalesforceInput_1);
+					} catch (org.talend.components.api.exception.DataRejectException e_tSalesforceInput_1) {
+						java.util.Map<String, Object> info_tSalesforceInput_1 = e_tSalesforceInput_1
+								.getRejectInfo();
+						// TODO use a method instead of getting method by the
+						// special key "error/errorMessage"
+						Object errorMessage_tSalesforceInput_1 = null;
+						if (info_tSalesforceInput_1.containsKey("error")) {
+							errorMessage_tSalesforceInput_1 = info_tSalesforceInput_1
+									.get("error");
+						} else if (info_tSalesforceInput_1
+								.containsKey("errorMessage")) {
+							errorMessage_tSalesforceInput_1 = info_tSalesforceInput_1
+									.get("errorMessage");
+						} else {
+							errorMessage_tSalesforceInput_1 = "Rejected but error message missing";
+						}
+						errorMessage_tSalesforceInput_1 = "Row "
+								+ nb_line_tSalesforceInput_1 + ": "
+								+ errorMessage_tSalesforceInput_1;
+						System.err.println(errorMessage_tSalesforceInput_1);
+						// If the record is reject, the main line record should
+						// put NULL
+						row222 = null;
+					}
+					java.lang.Iterable<?> outgoingMainRecordsList_tSalesforceInput_1 = new java.util.ArrayList<Object>();
+					java.util.Iterator outgoingMainRecordsIt_tSalesforceInput_1 = null;
+
+					/**
+					 * [tSalesforceInput_1 begin ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_1 main ] start
+					 */
+
+					currentComponent = "tSalesforceInput_1";
+
+					tos_count_tSalesforceInput_1++;
+
+					/**
+					 * [tSalesforceInput_1 main ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_1 process_data_begin ] start
+					 */
+
+					currentComponent = "tSalesforceInput_1";
+
+					/**
+					 * [tSalesforceInput_1 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tMap_5 main ] start
+					 */
+
+					currentComponent = "tMap_5";
+
+					// row222
+					// row222
+
+					if (execStat) {
+						runStat.updateStatOnConnection("row222" + iterateId, 1,
+								1);
+					}
+
+					boolean hasCasePrimitiveKeyWithNull_tMap_5 = false;
+
+					// ###############################
+					// # Input tables (lookups)
+					boolean rejectedInnerJoin_tMap_5 = false;
+					boolean mainRowRejected_tMap_5 = false;
+
+					// ###############################
+					{ // start of Var scope
+
+						// ###############################
+						// # Vars tables
+
+						Var__tMap_5__Struct Var = Var__tMap_5;// ###############################
+						// ###############################
+						// # Output tables
+
+						row2 = null;
+
+						// # Output table : 'row2'
+						row2_tmp.Id = row222.Id;
+						row2_tmp.ParentId = row222.ParentId;
+						row2_tmp.ActivityId = row222.ActivityId;
+						row2_tmp.CreatedById = row222.CreatedById;
+						row2_tmp.CreatedDate = row222.CreatedDate;
+						row2_tmp.LastModifiedDate = row222.LastModifiedDate;
+						row2_tmp.LastModifiedById = row222.LastModifiedById;
+						row2_tmp.SystemModstamp = row222.SystemModstamp;
+						row2_tmp.TextBody = row222.TextBody;
+						row2_tmp.HtmlBody = row222.HtmlBody;
+						row2_tmp.Headers = row222.Headers;
+						row2_tmp.Subject = row222.Subject;
+						row2_tmp.FromName = row222.FromName;
+						row2_tmp.FromAddress = row222.FromAddress;
+						row2_tmp.ValidatedFromAddress = row222.ValidatedFromAddress;
+						row2_tmp.ToAddress = row222.ToAddress;
+						row2_tmp.CcAddress = row222.CcAddress;
+						row2_tmp.BccAddress = row222.BccAddress;
+						row2_tmp.Incoming = row222.Incoming;
+						row2_tmp.HasAttachment = row222.HasAttachment;
+						row2_tmp.Status = row222.Status;
+						row2_tmp.MessageDate = row222.MessageDate;
+						row2_tmp.IsDeleted = row222.IsDeleted;
+						row2_tmp.ReplyToEmailMessageId = row222.ReplyToEmailMessageId;
+						row2_tmp.IsExternallyVisible = row222.IsExternallyVisible;
+						row2_tmp.MessageIdentifier = row222.MessageIdentifier;
+						row2_tmp.ThreadIdentifier = row222.ThreadIdentifier;
+						row2_tmp.RelatedToId = row222.RelatedToId;
+						row2_tmp.ExternalIdSAMS__c = row222.ExternalIdSAMS__c;
+						row2_tmp.Tech_UploadStatus__c = row222.Tech_UploadStatus__c;
+						row2_tmp.TECH_OldEmailMessageID__c = row222.TECH_OldEmailMessageID__c;
+						row2 = row2_tmp;
+						// ###############################
+
+					} // end of Var scope
+
+					rejectedInnerJoin_tMap_5 = false;
+
+					tos_count_tMap_5++;
+
+					/**
+					 * [tMap_5 main ] stop
+					 */
+
+					/**
+					 * [tMap_5 process_data_begin ] start
+					 */
+
+					currentComponent = "tMap_5";
+
+					/**
+					 * [tMap_5 process_data_begin ] stop
+					 */
+					// Start of branch "row2"
+					if (row2 != null) {
+						row25 = null;
+
+						/**
+						 * [tMap_1 main ] start
+						 */
+
+						currentComponent = "tMap_1";
+
+						// row2
+						// row2
+
+						if (execStat) {
+							runStat.updateStatOnConnection("row2" + iterateId,
+									1, 1);
+						}
+
+						boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+						// ###############################
+						// # Input tables (lookups)
+						boolean rejectedInnerJoin_tMap_1 = false;
+						boolean mainRowRejected_tMap_1 = false;
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "CreatedBy"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopCreatedBy = false;
+
+						CreatedByStruct CreatedByObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							CreatedByHashKey.ExternalIdSplit__c = row2.CreatedById;
+
+							CreatedByHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_CreatedBy.lookup(CreatedByHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_CreatedBy != null
+								&& tHash_Lookup_CreatedBy
+										.getCount(CreatedByHashKey) > 1) { // G
+																			// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'CreatedBy' and it contains more one result from keys :  CreatedBy.ExternalIdSplit__c = '"
+							// + CreatedByHashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						CreatedByStruct CreatedBy = null;
+
+						CreatedByStruct fromLookup_CreatedBy = null;
+						CreatedBy = CreatedByDefault;
+
+						if (tHash_Lookup_CreatedBy != null
+								&& tHash_Lookup_CreatedBy.hasNext()) { // G 099
+
+							fromLookup_CreatedBy = tHash_Lookup_CreatedBy
+									.next();
+
+						} // G 099
+
+						if (fromLookup_CreatedBy != null) {
+							CreatedBy = fromLookup_CreatedBy;
+						}
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "ModifiedBy"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopModifiedBy = false;
+
+						ModifiedByStruct ModifiedByObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							ModifiedByHashKey.ExternalIdSplit__c = row2.LastModifiedById;
+
+							ModifiedByHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_ModifiedBy.lookup(ModifiedByHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_ModifiedBy != null
+								&& tHash_Lookup_ModifiedBy
+										.getCount(ModifiedByHashKey) > 1) { // G
+																			// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'ModifiedBy' and it contains more one result from keys :  ModifiedBy.ExternalIdSplit__c = '"
+							// + ModifiedByHashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						ModifiedByStruct ModifiedBy = null;
+
+						ModifiedByStruct fromLookup_ModifiedBy = null;
+						ModifiedBy = ModifiedByDefault;
+
+						if (tHash_Lookup_ModifiedBy != null
+								&& tHash_Lookup_ModifiedBy.hasNext()) { // G 099
+
+							fromLookup_ModifiedBy = tHash_Lookup_ModifiedBy
+									.next();
+
+						} // G 099
+
+						if (fromLookup_ModifiedBy != null) {
+							ModifiedBy = fromLookup_ModifiedBy;
+						}
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "Meeting_minute"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopMeeting_minute = false;
+
+						Meeting_minuteStruct Meeting_minuteObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							Meeting_minuteHashKey.ExternalIdSplit__c = row2.RelatedToId;
+
+							Meeting_minuteHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_Meeting_minute
+									.lookup(Meeting_minuteHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_Meeting_minute != null
+								&& tHash_Lookup_Meeting_minute
+										.getCount(Meeting_minuteHashKey) > 1) { // G
+																				// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Meeting_minute' and it contains more one result from keys :  Meeting_minute.ExternalIdSplit__c = '"
+							// + Meeting_minuteHashKey.ExternalIdSplit__c +
+							// "'");
+						} // G 071
+
+						Meeting_minuteStruct Meeting_minute = null;
+
+						Meeting_minuteStruct fromLookup_Meeting_minute = null;
+						Meeting_minute = Meeting_minuteDefault;
+
+						if (tHash_Lookup_Meeting_minute != null
+								&& tHash_Lookup_Meeting_minute.hasNext()) { // G
+																			// 099
+
+							fromLookup_Meeting_minute = tHash_Lookup_Meeting_minute
+									.next();
+
+						} // G 099
+
+						if (fromLookup_Meeting_minute != null) {
+							Meeting_minute = fromLookup_Meeting_minute;
+						}
+
+						if (!rejectedInnerJoin_tMap_1 &&
+
+						!(
+
+						!Relational.ISNULL(row2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_Meeting_minute = null;
+							Meeting_minute = Meeting_minuteDefault;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "Opportunity"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopOpportunity = false;
+
+						OpportunityStruct OpportunityObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							OpportunityHashKey.ExternalIdSplit__c = row2.RelatedToId;
+
+							OpportunityHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_Opportunity.lookup(OpportunityHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_Opportunity != null
+								&& tHash_Lookup_Opportunity
+										.getCount(OpportunityHashKey) > 1) { // G
+																				// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Opportunity' and it contains more one result from keys :  Opportunity.ExternalIdSplit__c = '"
+							// + OpportunityHashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						OpportunityStruct Opportunity = null;
+
+						OpportunityStruct fromLookup_Opportunity = null;
+						Opportunity = OpportunityDefault;
+
+						if (tHash_Lookup_Opportunity != null
+								&& tHash_Lookup_Opportunity.hasNext()) { // G
+																			// 099
+
+							fromLookup_Opportunity = tHash_Lookup_Opportunity
+									.next();
+
+						} // G 099
+
+						if (fromLookup_Opportunity != null) {
+							Opportunity = fromLookup_Opportunity;
+						}
+
+						if (!rejectedInnerJoin_tMap_1 &&
+
+						!(
+
+						!Relational.ISNULL(row2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_Opportunity = null;
+							Opportunity = OpportunityDefault;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "CaseParentId"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopCaseParentId = false;
+
+						CaseParentIdStruct CaseParentIdObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							CaseParentIdHashKey.ExternalIdSplit__c = row2.ParentId;
+
+							CaseParentIdHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_CaseParentId
+									.lookup(CaseParentIdHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_CaseParentId != null
+								&& tHash_Lookup_CaseParentId
+										.getCount(CaseParentIdHashKey) > 1) { // G
+																				// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'CaseParentId' and it contains more one result from keys :  CaseParentId.ExternalIdSplit__c = '"
+							// + CaseParentIdHashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						CaseParentIdStruct CaseParentId = null;
+
+						CaseParentIdStruct fromLookup_CaseParentId = null;
+						CaseParentId = CaseParentIdDefault;
+
+						if (tHash_Lookup_CaseParentId != null
+								&& tHash_Lookup_CaseParentId.hasNext()) { // G
+																			// 099
+
+							fromLookup_CaseParentId = tHash_Lookup_CaseParentId
+									.next();
+
+						} // G 099
+
+						if (fromLookup_CaseParentId != null) {
+							CaseParentId = fromLookup_CaseParentId;
+						}
+
+						if (!rejectedInnerJoin_tMap_1 &&
+
+						!(
+
+						!Relational.ISNULL(row2.ParentId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_CaseParentId = null;
+							CaseParentId = CaseParentIdDefault;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "Project"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopProject = false;
+
+						ProjectStruct ProjectObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							ProjectHashKey.ExternalIdSplit__c = row2.RelatedToId;
+
+							ProjectHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_Project.lookup(ProjectHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_Project != null
+								&& tHash_Lookup_Project
+										.getCount(ProjectHashKey) > 1) { // G
+																			// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Project' and it contains more one result from keys :  Project.ExternalIdSplit__c = '"
+							// + ProjectHashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						ProjectStruct Project = null;
+
+						ProjectStruct fromLookup_Project = null;
+						Project = ProjectDefault;
+
+						if (tHash_Lookup_Project != null
+								&& tHash_Lookup_Project.hasNext()) { // G 099
+
+							fromLookup_Project = tHash_Lookup_Project.next();
+
+						} // G 099
+
+						if (fromLookup_Project != null) {
+							Project = fromLookup_Project;
+						}
+
+						if (!rejectedInnerJoin_tMap_1 &&
+
+						!(
+
+						!Relational.ISNULL(row2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_Project = null;
+							Project = ProjectDefault;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "Task1"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopTask1 = false;
+
+						Task1Struct Task1ObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							Task1HashKey.ExternalIdSplit__c = row2.ActivityId;
+
+							Task1HashKey.hashCodeDirty = true;
+
+							tHash_Lookup_Task1.lookup(Task1HashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_Task1 != null
+								&& tHash_Lookup_Task1.getCount(Task1HashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Task1' and it contains more one result from keys :  Task1.ExternalIdSplit__c = '"
+							// + Task1HashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						Task1Struct Task1 = null;
+
+						Task1Struct fromLookup_Task1 = null;
+						Task1 = Task1Default;
+
+						if (tHash_Lookup_Task1 != null
+								&& tHash_Lookup_Task1.hasNext()) { // G 099
+
+							fromLookup_Task1 = tHash_Lookup_Task1.next();
+
+						} // G 099
+
+						if (fromLookup_Task1 != null) {
+							Task1 = fromLookup_Task1;
+						}
+
+						if (!rejectedInnerJoin_tMap_1 &&
+
+						!(
+
+						!Relational.ISNULL(row2.ActivityId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_Task1 = null;
+							Task1 = Task1Default;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "Case"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopCase = false;
+
+						CaseStruct CaseObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							CaseHashKey.ExternalIdSplit__c = row2.RelatedToId;
+
+							CaseHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_Case.lookup(CaseHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_Case != null
+								&& tHash_Lookup_Case.getCount(CaseHashKey) > 1) { // G
+																					// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Case' and it contains more one result from keys :  Case.ExternalIdSplit__c = '"
+							// + CaseHashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						CaseStruct Case = null;
+
+						CaseStruct fromLookup_Case = null;
+						Case = CaseDefault;
+
+						if (tHash_Lookup_Case != null
+								&& tHash_Lookup_Case.hasNext()) { // G 099
+
+							fromLookup_Case = tHash_Lookup_Case.next();
+
+						} // G 099
+
+						if (fromLookup_Case != null) {
+							Case = fromLookup_Case;
+						}
+
+						if (!rejectedInnerJoin_tMap_1 &&
+
+						!(
+
+						!Relational.ISNULL(row2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_Case = null;
+							Case = CaseDefault;
+
+						} // G 016
+
+						// /////////////////////////////////////////////
+						// Starting Lookup Table "Contract"
+						// /////////////////////////////////////////////
+
+						boolean forceLoopContract = false;
+
+						ContractStruct ContractObjectFromLookup = null;
+
+						if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
+
+							hasCasePrimitiveKeyWithNull_tMap_1 = false;
+
+							ContractHashKey.ExternalIdSplit__c = row2.RelatedToId;
+
+							ContractHashKey.hashCodeDirty = true;
+
+							tHash_Lookup_Contract.lookup(ContractHashKey);
+
+						} // G_TM_M_020
+
+						if (tHash_Lookup_Contract != null
+								&& tHash_Lookup_Contract
+										.getCount(ContractHashKey) > 1) { // G
+																			// 071
+
+							// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'Contract' and it contains more one result from keys :  Contract.ExternalIdSplit__c = '"
+							// + ContractHashKey.ExternalIdSplit__c + "'");
+						} // G 071
+
+						ContractStruct Contract = null;
+
+						ContractStruct fromLookup_Contract = null;
+						Contract = ContractDefault;
+
+						if (tHash_Lookup_Contract != null
+								&& tHash_Lookup_Contract.hasNext()) { // G 099
+
+							fromLookup_Contract = tHash_Lookup_Contract.next();
+
+						} // G 099
+
+						if (fromLookup_Contract != null) {
+							Contract = fromLookup_Contract;
+						}
+
+						if (!rejectedInnerJoin_tMap_1 &&
+
+						!(
+
+						!Relational.ISNULL(row2.RelatedToId)
+
+						)
+
+						) { // G 016
+
+							fromLookup_Contract = null;
+							Contract = ContractDefault;
+
+						} // G 016
+
+						// ###############################
+						{ // start of Var scope
+
+							// ###############################
+							// # Vars tables
+
+							Var__tMap_1__Struct Var = Var__tMap_1;
+							Var.RelatedToId = !Relational
+									.ISNULL(Meeting_minute.Id) ? Meeting_minute.Id
+									: !Relational.ISNULL(Opportunity.Id) ? Opportunity.Id
+											: !Relational.ISNULL(Project.Id) ? Project.Id
+													: !Relational
+															.ISNULL(Case.Id) ? Case.Id
+															: !Relational
+																	.ISNULL(Contract.Id) ? Contract.Id
+																	: null;
+							Var.Status = row2.HasAttachment ? "5" : row2.Status;
+							Var.var1 = Relational.ISNULL(row2.ParentId) ? "5001j0000040aJUAAY"
+									: CaseParentId.Id;
+							Var.var2 = Relational.ISNULL(row2.ActivityId) ? null
+									: Task1.Id;// ###############################
+							// ###############################
+							// # Output tables
+
+							EmailMessage = null;
+
+							// # Output table : 'EmailMessage'
+							EmailMessage_tmp.ParentId = Var.var1;
+							EmailMessage_tmp.ActivityId = Var.var2;
+							EmailMessage_tmp.CreatedById = CreatedBy.Id;
+							EmailMessage_tmp.CreatedDate = row2.CreatedDate;
+							EmailMessage_tmp.LastModifiedDate = row2.LastModifiedDate;
+							EmailMessage_tmp.LastModifiedById = ModifiedBy.Id;
+							EmailMessage_tmp.TextBody = row2.TextBody;
+							EmailMessage_tmp.HtmlBody = row2.HtmlBody.length() < 131072 ? row2.HtmlBody
+									: row2.HtmlBody.substring(0, 131071);
+							EmailMessage_tmp.Subject = row2.Subject;
+							EmailMessage_tmp.FromName = row2.FromName;
+							EmailMessage_tmp.FromAddress = row2.FromAddress;
+							EmailMessage_tmp.ToAddress = row2.ToAddress;
+							EmailMessage_tmp.CcAddress = row2.CcAddress;
+							EmailMessage_tmp.BccAddress = row2.BccAddress;
+							EmailMessage_tmp.Incoming = row2.Incoming;
+							EmailMessage_tmp.Status = Var.Status;
+							EmailMessage_tmp.MessageDate = row2.MessageDate;
+							EmailMessage_tmp.RelatedToId = Relational
+									.ISNULL(row2.RelatedToId) ? null
+									: Var.RelatedToId;
+							EmailMessage_tmp.ExternalIdSplit__c = row2.Id;
+							EmailMessage = EmailMessage_tmp;
+							// ###############################
+
+						} // end of Var scope
+
+						rejectedInnerJoin_tMap_1 = false;
+
+						tos_count_tMap_1++;
+
+						/**
+						 * [tMap_1 main ] stop
+						 */
+
+						/**
+						 * [tMap_1 process_data_begin ] start
+						 */
+
+						currentComponent = "tMap_1";
+
+						/**
+						 * [tMap_1 process_data_begin ] stop
+						 */
+						// Start of branch "EmailMessage"
+						if (EmailMessage != null) {
+							row25 = null;
+
+							/**
+							 * [tSalesforceOutput_1 main ] start
+							 */
+
+							currentComponent = "tSalesforceOutput_1";
+
+							// EmailMessage
+							// EmailMessage
+
+							if (execStat) {
+								runStat.updateStatOnConnection("EmailMessage"
+										+ iterateId, 1, 1);
+							}
+
+							incomingEnforcer_tSalesforceOutput_1
+									.createNewRecord();
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("ParentId") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"ParentId", EmailMessage.ParentId);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("ActivityId") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"ActivityId", EmailMessage.ActivityId);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("CreatedById") != null) {
+								incomingEnforcer_tSalesforceOutput_1
+										.put("CreatedById",
+												EmailMessage.CreatedById);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("CreatedDate") != null) {
+								incomingEnforcer_tSalesforceOutput_1
+										.put("CreatedDate",
+												EmailMessage.CreatedDate);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField(
+											"LastModifiedDate") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"LastModifiedDate",
+										EmailMessage.LastModifiedDate);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField(
+											"LastModifiedById") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"LastModifiedById",
+										EmailMessage.LastModifiedById);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("TextBody") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"TextBody", EmailMessage.TextBody);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("HtmlBody") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"HtmlBody", EmailMessage.HtmlBody);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("Subject") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"Subject", EmailMessage.Subject);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("FromName") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"FromName", EmailMessage.FromName);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("FromAddress") != null) {
+								incomingEnforcer_tSalesforceOutput_1
+										.put("FromAddress",
+												EmailMessage.FromAddress);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("ToAddress") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"ToAddress", EmailMessage.ToAddress);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("CcAddress") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"CcAddress", EmailMessage.CcAddress);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("BccAddress") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"BccAddress", EmailMessage.BccAddress);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("Incoming") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"Incoming", EmailMessage.Incoming);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("Status") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"Status", EmailMessage.Status);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("MessageDate") != null) {
+								incomingEnforcer_tSalesforceOutput_1
+										.put("MessageDate",
+												EmailMessage.MessageDate);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField("RelatedToId") != null) {
+								incomingEnforcer_tSalesforceOutput_1
+										.put("RelatedToId",
+												EmailMessage.RelatedToId);
+							}
+							// skip the put action if the input column doesn't
+							// appear in component runtime schema
+							if (incomingEnforcer_tSalesforceOutput_1
+									.getRuntimeSchema().getField(
+											"ExternalIdSplit__c") != null) {
+								incomingEnforcer_tSalesforceOutput_1.put(
+										"ExternalIdSplit__c",
+										EmailMessage.ExternalIdSplit__c);
+							}
+							org.apache.avro.generic.IndexedRecord data_tSalesforceOutput_1 = incomingEnforcer_tSalesforceOutput_1
+									.getCurrentRecord();
+
+							writer_tSalesforceOutput_1
+									.write(data_tSalesforceOutput_1);
+
+							nb_line_tSalesforceOutput_1++;
+							if (!(writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback)) {
+								// For no feedback writer,just pass the input
+								// record to the output
+								if (data_tSalesforceOutput_1 != null) {
+									outgoingMainRecordsList_tSalesforceOutput_1 = java.util.Arrays
+											.asList(data_tSalesforceOutput_1);
+								}
+							}
+
+							tos_count_tSalesforceOutput_1++;
+
+							/**
+							 * [tSalesforceOutput_1 main ] stop
+							 */
+
+							/**
+							 * [tSalesforceOutput_1 process_data_begin ] start
+							 */
+
+							currentComponent = "tSalesforceOutput_1";
+
+							row25 = null;
+							row27 = null;
+							if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+								org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackMain_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
+								writerWithFeedbackMain_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+										writerWithFeedbackMain_tSalesforceOutput_1,
+										container_tSalesforceOutput_1);
+								java.lang.Iterable<?> outgoingRecs_tSalesforceOutput_1 = writerWithFeedbackMain_tSalesforceOutput_1
+										.getSuccessfulWrites();
+								java.util.Iterator outgoingMainRecords_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1
+										.iterator();
+								Object outgoingMain_tSalesforceOutput_1 = null;
+								if (outgoingMainRecords_tSalesforceOutput_1
+										.hasNext()) {
+									outgoingMainRecordsList_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1;
+								}
+							}
+							java.lang.Iterable<?> outgoingRejectRecordsList_tSalesforceOutput_1 = new java.util.ArrayList<Object>();
+							if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+								org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackReject_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
+								writerWithFeedbackReject_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+										writerWithFeedbackReject_tSalesforceOutput_1,
+										container_tSalesforceOutput_1);
+								java.lang.Iterable<?> outgoingRejectRecs_tSalesforceOutput_1 = writerWithFeedbackReject_tSalesforceOutput_1
+										.getRejectedWrites();
+								java.util.Iterator outgoingRejectRecords_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1
+										.iterator();
+								if (outgoingRejectRecords_tSalesforceOutput_1
+										.hasNext()) {
+									outgoingRejectRecordsList_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1;
+								}
+							}
+							outgoingMainRecordsIt_tSalesforceOutput_1 = outgoingMainRecordsList_tSalesforceOutput_1
+									.iterator();
+							java.util.Iterator outgoingRejectRecordsIt_tSalesforceOutput_1 = outgoingRejectRecordsList_tSalesforceOutput_1
+									.iterator();
+							while (outgoingMainRecordsIt_tSalesforceOutput_1
+									.hasNext()
+									|| outgoingRejectRecordsIt_tSalesforceOutput_1
+											.hasNext()) { // Start of data
+															// processing while
+															// block
+
+								if (outgoingMainRecordsIt_tSalesforceOutput_1
+										.hasNext()) {
+									row27 = new row27Struct();
+									Object outgoingMain_tSalesforceOutput_1 = outgoingMainRecordsIt_tSalesforceOutput_1
+											.next();
+
+									// Construct the factory once when the first
+									// data arrives.
+									if (factory_tSalesforceOutput_1OutMain == null) {
+										factory_tSalesforceOutput_1OutMain = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+												.createIndexedRecordConverter(outgoingMain_tSalesforceOutput_1
+														.getClass());
+									}
+
+									// Enforce the outgoing schema on the input.
+									outgoingEnforcer_tSalesforceOutput_1OutMain
+											.setWrapped(factory_tSalesforceOutput_1OutMain
+													.convertToAvro(outgoingMain_tSalesforceOutput_1));
+									Object columnValue_0_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(0);
+									row27.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutMain);
+									Object columnValue_1_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(1);
+									row27.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutMain);
+									Object columnValue_2_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(2);
+									row27.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutMain);
+									Object columnValue_3_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(3);
+									row27.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutMain);
+									Object columnValue_4_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(4);
+									row27.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutMain);
+									Object columnValue_5_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(5);
+									row27.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutMain);
+									Object columnValue_6_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(6);
+									row27.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutMain);
+									Object columnValue_7_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(7);
+									row27.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutMain);
+									Object columnValue_8_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(8);
+									row27.Subject = (String) (columnValue_8_tSalesforceOutput_1OutMain);
+									Object columnValue_9_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(9);
+									row27.FromName = (String) (columnValue_9_tSalesforceOutput_1OutMain);
+									Object columnValue_10_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(10);
+									row27.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutMain);
+									Object columnValue_11_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(11);
+									row27.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutMain);
+									Object columnValue_12_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(12);
+									row27.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutMain);
+									Object columnValue_13_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(13);
+									row27.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutMain);
+									Object columnValue_14_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(14);
+									if (columnValue_14_tSalesforceOutput_1OutMain == null) {
+										row27.Incoming = false;
+									} else {
+										row27.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutMain);
+									}
+									Object columnValue_15_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(15);
+									row27.Status = (String) (columnValue_15_tSalesforceOutput_1OutMain);
+									Object columnValue_16_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(16);
+									row27.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutMain);
+									Object columnValue_17_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(17);
+									row27.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutMain);
+									Object columnValue_18_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+											.get(18);
+									row27.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutMain);
+								} else {
+									row27 = null;
+								}
+
+								if (outgoingRejectRecordsIt_tSalesforceOutput_1
+										.hasNext()) {
+									row25 = new row25Struct();
+									Object outgoingReject_tSalesforceOutput_1 = outgoingRejectRecordsIt_tSalesforceOutput_1
+											.next();
+
+									// Construct the factory once when the first
+									// data arrives.
+									if (factory_tSalesforceOutput_1OutReject == null) {
+										factory_tSalesforceOutput_1OutReject = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+												.createIndexedRecordConverter(outgoingReject_tSalesforceOutput_1
+														.getClass());
+									}
+
+									// Enforce the outgoing schema on the input.
+									outgoingEnforcer_tSalesforceOutput_1OutReject
+											.setWrapped(factory_tSalesforceOutput_1OutReject
+													.convertToAvro(outgoingReject_tSalesforceOutput_1));
+									Object columnValue_0_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(0);
+									row25.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutReject);
+									Object columnValue_1_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(1);
+									row25.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutReject);
+									Object columnValue_2_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(2);
+									row25.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutReject);
+									Object columnValue_3_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(3);
+									row25.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutReject);
+									Object columnValue_4_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(4);
+									row25.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutReject);
+									Object columnValue_5_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(5);
+									row25.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutReject);
+									Object columnValue_6_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(6);
+									row25.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutReject);
+									Object columnValue_7_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(7);
+									row25.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutReject);
+									Object columnValue_8_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(8);
+									row25.Subject = (String) (columnValue_8_tSalesforceOutput_1OutReject);
+									Object columnValue_9_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(9);
+									row25.FromName = (String) (columnValue_9_tSalesforceOutput_1OutReject);
+									Object columnValue_10_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(10);
+									row25.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutReject);
+									Object columnValue_11_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(11);
+									row25.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutReject);
+									Object columnValue_12_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(12);
+									row25.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutReject);
+									Object columnValue_13_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(13);
+									row25.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutReject);
+									Object columnValue_14_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(14);
+									if (columnValue_14_tSalesforceOutput_1OutReject == null) {
+										row25.Incoming = false;
+									} else {
+										row25.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutReject);
+									}
+									Object columnValue_15_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(15);
+									row25.Status = (String) (columnValue_15_tSalesforceOutput_1OutReject);
+									Object columnValue_16_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(16);
+									row25.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutReject);
+									Object columnValue_17_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(17);
+									row25.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutReject);
+									Object columnValue_18_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(18);
+									row25.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutReject);
+									Object columnValue_19_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(19);
+									row25.errorCode = (String) (columnValue_19_tSalesforceOutput_1OutReject);
+									Object columnValue_20_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(20);
+									row25.errorFields = (String) (columnValue_20_tSalesforceOutput_1OutReject);
+									Object columnValue_21_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+											.get(21);
+									row25.errorMessage = (String) (columnValue_21_tSalesforceOutput_1OutReject);
+								} else {
+									row25 = null;
+								}
+
+								/**
+								 * [tSalesforceOutput_1 process_data_begin ]
+								 * stop
+								 */
+								// Start of branch "row27"
+								if (row27 != null) {
+
+									/**
+									 * [tFileOutputDelimited_6 main ] start
+									 */
+
+									currentComponent = "tFileOutputDelimited_6";
+
+									// row27
+									// row27
+
+									if (execStat) {
+										runStat.updateStatOnConnection("row27"
+												+ iterateId, 1, 1);
+									}
+
+									StringBuilder sb_tFileOutputDelimited_6 = new StringBuilder();
+									if (row27.ParentId != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.ParentId);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.ActivityId != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.ActivityId);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.CreatedById != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.CreatedById);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.CreatedDate != null) {
+										sb_tFileOutputDelimited_6
+												.append(FormatterUtils
+														.format_Date(
+																row27.CreatedDate,
+																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.LastModifiedDate != null) {
+										sb_tFileOutputDelimited_6
+												.append(FormatterUtils
+														.format_Date(
+																row27.LastModifiedDate,
+																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.LastModifiedById != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.LastModifiedById);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.Subject != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.Subject);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.FromName != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.FromName);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.FromAddress != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.FromAddress);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.ToAddress != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.ToAddress);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.CcAddress != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.CcAddress);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.BccAddress != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.BccAddress);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									sb_tFileOutputDelimited_6
+											.append(row27.Incoming);
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.Status != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.Status);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.MessageDate != null) {
+										sb_tFileOutputDelimited_6
+												.append(FormatterUtils
+														.format_Date(
+																row27.MessageDate,
+																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.RelatedToId != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.RelatedToId);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_tFileOutputDelimited_6);
+									if (row27.ExternalIdSplit__c != null) {
+										sb_tFileOutputDelimited_6
+												.append(row27.ExternalIdSplit__c);
+									}
+									sb_tFileOutputDelimited_6
+											.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_6);
+
+									nb_line_tFileOutputDelimited_6++;
+									resourceMap.put(
+											"nb_line_tFileOutputDelimited_6",
+											nb_line_tFileOutputDelimited_6);
+
+									outtFileOutputDelimited_6
+											.write(sb_tFileOutputDelimited_6
+													.toString());
+
+									tos_count_tFileOutputDelimited_6++;
+
+									/**
+									 * [tFileOutputDelimited_6 main ] stop
+									 */
+
+									/**
+									 * [tFileOutputDelimited_6
+									 * process_data_begin ] start
+									 */
+
+									currentComponent = "tFileOutputDelimited_6";
+
+									/**
+									 * [tFileOutputDelimited_6
+									 * process_data_begin ] stop
+									 */
+
+									/**
+									 * [tFileOutputDelimited_6 process_data_end
+									 * ] start
+									 */
+
+									currentComponent = "tFileOutputDelimited_6";
+
+									/**
+									 * [tFileOutputDelimited_6 process_data_end
+									 * ] stop
+									 */
+
+								} // End of branch "row27"
+
+								// Start of branch "row25"
+								if (row25 != null) {
+
+									/**
+									 * [tFileOutputDelimited_5 main ] start
+									 */
+
+									currentComponent = "tFileOutputDelimited_5";
+
+									// row25
+									// row25
+
+									if (execStat) {
+										runStat.updateStatOnConnection("row25"
+												+ iterateId, 1, 1);
+									}
+
+									StringBuilder sb_tFileOutputDelimited_5 = new StringBuilder();
+									if (row25.ParentId != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.ParentId);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.ActivityId != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.ActivityId);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.CreatedById != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.CreatedById);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.CreatedDate != null) {
+										sb_tFileOutputDelimited_5
+												.append(FormatterUtils
+														.format_Date(
+																row25.CreatedDate,
+																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.LastModifiedDate != null) {
+										sb_tFileOutputDelimited_5
+												.append(FormatterUtils
+														.format_Date(
+																row25.LastModifiedDate,
+																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.LastModifiedById != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.LastModifiedById);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.Subject != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.Subject);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.FromName != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.FromName);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.FromAddress != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.FromAddress);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.ToAddress != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.ToAddress);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.CcAddress != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.CcAddress);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.BccAddress != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.BccAddress);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									sb_tFileOutputDelimited_5
+											.append(row25.Incoming);
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.Status != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.Status);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.MessageDate != null) {
+										sb_tFileOutputDelimited_5
+												.append(FormatterUtils
+														.format_Date(
+																row25.MessageDate,
+																"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.RelatedToId != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.RelatedToId);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.ExternalIdSplit__c != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.ExternalIdSplit__c);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.errorCode != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.errorCode);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.errorFields != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.errorFields);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_tFileOutputDelimited_5);
+									if (row25.errorMessage != null) {
+										sb_tFileOutputDelimited_5
+												.append(row25.errorMessage);
+									}
+									sb_tFileOutputDelimited_5
+											.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_5);
+
+									nb_line_tFileOutputDelimited_5++;
+									resourceMap.put(
+											"nb_line_tFileOutputDelimited_5",
+											nb_line_tFileOutputDelimited_5);
+
+									outtFileOutputDelimited_5
+											.write(sb_tFileOutputDelimited_5
+													.toString());
+
+									tos_count_tFileOutputDelimited_5++;
+
+									/**
+									 * [tFileOutputDelimited_5 main ] stop
+									 */
+
+									/**
+									 * [tFileOutputDelimited_5
+									 * process_data_begin ] start
+									 */
+
+									currentComponent = "tFileOutputDelimited_5";
+
+									/**
+									 * [tFileOutputDelimited_5
+									 * process_data_begin ] stop
+									 */
+
+									/**
+									 * [tFileOutputDelimited_5 process_data_end
+									 * ] start
+									 */
+
+									currentComponent = "tFileOutputDelimited_5";
+
+									/**
+									 * [tFileOutputDelimited_5 process_data_end
+									 * ] stop
+									 */
+
+								} // End of branch "row25"
+
+								/**
+								 * [tSalesforceOutput_1 process_data_end ] start
+								 */
+
+								currentComponent = "tSalesforceOutput_1";
+
+							} // end of data processing while block
+							if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+								((org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1)
+										.cleanWrites();
+							}
+
+							/**
+							 * [tSalesforceOutput_1 process_data_end ] stop
+							 */
+
+						} // End of branch "EmailMessage"
+
+						/**
+						 * [tMap_1 process_data_end ] start
+						 */
+
+						currentComponent = "tMap_1";
+
+						/**
+						 * [tMap_1 process_data_end ] stop
+						 */
+
+					} // End of branch "row2"
+
+					/**
+					 * [tMap_5 process_data_end ] start
+					 */
+
+					currentComponent = "tMap_5";
+
+					/**
+					 * [tMap_5 process_data_end ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_1 process_data_end ] start
+					 */
+
+					currentComponent = "tSalesforceInput_1";
+
+					/**
+					 * [tSalesforceInput_1 process_data_end ] stop
+					 */
+
+					/**
+					 * [tSalesforceInput_1 end ] start
+					 */
+
+					currentComponent = "tSalesforceInput_1";
+
+					// end of generic
+
+					resourceMap.put("finish_tSalesforceInput_1", Boolean.TRUE);
+
+				} // while
+				reader_tSalesforceInput_1.close();
+				final java.util.Map<String, Object> resultMap_tSalesforceInput_1 = reader_tSalesforceInput_1
+						.getReturnValues();
+				if (resultMap_tSalesforceInput_1 != null) {
+					for (java.util.Map.Entry<String, Object> entry_tSalesforceInput_1 : resultMap_tSalesforceInput_1
+							.entrySet()) {
+						switch (entry_tSalesforceInput_1.getKey()) {
+						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
+							container_tSalesforceInput_1.setComponentData(
+									"tSalesforceInput_1", "ERROR_MESSAGE",
+									entry_tSalesforceInput_1.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
+							container_tSalesforceInput_1.setComponentData(
+									"tSalesforceInput_1", "NB_LINE",
+									entry_tSalesforceInput_1.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
+							container_tSalesforceInput_1.setComponentData(
+									"tSalesforceInput_1", "NB_SUCCESS",
+									entry_tSalesforceInput_1.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
+							container_tSalesforceInput_1.setComponentData(
+									"tSalesforceInput_1", "NB_REJECT",
+									entry_tSalesforceInput_1.getValue());
+							break;
+						default:
+							StringBuilder studio_key_tSalesforceInput_1 = new StringBuilder();
+							for (int i_tSalesforceInput_1 = 0; i_tSalesforceInput_1 < entry_tSalesforceInput_1
+									.getKey().length(); i_tSalesforceInput_1++) {
+								char ch_tSalesforceInput_1 = entry_tSalesforceInput_1
+										.getKey().charAt(i_tSalesforceInput_1);
+								if (Character
+										.isUpperCase(ch_tSalesforceInput_1)
+										&& i_tSalesforceInput_1 > 0) {
+									studio_key_tSalesforceInput_1.append('_');
+								}
+								studio_key_tSalesforceInput_1
+										.append(ch_tSalesforceInput_1);
+							}
+							container_tSalesforceInput_1.setComponentData(
+									"tSalesforceInput_1",
+									studio_key_tSalesforceInput_1.toString()
+											.toUpperCase(
+													java.util.Locale.ENGLISH),
+									entry_tSalesforceInput_1.getValue());
+							break;
+						}
+					}
+				}
+
+				ok_Hash.put("tSalesforceInput_1", true);
+				end_Hash.put("tSalesforceInput_1", System.currentTimeMillis());
+
+				/**
+				 * [tSalesforceInput_1 end ] stop
+				 */
+
+				/**
+				 * [tMap_5 end ] start
+				 */
+
+				currentComponent = "tMap_5";
+
+				// ###############################
+				// # Lookup hashes releasing
+				// ###############################
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row222" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tMap_5", true);
+				end_Hash.put("tMap_5", System.currentTimeMillis());
+
+				/**
+				 * [tMap_5 end ] stop
+				 */
+
+				/**
+				 * [tMap_1 end ] start
+				 */
+
+				currentComponent = "tMap_1";
+
+				// ###############################
+				// # Lookup hashes releasing
+				if (tHash_Lookup_CreatedBy != null) {
+					tHash_Lookup_CreatedBy.endGet();
+				}
+				globalMap.remove("tHash_Lookup_CreatedBy");
+
+				if (tHash_Lookup_ModifiedBy != null) {
+					tHash_Lookup_ModifiedBy.endGet();
+				}
+				globalMap.remove("tHash_Lookup_ModifiedBy");
+
+				if (tHash_Lookup_Meeting_minute != null) {
+					tHash_Lookup_Meeting_minute.endGet();
+				}
+				globalMap.remove("tHash_Lookup_Meeting_minute");
+
+				if (tHash_Lookup_Opportunity != null) {
+					tHash_Lookup_Opportunity.endGet();
+				}
+				globalMap.remove("tHash_Lookup_Opportunity");
+
+				if (tHash_Lookup_CaseParentId != null) {
+					tHash_Lookup_CaseParentId.endGet();
+				}
+				globalMap.remove("tHash_Lookup_CaseParentId");
+
+				if (tHash_Lookup_Project != null) {
+					tHash_Lookup_Project.endGet();
+				}
+				globalMap.remove("tHash_Lookup_Project");
+
+				if (tHash_Lookup_Task1 != null) {
+					tHash_Lookup_Task1.endGet();
+				}
+				globalMap.remove("tHash_Lookup_Task1");
+
+				if (tHash_Lookup_Case != null) {
+					tHash_Lookup_Case.endGet();
+				}
+				globalMap.remove("tHash_Lookup_Case");
+
+				if (tHash_Lookup_Contract != null) {
+					tHash_Lookup_Contract.endGet();
+				}
+				globalMap.remove("tHash_Lookup_Contract");
+
+				// ###############################
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row2" + iterateId, 2, 0);
+					}
+				}
+
+				ok_Hash.put("tMap_1", true);
+				end_Hash.put("tMap_1", System.currentTimeMillis());
+
+				/**
+				 * [tMap_1 end ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutput_1 end ] start
+				 */
+
+				currentComponent = "tSalesforceOutput_1";
+
+				// end of generic
+
+				resourceMap.put("finish_tSalesforceOutput_1", Boolean.TRUE);
+
+				org.talend.components.api.component.runtime.Result resultObject_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.Result) writer_tSalesforceOutput_1
+						.close();
+				final java.util.Map<String, Object> resultMap_tSalesforceOutput_1 = writer_tSalesforceOutput_1
+						.getWriteOperation()
+						.finalize(
+								java.util.Arrays
+										.<org.talend.components.api.component.runtime.Result> asList(resultObject_tSalesforceOutput_1),
+								container_tSalesforceOutput_1);
+				if (resultMap_tSalesforceOutput_1 != null) {
+					for (java.util.Map.Entry<String, Object> entry_tSalesforceOutput_1 : resultMap_tSalesforceOutput_1
+							.entrySet()) {
+						switch (entry_tSalesforceOutput_1.getKey()) {
+						case org.talend.components.api.component.ComponentDefinition.RETURN_ERROR_MESSAGE:
+							container_tSalesforceOutput_1.setComponentData(
+									"tSalesforceOutput_1", "ERROR_MESSAGE",
+									entry_tSalesforceOutput_1.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_TOTAL_RECORD_COUNT:
+							container_tSalesforceOutput_1.setComponentData(
+									"tSalesforceOutput_1", "NB_LINE",
+									entry_tSalesforceOutput_1.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_SUCCESS_RECORD_COUNT:
+							container_tSalesforceOutput_1.setComponentData(
+									"tSalesforceOutput_1", "NB_SUCCESS",
+									entry_tSalesforceOutput_1.getValue());
+							break;
+						case org.talend.components.api.component.ComponentDefinition.RETURN_REJECT_RECORD_COUNT:
+							container_tSalesforceOutput_1.setComponentData(
+									"tSalesforceOutput_1", "NB_REJECT",
+									entry_tSalesforceOutput_1.getValue());
+							break;
+						default:
+							StringBuilder studio_key_tSalesforceOutput_1 = new StringBuilder();
+							for (int i_tSalesforceOutput_1 = 0; i_tSalesforceOutput_1 < entry_tSalesforceOutput_1
+									.getKey().length(); i_tSalesforceOutput_1++) {
+								char ch_tSalesforceOutput_1 = entry_tSalesforceOutput_1
+										.getKey().charAt(i_tSalesforceOutput_1);
+								if (Character
+										.isUpperCase(ch_tSalesforceOutput_1)
+										&& i_tSalesforceOutput_1 > 0) {
+									studio_key_tSalesforceOutput_1.append('_');
+								}
+								studio_key_tSalesforceOutput_1
+										.append(ch_tSalesforceOutput_1);
+							}
+							container_tSalesforceOutput_1.setComponentData(
+									"tSalesforceOutput_1",
+									studio_key_tSalesforceOutput_1.toString()
+											.toUpperCase(
+													java.util.Locale.ENGLISH),
+									entry_tSalesforceOutput_1.getValue());
+							break;
+						}
+					}
+				}
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("EmailMessage"
+								+ iterateId, 2, 0);
+					}
+				}
+
+				ok_Hash.put("tSalesforceOutput_1", true);
+				end_Hash.put("tSalesforceOutput_1", System.currentTimeMillis());
+
+				/**
+				 * [tSalesforceOutput_1 end ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutput_1 process_data_begin ] start
+				 */
+
+				currentComponent = "tSalesforceOutput_1";
+
+				row25 = null;
+				row27 = null;
+				if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+					org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackMain_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
+					writerWithFeedbackMain_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+							writerWithFeedbackMain_tSalesforceOutput_1,
+							container_tSalesforceOutput_1);
+					java.lang.Iterable<?> outgoingRecs_tSalesforceOutput_1 = writerWithFeedbackMain_tSalesforceOutput_1
+							.getSuccessfulWrites();
+					java.util.Iterator outgoingMainRecords_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1
+							.iterator();
+					Object outgoingMain_tSalesforceOutput_1 = null;
+					if (outgoingMainRecords_tSalesforceOutput_1.hasNext()) {
+						outgoingMainRecordsList_tSalesforceOutput_1 = outgoingRecs_tSalesforceOutput_1;
+					}
+				}
+				java.lang.Iterable<?> outgoingRejectRecordsList_tSalesforceOutput_1 = new java.util.ArrayList<Object>();
+				if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+					org.talend.components.api.component.runtime.WriterWithFeedback writerWithFeedbackReject_tSalesforceOutput_1 = (org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1;
+					writerWithFeedbackReject_tSalesforceOutput_1 = new org.talend.codegen.flowvariables.runtime.FlowVariablesWriter(
+							writerWithFeedbackReject_tSalesforceOutput_1,
+							container_tSalesforceOutput_1);
+					java.lang.Iterable<?> outgoingRejectRecs_tSalesforceOutput_1 = writerWithFeedbackReject_tSalesforceOutput_1
+							.getRejectedWrites();
+					java.util.Iterator outgoingRejectRecords_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1
+							.iterator();
+					if (outgoingRejectRecords_tSalesforceOutput_1.hasNext()) {
+						outgoingRejectRecordsList_tSalesforceOutput_1 = outgoingRejectRecs_tSalesforceOutput_1;
+					}
+				}
+				outgoingMainRecordsIt_tSalesforceOutput_1 = outgoingMainRecordsList_tSalesforceOutput_1
+						.iterator();
+				java.util.Iterator outgoingRejectRecordsIt_tSalesforceOutput_1 = outgoingRejectRecordsList_tSalesforceOutput_1
+						.iterator();
+				while (outgoingMainRecordsIt_tSalesforceOutput_1.hasNext()
+						|| outgoingRejectRecordsIt_tSalesforceOutput_1
+								.hasNext()) { // Start of data processing while
+												// block
+
+					if (outgoingMainRecordsIt_tSalesforceOutput_1.hasNext()) {
+						row27 = new row27Struct();
+						Object outgoingMain_tSalesforceOutput_1 = outgoingMainRecordsIt_tSalesforceOutput_1
+								.next();
+
+						// Construct the factory once when the first data
+						// arrives.
+						if (factory_tSalesforceOutput_1OutMain == null) {
+							factory_tSalesforceOutput_1OutMain = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(outgoingMain_tSalesforceOutput_1
+											.getClass());
+						}
+
+						// Enforce the outgoing schema on the input.
+						outgoingEnforcer_tSalesforceOutput_1OutMain
+								.setWrapped(factory_tSalesforceOutput_1OutMain
+										.convertToAvro(outgoingMain_tSalesforceOutput_1));
+						Object columnValue_0_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(0);
+						row27.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutMain);
+						Object columnValue_1_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(1);
+						row27.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutMain);
+						Object columnValue_2_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(2);
+						row27.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutMain);
+						Object columnValue_3_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(3);
+						row27.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutMain);
+						Object columnValue_4_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(4);
+						row27.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutMain);
+						Object columnValue_5_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(5);
+						row27.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutMain);
+						Object columnValue_6_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(6);
+						row27.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutMain);
+						Object columnValue_7_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(7);
+						row27.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutMain);
+						Object columnValue_8_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(8);
+						row27.Subject = (String) (columnValue_8_tSalesforceOutput_1OutMain);
+						Object columnValue_9_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(9);
+						row27.FromName = (String) (columnValue_9_tSalesforceOutput_1OutMain);
+						Object columnValue_10_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(10);
+						row27.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutMain);
+						Object columnValue_11_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(11);
+						row27.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutMain);
+						Object columnValue_12_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(12);
+						row27.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutMain);
+						Object columnValue_13_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(13);
+						row27.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutMain);
+						Object columnValue_14_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(14);
+						if (columnValue_14_tSalesforceOutput_1OutMain == null) {
+							row27.Incoming = false;
+						} else {
+							row27.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutMain);
+						}
+						Object columnValue_15_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(15);
+						row27.Status = (String) (columnValue_15_tSalesforceOutput_1OutMain);
+						Object columnValue_16_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(16);
+						row27.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutMain);
+						Object columnValue_17_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(17);
+						row27.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutMain);
+						Object columnValue_18_tSalesforceOutput_1OutMain = outgoingEnforcer_tSalesforceOutput_1OutMain
+								.get(18);
+						row27.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutMain);
+					} else {
+						row27 = null;
+					}
+
+					if (outgoingRejectRecordsIt_tSalesforceOutput_1.hasNext()) {
+						row25 = new row25Struct();
+						Object outgoingReject_tSalesforceOutput_1 = outgoingRejectRecordsIt_tSalesforceOutput_1
+								.next();
+
+						// Construct the factory once when the first data
+						// arrives.
+						if (factory_tSalesforceOutput_1OutReject == null) {
+							factory_tSalesforceOutput_1OutReject = (org.talend.daikon.avro.converter.IndexedRecordConverter<Object, ? extends org.apache.avro.generic.IndexedRecord>) new org.talend.daikon.avro.AvroRegistry()
+									.createIndexedRecordConverter(outgoingReject_tSalesforceOutput_1
+											.getClass());
+						}
+
+						// Enforce the outgoing schema on the input.
+						outgoingEnforcer_tSalesforceOutput_1OutReject
+								.setWrapped(factory_tSalesforceOutput_1OutReject
+										.convertToAvro(outgoingReject_tSalesforceOutput_1));
+						Object columnValue_0_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(0);
+						row25.ParentId = (String) (columnValue_0_tSalesforceOutput_1OutReject);
+						Object columnValue_1_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(1);
+						row25.ActivityId = (String) (columnValue_1_tSalesforceOutput_1OutReject);
+						Object columnValue_2_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(2);
+						row25.CreatedById = (String) (columnValue_2_tSalesforceOutput_1OutReject);
+						Object columnValue_3_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(3);
+						row25.CreatedDate = (java.util.Date) (columnValue_3_tSalesforceOutput_1OutReject);
+						Object columnValue_4_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(4);
+						row25.LastModifiedDate = (java.util.Date) (columnValue_4_tSalesforceOutput_1OutReject);
+						Object columnValue_5_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(5);
+						row25.LastModifiedById = (String) (columnValue_5_tSalesforceOutput_1OutReject);
+						Object columnValue_6_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(6);
+						row25.TextBody = (String) (columnValue_6_tSalesforceOutput_1OutReject);
+						Object columnValue_7_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(7);
+						row25.HtmlBody = (String) (columnValue_7_tSalesforceOutput_1OutReject);
+						Object columnValue_8_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(8);
+						row25.Subject = (String) (columnValue_8_tSalesforceOutput_1OutReject);
+						Object columnValue_9_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(9);
+						row25.FromName = (String) (columnValue_9_tSalesforceOutput_1OutReject);
+						Object columnValue_10_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(10);
+						row25.FromAddress = (String) (columnValue_10_tSalesforceOutput_1OutReject);
+						Object columnValue_11_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(11);
+						row25.ToAddress = (String) (columnValue_11_tSalesforceOutput_1OutReject);
+						Object columnValue_12_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(12);
+						row25.CcAddress = (String) (columnValue_12_tSalesforceOutput_1OutReject);
+						Object columnValue_13_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(13);
+						row25.BccAddress = (String) (columnValue_13_tSalesforceOutput_1OutReject);
+						Object columnValue_14_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(14);
+						if (columnValue_14_tSalesforceOutput_1OutReject == null) {
+							row25.Incoming = false;
+						} else {
+							row25.Incoming = (boolean) (columnValue_14_tSalesforceOutput_1OutReject);
+						}
+						Object columnValue_15_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(15);
+						row25.Status = (String) (columnValue_15_tSalesforceOutput_1OutReject);
+						Object columnValue_16_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(16);
+						row25.MessageDate = (java.util.Date) (columnValue_16_tSalesforceOutput_1OutReject);
+						Object columnValue_17_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(17);
+						row25.RelatedToId = (String) (columnValue_17_tSalesforceOutput_1OutReject);
+						Object columnValue_18_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(18);
+						row25.ExternalIdSplit__c = (String) (columnValue_18_tSalesforceOutput_1OutReject);
+						Object columnValue_19_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(19);
+						row25.errorCode = (String) (columnValue_19_tSalesforceOutput_1OutReject);
+						Object columnValue_20_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(20);
+						row25.errorFields = (String) (columnValue_20_tSalesforceOutput_1OutReject);
+						Object columnValue_21_tSalesforceOutput_1OutReject = outgoingEnforcer_tSalesforceOutput_1OutReject
+								.get(21);
+						row25.errorMessage = (String) (columnValue_21_tSalesforceOutput_1OutReject);
+					} else {
+						row25 = null;
+					}
+
+					/**
+					 * [tSalesforceOutput_1 process_data_begin ] stop
+					 */
+					// Start of branch "row27"
+					if (row27 != null) {
+
+						/**
+						 * [tFileOutputDelimited_6 main ] start
+						 */
+
+						currentComponent = "tFileOutputDelimited_6";
+
+						// row27
+						// row27
+
+						if (execStat) {
+							runStat.updateStatOnConnection("row27" + iterateId,
+									1, 1);
+						}
+
+						StringBuilder sb_tFileOutputDelimited_6 = new StringBuilder();
+						if (row27.ParentId != null) {
+							sb_tFileOutputDelimited_6.append(row27.ParentId);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.ActivityId != null) {
+							sb_tFileOutputDelimited_6.append(row27.ActivityId);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.CreatedById != null) {
+							sb_tFileOutputDelimited_6.append(row27.CreatedById);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.CreatedDate != null) {
+							sb_tFileOutputDelimited_6.append(FormatterUtils
+									.format_Date(row27.CreatedDate,
+											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.LastModifiedDate != null) {
+							sb_tFileOutputDelimited_6.append(FormatterUtils
+									.format_Date(row27.LastModifiedDate,
+											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.LastModifiedById != null) {
+							sb_tFileOutputDelimited_6
+									.append(row27.LastModifiedById);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.Subject != null) {
+							sb_tFileOutputDelimited_6.append(row27.Subject);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.FromName != null) {
+							sb_tFileOutputDelimited_6.append(row27.FromName);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.FromAddress != null) {
+							sb_tFileOutputDelimited_6.append(row27.FromAddress);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.ToAddress != null) {
+							sb_tFileOutputDelimited_6.append(row27.ToAddress);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.CcAddress != null) {
+							sb_tFileOutputDelimited_6.append(row27.CcAddress);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.BccAddress != null) {
+							sb_tFileOutputDelimited_6.append(row27.BccAddress);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						sb_tFileOutputDelimited_6.append(row27.Incoming);
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.Status != null) {
+							sb_tFileOutputDelimited_6.append(row27.Status);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.MessageDate != null) {
+							sb_tFileOutputDelimited_6.append(FormatterUtils
+									.format_Date(row27.MessageDate,
+											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.RelatedToId != null) {
+							sb_tFileOutputDelimited_6.append(row27.RelatedToId);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_tFileOutputDelimited_6);
+						if (row27.ExternalIdSplit__c != null) {
+							sb_tFileOutputDelimited_6
+									.append(row27.ExternalIdSplit__c);
+						}
+						sb_tFileOutputDelimited_6
+								.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_6);
+
+						nb_line_tFileOutputDelimited_6++;
+						resourceMap.put("nb_line_tFileOutputDelimited_6",
+								nb_line_tFileOutputDelimited_6);
+
+						outtFileOutputDelimited_6
+								.write(sb_tFileOutputDelimited_6.toString());
+
+						tos_count_tFileOutputDelimited_6++;
+
+						/**
+						 * [tFileOutputDelimited_6 main ] stop
+						 */
+
+						/**
+						 * [tFileOutputDelimited_6 process_data_begin ] start
+						 */
+
+						currentComponent = "tFileOutputDelimited_6";
+
+						/**
+						 * [tFileOutputDelimited_6 process_data_begin ] stop
+						 */
+
+						/**
+						 * [tFileOutputDelimited_6 process_data_end ] start
+						 */
+
+						currentComponent = "tFileOutputDelimited_6";
+
+						/**
+						 * [tFileOutputDelimited_6 process_data_end ] stop
+						 */
+
+					} // End of branch "row27"
+
+					// Start of branch "row25"
+					if (row25 != null) {
+
+						/**
+						 * [tFileOutputDelimited_5 main ] start
+						 */
+
+						currentComponent = "tFileOutputDelimited_5";
+
+						// row25
+						// row25
+
+						if (execStat) {
+							runStat.updateStatOnConnection("row25" + iterateId,
+									1, 1);
+						}
+
+						StringBuilder sb_tFileOutputDelimited_5 = new StringBuilder();
+						if (row25.ParentId != null) {
+							sb_tFileOutputDelimited_5.append(row25.ParentId);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.ActivityId != null) {
+							sb_tFileOutputDelimited_5.append(row25.ActivityId);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.CreatedById != null) {
+							sb_tFileOutputDelimited_5.append(row25.CreatedById);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.CreatedDate != null) {
+							sb_tFileOutputDelimited_5.append(FormatterUtils
+									.format_Date(row25.CreatedDate,
+											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.LastModifiedDate != null) {
+							sb_tFileOutputDelimited_5.append(FormatterUtils
+									.format_Date(row25.LastModifiedDate,
+											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.LastModifiedById != null) {
+							sb_tFileOutputDelimited_5
+									.append(row25.LastModifiedById);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.Subject != null) {
+							sb_tFileOutputDelimited_5.append(row25.Subject);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.FromName != null) {
+							sb_tFileOutputDelimited_5.append(row25.FromName);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.FromAddress != null) {
+							sb_tFileOutputDelimited_5.append(row25.FromAddress);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.ToAddress != null) {
+							sb_tFileOutputDelimited_5.append(row25.ToAddress);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.CcAddress != null) {
+							sb_tFileOutputDelimited_5.append(row25.CcAddress);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.BccAddress != null) {
+							sb_tFileOutputDelimited_5.append(row25.BccAddress);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						sb_tFileOutputDelimited_5.append(row25.Incoming);
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.Status != null) {
+							sb_tFileOutputDelimited_5.append(row25.Status);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.MessageDate != null) {
+							sb_tFileOutputDelimited_5.append(FormatterUtils
+									.format_Date(row25.MessageDate,
+											"yyyy-MM-dd'T'HH:mm:ss'.000Z'"));
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.RelatedToId != null) {
+							sb_tFileOutputDelimited_5.append(row25.RelatedToId);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.ExternalIdSplit__c != null) {
+							sb_tFileOutputDelimited_5
+									.append(row25.ExternalIdSplit__c);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.errorCode != null) {
+							sb_tFileOutputDelimited_5.append(row25.errorCode);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.errorFields != null) {
+							sb_tFileOutputDelimited_5.append(row25.errorFields);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_tFileOutputDelimited_5);
+						if (row25.errorMessage != null) {
+							sb_tFileOutputDelimited_5
+									.append(row25.errorMessage);
+						}
+						sb_tFileOutputDelimited_5
+								.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_5);
+
+						nb_line_tFileOutputDelimited_5++;
+						resourceMap.put("nb_line_tFileOutputDelimited_5",
+								nb_line_tFileOutputDelimited_5);
+
+						outtFileOutputDelimited_5
+								.write(sb_tFileOutputDelimited_5.toString());
+
+						tos_count_tFileOutputDelimited_5++;
+
+						/**
+						 * [tFileOutputDelimited_5 main ] stop
+						 */
+
+						/**
+						 * [tFileOutputDelimited_5 process_data_begin ] start
+						 */
+
+						currentComponent = "tFileOutputDelimited_5";
+
+						/**
+						 * [tFileOutputDelimited_5 process_data_begin ] stop
+						 */
+
+						/**
+						 * [tFileOutputDelimited_5 process_data_end ] start
+						 */
+
+						currentComponent = "tFileOutputDelimited_5";
+
+						/**
+						 * [tFileOutputDelimited_5 process_data_end ] stop
+						 */
+
+					} // End of branch "row25"
+
+					/**
+					 * [tSalesforceOutput_1 process_data_end ] start
+					 */
+
+					currentComponent = "tSalesforceOutput_1";
+
+				} // end of data processing while block
+				if (writer_tSalesforceOutput_1 instanceof org.talend.components.api.component.runtime.WriterWithFeedback) {
+					((org.talend.components.api.component.runtime.WriterWithFeedback) writer_tSalesforceOutput_1)
+							.cleanWrites();
+				}
+
+				/**
+				 * [tSalesforceOutput_1 process_data_end ] stop
+				 */
+
+				/**
+				 * [tFileOutputDelimited_6 end ] start
+				 */
+
+				currentComponent = "tFileOutputDelimited_6";
+
+				if (outtFileOutputDelimited_6 != null) {
+					outtFileOutputDelimited_6.flush();
+					outtFileOutputDelimited_6.close();
+				}
+
+				globalMap.put("tFileOutputDelimited_6_NB_LINE",
+						nb_line_tFileOutputDelimited_6);
+				globalMap.put("tFileOutputDelimited_6_FILE_NAME",
+						fileName_tFileOutputDelimited_6);
+
+				resourceMap.put("finish_tFileOutputDelimited_6", true);
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row27" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tFileOutputDelimited_6", true);
+				end_Hash.put("tFileOutputDelimited_6",
+						System.currentTimeMillis());
+
+				/**
+				 * [tFileOutputDelimited_6 end ] stop
+				 */
+
+				/**
+				 * [tFileOutputDelimited_5 end ] start
+				 */
+
+				currentComponent = "tFileOutputDelimited_5";
+
+				if (outtFileOutputDelimited_5 != null) {
+					outtFileOutputDelimited_5.flush();
+					outtFileOutputDelimited_5.close();
+				}
+
+				globalMap.put("tFileOutputDelimited_5_NB_LINE",
+						nb_line_tFileOutputDelimited_5);
+				globalMap.put("tFileOutputDelimited_5_FILE_NAME",
+						fileName_tFileOutputDelimited_5);
+
+				if (isFileGenerated_tFileOutputDelimited_5
+						&& nb_line_tFileOutputDelimited_5 == 0) {
+
+					filetFileOutputDelimited_5.delete();
+
+				}
+
+				resourceMap.put("finish_tFileOutputDelimited_5", true);
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row25" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tFileOutputDelimited_5", true);
+				end_Hash.put("tFileOutputDelimited_5",
+						System.currentTimeMillis());
+
+				/**
+				 * [tFileOutputDelimited_5 end ] stop
+				 */
+
+			}// end the resume
+
+			if (resumeEntryMethodName == null || globalResumeTicket) {
+				resumeUtil.addLog("CHECKPOINT",
+						"CONNECTION:SUBJOB_OK:tSalesforceInput_1:OnSubjobOk",
+						"", Thread.currentThread().getId() + "", "", "", "",
+						"", "");
+			}
+
+			if (execStat) {
+				runStat.updateStatOnConnection("OnSubjobOk15", 0, "ok");
+			}
+
+			tFileInputDelimited_5Process(globalMap);
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_Meeting_minute");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_CreatedBy");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_ModifiedBy");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_Project");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_Task1");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_CaseParentId");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_Opportunity");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_Case");
+
+			// free memory for "tMap_1"
+			globalMap.remove("tHash_Lookup_Contract");
+
+			try {
+
+				/**
+				 * [tSalesforceInput_1 finally ] start
+				 */
+
+				currentComponent = "tSalesforceInput_1";
+
+				// finally of generic
+
+				if (resourceMap.get("finish_tSalesforceInput_1") == null) {
+					if (resourceMap.get("reader_tSalesforceInput_1") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Reader) resourceMap
+									.get("reader_tSalesforceInput_1")).close();
+						} catch (java.io.IOException e_tSalesforceInput_1) {
+							String errorMessage_tSalesforceInput_1 = "failed to release the resource in tSalesforceInput_1 :"
+									+ e_tSalesforceInput_1.getMessage();
+							System.err.println(errorMessage_tSalesforceInput_1);
+						}
+					}
+				}
+
+				/**
+				 * [tSalesforceInput_1 finally ] stop
+				 */
+
+				/**
+				 * [tMap_5 finally ] start
+				 */
+
+				currentComponent = "tMap_5";
+
+				/**
+				 * [tMap_5 finally ] stop
+				 */
+
+				/**
+				 * [tMap_1 finally ] start
+				 */
+
+				currentComponent = "tMap_1";
+
+				/**
+				 * [tMap_1 finally ] stop
+				 */
+
+				/**
+				 * [tSalesforceOutput_1 finally ] start
+				 */
+
+				currentComponent = "tSalesforceOutput_1";
+
+				// finally of generic
+
+				if (resourceMap.get("finish_tSalesforceOutput_1") == null) {
+					if (resourceMap.get("writer_tSalesforceOutput_1") != null) {
+						try {
+							((org.talend.components.api.component.runtime.Writer) resourceMap
+									.get("writer_tSalesforceOutput_1")).close();
+						} catch (java.io.IOException e_tSalesforceOutput_1) {
+							String errorMessage_tSalesforceOutput_1 = "failed to release the resource in tSalesforceOutput_1 :"
+									+ e_tSalesforceOutput_1.getMessage();
+							System.err
+									.println(errorMessage_tSalesforceOutput_1);
+						}
+					}
+				}
+
+				/**
+				 * [tSalesforceOutput_1 finally ] stop
+				 */
+
+				/**
+				 * [tFileOutputDelimited_6 finally ] start
+				 */
+
+				currentComponent = "tFileOutputDelimited_6";
+
+				if (resourceMap.get("finish_tFileOutputDelimited_6") == null) {
+
+					java.io.Writer outtFileOutputDelimited_6 = (java.io.Writer) resourceMap
+							.get("out_tFileOutputDelimited_6");
+					if (outtFileOutputDelimited_6 != null) {
+						outtFileOutputDelimited_6.flush();
+						outtFileOutputDelimited_6.close();
+					}
+
+				}
+
+				/**
+				 * [tFileOutputDelimited_6 finally ] stop
+				 */
+
+				/**
+				 * [tFileOutputDelimited_5 finally ] start
+				 */
+
+				currentComponent = "tFileOutputDelimited_5";
+
+				if (resourceMap.get("finish_tFileOutputDelimited_5") == null) {
+
+					java.io.Writer outtFileOutputDelimited_5 = (java.io.Writer) resourceMap
+							.get("out_tFileOutputDelimited_5");
+					if (outtFileOutputDelimited_5 != null) {
+						outtFileOutputDelimited_5.flush();
+						outtFileOutputDelimited_5.close();
+					}
+
+					if (Boolean.valueOf(String.valueOf(resourceMap
+							.get("isFileGenerated_tFileOutputDelimited_5")))
+							&& Integer.valueOf(String.valueOf(resourceMap
+									.get("nb_line_tFileOutputDelimited_5"))) == 0) {
+
+						((java.io.File) resourceMap
+								.get("filetFileOutputDelimited_5")).delete();
+
+					}
+
+				}
+
+				/**
+				 * [tFileOutputDelimited_5 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tSalesforceInput_1_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -23212,14 +38989,14 @@ public class LOAD_EmailMessage implements TalendJob {
 
 		try {
 			errorCode = null;
-			tSalesforceInput_2Process(globalMap);
+			tSalesforceInput_1Process(globalMap);
 			if (!"failure".equals(status)) {
 				status = "end";
 			}
-		} catch (TalendException e_tSalesforceInput_2) {
-			globalMap.put("tSalesforceInput_2_SUBPROCESS_STATE", -1);
+		} catch (TalendException e_tSalesforceInput_1) {
+			globalMap.put("tSalesforceInput_1_SUBPROCESS_STATE", -1);
 
-			e_tSalesforceInput_2.printStackTrace();
+			e_tSalesforceInput_1.printStackTrace();
 
 		}
 
@@ -23397,6 +39174,6 @@ public class LOAD_EmailMessage implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 784346 characters generated by Talend Open Studio for Data Integration on the
- * 27 novembre 2019 16:35:58 CET
+ * 1330248 characters generated by Talend Open Studio for Data Integration on
+ * the 29 novembre 2019 11:01:44 CET
  ************************************************************************************************/

@@ -44,6 +44,7 @@
     <module>jobs/process/TechNip/load_contentfolder_0.1</module>
     <module>jobs/process/TechNip/test2_0.1</module>
     <module>jobs/process/TechNip/load_emailmessage_rejectparentidnull_0.1</module>
+    <module>jobs/process/TechNip/En_attente/file_only_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TECHNIP</talend.project.name>

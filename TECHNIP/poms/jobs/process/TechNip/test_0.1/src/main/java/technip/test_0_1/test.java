@@ -432,7 +432,7 @@ public class test implements TalendJob {
 		tDie_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFixedFlowInput_2_error(Exception exception,
+	public void tFileInputDelimited_1_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -440,10 +440,11 @@ public class test implements TalendJob {
 
 		status = "failure";
 
-		tFixedFlowInput_2_onSubJobError(exception, errorComponent, globalMap);
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent,
+				globalMap);
 	}
 
-	public void tHashOutput_1_error(Exception exception, String errorComponent,
+	public void tMap_5_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -451,40 +452,20 @@ public class test implements TalendJob {
 
 		status = "failure";
 
-		tFixedFlowInput_2_onSubJobError(exception, errorComponent, globalMap);
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent,
+				globalMap);
 	}
 
-	public void tHashInput_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
+	public void tFileOutputDelimited_2_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
 		status = "failure";
 
-		tHashInput_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tLogRow_4_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tHashInput_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tRunJob_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tRunJob_1_onSubJobError(exception, errorComponent, globalMap);
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent,
+				globalMap);
 	}
 
 	public void tLogCatcher_1_error(Exception exception, String errorComponent,
@@ -583,25 +564,6 @@ public class test implements TalendJob {
 				globalMap);
 	}
 
-	public void tAggregateRow_1_AGGOUT_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		tAggregateRow_1_AGGIN_error(exception, errorComponent, globalMap);
-
-	}
-
-	public void tAggregateRow_1_AGGIN_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFixedFlowInput_2_onSubJobError(exception, errorComponent, globalMap);
-	}
-
 	public void Implicit_Context_Regex_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -635,29 +597,7 @@ public class test implements TalendJob {
 
 	}
 
-	public void tFixedFlowInput_2_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tHashInput_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tRunJob_1_onSubJobError(Exception exception,
+	public void tFileInputDelimited_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1752,15 +1692,66 @@ public class test implements TalendJob {
 		globalMap.put("tDie_2_SUBPROCESS_STATE", 1);
 	}
 
-	public static class row6Struct implements
-			routines.system.IPersistableRow<row6Struct> {
+	public static class outttStruct implements
+			routines.system.IPersistableRow<outttStruct> {
 		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
 		static byte[] commonByteArray_TECHNIP_test = new byte[0];
 
-		public Double somme;
+		public String Id;
 
-		public Double getSomme() {
-			return this.somme;
+		public String getId() {
+			return this.Id;
+		}
+
+		public String Name;
+
+		public String getName() {
+			return this.Name;
+		}
+
+		public String Prenom;
+
+		public String getPrenom() {
+			return this.Prenom;
+		}
+
+		public String Age;
+
+		public String getAge() {
+			return this.Age;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_test.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_test.length == 0) {
+						commonByteArray_TECHNIP_test = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_test = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_test, 0, length);
+				strReturn = new String(commonByteArray_TECHNIP_test, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
 		}
 
 		public void readData(ObjectInputStream dis) {
@@ -1771,12 +1762,13 @@ public class test implements TalendJob {
 
 					int length = 0;
 
-					length = dis.readByte();
-					if (length == -1) {
-						this.somme = null;
-					} else {
-						this.somme = dis.readDouble();
-					}
+					this.Id = readString(dis);
+
+					this.Name = readString(dis);
+
+					this.Prenom = readString(dis);
+
+					this.Age = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1790,14 +1782,21 @@ public class test implements TalendJob {
 		public void writeData(ObjectOutputStream dos) {
 			try {
 
-				// Double
+				// String
 
-				if (this.somme == null) {
-					dos.writeByte(-1);
-				} else {
-					dos.writeByte(0);
-					dos.writeDouble(this.somme);
-				}
+				writeString(this.Id, dos);
+
+				// String
+
+				writeString(this.Name, dos);
+
+				// String
+
+				writeString(this.Prenom, dos);
+
+				// String
+
+				writeString(this.Age, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1810,7 +1809,10 @@ public class test implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("somme=" + String.valueOf(somme));
+			sb.append("Id=" + Id);
+			sb.append(",Name=" + Name);
+			sb.append(",Prenom=" + Prenom);
+			sb.append(",Age=" + Age);
 			sb.append("]");
 
 			return sb.toString();
@@ -1819,7 +1821,7 @@ public class test implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row6Struct other) {
+		public int compareTo(outttStruct other) {
 
 			int returnValue = -1;
 
@@ -1850,15 +1852,66 @@ public class test implements TalendJob {
 
 	}
 
-	public static class OnRowsEndStructtAggregateRow_1 implements
-			routines.system.IPersistableRow<OnRowsEndStructtAggregateRow_1> {
+	public static class row1Struct implements
+			routines.system.IPersistableRow<row1Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
 		static byte[] commonByteArray_TECHNIP_test = new byte[0];
 
-		public Double somme;
+		public String Id;
 
-		public Double getSomme() {
-			return this.somme;
+		public String getId() {
+			return this.Id;
+		}
+
+		public String Name;
+
+		public String getName() {
+			return this.Name;
+		}
+
+		public String Prenom;
+
+		public String getPrenom() {
+			return this.Prenom;
+		}
+
+		public String Age;
+
+		public String getAge() {
+			return this.Age;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_test.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_test.length == 0) {
+						commonByteArray_TECHNIP_test = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_test = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_test, 0, length);
+				strReturn = new String(commonByteArray_TECHNIP_test, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
 		}
 
 		public void readData(ObjectInputStream dis) {
@@ -1869,12 +1922,13 @@ public class test implements TalendJob {
 
 					int length = 0;
 
-					length = dis.readByte();
-					if (length == -1) {
-						this.somme = null;
-					} else {
-						this.somme = dis.readDouble();
-					}
+					this.Id = readString(dis);
+
+					this.Name = readString(dis);
+
+					this.Prenom = readString(dis);
+
+					this.Age = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1888,14 +1942,21 @@ public class test implements TalendJob {
 		public void writeData(ObjectOutputStream dos) {
 			try {
 
-				// Double
+				// String
 
-				if (this.somme == null) {
-					dos.writeByte(-1);
-				} else {
-					dos.writeByte(0);
-					dos.writeDouble(this.somme);
-				}
+				writeString(this.Id, dos);
+
+				// String
+
+				writeString(this.Name, dos);
+
+				// String
+
+				writeString(this.Prenom, dos);
+
+				// String
+
+				writeString(this.Age, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -1908,7 +1969,10 @@ public class test implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("somme=" + String.valueOf(somme));
+			sb.append("Id=" + Id);
+			sb.append(",Name=" + Name);
+			sb.append(",Prenom=" + Prenom);
+			sb.append(",Age=" + Age);
 			sb.append("]");
 
 			return sb.toString();
@@ -1917,7 +1981,7 @@ public class test implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(OnRowsEndStructtAggregateRow_1 other) {
+		public int compareTo(row1Struct other) {
 
 			int returnValue = -1;
 
@@ -1948,111 +2012,12 @@ public class test implements TalendJob {
 
 	}
 
-	public static class row4Struct implements
-			routines.system.IPersistableRow<row4Struct> {
-		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
-		static byte[] commonByteArray_TECHNIP_test = new byte[0];
-
-		public Double doublez;
-
-		public Double getDoublez() {
-			return this.doublez;
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_TECHNIP_test) {
-
-				try {
-
-					int length = 0;
-
-					length = dis.readByte();
-					if (length == -1) {
-						this.doublez = null;
-					} else {
-						this.doublez = dis.readDouble();
-					}
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// Double
-
-				if (this.doublez == null) {
-					dos.writeByte(-1);
-				} else {
-					dos.writeByte(0);
-					dos.writeDouble(this.doublez);
-				}
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("doublez=" + String.valueOf(doublez));
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row4Struct other) {
-
-			int returnValue = -1;
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public void tFixedFlowInput_2Process(
+	public void tFileInputDelimited_1Process(
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tFixedFlowInput_2_SUBPROCESS_STATE", 0);
+		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
-		String currentVirtualComponent = null;
 
 		String iterateId = "";
 
@@ -2070,1403 +2035,537 @@ public class test implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				row4Struct row4 = new row4Struct();
-				row6Struct row6 = new row6Struct();
+				row1Struct row1 = new row1Struct();
+				outttStruct outtt = new outttStruct();
 
 				/**
-				 * [tAggregateRow_1_AGGOUT begin ] start
+				 * [tFileOutputDelimited_2 begin ] start
 				 */
 
-				ok_Hash.put("tAggregateRow_1_AGGOUT", false);
-				start_Hash.put("tAggregateRow_1_AGGOUT",
+				ok_Hash.put("tFileOutputDelimited_2", false);
+				start_Hash.put("tFileOutputDelimited_2",
 						System.currentTimeMillis());
 
-				currentVirtualComponent = "tAggregateRow_1";
-
-				currentComponent = "tAggregateRow_1_AGGOUT";
+				currentComponent = "tFileOutputDelimited_2";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row4" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("outtt" + iterateId, 0,
+								0);
 
 					}
 				}
 
-				int tos_count_tAggregateRow_1_AGGOUT = 0;
+				int tos_count_tFileOutputDelimited_2 = 0;
 
-				// ------------ Seems it is not used
-
-				java.util.Map hashAggreg_tAggregateRow_1 = new java.util.HashMap();
-
-				// ------------
-
-				class UtilClass_tAggregateRow_1 { // G_OutBegin_AggR_144
-
-					public double sd(Double[] data) {
-						final int n = data.length;
-						if (n < 2) {
-							return Double.NaN;
-						}
-						double d1 = 0d;
-						double d2 = 0d;
-
-						for (int i = 0; i < data.length; i++) {
-							d1 += (data[i] * data[i]);
-							d2 += data[i];
-						}
-
-						return Math.sqrt((n * d1 - d2 * d2) / n / (n - 1));
+				String fileName_tFileOutputDelimited_2 = "";
+				fileName_tFileOutputDelimited_2 = (new java.io.File(
+						"C:/Users/Cillia/Desktop/test3.byte"))
+						.getAbsolutePath().replace("\\", "/");
+				String fullName_tFileOutputDelimited_2 = null;
+				String extension_tFileOutputDelimited_2 = null;
+				String directory_tFileOutputDelimited_2 = null;
+				if ((fileName_tFileOutputDelimited_2.indexOf("/") != -1)) {
+					if (fileName_tFileOutputDelimited_2.lastIndexOf(".") < fileName_tFileOutputDelimited_2
+							.lastIndexOf("/")) {
+						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2;
+						extension_tFileOutputDelimited_2 = "";
+					} else {
+						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
+								.substring(0, fileName_tFileOutputDelimited_2
+										.lastIndexOf("."));
+						extension_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
+								.substring(fileName_tFileOutputDelimited_2
+										.lastIndexOf("."));
 					}
-
-					public void checkedIADD(byte a, byte b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-						byte r = (byte) (a + b);
-						if (checkTypeOverFlow && ((a ^ r) & (b ^ r)) < 0) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'short/Short'", "'byte/Byte'"));
-						}
+					directory_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
+							.substring(0, fileName_tFileOutputDelimited_2
+									.lastIndexOf("/"));
+				} else {
+					if (fileName_tFileOutputDelimited_2.lastIndexOf(".") != -1) {
+						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
+								.substring(0, fileName_tFileOutputDelimited_2
+										.lastIndexOf("."));
+						extension_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
+								.substring(fileName_tFileOutputDelimited_2
+										.lastIndexOf("."));
+					} else {
+						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2;
+						extension_tFileOutputDelimited_2 = "";
 					}
-
-					public void checkedIADD(short a, short b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-						short r = (short) (a + b);
-						if (checkTypeOverFlow && ((a ^ r) & (b ^ r)) < 0) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'int/Integer'", "'short/Short'"));
-						}
-					}
-
-					public void checkedIADD(int a, int b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-						int r = a + b;
-						if (checkTypeOverFlow && ((a ^ r) & (b ^ r)) < 0) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'long/Long'", "'int/Integer'"));
-						}
-					}
-
-					public void checkedIADD(long a, long b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-						long r = a + b;
-						if (checkTypeOverFlow && ((a ^ r) & (b ^ r)) < 0) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'BigDecimal'", "'long/Long'"));
-						}
-					}
-
-					public void checkedIADD(float a, float b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-
-						if (checkUlp) {
-							float minAddedValue = Math.ulp(a);
-							if (minAddedValue > Math.abs(b)) {
-								throw new RuntimeException(
-										buildPrecisionMessage(
-												String.valueOf(a),
-												String.valueOf(b),
-												"'double' or 'BigDecimal'",
-												"'float/Float'"));
-							}
-						}
-
-						if (checkTypeOverFlow
-								&& ((double) a + (double) b > (double) Float.MAX_VALUE)
-								|| ((double) a + (double) b < (double) -Float.MAX_VALUE)) {
-							throw new RuntimeException(
-									buildOverflowMessage(String.valueOf(a),
-											String.valueOf(b),
-											"'double' or 'BigDecimal'",
-											"'float/Float'"));
-						}
-					}
-
-					public void checkedIADD(double a, double b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-
-						if (checkUlp) {
-							double minAddedValue = Math.ulp(a);
-							if (minAddedValue > Math.abs(b)) {
-								throw new RuntimeException(
-										buildPrecisionMessage(
-												String.valueOf(a),
-												String.valueOf(a),
-												"'BigDecimal'",
-												"'double/Double'"));
-							}
-						}
-
-						if (checkTypeOverFlow
-								&& (a + b > (double) Double.MAX_VALUE)
-								|| (a + b < -Double.MAX_VALUE)) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'BigDecimal'", "'double/Double'"));
-						}
-					}
-
-					public void checkedIADD(double a, byte b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-
-						if (checkTypeOverFlow
-								&& (a + b > (double) Double.MAX_VALUE)
-								|| (a + b < -Double.MAX_VALUE)) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'BigDecimal'", "'double/Double'"));
-						}
-					}
-
-					public void checkedIADD(double a, short b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-
-						if (checkTypeOverFlow
-								&& (a + b > (double) Double.MAX_VALUE)
-								|| (a + b < -Double.MAX_VALUE)) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'BigDecimal'", "'double/Double'"));
-						}
-					}
-
-					public void checkedIADD(double a, int b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-
-						if (checkTypeOverFlow
-								&& (a + b > (double) Double.MAX_VALUE)
-								|| (a + b < -Double.MAX_VALUE)) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'BigDecimal'", "'double/Double'"));
-						}
-					}
-
-					public void checkedIADD(double a, float b,
-							boolean checkTypeOverFlow, boolean checkUlp) {
-
-						if (checkUlp) {
-							double minAddedValue = Math.ulp(a);
-							if (minAddedValue > Math.abs(b)) {
-								throw new RuntimeException(
-										buildPrecisionMessage(
-												String.valueOf(a),
-												String.valueOf(a),
-												"'BigDecimal'",
-												"'double/Double'"));
-							}
-						}
-
-						if (checkTypeOverFlow
-								&& (a + b > (double) Double.MAX_VALUE)
-								|| (a + b < -Double.MAX_VALUE)) {
-							throw new RuntimeException(buildOverflowMessage(
-									String.valueOf(a), String.valueOf(b),
-									"'BigDecimal'", "'double/Double'"));
-						}
-					}
-
-					private String buildOverflowMessage(String a, String b,
-							String advicedTypes, String originalType) {
-						return "Type overflow when adding "
-								+ b
-								+ " to "
-								+ a
-								+ ", to resolve this problem, increase the precision by using "
-								+ advicedTypes + " type in place of "
-								+ originalType + ".";
-					}
-
-					private String buildPrecisionMessage(String a, String b,
-							String advicedTypes, String originalType) {
-						return "The double precision is unsufficient to add the value "
-								+ b
-								+ " to "
-								+ a
-								+ ", to resolve this problem, increase the precision by using "
-								+ advicedTypes
-								+ " type in place of "
-								+ originalType + ".";
-					}
-
-				} // G_OutBegin_AggR_144
-
-				UtilClass_tAggregateRow_1 utilClass_tAggregateRow_1 = new UtilClass_tAggregateRow_1();
-
-				class AggOperationStruct_tAggregateRow_1 { // G_OutBegin_AggR_100
-
-					private static final int DEFAULT_HASHCODE = 1;
-					private static final int PRIME = 31;
-					private int hashCode = DEFAULT_HASHCODE;
-					public boolean hashCodeDirty = true;
-					BigDecimal somme_sum;
-
-					@Override
-					public int hashCode() {
-						if (this.hashCodeDirty) {
-							final int prime = PRIME;
-							int result = DEFAULT_HASHCODE;
-
-							this.hashCode = result;
-							this.hashCodeDirty = false;
-						}
-						return this.hashCode;
-					}
-
-					@Override
-					public boolean equals(Object obj) {
-						if (this == obj)
-							return true;
-						if (obj == null)
-							return false;
-						if (getClass() != obj.getClass())
-							return false;
-						final AggOperationStruct_tAggregateRow_1 other = (AggOperationStruct_tAggregateRow_1) obj;
-
-						return true;
-					}
-
-				} // G_OutBegin_AggR_100
-
-				AggOperationStruct_tAggregateRow_1 operation_result_tAggregateRow_1 = null;
-				AggOperationStruct_tAggregateRow_1 operation_finder_tAggregateRow_1 = new AggOperationStruct_tAggregateRow_1();
-				java.util.Map<AggOperationStruct_tAggregateRow_1, AggOperationStruct_tAggregateRow_1> hash_tAggregateRow_1 = new java.util.HashMap<AggOperationStruct_tAggregateRow_1, AggOperationStruct_tAggregateRow_1>();
-
-				/**
-				 * [tAggregateRow_1_AGGOUT begin ] stop
-				 */
-
-				/**
-				 * [tFixedFlowInput_2 begin ] start
-				 */
-
-				ok_Hash.put("tFixedFlowInput_2", false);
-				start_Hash.put("tFixedFlowInput_2", System.currentTimeMillis());
-
-				currentComponent = "tFixedFlowInput_2";
-
-				int tos_count_tFixedFlowInput_2 = 0;
-
-				int nb_line_tFixedFlowInput_2 = 0;
-				List<row4Struct> cacheList_tFixedFlowInput_2 = new java.util.ArrayList<row4Struct>();
-				row4 = new row4Struct();
-				row4.doublez = 0.185;
-				cacheList_tFixedFlowInput_2.add(row4);
-				row4 = new row4Struct();
-				row4.doublez = 0.12;
-				cacheList_tFixedFlowInput_2.add(row4);
-				row4 = new row4Struct();
-				row4.doublez = 0.15;
-				cacheList_tFixedFlowInput_2.add(row4);
-				for (int i_tFixedFlowInput_2 = 0; i_tFixedFlowInput_2 < 1; i_tFixedFlowInput_2++) {
-					for (row4Struct tmpRow_tFixedFlowInput_2 : cacheList_tFixedFlowInput_2) {
-						nb_line_tFixedFlowInput_2++;
-						row4 = tmpRow_tFixedFlowInput_2;
-
-						/**
-						 * [tFixedFlowInput_2 begin ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_2 main ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_2";
-
-						tos_count_tFixedFlowInput_2++;
-
-						/**
-						 * [tFixedFlowInput_2 main ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_2 process_data_begin ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_2";
-
-						/**
-						 * [tFixedFlowInput_2 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tAggregateRow_1_AGGOUT main ] start
-						 */
-
-						currentVirtualComponent = "tAggregateRow_1";
-
-						currentComponent = "tAggregateRow_1_AGGOUT";
-
-						// row4
-						// row4
-
-						if (execStat) {
-							runStat.updateStatOnConnection("row4" + iterateId,
-									1, 1);
-						}
-
-						operation_finder_tAggregateRow_1.hashCodeDirty = true;
-
-						operation_result_tAggregateRow_1 = hash_tAggregateRow_1
-								.get(operation_finder_tAggregateRow_1);
-
-						if (operation_result_tAggregateRow_1 == null) { // G_OutMain_AggR_001
-
-							operation_result_tAggregateRow_1 = new AggOperationStruct_tAggregateRow_1();
-
-							hash_tAggregateRow_1.put(
-									operation_result_tAggregateRow_1,
-									operation_result_tAggregateRow_1);
-
-						} // G_OutMain_AggR_001
-
-						if (row4.doublez != null) { // G_OutMain_AggR_546
-
-							if (operation_result_tAggregateRow_1.somme_sum == null) {
-								operation_result_tAggregateRow_1.somme_sum = new BigDecimal(
-										0);
-							}
-							operation_result_tAggregateRow_1.somme_sum = operation_result_tAggregateRow_1.somme_sum
-									.add(new BigDecimal(String
-											.valueOf(row4.doublez)));
-
-						} // G_OutMain_AggR_546
-
-						tos_count_tAggregateRow_1_AGGOUT++;
-
-						/**
-						 * [tAggregateRow_1_AGGOUT main ] stop
-						 */
-
-						/**
-						 * [tAggregateRow_1_AGGOUT process_data_begin ] start
-						 */
-
-						currentVirtualComponent = "tAggregateRow_1";
-
-						currentComponent = "tAggregateRow_1_AGGOUT";
-
-						/**
-						 * [tAggregateRow_1_AGGOUT process_data_begin ] stop
-						 */
-
-						/**
-						 * [tAggregateRow_1_AGGOUT process_data_end ] start
-						 */
-
-						currentVirtualComponent = "tAggregateRow_1";
-
-						currentComponent = "tAggregateRow_1_AGGOUT";
-
-						/**
-						 * [tAggregateRow_1_AGGOUT process_data_end ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_2 process_data_end ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_2";
-
-						/**
-						 * [tFixedFlowInput_2 process_data_end ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_2 end ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_2";
-
-					}
+					directory_tFileOutputDelimited_2 = "";
 				}
-				cacheList_tFixedFlowInput_2.clear();
-				globalMap.put("tFixedFlowInput_2_NB_LINE",
-						nb_line_tFixedFlowInput_2);
+				boolean isFileGenerated_tFileOutputDelimited_2 = true;
+				java.io.File filetFileOutputDelimited_2 = new java.io.File(
+						fileName_tFileOutputDelimited_2);
+				globalMap.put("tFileOutputDelimited_2_FILE_NAME",
+						fileName_tFileOutputDelimited_2);
+				if (filetFileOutputDelimited_2.exists()) {
+					isFileGenerated_tFileOutputDelimited_2 = false;
+				}
+				int nb_line_tFileOutputDelimited_2 = 0;
+				int splitedFileNo_tFileOutputDelimited_2 = 0;
+				int currentRow_tFileOutputDelimited_2 = 0;
 
-				ok_Hash.put("tFixedFlowInput_2", true);
-				end_Hash.put("tFixedFlowInput_2", System.currentTimeMillis());
-
-				/**
-				 * [tFixedFlowInput_2 end ] stop
+				final String OUT_DELIM_tFileOutputDelimited_2 = /**
+				 * Start field
+				 * tFileOutputDelimited_2:FIELDSEPARATOR
 				 */
+				";"/** End field tFileOutputDelimited_2:FIELDSEPARATOR */
+				;
 
-				/**
-				 * [tAggregateRow_1_AGGOUT end ] start
+				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_2 = /**
+				 * Start
+				 * field tFileOutputDelimited_2:ROWSEPARATOR
 				 */
+				"\n"/** End field tFileOutputDelimited_2:ROWSEPARATOR */
+				;
 
-				currentVirtualComponent = "tAggregateRow_1";
-
-				currentComponent = "tAggregateRow_1_AGGOUT";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row4" + iterateId, 2, 0);
+				// create directory only if not exists
+				if (directory_tFileOutputDelimited_2 != null
+						&& directory_tFileOutputDelimited_2.trim().length() != 0) {
+					java.io.File dir_tFileOutputDelimited_2 = new java.io.File(
+							directory_tFileOutputDelimited_2);
+					if (!dir_tFileOutputDelimited_2.exists()) {
+						dir_tFileOutputDelimited_2.mkdirs();
 					}
 				}
 
-				ok_Hash.put("tAggregateRow_1_AGGOUT", true);
-				end_Hash.put("tAggregateRow_1_AGGOUT",
-						System.currentTimeMillis());
+				// routines.system.Row
+				java.io.Writer outtFileOutputDelimited_2 = null;
+
+				outtFileOutputDelimited_2 = new java.io.BufferedWriter(
+						new java.io.OutputStreamWriter(
+								new java.io.FileOutputStream(
+										fileName_tFileOutputDelimited_2, true),
+								"ISO-8859-15"));
+				if (filetFileOutputDelimited_2.length() == 0) {
+					outtFileOutputDelimited_2.write("Id");
+					outtFileOutputDelimited_2
+							.write(OUT_DELIM_tFileOutputDelimited_2);
+					outtFileOutputDelimited_2.write("Name");
+					outtFileOutputDelimited_2
+							.write(OUT_DELIM_tFileOutputDelimited_2);
+					outtFileOutputDelimited_2.write("Prenom");
+					outtFileOutputDelimited_2
+							.write(OUT_DELIM_tFileOutputDelimited_2);
+					outtFileOutputDelimited_2.write("Age");
+					outtFileOutputDelimited_2
+							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_2);
+					outtFileOutputDelimited_2.flush();
+				}
+
+				resourceMap.put("out_tFileOutputDelimited_2",
+						outtFileOutputDelimited_2);
+				resourceMap.put("nb_line_tFileOutputDelimited_2",
+						nb_line_tFileOutputDelimited_2);
 
 				/**
-				 * [tAggregateRow_1_AGGOUT end ] stop
+				 * [tFileOutputDelimited_2 begin ] stop
 				 */
 
 				/**
-				 * [tHashOutput_1 begin ] start
+				 * [tMap_5 begin ] start
 				 */
 
-				ok_Hash.put("tHashOutput_1", false);
-				start_Hash.put("tHashOutput_1", System.currentTimeMillis());
+				ok_Hash.put("tMap_5", false);
+				start_Hash.put("tMap_5", System.currentTimeMillis());
 
-				currentComponent = "tHashOutput_1";
+				currentComponent = "tMap_5";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row6" + iterateId, 0, 0);
+						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
 
 					}
 				}
 
-				int tos_count_tHashOutput_1 = 0;
+				int tos_count_tMap_5 = 0;
 
-				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashOutput_1 = org.talend.designer.components.hashfile.common.MapHashFile
-						.getMapHashFile();
-				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row6Struct> tHashFile_tHashOutput_1 = null;
-				String hashKey_tHashOutput_1 = "tHashFile_test_" + pid
-						+ "_tHashOutput_1";
-				synchronized (org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
-						.get(hashKey_tHashOutput_1)) {
-					if (mf_tHashOutput_1.getResourceMap().get(
-							hashKey_tHashOutput_1) == null) {
-						mf_tHashOutput_1
-								.getResourceMap()
-								.put(hashKey_tHashOutput_1,
-										new org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row6Struct>(
-												org.talend.designer.components.hashfile.common.MATCHING_MODE.KEEP_ALL));
-						tHashFile_tHashOutput_1 = mf_tHashOutput_1
-								.getResourceMap().get(hashKey_tHashOutput_1);
-					} else {
-						tHashFile_tHashOutput_1 = mf_tHashOutput_1
-								.getResourceMap().get(hashKey_tHashOutput_1);
-					}
+				// ###############################
+				// # Lookup's keys initialization
+				// ###############################
+
+				// ###############################
+				// # Vars initialization
+				class Var__tMap_5__Struct {
 				}
-				int nb_line_tHashOutput_1 = 0;
+				Var__tMap_5__Struct Var__tMap_5 = new Var__tMap_5__Struct();
+				// ###############################
+
+				// ###############################
+				// # Outputs initialization
+				outttStruct outtt_tmp = new outttStruct();
+				// ###############################
 
 				/**
-				 * [tHashOutput_1 begin ] stop
+				 * [tMap_5 begin ] stop
 				 */
 
 				/**
-				 * [tAggregateRow_1_AGGIN begin ] start
+				 * [tFileInputDelimited_1 begin ] start
 				 */
 
-				ok_Hash.put("tAggregateRow_1_AGGIN", false);
-				start_Hash.put("tAggregateRow_1_AGGIN",
+				ok_Hash.put("tFileInputDelimited_1", false);
+				start_Hash.put("tFileInputDelimited_1",
 						System.currentTimeMillis());
 
-				currentVirtualComponent = "tAggregateRow_1";
+				currentComponent = "tFileInputDelimited_1";
 
-				currentComponent = "tAggregateRow_1_AGGIN";
+				int tos_count_tFileInputDelimited_1 = 0;
 
-				int tos_count_tAggregateRow_1_AGGIN = 0;
+				final routines.system.RowState rowstate_tFileInputDelimited_1 = new routines.system.RowState();
 
-				java.util.Collection<AggOperationStruct_tAggregateRow_1> values_tAggregateRow_1 = hash_tAggregateRow_1
-						.values();
-
-				globalMap.put("tAggregateRow_1_NB_LINE",
-						values_tAggregateRow_1.size());
-
-				for (AggOperationStruct_tAggregateRow_1 aggregated_row_tAggregateRow_1 : values_tAggregateRow_1) { // G_AggR_600
-
-					/**
-					 * [tAggregateRow_1_AGGIN begin ] stop
-					 */
-
-					/**
-					 * [tAggregateRow_1_AGGIN main ] start
-					 */
-
-					currentVirtualComponent = "tAggregateRow_1";
-
-					currentComponent = "tAggregateRow_1_AGGIN";
-
-					if (aggregated_row_tAggregateRow_1.somme_sum != null) {
-						row6.somme = aggregated_row_tAggregateRow_1.somme_sum
-								.doubleValue();
-
-					} else {
-
-						row6.somme = null;
-
-					}
-
-					tos_count_tAggregateRow_1_AGGIN++;
-
-					/**
-					 * [tAggregateRow_1_AGGIN main ] stop
-					 */
-
-					/**
-					 * [tAggregateRow_1_AGGIN process_data_begin ] start
-					 */
-
-					currentVirtualComponent = "tAggregateRow_1";
-
-					currentComponent = "tAggregateRow_1_AGGIN";
-
-					/**
-					 * [tAggregateRow_1_AGGIN process_data_begin ] stop
-					 */
-
-					/**
-					 * [tHashOutput_1 main ] start
-					 */
-
-					currentComponent = "tHashOutput_1";
-
-					// row6
-					// row6
-
-					if (execStat) {
-						runStat.updateStatOnConnection("row6" + iterateId, 1, 1);
-					}
-
-					row6Struct oneRow_tHashOutput_1 = new row6Struct();
-
-					oneRow_tHashOutput_1.somme = row6.somme;
-
-					tHashFile_tHashOutput_1.put(oneRow_tHashOutput_1);
-					nb_line_tHashOutput_1++;
-
-					tos_count_tHashOutput_1++;
-
-					/**
-					 * [tHashOutput_1 main ] stop
-					 */
-
-					/**
-					 * [tHashOutput_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tHashOutput_1";
-
-					/**
-					 * [tHashOutput_1 process_data_begin ] stop
-					 */
-
-					/**
-					 * [tHashOutput_1 process_data_end ] start
-					 */
-
-					currentComponent = "tHashOutput_1";
-
-					/**
-					 * [tHashOutput_1 process_data_end ] stop
-					 */
-
-					/**
-					 * [tAggregateRow_1_AGGIN process_data_end ] start
-					 */
-
-					currentVirtualComponent = "tAggregateRow_1";
-
-					currentComponent = "tAggregateRow_1_AGGIN";
-
-					/**
-					 * [tAggregateRow_1_AGGIN process_data_end ] stop
-					 */
-
-					/**
-					 * [tAggregateRow_1_AGGIN end ] start
-					 */
-
-					currentVirtualComponent = "tAggregateRow_1";
-
-					currentComponent = "tAggregateRow_1_AGGIN";
-
-				} // G_AggR_600
-
-				ok_Hash.put("tAggregateRow_1_AGGIN", true);
-				end_Hash.put("tAggregateRow_1_AGGIN",
-						System.currentTimeMillis());
-
-				/**
-				 * [tAggregateRow_1_AGGIN end ] stop
-				 */
-
-				/**
-				 * [tHashOutput_1 end ] start
-				 */
-
-				currentComponent = "tHashOutput_1";
-
-				globalMap.put("tHashOutput_1_NB_LINE", nb_line_tHashOutput_1);
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row6" + iterateId, 2, 0);
-					}
-				}
-
-				ok_Hash.put("tHashOutput_1", true);
-				end_Hash.put("tHashOutput_1", System.currentTimeMillis());
-
-				/**
-				 * [tHashOutput_1 end ] stop
-				 */
-
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			te.setVirtualComponentName(currentVirtualComponent);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			// free memory for "tAggregateRow_1_AGGIN"
-			globalMap.remove("tAggregateRow_1");
-
-			try {
-
-				/**
-				 * [tFixedFlowInput_2 finally ] start
-				 */
-
-				currentComponent = "tFixedFlowInput_2";
-
-				/**
-				 * [tFixedFlowInput_2 finally ] stop
-				 */
-
-				/**
-				 * [tAggregateRow_1_AGGOUT finally ] start
-				 */
-
-				currentVirtualComponent = "tAggregateRow_1";
-
-				currentComponent = "tAggregateRow_1_AGGOUT";
-
-				/**
-				 * [tAggregateRow_1_AGGOUT finally ] stop
-				 */
-
-				/**
-				 * [tAggregateRow_1_AGGIN finally ] start
-				 */
-
-				currentVirtualComponent = "tAggregateRow_1";
-
-				currentComponent = "tAggregateRow_1_AGGIN";
-
-				/**
-				 * [tAggregateRow_1_AGGIN finally ] stop
-				 */
-
-				/**
-				 * [tHashOutput_1 finally ] start
-				 */
-
-				currentComponent = "tHashOutput_1";
-
-				/**
-				 * [tHashOutput_1 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFixedFlowInput_2_SUBPROCESS_STATE", 1);
-	}
-
-	public static class row7Struct implements
-			routines.system.IPersistableRow<row7Struct> {
-		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
-		static byte[] commonByteArray_TECHNIP_test = new byte[0];
-
-		public Double SOMME;
-
-		public Double getSOMME() {
-			return this.SOMME;
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_TECHNIP_test) {
-
+				int nb_line_tFileInputDelimited_1 = 0;
+				org.talend.fileprocess.FileInputDelimited fid_tFileInputDelimited_1 = null;
 				try {
 
-					int length = 0;
+					Object filename_tFileInputDelimited_1 = "C:/Users/Cillia/Desktop/test.csv";
+					if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
 
-					length = dis.readByte();
-					if (length == -1) {
-						this.SOMME = null;
-					} else {
-						this.SOMME = dis.readDouble();
-					}
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// Double
-
-				if (this.SOMME == null) {
-					dos.writeByte(-1);
-				} else {
-					dos.writeByte(0);
-					dos.writeDouble(this.SOMME);
-				}
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("SOMME=" + String.valueOf(SOMME));
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row7Struct other) {
-
-			int returnValue = -1;
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public void tHashInput_1Process(
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tHashInput_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				row7Struct row7 = new row7Struct();
-
-				/**
-				 * [tLogRow_4 begin ] start
-				 */
-
-				ok_Hash.put("tLogRow_4", false);
-				start_Hash.put("tLogRow_4", System.currentTimeMillis());
-
-				currentComponent = "tLogRow_4";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null) {
-
-						runStat.updateStatOnConnection("row7" + iterateId, 0, 0);
+						int footer_value_tFileInputDelimited_1 = 0, random_value_tFileInputDelimited_1 = -1;
+						if (footer_value_tFileInputDelimited_1 > 0
+								|| random_value_tFileInputDelimited_1 > 0) {
+							throw new java.lang.Exception(
+									"When the input source is a stream,footer and random shouldn't be bigger than 0.");
+						}
 
 					}
-				}
+					try {
+						fid_tFileInputDelimited_1 = new org.talend.fileprocess.FileInputDelimited(
+								"C:/Users/Cillia/Desktop/test.csv", "UTF-8",
+								";", "\n", true, 1, 0, -1, -1, false);
+					} catch (java.lang.Exception e) {
 
-				int tos_count_tLogRow_4 = 0;
+						System.err.println(e.getMessage());
 
-				// /////////////////////
+					}
 
-				class Util_tLogRow_4 {
+					while (fid_tFileInputDelimited_1 != null
+							&& fid_tFileInputDelimited_1.nextRecord()) {
+						rowstate_tFileInputDelimited_1.reset();
 
-					String[] des_top = { ".", ".", "-", "+" };
+						row1 = null;
 
-					String[] des_head = { "|=", "=|", "-", "+" };
+						boolean whetherReject_tFileInputDelimited_1 = false;
+						row1 = new row1Struct();
+						try {
 
-					String[] des_bottom = { "'", "'", "-", "+" };
+							int columnIndexWithD_tFileInputDelimited_1 = 0;
 
-					String name = "";
+							columnIndexWithD_tFileInputDelimited_1 = 0;
 
-					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
+							row1.Id = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
 
-					int[] colLengths = new int[1];
+							columnIndexWithD_tFileInputDelimited_1 = 1;
 
-					public void addRow(String[] row) {
+							row1.Name = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
 
-						for (int i = 0; i < 1; i++) {
-							if (row[i] != null) {
-								colLengths[i] = Math.max(colLengths[i],
-										row[i].length());
+							columnIndexWithD_tFileInputDelimited_1 = 2;
+
+							row1.Prenom = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							columnIndexWithD_tFileInputDelimited_1 = 3;
+
+							row1.Age = fid_tFileInputDelimited_1
+									.get(columnIndexWithD_tFileInputDelimited_1);
+
+							if (rowstate_tFileInputDelimited_1.getException() != null) {
+								throw rowstate_tFileInputDelimited_1
+										.getException();
 							}
+
+						} catch (java.lang.Exception e) {
+							whetherReject_tFileInputDelimited_1 = true;
+
+							System.err.println(e.getMessage());
+							row1 = null;
+
 						}
-						list.add(row);
+
+						/**
+						 * [tFileInputDelimited_1 begin ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_1 main ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_1";
+
+						tos_count_tFileInputDelimited_1++;
+
+						/**
+						 * [tFileInputDelimited_1 main ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_1 process_data_begin ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_1";
+
+						/**
+						 * [tFileInputDelimited_1 process_data_begin ] stop
+						 */
+						// Start of branch "row1"
+						if (row1 != null) {
+
+							/**
+							 * [tMap_5 main ] start
+							 */
+
+							currentComponent = "tMap_5";
+
+							// row1
+							// row1
+
+							if (execStat) {
+								runStat.updateStatOnConnection("row1"
+										+ iterateId, 1, 1);
+							}
+
+							boolean hasCasePrimitiveKeyWithNull_tMap_5 = false;
+
+							// ###############################
+							// # Input tables (lookups)
+							boolean rejectedInnerJoin_tMap_5 = false;
+							boolean mainRowRejected_tMap_5 = false;
+
+							// ###############################
+							{ // start of Var scope
+
+								// ###############################
+								// # Vars tables
+
+								Var__tMap_5__Struct Var = Var__tMap_5;// ###############################
+								// ###############################
+								// # Output tables
+
+								outtt = null;
+
+								// # Output table : 'outtt'
+								outtt_tmp.Id = row1.Id;
+								outtt_tmp.Name = row1.Name;
+								outtt_tmp.Prenom = row1.Prenom;
+								outtt_tmp.Age = row1.Age;
+								outtt = outtt_tmp;
+								// ###############################
+
+							} // end of Var scope
+
+							rejectedInnerJoin_tMap_5 = false;
+
+							tos_count_tMap_5++;
+
+							/**
+							 * [tMap_5 main ] stop
+							 */
+
+							/**
+							 * [tMap_5 process_data_begin ] start
+							 */
+
+							currentComponent = "tMap_5";
+
+							/**
+							 * [tMap_5 process_data_begin ] stop
+							 */
+							// Start of branch "outtt"
+							if (outtt != null) {
+
+								/**
+								 * [tFileOutputDelimited_2 main ] start
+								 */
+
+								currentComponent = "tFileOutputDelimited_2";
+
+								// outtt
+								// outtt
+
+								if (execStat) {
+									runStat.updateStatOnConnection("outtt"
+											+ iterateId, 1, 1);
+								}
+
+								StringBuilder sb_tFileOutputDelimited_2 = new StringBuilder();
+								if (outtt.Id != null) {
+									sb_tFileOutputDelimited_2.append(outtt.Id);
+								}
+								sb_tFileOutputDelimited_2
+										.append(OUT_DELIM_tFileOutputDelimited_2);
+								if (outtt.Name != null) {
+									sb_tFileOutputDelimited_2
+											.append(outtt.Name);
+								}
+								sb_tFileOutputDelimited_2
+										.append(OUT_DELIM_tFileOutputDelimited_2);
+								if (outtt.Prenom != null) {
+									sb_tFileOutputDelimited_2
+											.append(outtt.Prenom);
+								}
+								sb_tFileOutputDelimited_2
+										.append(OUT_DELIM_tFileOutputDelimited_2);
+								if (outtt.Age != null) {
+									sb_tFileOutputDelimited_2.append(outtt.Age);
+								}
+								sb_tFileOutputDelimited_2
+										.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_2);
+
+								nb_line_tFileOutputDelimited_2++;
+								resourceMap.put(
+										"nb_line_tFileOutputDelimited_2",
+										nb_line_tFileOutputDelimited_2);
+
+								outtFileOutputDelimited_2
+										.write(sb_tFileOutputDelimited_2
+												.toString());
+
+								tos_count_tFileOutputDelimited_2++;
+
+								/**
+								 * [tFileOutputDelimited_2 main ] stop
+								 */
+
+								/**
+								 * [tFileOutputDelimited_2 process_data_begin ]
+								 * start
+								 */
+
+								currentComponent = "tFileOutputDelimited_2";
+
+								/**
+								 * [tFileOutputDelimited_2 process_data_begin ]
+								 * stop
+								 */
+
+								/**
+								 * [tFileOutputDelimited_2 process_data_end ]
+								 * start
+								 */
+
+								currentComponent = "tFileOutputDelimited_2";
+
+								/**
+								 * [tFileOutputDelimited_2 process_data_end ]
+								 * stop
+								 */
+
+							} // End of branch "outtt"
+
+							/**
+							 * [tMap_5 process_data_end ] start
+							 */
+
+							currentComponent = "tMap_5";
+
+							/**
+							 * [tMap_5 process_data_end ] stop
+							 */
+
+						} // End of branch "row1"
+
+						/**
+						 * [tFileInputDelimited_1 process_data_end ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_1";
+
+						/**
+						 * [tFileInputDelimited_1 process_data_end ] stop
+						 */
+
+						/**
+						 * [tFileInputDelimited_1 end ] start
+						 */
+
+						currentComponent = "tFileInputDelimited_1";
+
 					}
-
-					public void setTableName(String name) {
-
-						this.name = name;
+				} finally {
+					if (!((Object) ("C:/Users/Cillia/Desktop/test.csv") instanceof java.io.InputStream)) {
+						if (fid_tFileInputDelimited_1 != null) {
+							fid_tFileInputDelimited_1.close();
+						}
 					}
+					if (fid_tFileInputDelimited_1 != null) {
+						globalMap.put("tFileInputDelimited_1_NB_LINE",
+								fid_tFileInputDelimited_1.getRowNumber());
 
-					public StringBuilder format() {
-
-						StringBuilder sb = new StringBuilder();
-
-						sb.append(print(des_top));
-
-						int totals = 0;
-						for (int i = 0; i < colLengths.length; i++) {
-							totals = totals + colLengths[i];
-						}
-
-						// name
-						sb.append("|");
-						int k = 0;
-						for (k = 0; k < (totals + 0 - name.length()) / 2; k++) {
-							sb.append(' ');
-						}
-						sb.append(name);
-						for (int i = 0; i < totals + 0 - name.length() - k; i++) {
-							sb.append(' ');
-						}
-						sb.append("|\n");
-
-						// head and rows
-						sb.append(print(des_head));
-						for (int i = 0; i < list.size(); i++) {
-
-							String[] row = list.get(i);
-
-							java.util.Formatter formatter = new java.util.Formatter(
-									new StringBuilder());
-
-							StringBuilder sbformat = new StringBuilder();
-							sbformat.append("|%1$-");
-							sbformat.append(colLengths[0]);
-							sbformat.append("s");
-
-							sbformat.append("|\n");
-
-							formatter.format(sbformat.toString(),
-									(Object[]) row);
-
-							sb.append(formatter.toString());
-							if (i == 0)
-								sb.append(print(des_head)); // print the head
-						}
-
-						// end
-						sb.append(print(des_bottom));
-						return sb;
-					}
-
-					private StringBuilder print(String[] fillChars) {
-						StringBuilder sb = new StringBuilder();
-						// first column
-						sb.append(fillChars[0]);
-
-						// last column
-						for (int i = 0; i < colLengths[0]
-								- fillChars[0].length() - fillChars[1].length()
-								+ 2; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[1]);
-						sb.append("\n");
-						return sb;
-					}
-
-					public boolean isTableEmpty() {
-						if (list.size() > 1)
-							return false;
-						return true;
 					}
 				}
-				Util_tLogRow_4 util_tLogRow_4 = new Util_tLogRow_4();
-				util_tLogRow_4.setTableName("tLogRow_4");
-				util_tLogRow_4.addRow(new String[] { "SOMME", });
-				StringBuilder strBuffer_tLogRow_4 = null;
-				int nb_line_tLogRow_4 = 0;
-				// /////////////////////
+
+				ok_Hash.put("tFileInputDelimited_1", true);
+				end_Hash.put("tFileInputDelimited_1",
+						System.currentTimeMillis());
 
 				/**
-				 * [tLogRow_4 begin ] stop
+				 * [tFileInputDelimited_1 end ] stop
 				 */
 
 				/**
-				 * [tHashInput_1 begin ] start
+				 * [tMap_5 end ] start
 				 */
 
-				ok_Hash.put("tHashInput_1", false);
-				start_Hash.put("tHashInput_1", System.currentTimeMillis());
+				currentComponent = "tMap_5";
 
-				currentComponent = "tHashInput_1";
-
-				int tos_count_tHashInput_1 = 0;
-
-				int nb_line_tHashInput_1 = 0;
-
-				org.talend.designer.components.hashfile.common.MapHashFile mf_tHashInput_1 = org.talend.designer.components.hashfile.common.MapHashFile
-						.getMapHashFile();
-				org.talend.designer.components.hashfile.memory.AdvancedMemoryHashFile<row6Struct> tHashFile_tHashInput_1 = mf_tHashInput_1
-						.getAdvancedMemoryHashFile("tHashFile_test_" + pid
-								+ "_tHashOutput_1");
-				if (tHashFile_tHashInput_1 == null) {
-					throw new RuntimeException(
-							"The hash is not initialized : The hash must exist before you read from it");
-				}
-				java.util.Iterator<row6Struct> iterator_tHashInput_1 = tHashFile_tHashInput_1
-						.iterator();
-				while (iterator_tHashInput_1.hasNext()) {
-					row6Struct next_tHashInput_1 = iterator_tHashInput_1.next();
-
-					row7.SOMME = next_tHashInput_1.somme;
-
-					/**
-					 * [tHashInput_1 begin ] stop
-					 */
-
-					/**
-					 * [tHashInput_1 main ] start
-					 */
-
-					currentComponent = "tHashInput_1";
-
-					tos_count_tHashInput_1++;
-
-					/**
-					 * [tHashInput_1 main ] stop
-					 */
-
-					/**
-					 * [tHashInput_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tHashInput_1";
-
-					/**
-					 * [tHashInput_1 process_data_begin ] stop
-					 */
-
-					/**
-					 * [tLogRow_4 main ] start
-					 */
-
-					currentComponent = "tLogRow_4";
-
-					// row7
-					// row7
-
-					if (execStat) {
-						runStat.updateStatOnConnection("row7" + iterateId, 1, 1);
-					}
-
-					// /////////////////////
-
-					String[] row_tLogRow_4 = new String[1];
-
-					if (row7.SOMME != null) { //
-						row_tLogRow_4[0] = FormatterUtils
-								.formatUnwithE(row7.SOMME);
-
-					} //
-
-					util_tLogRow_4.addRow(row_tLogRow_4);
-					nb_line_tLogRow_4++;
-					// ////
-
-					// ////
-
-					// /////////////////////
-
-					tos_count_tLogRow_4++;
-
-					/**
-					 * [tLogRow_4 main ] stop
-					 */
-
-					/**
-					 * [tLogRow_4 process_data_begin ] start
-					 */
-
-					currentComponent = "tLogRow_4";
-
-					/**
-					 * [tLogRow_4 process_data_begin ] stop
-					 */
-
-					/**
-					 * [tLogRow_4 process_data_end ] start
-					 */
-
-					currentComponent = "tLogRow_4";
-
-					/**
-					 * [tLogRow_4 process_data_end ] stop
-					 */
-
-					/**
-					 * [tHashInput_1 process_data_end ] start
-					 */
-
-					currentComponent = "tHashInput_1";
-
-					/**
-					 * [tHashInput_1 process_data_end ] stop
-					 */
-
-					/**
-					 * [tHashInput_1 end ] start
-					 */
-
-					currentComponent = "tHashInput_1";
-
-					nb_line_tHashInput_1++;
-				}
-
-				org.talend.designer.components.hashfile.common.MapHashFile.resourceLockMap
-						.remove("tHashFile_test_" + pid + "_tHashOutput_1");
-
-				globalMap.put("tHashInput_1_NB_LINE", nb_line_tHashInput_1);
-
-				ok_Hash.put("tHashInput_1", true);
-				end_Hash.put("tHashInput_1", System.currentTimeMillis());
-
-				/**
-				 * [tHashInput_1 end ] stop
-				 */
-
-				/**
-				 * [tLogRow_4 end ] start
-				 */
-
-				currentComponent = "tLogRow_4";
-
-				// ////
-
-				java.io.PrintStream consoleOut_tLogRow_4 = null;
-				if (globalMap.get("tLogRow_CONSOLE") != null) {
-					consoleOut_tLogRow_4 = (java.io.PrintStream) globalMap
-							.get("tLogRow_CONSOLE");
-				} else {
-					consoleOut_tLogRow_4 = new java.io.PrintStream(
-							new java.io.BufferedOutputStream(System.out));
-					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_4);
-				}
-
-				consoleOut_tLogRow_4
-						.println(util_tLogRow_4.format().toString());
-				consoleOut_tLogRow_4.flush();
-				// ////
-				globalMap.put("tLogRow_4_NB_LINE", nb_line_tLogRow_4);
-
-				// /////////////////////
+				// ###############################
+				// # Lookup hashes releasing
+				// ###############################
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row7" + iterateId, 2, 0);
+						runStat.updateStatOnConnection("row1" + iterateId, 2, 0);
 					}
 				}
 
-				ok_Hash.put("tLogRow_4", true);
-				end_Hash.put("tLogRow_4", System.currentTimeMillis());
+				ok_Hash.put("tMap_5", true);
+				end_Hash.put("tMap_5", System.currentTimeMillis());
 
 				/**
-				 * [tLogRow_4 end ] stop
-				 */
-
-			}// end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil
-						.addLog("CHECKPOINT",
-								"CONNECTION:SUBJOB_OK:tHashInput_1:OnSubjobOk",
-								"", Thread.currentThread().getId() + "", "",
-								"", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk4", 0, "ok");
-			}
-
-			tRunJob_1Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tHashInput_1 finally ] start
-				 */
-
-				currentComponent = "tHashInput_1";
-
-				/**
-				 * [tHashInput_1 finally ] stop
+				 * [tMap_5 end ] stop
 				 */
 
 				/**
-				 * [tLogRow_4 finally ] start
+				 * [tFileOutputDelimited_2 end ] start
 				 */
 
-				currentComponent = "tLogRow_4";
+				currentComponent = "tFileOutputDelimited_2";
 
-				/**
-				 * [tLogRow_4 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tHashInput_1_SUBPROCESS_STATE", 1);
-	}
-
-	public void tRunJob_1Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tRunJob_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tRunJob_1 begin ] start
-				 */
-
-				ok_Hash.put("tRunJob_1", false);
-				start_Hash.put("tRunJob_1", System.currentTimeMillis());
-
-				currentComponent = "tRunJob_1";
-
-				int tos_count_tRunJob_1 = 0;
-
-				/**
-				 * [tRunJob_1 begin ] stop
-				 */
-
-				/**
-				 * [tRunJob_1 main ] start
-				 */
-
-				currentComponent = "tRunJob_1";
-
-				java.util.List<String> paraList_tRunJob_1 = new java.util.ArrayList<String>();
-
-				paraList_tRunJob_1.add("--father_pid=" + pid);
-
-				paraList_tRunJob_1.add("--root_pid=" + rootPid);
-
-				paraList_tRunJob_1.add("--father_node=tRunJob_1");
-
-				paraList_tRunJob_1.add("--context=Default");
-
-				// for feature:10589
-
-				paraList_tRunJob_1.add("--stat_port=" + portStats);
-
-				if (resuming_logs_dir_path != null) {
-					paraList_tRunJob_1.add("--resuming_logs_dir_path="
-							+ resuming_logs_dir_path);
+				if (outtFileOutputDelimited_2 != null) {
+					outtFileOutputDelimited_2.flush();
+					outtFileOutputDelimited_2.close();
 				}
-				String childResumePath_tRunJob_1 = ResumeUtil
-						.getChildJobCheckPointPath(resuming_checkpoint_path);
-				String tRunJobName_tRunJob_1 = ResumeUtil
-						.getRighttRunJob(resuming_checkpoint_path);
-				if ("tRunJob_1".equals(tRunJobName_tRunJob_1)
-						&& childResumePath_tRunJob_1 != null) {
-					paraList_tRunJob_1
-							.add("--resuming_checkpoint_path="
-									+ ResumeUtil
-											.getChildJobCheckPointPath(resuming_checkpoint_path));
-				}
-				paraList_tRunJob_1.add("--parent_part_launcher=JOB:" + jobName
-						+ "/NODE:tRunJob_1");
 
-				java.util.Map<String, Object> parentContextMap_tRunJob_1 = new java.util.HashMap<String, Object>();
+				globalMap.put("tFileOutputDelimited_2_NB_LINE",
+						nb_line_tFileOutputDelimited_2);
+				globalMap.put("tFileOutputDelimited_2_FILE_NAME",
+						fileName_tFileOutputDelimited_2);
 
-				Object obj_tRunJob_1 = null;
+				resourceMap.put("finish_tFileOutputDelimited_2", true);
 
-				technip.test2_0_1.test2 childJob_tRunJob_1 = new technip.test2_0_1.test2();
-				// pass DataSources
-				java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_1 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
-						.get(KEY_DB_DATASOURCES);
-				if (null != talendDataSources_tRunJob_1) {
-					java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_1 = new java.util.HashMap<String, javax.sql.DataSource>();
-					for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_1 : talendDataSources_tRunJob_1
-							.entrySet()) {
-						dataSources_tRunJob_1.put(
-								talendDataSourceEntry_tRunJob_1.getKey(),
-								talendDataSourceEntry_tRunJob_1.getValue()
-										.getRawDataSource());
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("outtt" + iterateId, 2,
+								0);
 					}
-					childJob_tRunJob_1.setDataSources(dataSources_tRunJob_1);
 				}
 
-				childJob_tRunJob_1.parentContextMap = parentContextMap_tRunJob_1;
-
-				String[][] childReturn_tRunJob_1 = childJob_tRunJob_1
-						.runJob((String[]) paraList_tRunJob_1
-								.toArray(new String[paraList_tRunJob_1.size()]));
-
-				errorCode = childJob_tRunJob_1.getErrorCode();
-
-				if (childJob_tRunJob_1.getErrorCode() == null) {
-					globalMap.put(
-							"tRunJob_1_CHILD_RETURN_CODE",
-							childJob_tRunJob_1.getStatus() != null
-									&& ("failure").equals(childJob_tRunJob_1
-											.getStatus()) ? 1 : 0);
-				} else {
-					globalMap.put("tRunJob_1_CHILD_RETURN_CODE",
-							childJob_tRunJob_1.getErrorCode());
-				}
-				if (childJob_tRunJob_1.getExceptionStackTrace() != null) {
-					globalMap.put("tRunJob_1_CHILD_EXCEPTION_STACKTRACE",
-							childJob_tRunJob_1.getExceptionStackTrace());
-				}
-
-				if (childJob_tRunJob_1.getErrorCode() != null
-						|| ("failure").equals(childJob_tRunJob_1.getStatus())) {
-					throw new RuntimeException("Child job running failed.\n"
-							+ childJob_tRunJob_1.getException().getClass()
-									.getName() + ": "
-							+ childJob_tRunJob_1.getException().getMessage());
-				}
-
-				tos_count_tRunJob_1++;
+				ok_Hash.put("tFileOutputDelimited_2", true);
+				end_Hash.put("tFileOutputDelimited_2",
+						System.currentTimeMillis());
 
 				/**
-				 * [tRunJob_1 main ] stop
+				 * [tFileOutputDelimited_2 end ] stop
 				 */
 
-				/**
-				 * [tRunJob_1 process_data_begin ] start
-				 */
-
-				currentComponent = "tRunJob_1";
-
-				/**
-				 * [tRunJob_1 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tRunJob_1 process_data_end ] start
-				 */
-
-				currentComponent = "tRunJob_1";
-
-				/**
-				 * [tRunJob_1 process_data_end ] stop
-				 */
-
-				/**
-				 * [tRunJob_1 end ] start
-				 */
-
-				currentComponent = "tRunJob_1";
-
-				ok_Hash.put("tRunJob_1", true);
-				end_Hash.put("tRunJob_1", System.currentTimeMillis());
-
-				/**
-				 * [tRunJob_1 end ] stop
-				 */
 			}// end the resume
 
 		} catch (java.lang.Exception e) {
@@ -3485,14 +2584,46 @@ public class test implements TalendJob {
 			try {
 
 				/**
-				 * [tRunJob_1 finally ] start
+				 * [tFileInputDelimited_1 finally ] start
 				 */
 
-				currentComponent = "tRunJob_1";
+				currentComponent = "tFileInputDelimited_1";
 
 				/**
-				 * [tRunJob_1 finally ] stop
+				 * [tFileInputDelimited_1 finally ] stop
 				 */
+
+				/**
+				 * [tMap_5 finally ] start
+				 */
+
+				currentComponent = "tMap_5";
+
+				/**
+				 * [tMap_5 finally ] stop
+				 */
+
+				/**
+				 * [tFileOutputDelimited_2 finally ] start
+				 */
+
+				currentComponent = "tFileOutputDelimited_2";
+
+				if (resourceMap.get("finish_tFileOutputDelimited_2") == null) {
+
+					java.io.Writer outtFileOutputDelimited_2 = (java.io.Writer) resourceMap
+							.get("out_tFileOutputDelimited_2");
+					if (outtFileOutputDelimited_2 != null) {
+						outtFileOutputDelimited_2.flush();
+						outtFileOutputDelimited_2.close();
+					}
+
+				}
+
+				/**
+				 * [tFileOutputDelimited_2 finally ] stop
+				 */
+
 			} catch (java.lang.Exception e) {
 				// ignore
 			} catch (java.lang.Error error) {
@@ -3501,7 +2632,7 @@ public class test implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tRunJob_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 1);
 	}
 
 	public static class in_logStruct implements
@@ -4960,20 +4091,6 @@ public class test implements TalendJob {
 				 */
 			}// end the resume
 
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil
-						.addLog("CHECKPOINT",
-								"CONNECTION:SUBJOB_OK:tSalesforceConnection_2:OnSubjobOk",
-								"", Thread.currentThread().getId() + "", "",
-								"", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk2", 0, "ok");
-			}
-
-			tFixedFlowInput_2Process(globalMap);
-
 		} catch (java.lang.Exception e) {
 
 			TalendException te = new TalendException(e, currentComponent,
@@ -5396,14 +4513,14 @@ public class test implements TalendJob {
 
 		try {
 			errorCode = null;
-			tHashInput_1Process(globalMap);
+			tFileInputDelimited_1Process(globalMap);
 			if (!"failure".equals(status)) {
 				status = "end";
 			}
-		} catch (TalendException e_tHashInput_1) {
-			globalMap.put("tHashInput_1_SUBPROCESS_STATE", -1);
+		} catch (TalendException e_tFileInputDelimited_1) {
+			globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", -1);
 
-			e_tHashInput_1.printStackTrace();
+			e_tFileInputDelimited_1.printStackTrace();
 
 		}
 
@@ -5567,6 +4684,6 @@ public class test implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 158705 characters generated by Talend Open Studio for Data Integration on the
- * 29 novembre 2019 11:45:58 CET
+ * 136068 characters generated by Talend Open Studio for Data Integration on the
+ * 2 décembre 2019 15:55:22 CET
  ************************************************************************************************/

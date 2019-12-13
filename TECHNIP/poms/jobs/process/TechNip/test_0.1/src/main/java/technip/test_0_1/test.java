@@ -41,6 +41,9 @@ import java.io.ObjectInputStream;
 import java.io.IOException;
 import java.util.Comparator;
 
+//the import part of tJava_2
+//import java.util.List;
+
 @SuppressWarnings("unused")
 /**
  * Job: test Purpose: <br>
@@ -123,6 +126,30 @@ public class test implements TalendJob {
 
 			}
 
+			if (FULL_Endpt != null) {
+
+				this.setProperty("FULL_Endpt", FULL_Endpt.toString());
+
+			}
+
+			if (FULL_PassW != null) {
+
+				this.setProperty("FULL_PassW", FULL_PassW.toString());
+
+			}
+
+			if (FULL_SecuK != null) {
+
+				this.setProperty("FULL_SecuK", FULL_SecuK.toString());
+
+			}
+
+			if (FULL_UserId != null) {
+
+				this.setProperty("FULL_UserId", FULL_UserId.toString());
+
+			}
+
 			if (CIBLE_Endpt != null) {
 
 				this.setProperty("CIBLE_Endpt", CIBLE_Endpt.toString());
@@ -171,12 +198,42 @@ public class test implements TalendJob {
 
 			}
 
+			if (boucle != null) {
+
+				this.setProperty("boucle", boucle.toString());
+
+			}
+
 		}
 
 		public String ID;
 
 		public String getID() {
 			return this.ID;
+		}
+
+		public String FULL_Endpt;
+
+		public String getFULL_Endpt() {
+			return this.FULL_Endpt;
+		}
+
+		public java.lang.String FULL_PassW;
+
+		public java.lang.String getFULL_PassW() {
+			return this.FULL_PassW;
+		}
+
+		public java.lang.String FULL_SecuK;
+
+		public java.lang.String getFULL_SecuK() {
+			return this.FULL_SecuK;
+		}
+
+		public String FULL_UserId;
+
+		public String getFULL_UserId() {
+			return this.FULL_UserId;
 		}
 
 		public String CIBLE_Endpt;
@@ -225,6 +282,12 @@ public class test implements TalendJob {
 
 		public String getSOURCE_UserId() {
 			return this.SOURCE_UserId;
+		}
+
+		public Integer boucle;
+
+		public Integer getBoucle() {
+			return this.boucle;
 		}
 	}
 
@@ -432,42 +495,6 @@ public class test implements TalendJob {
 		tDie_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFileInputDelimited_1_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileInputDelimited_1_onSubJobError(exception, errorComponent,
-				globalMap);
-	}
-
-	public void tMap_5_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileInputDelimited_1_onSubJobError(exception, errorComponent,
-				globalMap);
-	}
-
-	public void tFileOutputDelimited_2_error(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFileInputDelimited_1_onSubJobError(exception, errorComponent,
-				globalMap);
-	}
-
 	public void tLogCatcher_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -490,7 +517,7 @@ public class test implements TalendJob {
 		tLogCatcher_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tLogRow_3_error(Exception exception, String errorComponent,
+	public void tLoop_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -498,7 +525,18 @@ public class test implements TalendJob {
 
 		status = "failure";
 
-		tLogRow_3_onSubJobError(exception, errorComponent, globalMap);
+		tLoop_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tJava_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tLoop_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void tPrejob_1_error(Exception exception, String errorComponent,
@@ -597,17 +635,6 @@ public class test implements TalendJob {
 
 	}
 
-	public void tFileInputDelimited_1_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
 	public void tLogCatcher_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -619,7 +646,7 @@ public class test implements TalendJob {
 
 	}
 
-	public void tLogRow_3_onSubJobError(Exception exception,
+	public void tLoop_1_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1099,6 +1126,16 @@ public class test implements TalendJob {
 						String currentValue_Implicit_Context_Context = value_Implicit_Context_Context;
 
 						if ((key_Implicit_Context_Context != null)
+								&& ("FULL_PassW"
+										.equals(key_Implicit_Context_Context)))
+							currentValue_Implicit_Context_Context = currentValue_Implicit_Context_Context
+									.replaceAll(".", "*");
+						if ((key_Implicit_Context_Context != null)
+								&& ("FULL_SecuK"
+										.equals(key_Implicit_Context_Context)))
+							currentValue_Implicit_Context_Context = currentValue_Implicit_Context_Context
+									.replaceAll(".", "*");
+						if ((key_Implicit_Context_Context != null)
 								&& ("CIBLE_PassW"
 										.equals(key_Implicit_Context_Context)))
 							currentValue_Implicit_Context_Context = currentValue_Implicit_Context_Context
@@ -1124,6 +1161,30 @@ public class test implements TalendJob {
 								if (key_Implicit_Context_Context != null
 										&& "ID".equals(key_Implicit_Context_Context)) {
 									context.ID = value_Implicit_Context_Context;
+								}
+
+								if (key_Implicit_Context_Context != null
+										&& "FULL_Endpt"
+												.equals(key_Implicit_Context_Context)) {
+									context.FULL_Endpt = value_Implicit_Context_Context;
+								}
+
+								if (key_Implicit_Context_Context != null
+										&& "FULL_PassW"
+												.equals(key_Implicit_Context_Context)) {
+									context.FULL_PassW = value_Implicit_Context_Context;
+								}
+
+								if (key_Implicit_Context_Context != null
+										&& "FULL_SecuK"
+												.equals(key_Implicit_Context_Context)) {
+									context.FULL_SecuK = value_Implicit_Context_Context;
+								}
+
+								if (key_Implicit_Context_Context != null
+										&& "FULL_UserId"
+												.equals(key_Implicit_Context_Context)) {
+									context.FULL_UserId = value_Implicit_Context_Context;
 								}
 
 								if (key_Implicit_Context_Context != null
@@ -1172,6 +1233,15 @@ public class test implements TalendJob {
 										&& "SOURCE_UserId"
 												.equals(key_Implicit_Context_Context)) {
 									context.SOURCE_UserId = value_Implicit_Context_Context;
+								}
+
+								if (key_Implicit_Context_Context != null
+										&& "boucle"
+												.equals(key_Implicit_Context_Context)) {
+
+									context.boucle = Integer
+											.parseInt(value_Implicit_Context_Context);
+
 								}
 
 								if (context
@@ -1313,6 +1383,10 @@ public class test implements TalendJob {
 						nb_line_Implicit_Context_Context);
 
 				List<String> parametersToEncrypt_Implicit_Context_Context = new java.util.ArrayList<String>();
+
+				parametersToEncrypt_Implicit_Context_Context.add("FULL_PassW");
+
+				parametersToEncrypt_Implicit_Context_Context.add("FULL_SecuK");
 
 				parametersToEncrypt_Implicit_Context_Context.add("CIBLE_PassW");
 
@@ -1690,949 +1764,6 @@ public class test implements TalendJob {
 		}
 
 		globalMap.put("tDie_2_SUBPROCESS_STATE", 1);
-	}
-
-	public static class outttStruct implements
-			routines.system.IPersistableRow<outttStruct> {
-		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
-		static byte[] commonByteArray_TECHNIP_test = new byte[0];
-
-		public String Id;
-
-		public String getId() {
-			return this.Id;
-		}
-
-		public String Name;
-
-		public String getName() {
-			return this.Name;
-		}
-
-		public String Prenom;
-
-		public String getPrenom() {
-			return this.Prenom;
-		}
-
-		public String Age;
-
-		public String getAge() {
-			return this.Age;
-		}
-
-		private String readString(ObjectInputStream dis) throws IOException {
-			String strReturn = null;
-			int length = 0;
-			length = dis.readInt();
-			if (length == -1) {
-				strReturn = null;
-			} else {
-				if (length > commonByteArray_TECHNIP_test.length) {
-					if (length < 1024
-							&& commonByteArray_TECHNIP_test.length == 0) {
-						commonByteArray_TECHNIP_test = new byte[1024];
-					} else {
-						commonByteArray_TECHNIP_test = new byte[2 * length];
-					}
-				}
-				dis.readFully(commonByteArray_TECHNIP_test, 0, length);
-				strReturn = new String(commonByteArray_TECHNIP_test, 0, length,
-						utf8Charset);
-			}
-			return strReturn;
-		}
-
-		private void writeString(String str, ObjectOutputStream dos)
-				throws IOException {
-			if (str == null) {
-				dos.writeInt(-1);
-			} else {
-				byte[] byteArray = str.getBytes(utf8Charset);
-				dos.writeInt(byteArray.length);
-				dos.write(byteArray);
-			}
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_TECHNIP_test) {
-
-				try {
-
-					int length = 0;
-
-					this.Id = readString(dis);
-
-					this.Name = readString(dis);
-
-					this.Prenom = readString(dis);
-
-					this.Age = readString(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// String
-
-				writeString(this.Id, dos);
-
-				// String
-
-				writeString(this.Name, dos);
-
-				// String
-
-				writeString(this.Prenom, dos);
-
-				// String
-
-				writeString(this.Age, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("Id=" + Id);
-			sb.append(",Name=" + Name);
-			sb.append(",Prenom=" + Prenom);
-			sb.append(",Age=" + Age);
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(outttStruct other) {
-
-			int returnValue = -1;
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public static class row1Struct implements
-			routines.system.IPersistableRow<row1Struct> {
-		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
-		static byte[] commonByteArray_TECHNIP_test = new byte[0];
-
-		public String Id;
-
-		public String getId() {
-			return this.Id;
-		}
-
-		public String Name;
-
-		public String getName() {
-			return this.Name;
-		}
-
-		public String Prenom;
-
-		public String getPrenom() {
-			return this.Prenom;
-		}
-
-		public String Age;
-
-		public String getAge() {
-			return this.Age;
-		}
-
-		private String readString(ObjectInputStream dis) throws IOException {
-			String strReturn = null;
-			int length = 0;
-			length = dis.readInt();
-			if (length == -1) {
-				strReturn = null;
-			} else {
-				if (length > commonByteArray_TECHNIP_test.length) {
-					if (length < 1024
-							&& commonByteArray_TECHNIP_test.length == 0) {
-						commonByteArray_TECHNIP_test = new byte[1024];
-					} else {
-						commonByteArray_TECHNIP_test = new byte[2 * length];
-					}
-				}
-				dis.readFully(commonByteArray_TECHNIP_test, 0, length);
-				strReturn = new String(commonByteArray_TECHNIP_test, 0, length,
-						utf8Charset);
-			}
-			return strReturn;
-		}
-
-		private void writeString(String str, ObjectOutputStream dos)
-				throws IOException {
-			if (str == null) {
-				dos.writeInt(-1);
-			} else {
-				byte[] byteArray = str.getBytes(utf8Charset);
-				dos.writeInt(byteArray.length);
-				dos.write(byteArray);
-			}
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_TECHNIP_test) {
-
-				try {
-
-					int length = 0;
-
-					this.Id = readString(dis);
-
-					this.Name = readString(dis);
-
-					this.Prenom = readString(dis);
-
-					this.Age = readString(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// String
-
-				writeString(this.Id, dos);
-
-				// String
-
-				writeString(this.Name, dos);
-
-				// String
-
-				writeString(this.Prenom, dos);
-
-				// String
-
-				writeString(this.Age, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("Id=" + Id);
-			sb.append(",Name=" + Name);
-			sb.append(",Prenom=" + Prenom);
-			sb.append(",Age=" + Age);
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row1Struct other) {
-
-			int returnValue = -1;
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public void tFileInputDelimited_1Process(
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				row1Struct row1 = new row1Struct();
-				outttStruct outtt = new outttStruct();
-
-				/**
-				 * [tFileOutputDelimited_2 begin ] start
-				 */
-
-				ok_Hash.put("tFileOutputDelimited_2", false);
-				start_Hash.put("tFileOutputDelimited_2",
-						System.currentTimeMillis());
-
-				currentComponent = "tFileOutputDelimited_2";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null) {
-
-						runStat.updateStatOnConnection("outtt" + iterateId, 0,
-								0);
-
-					}
-				}
-
-				int tos_count_tFileOutputDelimited_2 = 0;
-
-				String fileName_tFileOutputDelimited_2 = "";
-				fileName_tFileOutputDelimited_2 = (new java.io.File(
-						"C:/Users/Cillia/Desktop/test3.byte"))
-						.getAbsolutePath().replace("\\", "/");
-				String fullName_tFileOutputDelimited_2 = null;
-				String extension_tFileOutputDelimited_2 = null;
-				String directory_tFileOutputDelimited_2 = null;
-				if ((fileName_tFileOutputDelimited_2.indexOf("/") != -1)) {
-					if (fileName_tFileOutputDelimited_2.lastIndexOf(".") < fileName_tFileOutputDelimited_2
-							.lastIndexOf("/")) {
-						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2;
-						extension_tFileOutputDelimited_2 = "";
-					} else {
-						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
-								.substring(0, fileName_tFileOutputDelimited_2
-										.lastIndexOf("."));
-						extension_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
-								.substring(fileName_tFileOutputDelimited_2
-										.lastIndexOf("."));
-					}
-					directory_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
-							.substring(0, fileName_tFileOutputDelimited_2
-									.lastIndexOf("/"));
-				} else {
-					if (fileName_tFileOutputDelimited_2.lastIndexOf(".") != -1) {
-						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
-								.substring(0, fileName_tFileOutputDelimited_2
-										.lastIndexOf("."));
-						extension_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2
-								.substring(fileName_tFileOutputDelimited_2
-										.lastIndexOf("."));
-					} else {
-						fullName_tFileOutputDelimited_2 = fileName_tFileOutputDelimited_2;
-						extension_tFileOutputDelimited_2 = "";
-					}
-					directory_tFileOutputDelimited_2 = "";
-				}
-				boolean isFileGenerated_tFileOutputDelimited_2 = true;
-				java.io.File filetFileOutputDelimited_2 = new java.io.File(
-						fileName_tFileOutputDelimited_2);
-				globalMap.put("tFileOutputDelimited_2_FILE_NAME",
-						fileName_tFileOutputDelimited_2);
-				if (filetFileOutputDelimited_2.exists()) {
-					isFileGenerated_tFileOutputDelimited_2 = false;
-				}
-				int nb_line_tFileOutputDelimited_2 = 0;
-				int splitedFileNo_tFileOutputDelimited_2 = 0;
-				int currentRow_tFileOutputDelimited_2 = 0;
-
-				final String OUT_DELIM_tFileOutputDelimited_2 = /**
-				 * Start field
-				 * tFileOutputDelimited_2:FIELDSEPARATOR
-				 */
-				";"/** End field tFileOutputDelimited_2:FIELDSEPARATOR */
-				;
-
-				final String OUT_DELIM_ROWSEP_tFileOutputDelimited_2 = /**
-				 * Start
-				 * field tFileOutputDelimited_2:ROWSEPARATOR
-				 */
-				"\n"/** End field tFileOutputDelimited_2:ROWSEPARATOR */
-				;
-
-				// create directory only if not exists
-				if (directory_tFileOutputDelimited_2 != null
-						&& directory_tFileOutputDelimited_2.trim().length() != 0) {
-					java.io.File dir_tFileOutputDelimited_2 = new java.io.File(
-							directory_tFileOutputDelimited_2);
-					if (!dir_tFileOutputDelimited_2.exists()) {
-						dir_tFileOutputDelimited_2.mkdirs();
-					}
-				}
-
-				// routines.system.Row
-				java.io.Writer outtFileOutputDelimited_2 = null;
-
-				outtFileOutputDelimited_2 = new java.io.BufferedWriter(
-						new java.io.OutputStreamWriter(
-								new java.io.FileOutputStream(
-										fileName_tFileOutputDelimited_2, true),
-								"ISO-8859-15"));
-				if (filetFileOutputDelimited_2.length() == 0) {
-					outtFileOutputDelimited_2.write("Id");
-					outtFileOutputDelimited_2
-							.write(OUT_DELIM_tFileOutputDelimited_2);
-					outtFileOutputDelimited_2.write("Name");
-					outtFileOutputDelimited_2
-							.write(OUT_DELIM_tFileOutputDelimited_2);
-					outtFileOutputDelimited_2.write("Prenom");
-					outtFileOutputDelimited_2
-							.write(OUT_DELIM_tFileOutputDelimited_2);
-					outtFileOutputDelimited_2.write("Age");
-					outtFileOutputDelimited_2
-							.write(OUT_DELIM_ROWSEP_tFileOutputDelimited_2);
-					outtFileOutputDelimited_2.flush();
-				}
-
-				resourceMap.put("out_tFileOutputDelimited_2",
-						outtFileOutputDelimited_2);
-				resourceMap.put("nb_line_tFileOutputDelimited_2",
-						nb_line_tFileOutputDelimited_2);
-
-				/**
-				 * [tFileOutputDelimited_2 begin ] stop
-				 */
-
-				/**
-				 * [tMap_5 begin ] start
-				 */
-
-				ok_Hash.put("tMap_5", false);
-				start_Hash.put("tMap_5", System.currentTimeMillis());
-
-				currentComponent = "tMap_5";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null) {
-
-						runStat.updateStatOnConnection("row1" + iterateId, 0, 0);
-
-					}
-				}
-
-				int tos_count_tMap_5 = 0;
-
-				// ###############################
-				// # Lookup's keys initialization
-				// ###############################
-
-				// ###############################
-				// # Vars initialization
-				class Var__tMap_5__Struct {
-				}
-				Var__tMap_5__Struct Var__tMap_5 = new Var__tMap_5__Struct();
-				// ###############################
-
-				// ###############################
-				// # Outputs initialization
-				outttStruct outtt_tmp = new outttStruct();
-				// ###############################
-
-				/**
-				 * [tMap_5 begin ] stop
-				 */
-
-				/**
-				 * [tFileInputDelimited_1 begin ] start
-				 */
-
-				ok_Hash.put("tFileInputDelimited_1", false);
-				start_Hash.put("tFileInputDelimited_1",
-						System.currentTimeMillis());
-
-				currentComponent = "tFileInputDelimited_1";
-
-				int tos_count_tFileInputDelimited_1 = 0;
-
-				final routines.system.RowState rowstate_tFileInputDelimited_1 = new routines.system.RowState();
-
-				int nb_line_tFileInputDelimited_1 = 0;
-				org.talend.fileprocess.FileInputDelimited fid_tFileInputDelimited_1 = null;
-				try {
-
-					Object filename_tFileInputDelimited_1 = "C:/Users/Cillia/Desktop/test.csv";
-					if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
-
-						int footer_value_tFileInputDelimited_1 = 0, random_value_tFileInputDelimited_1 = -1;
-						if (footer_value_tFileInputDelimited_1 > 0
-								|| random_value_tFileInputDelimited_1 > 0) {
-							throw new java.lang.Exception(
-									"When the input source is a stream,footer and random shouldn't be bigger than 0.");
-						}
-
-					}
-					try {
-						fid_tFileInputDelimited_1 = new org.talend.fileprocess.FileInputDelimited(
-								"C:/Users/Cillia/Desktop/test.csv", "UTF-8",
-								";", "\n", true, 1, 0, -1, -1, false);
-					} catch (java.lang.Exception e) {
-
-						System.err.println(e.getMessage());
-
-					}
-
-					while (fid_tFileInputDelimited_1 != null
-							&& fid_tFileInputDelimited_1.nextRecord()) {
-						rowstate_tFileInputDelimited_1.reset();
-
-						row1 = null;
-
-						boolean whetherReject_tFileInputDelimited_1 = false;
-						row1 = new row1Struct();
-						try {
-
-							int columnIndexWithD_tFileInputDelimited_1 = 0;
-
-							columnIndexWithD_tFileInputDelimited_1 = 0;
-
-							row1.Id = fid_tFileInputDelimited_1
-									.get(columnIndexWithD_tFileInputDelimited_1);
-
-							columnIndexWithD_tFileInputDelimited_1 = 1;
-
-							row1.Name = fid_tFileInputDelimited_1
-									.get(columnIndexWithD_tFileInputDelimited_1);
-
-							columnIndexWithD_tFileInputDelimited_1 = 2;
-
-							row1.Prenom = fid_tFileInputDelimited_1
-									.get(columnIndexWithD_tFileInputDelimited_1);
-
-							columnIndexWithD_tFileInputDelimited_1 = 3;
-
-							row1.Age = fid_tFileInputDelimited_1
-									.get(columnIndexWithD_tFileInputDelimited_1);
-
-							if (rowstate_tFileInputDelimited_1.getException() != null) {
-								throw rowstate_tFileInputDelimited_1
-										.getException();
-							}
-
-						} catch (java.lang.Exception e) {
-							whetherReject_tFileInputDelimited_1 = true;
-
-							System.err.println(e.getMessage());
-							row1 = null;
-
-						}
-
-						/**
-						 * [tFileInputDelimited_1 begin ] stop
-						 */
-
-						/**
-						 * [tFileInputDelimited_1 main ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_1";
-
-						tos_count_tFileInputDelimited_1++;
-
-						/**
-						 * [tFileInputDelimited_1 main ] stop
-						 */
-
-						/**
-						 * [tFileInputDelimited_1 process_data_begin ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_1";
-
-						/**
-						 * [tFileInputDelimited_1 process_data_begin ] stop
-						 */
-						// Start of branch "row1"
-						if (row1 != null) {
-
-							/**
-							 * [tMap_5 main ] start
-							 */
-
-							currentComponent = "tMap_5";
-
-							// row1
-							// row1
-
-							if (execStat) {
-								runStat.updateStatOnConnection("row1"
-										+ iterateId, 1, 1);
-							}
-
-							boolean hasCasePrimitiveKeyWithNull_tMap_5 = false;
-
-							// ###############################
-							// # Input tables (lookups)
-							boolean rejectedInnerJoin_tMap_5 = false;
-							boolean mainRowRejected_tMap_5 = false;
-
-							// ###############################
-							{ // start of Var scope
-
-								// ###############################
-								// # Vars tables
-
-								Var__tMap_5__Struct Var = Var__tMap_5;// ###############################
-								// ###############################
-								// # Output tables
-
-								outtt = null;
-
-								// # Output table : 'outtt'
-								outtt_tmp.Id = row1.Id;
-								outtt_tmp.Name = row1.Name;
-								outtt_tmp.Prenom = row1.Prenom;
-								outtt_tmp.Age = row1.Age;
-								outtt = outtt_tmp;
-								// ###############################
-
-							} // end of Var scope
-
-							rejectedInnerJoin_tMap_5 = false;
-
-							tos_count_tMap_5++;
-
-							/**
-							 * [tMap_5 main ] stop
-							 */
-
-							/**
-							 * [tMap_5 process_data_begin ] start
-							 */
-
-							currentComponent = "tMap_5";
-
-							/**
-							 * [tMap_5 process_data_begin ] stop
-							 */
-							// Start of branch "outtt"
-							if (outtt != null) {
-
-								/**
-								 * [tFileOutputDelimited_2 main ] start
-								 */
-
-								currentComponent = "tFileOutputDelimited_2";
-
-								// outtt
-								// outtt
-
-								if (execStat) {
-									runStat.updateStatOnConnection("outtt"
-											+ iterateId, 1, 1);
-								}
-
-								StringBuilder sb_tFileOutputDelimited_2 = new StringBuilder();
-								if (outtt.Id != null) {
-									sb_tFileOutputDelimited_2.append(outtt.Id);
-								}
-								sb_tFileOutputDelimited_2
-										.append(OUT_DELIM_tFileOutputDelimited_2);
-								if (outtt.Name != null) {
-									sb_tFileOutputDelimited_2
-											.append(outtt.Name);
-								}
-								sb_tFileOutputDelimited_2
-										.append(OUT_DELIM_tFileOutputDelimited_2);
-								if (outtt.Prenom != null) {
-									sb_tFileOutputDelimited_2
-											.append(outtt.Prenom);
-								}
-								sb_tFileOutputDelimited_2
-										.append(OUT_DELIM_tFileOutputDelimited_2);
-								if (outtt.Age != null) {
-									sb_tFileOutputDelimited_2.append(outtt.Age);
-								}
-								sb_tFileOutputDelimited_2
-										.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_2);
-
-								nb_line_tFileOutputDelimited_2++;
-								resourceMap.put(
-										"nb_line_tFileOutputDelimited_2",
-										nb_line_tFileOutputDelimited_2);
-
-								outtFileOutputDelimited_2
-										.write(sb_tFileOutputDelimited_2
-												.toString());
-
-								tos_count_tFileOutputDelimited_2++;
-
-								/**
-								 * [tFileOutputDelimited_2 main ] stop
-								 */
-
-								/**
-								 * [tFileOutputDelimited_2 process_data_begin ]
-								 * start
-								 */
-
-								currentComponent = "tFileOutputDelimited_2";
-
-								/**
-								 * [tFileOutputDelimited_2 process_data_begin ]
-								 * stop
-								 */
-
-								/**
-								 * [tFileOutputDelimited_2 process_data_end ]
-								 * start
-								 */
-
-								currentComponent = "tFileOutputDelimited_2";
-
-								/**
-								 * [tFileOutputDelimited_2 process_data_end ]
-								 * stop
-								 */
-
-							} // End of branch "outtt"
-
-							/**
-							 * [tMap_5 process_data_end ] start
-							 */
-
-							currentComponent = "tMap_5";
-
-							/**
-							 * [tMap_5 process_data_end ] stop
-							 */
-
-						} // End of branch "row1"
-
-						/**
-						 * [tFileInputDelimited_1 process_data_end ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_1";
-
-						/**
-						 * [tFileInputDelimited_1 process_data_end ] stop
-						 */
-
-						/**
-						 * [tFileInputDelimited_1 end ] start
-						 */
-
-						currentComponent = "tFileInputDelimited_1";
-
-					}
-				} finally {
-					if (!((Object) ("C:/Users/Cillia/Desktop/test.csv") instanceof java.io.InputStream)) {
-						if (fid_tFileInputDelimited_1 != null) {
-							fid_tFileInputDelimited_1.close();
-						}
-					}
-					if (fid_tFileInputDelimited_1 != null) {
-						globalMap.put("tFileInputDelimited_1_NB_LINE",
-								fid_tFileInputDelimited_1.getRowNumber());
-
-					}
-				}
-
-				ok_Hash.put("tFileInputDelimited_1", true);
-				end_Hash.put("tFileInputDelimited_1",
-						System.currentTimeMillis());
-
-				/**
-				 * [tFileInputDelimited_1 end ] stop
-				 */
-
-				/**
-				 * [tMap_5 end ] start
-				 */
-
-				currentComponent = "tMap_5";
-
-				// ###############################
-				// # Lookup hashes releasing
-				// ###############################
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row1" + iterateId, 2, 0);
-					}
-				}
-
-				ok_Hash.put("tMap_5", true);
-				end_Hash.put("tMap_5", System.currentTimeMillis());
-
-				/**
-				 * [tMap_5 end ] stop
-				 */
-
-				/**
-				 * [tFileOutputDelimited_2 end ] start
-				 */
-
-				currentComponent = "tFileOutputDelimited_2";
-
-				if (outtFileOutputDelimited_2 != null) {
-					outtFileOutputDelimited_2.flush();
-					outtFileOutputDelimited_2.close();
-				}
-
-				globalMap.put("tFileOutputDelimited_2_NB_LINE",
-						nb_line_tFileOutputDelimited_2);
-				globalMap.put("tFileOutputDelimited_2_FILE_NAME",
-						fileName_tFileOutputDelimited_2);
-
-				resourceMap.put("finish_tFileOutputDelimited_2", true);
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("outtt" + iterateId, 2,
-								0);
-					}
-				}
-
-				ok_Hash.put("tFileOutputDelimited_2", true);
-				end_Hash.put("tFileOutputDelimited_2",
-						System.currentTimeMillis());
-
-				/**
-				 * [tFileOutputDelimited_2 end ] stop
-				 */
-
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFileInputDelimited_1 finally ] start
-				 */
-
-				currentComponent = "tFileInputDelimited_1";
-
-				/**
-				 * [tFileInputDelimited_1 finally ] stop
-				 */
-
-				/**
-				 * [tMap_5 finally ] start
-				 */
-
-				currentComponent = "tMap_5";
-
-				/**
-				 * [tMap_5 finally ] stop
-				 */
-
-				/**
-				 * [tFileOutputDelimited_2 finally ] start
-				 */
-
-				currentComponent = "tFileOutputDelimited_2";
-
-				if (resourceMap.get("finish_tFileOutputDelimited_2") == null) {
-
-					java.io.Writer outtFileOutputDelimited_2 = (java.io.Writer) resourceMap
-							.get("out_tFileOutputDelimited_2");
-					if (outtFileOutputDelimited_2 != null) {
-						outtFileOutputDelimited_2.flush();
-						outtFileOutputDelimited_2.close();
-					}
-
-				}
-
-				/**
-				 * [tFileOutputDelimited_2 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 1);
 	}
 
 	public static class in_logStruct implements
@@ -3234,9 +2365,9 @@ public class test implements TalendJob {
 		globalMap.put("tLogCatcher_1_SUBPROCESS_STATE", 1);
 	}
 
-	public void tLogRow_3Process(final java.util.Map<String, Object> globalMap)
+	public void tLoop_1Process(final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tLogRow_3_SUBPROCESS_STATE", 0);
+		globalMap.put("tLoop_1_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
@@ -3257,196 +2388,152 @@ public class test implements TalendJob {
 				globalResumeTicket = true;
 
 				/**
-				 * [tLogRow_3 begin ] start
+				 * [tLoop_1 begin ] start
 				 */
 
-				ok_Hash.put("tLogRow_3", false);
-				start_Hash.put("tLogRow_3", System.currentTimeMillis());
+				int NB_ITERATE_tJava_2 = 0; // for statistics
 
-				currentComponent = "tLogRow_3";
+				ok_Hash.put("tLoop_1", false);
+				start_Hash.put("tLoop_1", System.currentTimeMillis());
 
-				int tos_count_tLogRow_3 = 0;
+				currentComponent = "tLoop_1";
 
-				// /////////////////////
+				int tos_count_tLoop_1 = 0;
 
-				class Util_tLogRow_3 {
+				int current_iteration_tLoop_1 = 0;
 
-					String[] des_top = { ".", ".", "-", "+" };
+				for (int looptLoop_1 = 1; looptLoop_1 <= 200000; looptLoop_1 = looptLoop_1
+						+ context.boucle) {
 
-					String[] des_head = { "|=", "=|", "-", "+" };
+					current_iteration_tLoop_1++;
+					globalMap.put("tLoop_1_CURRENT_VALUE", looptLoop_1);
+					globalMap.put("tLoop_1_CURRENT_ITERATION",
+							current_iteration_tLoop_1);
 
-					String[] des_bottom = { "'", "'", "-", "+" };
+					/**
+					 * [tLoop_1 begin ] stop
+					 */
 
-					String name = "";
+					/**
+					 * [tLoop_1 main ] start
+					 */
 
-					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
+					currentComponent = "tLoop_1";
 
-					int[] colLengths = new int[1];
+					tos_count_tLoop_1++;
 
-					public void addRow(String[] row) {
+					/**
+					 * [tLoop_1 main ] stop
+					 */
 
-						for (int i = 0; i < 1; i++) {
-							if (row[i] != null) {
-								colLengths[i] = Math.max(colLengths[i],
-										row[i].length());
-							}
-						}
-						list.add(row);
+					/**
+					 * [tLoop_1 process_data_begin ] start
+					 */
+
+					currentComponent = "tLoop_1";
+
+					/**
+					 * [tLoop_1 process_data_begin ] stop
+					 */
+					NB_ITERATE_tJava_2++;
+
+					if (execStat) {
+						runStat.updateStatOnConnection("iterate3", 1, "exec"
+								+ NB_ITERATE_tJava_2);
+						// Thread.sleep(1000);
 					}
 
-					public void setTableName(String name) {
+					/**
+					 * [tJava_2 begin ] start
+					 */
 
-						this.name = name;
+					ok_Hash.put("tJava_2", false);
+					start_Hash.put("tJava_2", System.currentTimeMillis());
+
+					currentComponent = "tJava_2";
+
+					int tos_count_tJava_2 = 0;
+
+					String foo = "bar";
+
+					System.out.println("ok");
+
+					/**
+					 * [tJava_2 begin ] stop
+					 */
+
+					/**
+					 * [tJava_2 main ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					tos_count_tJava_2++;
+
+					/**
+					 * [tJava_2 main ] stop
+					 */
+
+					/**
+					 * [tJava_2 process_data_begin ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					/**
+					 * [tJava_2 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tJava_2 process_data_end ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					/**
+					 * [tJava_2 process_data_end ] stop
+					 */
+
+					/**
+					 * [tJava_2 end ] start
+					 */
+
+					currentComponent = "tJava_2";
+
+					ok_Hash.put("tJava_2", true);
+					end_Hash.put("tJava_2", System.currentTimeMillis());
+
+					/**
+					 * [tJava_2 end ] stop
+					 */
+					if (execStat) {
+						runStat.updateStatOnConnection("iterate3", 2, "exec"
+								+ NB_ITERATE_tJava_2);
 					}
 
-					public StringBuilder format() {
+					/**
+					 * [tLoop_1 process_data_end ] start
+					 */
 
-						StringBuilder sb = new StringBuilder();
+					currentComponent = "tLoop_1";
 
-						sb.append(print(des_top));
+					/**
+					 * [tLoop_1 process_data_end ] stop
+					 */
 
-						int totals = 0;
-						for (int i = 0; i < colLengths.length; i++) {
-							totals = totals + colLengths[i];
-						}
+					/**
+					 * [tLoop_1 end ] start
+					 */
 
-						// name
-						sb.append("|");
-						int k = 0;
-						for (k = 0; k < (totals + 0 - name.length()) / 2; k++) {
-							sb.append(' ');
-						}
-						sb.append(name);
-						for (int i = 0; i < totals + 0 - name.length() - k; i++) {
-							sb.append(' ');
-						}
-						sb.append("|\n");
+					currentComponent = "tLoop_1";
 
-						// head and rows
-						sb.append(print(des_head));
-						for (int i = 0; i < list.size(); i++) {
-
-							String[] row = list.get(i);
-
-							java.util.Formatter formatter = new java.util.Formatter(
-									new StringBuilder());
-
-							StringBuilder sbformat = new StringBuilder();
-							sbformat.append("|%1$-");
-							sbformat.append(colLengths[0]);
-							sbformat.append("s");
-
-							sbformat.append("|\n");
-
-							formatter.format(sbformat.toString(),
-									(Object[]) row);
-
-							sb.append(formatter.toString());
-							if (i == 0)
-								sb.append(print(des_head)); // print the head
-						}
-
-						// end
-						sb.append(print(des_bottom));
-						return sb;
-					}
-
-					private StringBuilder print(String[] fillChars) {
-						StringBuilder sb = new StringBuilder();
-						// first column
-						sb.append(fillChars[0]);
-
-						// last column
-						for (int i = 0; i < colLengths[0]
-								- fillChars[0].length() - fillChars[1].length()
-								+ 2; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[1]);
-						sb.append("\n");
-						return sb;
-					}
-
-					public boolean isTableEmpty() {
-						if (list.size() > 1)
-							return false;
-						return true;
-					}
-				}
-				Util_tLogRow_3 util_tLogRow_3 = new Util_tLogRow_3();
-				util_tLogRow_3.setTableName("tLogRow_3");
-				util_tLogRow_3.addRow(new String[] { "somme", });
-				StringBuilder strBuffer_tLogRow_3 = null;
-				int nb_line_tLogRow_3 = 0;
-				// /////////////////////
-
-				/**
-				 * [tLogRow_3 begin ] stop
-				 */
-
-				/**
-				 * [tLogRow_3 main ] start
-				 */
-
-				currentComponent = "tLogRow_3";
-
-				tos_count_tLogRow_3++;
-
-				/**
-				 * [tLogRow_3 main ] stop
-				 */
-
-				/**
-				 * [tLogRow_3 process_data_begin ] start
-				 */
-
-				currentComponent = "tLogRow_3";
-
-				/**
-				 * [tLogRow_3 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tLogRow_3 process_data_end ] start
-				 */
-
-				currentComponent = "tLogRow_3";
-
-				/**
-				 * [tLogRow_3 process_data_end ] stop
-				 */
-
-				/**
-				 * [tLogRow_3 end ] start
-				 */
-
-				currentComponent = "tLogRow_3";
-
-				// ////
-
-				java.io.PrintStream consoleOut_tLogRow_3 = null;
-				if (globalMap.get("tLogRow_CONSOLE") != null) {
-					consoleOut_tLogRow_3 = (java.io.PrintStream) globalMap
-							.get("tLogRow_CONSOLE");
-				} else {
-					consoleOut_tLogRow_3 = new java.io.PrintStream(
-							new java.io.BufferedOutputStream(System.out));
-					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_3);
 				}
 
-				consoleOut_tLogRow_3
-						.println(util_tLogRow_3.format().toString());
-				consoleOut_tLogRow_3.flush();
-				// ////
-				globalMap.put("tLogRow_3_NB_LINE", nb_line_tLogRow_3);
-
-				// /////////////////////
-
-				ok_Hash.put("tLogRow_3", true);
-				end_Hash.put("tLogRow_3", System.currentTimeMillis());
+				ok_Hash.put("tLoop_1", true);
+				end_Hash.put("tLoop_1", System.currentTimeMillis());
 
 				/**
-				 * [tLogRow_3 end ] stop
+				 * [tLoop_1 end ] stop
 				 */
 			}// end the resume
 
@@ -3466,14 +2553,25 @@ public class test implements TalendJob {
 			try {
 
 				/**
-				 * [tLogRow_3 finally ] start
+				 * [tLoop_1 finally ] start
 				 */
 
-				currentComponent = "tLogRow_3";
+				currentComponent = "tLoop_1";
 
 				/**
-				 * [tLogRow_3 finally ] stop
+				 * [tLoop_1 finally ] stop
 				 */
+
+				/**
+				 * [tJava_2 finally ] start
+				 */
+
+				currentComponent = "tJava_2";
+
+				/**
+				 * [tJava_2 finally ] stop
+				 */
+
 			} catch (java.lang.Exception e) {
 				// ignore
 			} catch (java.lang.Error error) {
@@ -3482,7 +2580,7 @@ public class test implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tLogRow_3_SUBPROCESS_STATE", 1);
+		globalMap.put("tLoop_1_SUBPROCESS_STATE", 1);
 	}
 
 	public void tPrejob_1Process(final java.util.Map<String, Object> globalMap)
@@ -4293,6 +3391,58 @@ public class test implements TalendJob {
 			context.setContextType("ID", "id_String");
 
 			context.ID = (String) context.getProperty("ID");
+			context.setContextType("FULL_Endpt", "id_String");
+
+			context.FULL_Endpt = (String) context.getProperty("FULL_Endpt");
+			context.setContextType("FULL_PassW", "id_Password");
+
+			String pwd_FULL_PassW_value = context.getProperty("FULL_PassW");
+			context.FULL_PassW = null;
+			if (pwd_FULL_PassW_value != null) {
+				if (context_param.containsKey("FULL_PassW")) {// no need to
+																// decrypt if it
+																// come from
+																// program
+																// argument or
+																// parent job
+																// runtime
+					context.FULL_PassW = pwd_FULL_PassW_value;
+				} else if (!pwd_FULL_PassW_value.isEmpty()) {
+					try {
+						context.FULL_PassW = routines.system.PasswordEncryptUtil
+								.decryptPassword(pwd_FULL_PassW_value);
+						context.put("FULL_PassW", context.FULL_PassW);
+					} catch (java.lang.RuntimeException e) {
+						// do nothing
+					}
+				}
+			}
+			context.setContextType("FULL_SecuK", "id_Password");
+
+			String pwd_FULL_SecuK_value = context.getProperty("FULL_SecuK");
+			context.FULL_SecuK = null;
+			if (pwd_FULL_SecuK_value != null) {
+				if (context_param.containsKey("FULL_SecuK")) {// no need to
+																// decrypt if it
+																// come from
+																// program
+																// argument or
+																// parent job
+																// runtime
+					context.FULL_SecuK = pwd_FULL_SecuK_value;
+				} else if (!pwd_FULL_SecuK_value.isEmpty()) {
+					try {
+						context.FULL_SecuK = routines.system.PasswordEncryptUtil
+								.decryptPassword(pwd_FULL_SecuK_value);
+						context.put("FULL_SecuK", context.FULL_SecuK);
+					} catch (java.lang.RuntimeException e) {
+						// do nothing
+					}
+				}
+			}
+			context.setContextType("FULL_UserId", "id_String");
+
+			context.FULL_UserId = (String) context.getProperty("FULL_UserId");
 			context.setContextType("CIBLE_Endpt", "id_String");
 
 			context.CIBLE_Endpt = (String) context.getProperty("CIBLE_Endpt");
@@ -4398,6 +3548,17 @@ public class test implements TalendJob {
 
 			context.SOURCE_UserId = (String) context
 					.getProperty("SOURCE_UserId");
+			context.setContextType("boucle", "id_Integer");
+
+			try {
+				context.boucle = routines.system.ParserUtils
+						.parseTo_Integer(context.getProperty("boucle"));
+			} catch (NumberFormatException e) {
+				System.err.println(String.format(
+						"Null value will be used for context parameter %s: %s",
+						"boucle", e.getMessage()));
+				context.boucle = null;
+			}
 		} catch (java.io.IOException ie) {
 			System.err.println("Could not load context " + contextStr);
 			ie.printStackTrace();
@@ -4407,6 +3568,22 @@ public class test implements TalendJob {
 		if (parentContextMap != null && !parentContextMap.isEmpty()) {
 			if (parentContextMap.containsKey("ID")) {
 				context.ID = (String) parentContextMap.get("ID");
+			}
+			if (parentContextMap.containsKey("FULL_Endpt")) {
+				context.FULL_Endpt = (String) parentContextMap
+						.get("FULL_Endpt");
+			}
+			if (parentContextMap.containsKey("FULL_PassW")) {
+				context.FULL_PassW = (java.lang.String) parentContextMap
+						.get("FULL_PassW");
+			}
+			if (parentContextMap.containsKey("FULL_SecuK")) {
+				context.FULL_SecuK = (java.lang.String) parentContextMap
+						.get("FULL_SecuK");
+			}
+			if (parentContextMap.containsKey("FULL_UserId")) {
+				context.FULL_UserId = (String) parentContextMap
+						.get("FULL_UserId");
 			}
 			if (parentContextMap.containsKey("CIBLE_Endpt")) {
 				context.CIBLE_Endpt = (String) parentContextMap
@@ -4440,6 +3617,9 @@ public class test implements TalendJob {
 				context.SOURCE_UserId = (String) parentContextMap
 						.get("SOURCE_UserId");
 			}
+			if (parentContextMap.containsKey("boucle")) {
+				context.boucle = (Integer) parentContextMap.get("boucle");
+			}
 		}
 
 		// Resume: init the resumeUtil
@@ -4450,6 +3630,8 @@ public class test implements TalendJob {
 				jobName, contextStr, jobVersion);
 
 		List<String> parametersToEncrypt = new java.util.ArrayList<String>();
+		parametersToEncrypt.add("FULL_PassW");
+		parametersToEncrypt.add("FULL_SecuK");
 		parametersToEncrypt.add("CIBLE_PassW");
 		parametersToEncrypt.add("CIBLE_SecuK");
 		parametersToEncrypt.add("SOURCE_PassW");
@@ -4513,14 +3695,14 @@ public class test implements TalendJob {
 
 		try {
 			errorCode = null;
-			tFileInputDelimited_1Process(globalMap);
+			tLoop_1Process(globalMap);
 			if (!"failure".equals(status)) {
 				status = "end";
 			}
-		} catch (TalendException e_tFileInputDelimited_1) {
-			globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", -1);
+		} catch (TalendException e_tLoop_1) {
+			globalMap.put("tLoop_1_SUBPROCESS_STATE", -1);
 
-			e_tFileInputDelimited_1.printStackTrace();
+			e_tLoop_1.printStackTrace();
 
 		}
 
@@ -4684,6 +3866,6 @@ public class test implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 136068 characters generated by Talend Open Studio for Data Integration on the
- * 2 décembre 2019 15:55:22 CET
+ * 112298 characters generated by Talend Open Studio for Data Integration on the
+ * 10 décembre 2019 12:05:16 CET
  ************************************************************************************************/

@@ -46,6 +46,15 @@
     <module>jobs/process/TechNip/En_attente/load_contentfolder_0.1</module>
     <module>jobs/process/TechNip/En_attente/load_unitcodename_0.1</module>
     <module>jobs/process/TechNip/load_workpackage_update_0.1</module>
+    <module>jobs/process/TechNip/load_groupmember_0.1</module>
+    <module>jobs/process/TechNip/load_captureplan_update_0.1</module>
+    <module>jobs/process/TechNip/load_famsa_update_0.1</module>
+    <module>jobs/process/TechNip/load_shareholderprospect_update_0.1</module>
+    <module>jobs/process/TechNip/load_wppipe_update_0.1</module>
+    <module>jobs/process/TechNip/load_decisionmaker_update_0.1</module>
+    <module>jobs/process/TechNip/load_vessel_update_0.1</module>
+    <module>jobs/process/TechNip/load_wpspshardware_update_0.1</module>
+    <module>jobs/process/TechNip/load_wpvessel_update_0.1</module>
   </modules>
   <properties>
     <talend.project.name>TECHNIP</talend.project.name>

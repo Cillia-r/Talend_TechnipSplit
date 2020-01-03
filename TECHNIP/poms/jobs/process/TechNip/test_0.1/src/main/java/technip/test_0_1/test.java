@@ -558,6 +558,17 @@ public class test implements TalendJob {
 		tJava_3_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tLogRow_3_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tLogRow_3_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tPrejob_1_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
@@ -677,6 +688,17 @@ public class test implements TalendJob {
 	}
 
 	public void tJava_3_onSubJobError(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
+				.currentThread().getId() + "", "FATAL", "",
+				exception.getMessage(),
+				ResumeUtil.getExceptionStackTrace(exception), "");
+
+	}
+
+	public void tLogRow_3_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -2118,12 +2140,12 @@ public class test implements TalendJob {
 							}
 
 							if (execStat) {
-								runStat.updateStatOnConnection("row9", 3, 0);
+								runStat.updateStatOnConnection("OnSubjobOk2",
+										3, 0);
 							}
 
 							if (execStat) {
-								runStat.updateStatOnConnection("OnSubjobOk2",
-										3, 0);
+								runStat.updateStatOnConnection("row9", 3, 0);
 							}
 
 							if (execStat) {
@@ -2145,6 +2167,7 @@ public class test implements TalendJob {
 							int tos_count_tJava_5 = 0;
 
 							String foo = "bar";
+							System.out.println(" avant " + context.offset);
 
 							/**
 							 * [tJava_5 begin ] stop
@@ -2504,7 +2527,7 @@ public class test implements TalendJob {
 
 				String fileName_tFileOutputDelimited_3 = "";
 				fileName_tFileOutputDelimited_3 = (new java.io.File(
-						"C:/Users/Cillia/Desktop/Nouveau dossier (2)/outOFSSET1.csv"))
+						"C:/Users/Cillia/Desktop/Nouveau dossier (2)/outOFSSET2.csv"))
 						.getAbsolutePath().replace("\\", "/");
 				String fullName_tFileOutputDelimited_3 = null;
 				String extension_tFileOutputDelimited_3 = null;
@@ -3217,6 +3240,7 @@ public class test implements TalendJob {
 
 				String foo = "bar";
 				context.offset = context.offset + 200;
+				System.out.println(context.offset);
 
 				/**
 				 * [tJava_3 begin ] stop
@@ -3301,6 +3325,257 @@ public class test implements TalendJob {
 		}
 
 		globalMap.put("tJava_3_SUBPROCESS_STATE", 1);
+	}
+
+	public void tLogRow_3Process(final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tLogRow_3_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				/**
+				 * [tLogRow_3 begin ] start
+				 */
+
+				ok_Hash.put("tLogRow_3", false);
+				start_Hash.put("tLogRow_3", System.currentTimeMillis());
+
+				currentComponent = "tLogRow_3";
+
+				int tos_count_tLogRow_3 = 0;
+
+				// /////////////////////
+
+				class Util_tLogRow_3 {
+
+					String[] des_top = { ".", ".", "-", "+" };
+
+					String[] des_head = { "|=", "=|", "-", "+" };
+
+					String[] des_bottom = { "'", "'", "-", "+" };
+
+					String name = "";
+
+					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
+
+					int[] colLengths = new int[1];
+
+					public void addRow(String[] row) {
+
+						for (int i = 0; i < 1; i++) {
+							if (row[i] != null) {
+								colLengths[i] = Math.max(colLengths[i],
+										row[i].length());
+							}
+						}
+						list.add(row);
+					}
+
+					public void setTableName(String name) {
+
+						this.name = name;
+					}
+
+					public StringBuilder format() {
+
+						StringBuilder sb = new StringBuilder();
+
+						sb.append(print(des_top));
+
+						int totals = 0;
+						for (int i = 0; i < colLengths.length; i++) {
+							totals = totals + colLengths[i];
+						}
+
+						// name
+						sb.append("|");
+						int k = 0;
+						for (k = 0; k < (totals + 0 - name.length()) / 2; k++) {
+							sb.append(' ');
+						}
+						sb.append(name);
+						for (int i = 0; i < totals + 0 - name.length() - k; i++) {
+							sb.append(' ');
+						}
+						sb.append("|\n");
+
+						// head and rows
+						sb.append(print(des_head));
+						for (int i = 0; i < list.size(); i++) {
+
+							String[] row = list.get(i);
+
+							java.util.Formatter formatter = new java.util.Formatter(
+									new StringBuilder());
+
+							StringBuilder sbformat = new StringBuilder();
+							sbformat.append("|%1$-");
+							sbformat.append(colLengths[0]);
+							sbformat.append("s");
+
+							sbformat.append("|\n");
+
+							formatter.format(sbformat.toString(),
+									(Object[]) row);
+
+							sb.append(formatter.toString());
+							if (i == 0)
+								sb.append(print(des_head)); // print the head
+						}
+
+						// end
+						sb.append(print(des_bottom));
+						return sb;
+					}
+
+					private StringBuilder print(String[] fillChars) {
+						StringBuilder sb = new StringBuilder();
+						// first column
+						sb.append(fillChars[0]);
+
+						// last column
+						for (int i = 0; i < colLengths[0]
+								- fillChars[0].length() - fillChars[1].length()
+								+ 2; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[1]);
+						sb.append("\n");
+						return sb;
+					}
+
+					public boolean isTableEmpty() {
+						if (list.size() > 1)
+							return false;
+						return true;
+					}
+				}
+				Util_tLogRow_3 util_tLogRow_3 = new Util_tLogRow_3();
+				util_tLogRow_3.setTableName("tLogRow_3");
+				util_tLogRow_3.addRow(new String[] { "Id", });
+				StringBuilder strBuffer_tLogRow_3 = null;
+				int nb_line_tLogRow_3 = 0;
+				// /////////////////////
+
+				/**
+				 * [tLogRow_3 begin ] stop
+				 */
+
+				/**
+				 * [tLogRow_3 main ] start
+				 */
+
+				currentComponent = "tLogRow_3";
+
+				tos_count_tLogRow_3++;
+
+				/**
+				 * [tLogRow_3 main ] stop
+				 */
+
+				/**
+				 * [tLogRow_3 process_data_begin ] start
+				 */
+
+				currentComponent = "tLogRow_3";
+
+				/**
+				 * [tLogRow_3 process_data_begin ] stop
+				 */
+
+				/**
+				 * [tLogRow_3 process_data_end ] start
+				 */
+
+				currentComponent = "tLogRow_3";
+
+				/**
+				 * [tLogRow_3 process_data_end ] stop
+				 */
+
+				/**
+				 * [tLogRow_3 end ] start
+				 */
+
+				currentComponent = "tLogRow_3";
+
+				// ////
+
+				java.io.PrintStream consoleOut_tLogRow_3 = null;
+				if (globalMap.get("tLogRow_CONSOLE") != null) {
+					consoleOut_tLogRow_3 = (java.io.PrintStream) globalMap
+							.get("tLogRow_CONSOLE");
+				} else {
+					consoleOut_tLogRow_3 = new java.io.PrintStream(
+							new java.io.BufferedOutputStream(System.out));
+					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_3);
+				}
+
+				consoleOut_tLogRow_3
+						.println(util_tLogRow_3.format().toString());
+				consoleOut_tLogRow_3.flush();
+				// ////
+				globalMap.put("tLogRow_3_NB_LINE", nb_line_tLogRow_3);
+
+				// /////////////////////
+
+				ok_Hash.put("tLogRow_3", true);
+				end_Hash.put("tLogRow_3", System.currentTimeMillis());
+
+				/**
+				 * [tLogRow_3 end ] stop
+				 */
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tLogRow_3 finally ] start
+				 */
+
+				currentComponent = "tLogRow_3";
+
+				/**
+				 * [tLogRow_3 finally ] stop
+				 */
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tLogRow_3_SUBPROCESS_STATE", 1);
 	}
 
 	public void tPrejob_1Process(final java.util.Map<String, Object> globalMap)
@@ -4586,6 +4861,6 @@ public class test implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 142164 characters generated by Talend Open Studio for Data Integration on the
- * 19 décembre 2019 11:31:45 CET
+ * 150076 characters generated by Talend Open Studio for Data Integration on the
+ * 3 janvier 2020 10:04:33 CET
  ************************************************************************************************/

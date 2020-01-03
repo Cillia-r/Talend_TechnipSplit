@@ -57,6 +57,7 @@
     <module>jobs/process/TechNip/load_wpvessel_update_0.1</module>
     <module>jobs/process/TechNip/load_emailmessage_updatestatus_0.1</module>
     <module>jobs/process/TechNip/load_emailmessage_minimise_0.1</module>
+    <module>jobs/process/TechNip/load_emailmessage_rejectparentidnull_0.2</module>
   </modules>
   <properties>
     <talend.project.name>TECHNIP</talend.project.name>

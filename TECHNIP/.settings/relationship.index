@@ -17,10 +17,6 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_qM2e4Ax7Eeqsk-N5zNNf7Q",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -56,10 +52,6 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "_qM2e4Ax7Eeqsk-N5zNNf7Q - metadata",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {

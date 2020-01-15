@@ -316,7 +316,7 @@
     <elementParameter field="TEXT" name="LABEL" value="End"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="0" offsetLabelY="-7" posX="1024" posY="1952">
+  <node componentName="tWarn" componentVersion="0.101" offsetLabelX="-6" offsetLabelY="-7" posX="864" posY="1952">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tWarn_1" show="false"/>
     <elementParameter field="TEXT" name="MESSAGE" value="&quot;Fin execution&quot;+jobName"/>
     <elementParameter field="TEXT" name="CODE" value="42"/>
@@ -715,7 +715,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="CapturePlan">
         <mapperTableEntries name="OwnerId" expression="Owner.Id " type="id_String"/>

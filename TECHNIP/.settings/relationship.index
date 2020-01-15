@@ -580,10 +580,6 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_qM2e4Ax7Eeqsk-N5zNNf7Q",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -621,10 +617,6 @@
     "type" : "routine"
   }, {
     "id" : "_PNo4MPosEemPbeceHIMquQ - EmailMessage",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_qM2e4Ax7Eeqsk-N5zNNf7Q - metadata",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -1186,10 +1178,6 @@
     "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "_ocvk8PosEemPbeceHIMquQ - KAM__c",
-    "version" : "Latest",
-    "type" : "schema"
   } ]
 }, {
   "baseItem" : {
@@ -2147,10 +2135,6 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_qM2e4Ax7Eeqsk-N5zNNf7Q",
-    "version" : "Latest",
-    "type" : "property"
-  }, {
     "id" : "DataOperation",
     "version" : "Latest",
     "type" : "routine"
@@ -2188,10 +2172,6 @@
     "type" : "routine"
   }, {
     "id" : "_ocvk8PosEemPbeceHIMquQ - WPPipe__c",
-    "version" : "Latest",
-    "type" : "schema"
-  }, {
-    "id" : "_qM2e4Ax7Eeqsk-N5zNNf7Q - metadata",
     "version" : "Latest",
     "type" : "schema"
   } ]

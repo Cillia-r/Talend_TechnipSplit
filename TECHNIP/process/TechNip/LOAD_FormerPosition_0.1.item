@@ -525,7 +525,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="FormerPosition">
         <mapperTableEntries name="CurrencyIsoCode" expression="row4.CurrencyIsoCode" type="id_String" nullable="true"/>

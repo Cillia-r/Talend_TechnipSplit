@@ -4892,11 +4892,11 @@
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.LastModifiedById " type="id_String" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="WPcompetitoR" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="WPcompetitoR" expressionFilter="!Relational.ISNULL(row2.WPCompetitor__c)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" expression="" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.WPCompetitor__c" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="Vessel" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="Vessel" expressionFilter="!Relational.ISNULL(row2.Vessel__c)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.Vessel__c" type="id_String" nullable="true"/>
       </inputTables>

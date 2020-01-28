@@ -525,7 +525,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="FormerPosition">
         <mapperTableEntries name="CurrencyIsoCode" expression="row4.CurrencyIsoCode" type="id_String" nullable="true"/>
@@ -566,11 +566,11 @@
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row4.LastModifiedById " type="id_String" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="Contact" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="Contact" expressionFilter="!Relational.ISNULL(row4.Contact__c)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row4.Contact__c " type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="Account" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="Account" expressionFilter="!Relational.ISNULL(row4.Company__c)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row4.Company__c" type="id_String" nullable="true"/>
       </inputTables>

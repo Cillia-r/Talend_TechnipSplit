@@ -483,7 +483,7 @@
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.LastModifiedById " type="id_String" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="Contact" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="Contact" expressionFilter="!Relational.ISNULL(row2.Contact__c)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.Contact__c" type="id_String" nullable="true"/>
       </inputTables>

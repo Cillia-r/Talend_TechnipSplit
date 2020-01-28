@@ -329,15 +329,15 @@
       <column comment="" key="false" length="-1" name="ExternalIdSplit__c" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="Kam">
-        <mapperTableEntries name="OwnerId" expression="row3.Id " type="id_String"/>
+        <mapperTableEntries name="OwnerId" expression="owner.Id " type="id_String"/>
         <mapperTableEntries name="CurrencyIsoCode" expression="row2.CurrencyIsoCode " type="id_String" nullable="true"/>
         <mapperTableEntries name="CreatedDate" expression="row2.CreatedDate " type="id_Date"/>
-        <mapperTableEntries name="CreatedById" expression="row4.Id " type="id_String"/>
+        <mapperTableEntries name="CreatedById" expression="createdid.Id " type="id_String"/>
         <mapperTableEntries name="LastModifiedDate" expression="row2.LastModifiedDate " type="id_Date"/>
-        <mapperTableEntries name="LastModifiedById" expression="row5.Id " type="id_String"/>
+        <mapperTableEntries name="LastModifiedById" expression="modifiedid.Id " type="id_String"/>
         <mapperTableEntries name="KAM_Account__c" expression="Account.Id " type="id_String" nullable="true"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.Id " type="id_String" nullable="true"/>
       </outputTables>
@@ -354,19 +354,19 @@
         <mapperTableEntries name="LastReferencedDate" type="id_Date" nullable="true"/>
         <mapperTableEntries name="KAM_Account__c" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="owner" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.OwnerId " type="id_String" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row4" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="createdid" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.CreatedById " type="id_String" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="modifiedid" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.LastModifiedById " type="id_String" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="Account" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="Account" expressionFilter="!Relational.ISNULL(row2.KAM_Account__c)" activateExpressionFilter="true" columnNameFilter="" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.KAM_Account__c " type="id_String" nullable="true" operator="="/>
       </inputTables>
@@ -828,17 +828,17 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="Kam" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row3" lineStyle="8" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tMap_1">
+  <connection connectorName="FLOW" label="owner" lineStyle="8" metaname="tHashInput_1" offsetLabelX="0" offsetLabelY="0" source="tHashInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="owner" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row4" lineStyle="8" metaname="tHashInput_2" offsetLabelX="0" offsetLabelY="0" source="tHashInput_2" target="tMap_1">
+  <connection connectorName="FLOW" label="createdid" lineStyle="8" metaname="tHashInput_2" offsetLabelX="0" offsetLabelY="0" source="tHashInput_2" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="createdid" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row5" lineStyle="8" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tMap_1">
+  <connection connectorName="FLOW" label="modifiedid" lineStyle="8" metaname="tHashInput_3" offsetLabelX="0" offsetLabelY="0" source="tHashInput_3" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="modifiedid" show="false"/>
   </connection>
   <connection connectorName="MAIN" label="row7" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSalesforceOutput_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>

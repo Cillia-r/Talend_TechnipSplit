@@ -5289,11 +5289,11 @@
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.LastModifiedById " type="id_String" nullable="true" operator="="/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="WPDetails" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="WPDetails" expressionFilter="!Relational.ISNULL(row2.WPDetail__c)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" expression="" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.WPDetail__c" type="id_String" nullable="true"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="Account" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="Account" expressionFilter="!Relational.ISNULL(row2.CompetitorName__c)" activateExpressionFilter="true" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="Id" type="id_String"/>
         <mapperTableEntries name="ExternalIdSplit__c" expression="row2.CompetitorName__c" type="id_String" nullable="true"/>
       </inputTables>
@@ -5746,14 +5746,14 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSalesforceInput_11" offsetLabelX="0" offsetLabelY="0" source="tSalesforceInput_11" target="tSalesforceInput_13">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
+  </connection>
   <connection connectorName="MAIN" label="row14" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" source="tSalesforceInput_11" target="tHashOutput_10">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row14" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSalesforceInput_11" offsetLabelX="0" offsetLabelY="0" source="tSalesforceInput_11" target="tSalesforceInput_13">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
   </connection>
   <connection connectorName="MAIN" label="row13" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" source="tSalesforceInput_12" target="tSalesforceOutputBulkExec_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -5780,15 +5780,15 @@
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="WPpipe_p" show="false"/>
   </connection>
-  <connection connectorName="MAIN" label="row17" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSalesforceOutputBulkExec_5" target="tFileOutputDelimited_4">
-    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row17" show="false"/>
-  </connection>
-  <connection connectorName="REJECT" label="row16" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSalesforceOutputBulkExec_5" target="tFileOutputDelimited_5">
+  <connection connectorName="REJECT" label="row16" lineStyle="0" metaname="REJECT" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tSalesforceOutputBulkExec_5" target="tFileOutputDelimited_5">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row16" show="false"/>
+  </connection>
+  <connection connectorName="MAIN" label="row17" lineStyle="0" metaname="MAIN" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tSalesforceOutputBulkExec_5" target="tFileOutputDelimited_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row17" show="false"/>
   </connection>
   <connection connectorName="MAIN" label="row9" lineStyle="0" metaname="tSalesforceInput_4" offsetLabelX="0" offsetLabelY="0" source="tSalesforceInput_4" target="tHashOutput_3">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>

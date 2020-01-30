@@ -41,15 +41,6 @@ import java.io.ObjectInputStream;
 import java.io.IOException;
 import java.util.Comparator;
 
-//the import part of tJava_4
-//import java.util.List;
-
-//the import part of tJava_6
-//import java.util.List;
-
-//the import part of tJava_7
-//import java.util.List;
-
 @SuppressWarnings("unused")
 /**
  * Job: test Purpose: <br>
@@ -345,8 +336,8 @@ public class test implements TalendJob {
 	public Integer errorCode = null;
 	private String currentComponent = "";
 
-	private final java.util.Map<String, Object> globalMap = new java.util.HashMap<String, Object>();
-	private final static java.util.Map<String, Object> junitGlobalMap = new java.util.HashMap<String, Object>();
+	private final java.util.Map<String, Object> globalMap = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Object>());
 
 	private final java.util.Map<String, Long> start_Hash = new java.util.HashMap<String, Long>();
 	private final java.util.Map<String, Long> end_Hash = new java.util.HashMap<String, Long>();
@@ -506,7 +497,7 @@ public class test implements TalendJob {
 				globalMap);
 	}
 
-	public void tFixedFlowInput_3_error(Exception exception,
+	public void tFixedFlowInput_4_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -514,10 +505,10 @@ public class test implements TalendJob {
 
 		status = "failure";
 
-		tFixedFlowInput_3_onSubJobError(exception, errorComponent, globalMap);
+		tFixedFlowInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFlowToIterate_4_error(Exception exception,
+	public void tExtractJSONFields_2_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -525,43 +516,10 @@ public class test implements TalendJob {
 
 		status = "failure";
 
-		tFixedFlowInput_3_onSubJobError(exception, errorComponent, globalMap);
+		tFixedFlowInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tJava_4_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tFixedFlowInput_3_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tJava_6_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tJava_6_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tJava_7_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tJava_7_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tRowGenerator_1_error(Exception exception,
+	public void tFileOutputJSON_1_error(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -569,18 +527,26 @@ public class test implements TalendJob {
 
 		status = "failure";
 
-		tRowGenerator_1_onSubJobError(exception, errorComponent, globalMap);
+		tFixedFlowInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tLogRow_5_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap)
+	public void tWriteJSONField_1_Out_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+
+		tWriteJSONField_1_In_error(exception, errorComponent, globalMap);
+
+	}
+
+	public void tWriteJSONField_1_In_error(Exception exception,
+			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
 		status = "failure";
 
-		tRowGenerator_1_onSubJobError(exception, errorComponent, globalMap);
+		tFixedFlowInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void Implicit_Context_Regex_onSubJobError(Exception exception,
@@ -594,7 +560,7 @@ public class test implements TalendJob {
 
 	}
 
-	public void tFixedFlowInput_3_onSubJobError(Exception exception,
+	public void tFixedFlowInput_4_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -605,29 +571,7 @@ public class test implements TalendJob {
 
 	}
 
-	public void tJava_6_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tJava_7_onSubJobError(Exception exception,
-			String errorComponent, final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-
-		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread
-				.currentThread().getId() + "", "FATAL", "",
-				exception.getMessage(),
-				ResumeUtil.getExceptionStackTrace(exception), "");
-
-	}
-
-	public void tRowGenerator_1_onSubJobError(Exception exception,
+	public void tWriteJSONField_1_In_onSubJobError(Exception exception,
 			String errorComponent, final java.util.Map<String, Object> globalMap)
 			throws TalendException {
 
@@ -1444,738 +1388,27 @@ public class test implements TalendJob {
 		globalMap.put("Implicit_Context_Regex_SUBPROCESS_STATE", 1);
 	}
 
-	public static class row15Struct implements
-			routines.system.IPersistableRow<row15Struct> {
+	public static class row19Struct implements
+			routines.system.IPersistableRow<row19Struct> {
 		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
 		static byte[] commonByteArray_TECHNIP_test = new byte[0];
 
-		public Integer identif;
+		public String firstname;
 
-		public Integer getIdentif() {
-			return this.identif;
+		public String getFirstname() {
+			return this.firstname;
 		}
 
-		private Integer readInteger(ObjectInputStream dis) throws IOException {
-			Integer intReturn;
-			int length = 0;
-			length = dis.readByte();
-			if (length == -1) {
-				intReturn = null;
-			} else {
-				intReturn = dis.readInt();
-			}
-			return intReturn;
+		public String lastname;
+
+		public String getLastname() {
+			return this.lastname;
 		}
 
-		private void writeInteger(Integer intNum, ObjectOutputStream dos)
-				throws IOException {
-			if (intNum == null) {
-				dos.writeByte(-1);
-			} else {
-				dos.writeByte(0);
-				dos.writeInt(intNum);
-			}
-		}
+		public String dept;
 
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_TECHNIP_test) {
-
-				try {
-
-					int length = 0;
-
-					this.identif = readInteger(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// Integer
-
-				writeInteger(this.identif, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("identif=" + String.valueOf(identif));
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row15Struct other) {
-
-			int returnValue = -1;
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(),
-						object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public void tFixedFlowInput_3Process(
-			final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tFixedFlowInput_3_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				row15Struct row15 = new row15Struct();
-
-				/**
-				 * [tFlowToIterate_4 begin ] start
-				 */
-
-				int NB_ITERATE_tJava_4 = 0; // for statistics
-
-				ok_Hash.put("tFlowToIterate_4", false);
-				start_Hash.put("tFlowToIterate_4", System.currentTimeMillis());
-
-				currentComponent = "tFlowToIterate_4";
-
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null) {
-
-						runStat.updateStatOnConnection("row15" + iterateId, 0,
-								0);
-
-					}
-				}
-
-				int tos_count_tFlowToIterate_4 = 0;
-
-				int nb_line_tFlowToIterate_4 = 0;
-				int counter_tFlowToIterate_4 = 0;
-
-				/**
-				 * [tFlowToIterate_4 begin ] stop
-				 */
-
-				/**
-				 * [tFixedFlowInput_3 begin ] start
-				 */
-
-				ok_Hash.put("tFixedFlowInput_3", false);
-				start_Hash.put("tFixedFlowInput_3", System.currentTimeMillis());
-
-				currentComponent = "tFixedFlowInput_3";
-
-				int tos_count_tFixedFlowInput_3 = 0;
-
-				int nb_line_tFixedFlowInput_3 = 0;
-				List<row15Struct> cacheList_tFixedFlowInput_3 = new java.util.ArrayList<row15Struct>();
-				row15 = new row15Struct();
-				row15.identif = 15;
-				cacheList_tFixedFlowInput_3.add(row15);
-				row15 = new row15Struct();
-				row15.identif = 87;
-				cacheList_tFixedFlowInput_3.add(row15);
-				row15 = new row15Struct();
-				row15.identif = 1;
-				cacheList_tFixedFlowInput_3.add(row15);
-				row15 = new row15Struct();
-				row15.identif = 20;
-				cacheList_tFixedFlowInput_3.add(row15);
-				for (int i_tFixedFlowInput_3 = 0; i_tFixedFlowInput_3 < 1; i_tFixedFlowInput_3++) {
-					for (row15Struct tmpRow_tFixedFlowInput_3 : cacheList_tFixedFlowInput_3) {
-						nb_line_tFixedFlowInput_3++;
-						row15 = tmpRow_tFixedFlowInput_3;
-
-						/**
-						 * [tFixedFlowInput_3 begin ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_3 main ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_3";
-
-						tos_count_tFixedFlowInput_3++;
-
-						/**
-						 * [tFixedFlowInput_3 main ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_3 process_data_begin ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_3";
-
-						/**
-						 * [tFixedFlowInput_3 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tFlowToIterate_4 main ] start
-						 */
-
-						currentComponent = "tFlowToIterate_4";
-
-						// row15
-						// row15
-
-						if (execStat) {
-							runStat.updateStatOnConnection("row15" + iterateId,
-									1, 1);
-						}
-
-						globalMap.put("row15.identif", row15.identif);
-
-						nb_line_tFlowToIterate_4++;
-						counter_tFlowToIterate_4++;
-						globalMap.put("tFlowToIterate_4_CURRENT_ITERATION",
-								counter_tFlowToIterate_4);
-
-						tos_count_tFlowToIterate_4++;
-
-						/**
-						 * [tFlowToIterate_4 main ] stop
-						 */
-
-						/**
-						 * [tFlowToIterate_4 process_data_begin ] start
-						 */
-
-						currentComponent = "tFlowToIterate_4";
-
-						/**
-						 * [tFlowToIterate_4 process_data_begin ] stop
-						 */
-						NB_ITERATE_tJava_4++;
-
-						if (execStat) {
-							runStat.updateStatOnConnection("OnSubjobOk5", 3, 0);
-						}
-
-						if (execStat) {
-							runStat.updateStatOnConnection("OnComponentOk5", 3,
-									0);
-						}
-
-						if (execStat) {
-							runStat.updateStatOnConnection("iterate5", 1,
-									"exec" + NB_ITERATE_tJava_4);
-							// Thread.sleep(1000);
-						}
-
-						/**
-						 * [tJava_4 begin ] start
-						 */
-
-						ok_Hash.put("tJava_4", false);
-						start_Hash.put("tJava_4", System.currentTimeMillis());
-
-						currentComponent = "tJava_4";
-
-						int tos_count_tJava_4 = 0;
-
-						String foo = "bar";
-						context.identif = (Integer) globalMap
-								.get("row15.identif");
-
-						/**
-						 * [tJava_4 begin ] stop
-						 */
-
-						/**
-						 * [tJava_4 main ] start
-						 */
-
-						currentComponent = "tJava_4";
-
-						tos_count_tJava_4++;
-
-						/**
-						 * [tJava_4 main ] stop
-						 */
-
-						/**
-						 * [tJava_4 process_data_begin ] start
-						 */
-
-						currentComponent = "tJava_4";
-
-						/**
-						 * [tJava_4 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tJava_4 process_data_end ] start
-						 */
-
-						currentComponent = "tJava_4";
-
-						/**
-						 * [tJava_4 process_data_end ] stop
-						 */
-
-						/**
-						 * [tJava_4 end ] start
-						 */
-
-						currentComponent = "tJava_4";
-
-						ok_Hash.put("tJava_4", true);
-						end_Hash.put("tJava_4", System.currentTimeMillis());
-
-						if (execStat) {
-							runStat.updateStatOnConnection("OnComponentOk5", 0,
-									"ok");
-						}
-						tJava_6Process(globalMap);
-
-						/**
-						 * [tJava_4 end ] stop
-						 */
-						if (execStat) {
-							runStat.updateStatOnConnection("iterate5", 2,
-									"exec" + NB_ITERATE_tJava_4);
-						}
-
-						/**
-						 * [tFlowToIterate_4 process_data_end ] start
-						 */
-
-						currentComponent = "tFlowToIterate_4";
-
-						/**
-						 * [tFlowToIterate_4 process_data_end ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_3 process_data_end ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_3";
-
-						/**
-						 * [tFixedFlowInput_3 process_data_end ] stop
-						 */
-
-						/**
-						 * [tFixedFlowInput_3 end ] start
-						 */
-
-						currentComponent = "tFixedFlowInput_3";
-
-					}
-				}
-				cacheList_tFixedFlowInput_3.clear();
-				globalMap.put("tFixedFlowInput_3_NB_LINE",
-						nb_line_tFixedFlowInput_3);
-
-				ok_Hash.put("tFixedFlowInput_3", true);
-				end_Hash.put("tFixedFlowInput_3", System.currentTimeMillis());
-
-				/**
-				 * [tFixedFlowInput_3 end ] stop
-				 */
-
-				/**
-				 * [tFlowToIterate_4 end ] start
-				 */
-
-				currentComponent = "tFlowToIterate_4";
-
-				globalMap.put("tFlowToIterate_4_NB_LINE",
-						nb_line_tFlowToIterate_4);
-				if (execStat) {
-					if (resourceMap.get("inIterateVComp") == null
-							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row15" + iterateId, 2,
-								0);
-					}
-				}
-
-				ok_Hash.put("tFlowToIterate_4", true);
-				end_Hash.put("tFlowToIterate_4", System.currentTimeMillis());
-
-				/**
-				 * [tFlowToIterate_4 end ] stop
-				 */
-
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tFixedFlowInput_3 finally ] start
-				 */
-
-				currentComponent = "tFixedFlowInput_3";
-
-				/**
-				 * [tFixedFlowInput_3 finally ] stop
-				 */
-
-				/**
-				 * [tFlowToIterate_4 finally ] start
-				 */
-
-				currentComponent = "tFlowToIterate_4";
-
-				/**
-				 * [tFlowToIterate_4 finally ] stop
-				 */
-
-				/**
-				 * [tJava_4 finally ] start
-				 */
-
-				currentComponent = "tJava_4";
-
-				/**
-				 * [tJava_4 finally ] stop
-				 */
-
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tFixedFlowInput_3_SUBPROCESS_STATE", 1);
-	}
-
-	public void tJava_6Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tJava_6_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tJava_6 begin ] start
-				 */
-
-				ok_Hash.put("tJava_6", false);
-				start_Hash.put("tJava_6", System.currentTimeMillis());
-
-				currentComponent = "tJava_6";
-
-				int tos_count_tJava_6 = 0;
-
-				String foo = "bar";
-				System.out.println(context.identif);
-
-				/**
-				 * [tJava_6 begin ] stop
-				 */
-
-				/**
-				 * [tJava_6 main ] start
-				 */
-
-				currentComponent = "tJava_6";
-
-				tos_count_tJava_6++;
-
-				/**
-				 * [tJava_6 main ] stop
-				 */
-
-				/**
-				 * [tJava_6 process_data_begin ] start
-				 */
-
-				currentComponent = "tJava_6";
-
-				/**
-				 * [tJava_6 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tJava_6 process_data_end ] start
-				 */
-
-				currentComponent = "tJava_6";
-
-				/**
-				 * [tJava_6 process_data_end ] stop
-				 */
-
-				/**
-				 * [tJava_6 end ] start
-				 */
-
-				currentComponent = "tJava_6";
-
-				ok_Hash.put("tJava_6", true);
-				end_Hash.put("tJava_6", System.currentTimeMillis());
-
-				/**
-				 * [tJava_6 end ] stop
-				 */
-			}// end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil.addLog("CHECKPOINT",
-						"CONNECTION:SUBJOB_OK:tJava_6:OnSubjobOk", "", Thread
-								.currentThread().getId() + "", "", "", "", "",
-						"");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk5", 0, "ok");
-			}
-
-			tJava_7Process(globalMap);
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tJava_6 finally ] start
-				 */
-
-				currentComponent = "tJava_6";
-
-				/**
-				 * [tJava_6 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tJava_6_SUBPROCESS_STATE", 1);
-	}
-
-	public void tJava_7Process(final java.util.Map<String, Object> globalMap)
-			throws TalendException {
-		globalMap.put("tJava_7_SUBPROCESS_STATE", 0);
-
-		final boolean execStat = this.execStat;
-
-		String iterateId = "";
-
-		String currentComponent = "";
-		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
-
-		try {
-			// TDI-39566 avoid throwing an useless Exception
-			boolean resumeIt = true;
-			if (globalResumeTicket == false && resumeEntryMethodName != null) {
-				String currentMethodName = new java.lang.Exception()
-						.getStackTrace()[0].getMethodName();
-				resumeIt = resumeEntryMethodName.equals(currentMethodName);
-			}
-			if (resumeIt || globalResumeTicket) { // start the resume
-				globalResumeTicket = true;
-
-				/**
-				 * [tJava_7 begin ] start
-				 */
-
-				ok_Hash.put("tJava_7", false);
-				start_Hash.put("tJava_7", System.currentTimeMillis());
-
-				currentComponent = "tJava_7";
-
-				int tos_count_tJava_7 = 0;
-
-				String foo = "bar";
-				context.somme = context.identif + 2;
-				System.out.println("somm :" + context.somme);
-
-				/**
-				 * [tJava_7 begin ] stop
-				 */
-
-				/**
-				 * [tJava_7 main ] start
-				 */
-
-				currentComponent = "tJava_7";
-
-				tos_count_tJava_7++;
-
-				/**
-				 * [tJava_7 main ] stop
-				 */
-
-				/**
-				 * [tJava_7 process_data_begin ] start
-				 */
-
-				currentComponent = "tJava_7";
-
-				/**
-				 * [tJava_7 process_data_begin ] stop
-				 */
-
-				/**
-				 * [tJava_7 process_data_end ] start
-				 */
-
-				currentComponent = "tJava_7";
-
-				/**
-				 * [tJava_7 process_data_end ] stop
-				 */
-
-				/**
-				 * [tJava_7 end ] start
-				 */
-
-				currentComponent = "tJava_7";
-
-				ok_Hash.put("tJava_7", true);
-				end_Hash.put("tJava_7", System.currentTimeMillis());
-
-				/**
-				 * [tJava_7 end ] stop
-				 */
-			}// end the resume
-
-		} catch (java.lang.Exception e) {
-
-			TalendException te = new TalendException(e, currentComponent,
-					globalMap);
-
-			throw te;
-		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
-
-			throw error;
-		} finally {
-
-			try {
-
-				/**
-				 * [tJava_7 finally ] start
-				 */
-
-				currentComponent = "tJava_7";
-
-				/**
-				 * [tJava_7 finally ] stop
-				 */
-			} catch (java.lang.Exception e) {
-				// ignore
-			} catch (java.lang.Error error) {
-				// ignore
-			}
-			resourceMap = null;
-		}
-
-		globalMap.put("tJava_7_SUBPROCESS_STATE", 1);
-	}
-
-	public static class row14Struct implements
-			routines.system.IPersistableRow<row14Struct> {
-		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
-		static byte[] commonByteArray_TECHNIP_test = new byte[0];
-
-		public String id;
-
-		public String getId() {
-			return this.id;
+		public String getDept() {
+			return this.dept;
 		}
 
 		private String readString(ObjectInputStream dis) throws IOException {
@@ -2219,7 +1452,11 @@ public class test implements TalendJob {
 
 					int length = 0;
 
-					this.id = readString(dis);
+					this.firstname = readString(dis);
+
+					this.lastname = readString(dis);
+
+					this.dept = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -2235,7 +1472,15 @@ public class test implements TalendJob {
 
 				// String
 
-				writeString(this.id, dos);
+				writeString(this.firstname, dos);
+
+				// String
+
+				writeString(this.lastname, dos);
+
+				// String
+
+				writeString(this.dept, dos);
 
 			} catch (IOException e) {
 				throw new RuntimeException(e);
@@ -2248,7 +1493,9 @@ public class test implements TalendJob {
 			StringBuilder sb = new StringBuilder();
 			sb.append(super.toString());
 			sb.append("[");
-			sb.append("id=" + id);
+			sb.append("firstname=" + firstname);
+			sb.append(",lastname=" + lastname);
+			sb.append(",dept=" + dept);
 			sb.append("]");
 
 			return sb.toString();
@@ -2257,7 +1504,7 @@ public class test implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row14Struct other) {
+		public int compareTo(row19Struct other) {
 
 			int returnValue = -1;
 
@@ -2288,12 +1535,13 @@ public class test implements TalendJob {
 
 	}
 
-	public void tRowGenerator_1Process(
+	public void tFixedFlowInput_4Process(
 			final java.util.Map<String, Object> globalMap)
 			throws TalendException {
-		globalMap.put("tRowGenerator_1_SUBPROCESS_STATE", 0);
+		globalMap.put("tFixedFlowInput_4_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
+		String currentVirtualComponent = null;
 
 		String iterateId = "";
 
@@ -2311,236 +1559,546 @@ public class test implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				row14Struct row14 = new row14Struct();
+				row19Struct row19 = new row19Struct();
 
 				/**
-				 * [tLogRow_5 begin ] start
+				 * [tWriteJSONField_1_Out begin ] start
 				 */
 
-				ok_Hash.put("tLogRow_5", false);
-				start_Hash.put("tLogRow_5", System.currentTimeMillis());
+				ok_Hash.put("tWriteJSONField_1_Out", false);
+				start_Hash.put("tWriteJSONField_1_Out",
+						System.currentTimeMillis());
 
-				currentComponent = "tLogRow_5";
+				currentVirtualComponent = "tWriteJSONField_1";
+
+				currentComponent = "tWriteJSONField_1_Out";
 
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null) {
 
-						runStat.updateStatOnConnection("row14" + iterateId, 0,
+						runStat.updateStatOnConnection("row19" + iterateId, 0,
 								0);
 
 					}
 				}
 
-				int tos_count_tLogRow_5 = 0;
+				int tos_count_tWriteJSONField_1_Out = 0;
 
-				// /////////////////////
+				// tWriteXMLFieldOut_begin
+				int nb_line_tWriteJSONField_1_Out = 0;
+				boolean needRoot_tWriteJSONField_1_Out = true;
 
-				final String OUTPUT_FIELD_SEPARATOR_tLogRow_5 = "|";
-				java.io.PrintStream consoleOut_tLogRow_5 = null;
+				String strCompCache_tWriteJSONField_1_Out = null;
 
-				StringBuilder strBuffer_tLogRow_5 = null;
-				int nb_line_tLogRow_5 = 0;
-				// /////////////////////
+				java.util.Queue<row20Struct> listGroupby_tWriteJSONField_1_Out = new java.util.concurrent.ConcurrentLinkedQueue<row20Struct>();
 
-				/**
-				 * [tLogRow_5 begin ] stop
-				 */
+				class ThreadXMLField_tWriteJSONField_1_Out extends Thread {
 
-				/**
-				 * [tRowGenerator_1 begin ] start
-				 */
+					java.util.Queue<row20Struct> queue;
 
-				ok_Hash.put("tRowGenerator_1", false);
-				start_Hash.put("tRowGenerator_1", System.currentTimeMillis());
+					java.util.List<java.util.Map<String, String>> flows;
+					java.lang.Exception lastException;
+					String currentComponent;
 
-				currentComponent = "tRowGenerator_1";
+					ThreadXMLField_tWriteJSONField_1_Out(java.util.Queue q) {
+						this.queue = q;
+						globalMap.put("queue_tWriteJSONField_1_In", queue);
+						lastException = null;
+					}
 
-				int tos_count_tRowGenerator_1 = 0;
+					ThreadXMLField_tWriteJSONField_1_Out(java.util.Queue q,
+							java.util.List<java.util.Map<String, String>> l) {
+						this.queue = q;
+						this.flows = l;
+						lastException = null;
+						globalMap.put("queue_tWriteJSONField_1_In", queue);
+						globalMap.put("flows_tWriteJSONField_1_In", flows);
+					}
 
-				int nb_line_tRowGenerator_1 = 0;
-				int nb_max_row_tRowGenerator_1 = 5;
+					public java.lang.Exception getLastException() {
+						return this.lastException;
+					}
 
-				class tRowGenerator_1Randomizer {
-					public String getRandomid() {
+					public String getCurrentComponent() {
+						return this.currentComponent;
+					}
 
-						return TalendString.getAsciiRandomString(6);
-
+					@Override
+					public void run() {
+						try {
+							tWriteJSONField_1_InProcess(globalMap);
+						} catch (TalendException te) {
+							this.lastException = te.getException();
+							this.currentComponent = te.getCurrentComponent();
+						}
 					}
 				}
-				tRowGenerator_1Randomizer randtRowGenerator_1 = new tRowGenerator_1Randomizer();
 
-				for (int itRowGenerator_1 = 0; itRowGenerator_1 < nb_max_row_tRowGenerator_1; itRowGenerator_1++) {
-					row14.id = randtRowGenerator_1.getRandomid();
-					nb_line_tRowGenerator_1++;
+				ThreadXMLField_tWriteJSONField_1_Out txf_tWriteJSONField_1_Out = new ThreadXMLField_tWriteJSONField_1_Out(
+						listGroupby_tWriteJSONField_1_Out);
 
-					/**
-					 * [tRowGenerator_1 begin ] stop
-					 */
+				txf_tWriteJSONField_1_Out.start();
 
-					/**
-					 * [tRowGenerator_1 main ] start
-					 */
+				java.util.List<java.util.List<String>> groupbyList_tWriteJSONField_1_Out = new java.util.ArrayList<java.util.List<String>>();
+				java.util.Map<String, String> valueMap_tWriteJSONField_1_Out = new java.util.HashMap<String, String>();
+				java.util.Map<String, String> arraysValueMap_tWriteJSONField_1_Out = new java.util.HashMap<String, String>();
 
-					currentComponent = "tRowGenerator_1";
-
-					tos_count_tRowGenerator_1++;
-
-					/**
-					 * [tRowGenerator_1 main ] stop
-					 */
-
-					/**
-					 * [tRowGenerator_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tRowGenerator_1";
-
-					/**
-					 * [tRowGenerator_1 process_data_begin ] stop
-					 */
-
-					/**
-					 * [tLogRow_5 main ] start
-					 */
-
-					currentComponent = "tLogRow_5";
-
-					// row14
-					// row14
-
-					if (execStat) {
-						runStat.updateStatOnConnection("row14" + iterateId, 1,
-								1);
+				class NestXMLTool_tWriteJSONField_1_Out {
+					public void parseAndAdd(org.dom4j.Element nestRoot,
+							String value) {
+						try {
+							org.dom4j.Document doc4Str = org.dom4j.DocumentHelper
+									.parseText("<root>" + value + "</root>");
+							nestRoot.setContent(doc4Str.getRootElement()
+									.content());
+						} catch (java.lang.Exception e) {
+							e.printStackTrace();
+							nestRoot.setText(value);
+						}
 					}
 
-					// /////////////////////
-
-					strBuffer_tLogRow_5 = new StringBuilder();
-
-					if (row14.id != null) { //
-
-						strBuffer_tLogRow_5.append(String.valueOf(row14.id));
-
-					} //
-
-					if (globalMap.get("tLogRow_CONSOLE") != null) {
-						consoleOut_tLogRow_5 = (java.io.PrintStream) globalMap
-								.get("tLogRow_CONSOLE");
-					} else {
-						consoleOut_tLogRow_5 = new java.io.PrintStream(
-								new java.io.BufferedOutputStream(System.out));
-						globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_5);
+					public void setText(org.dom4j.Element element, String value) {
+						if (value.startsWith("<![CDATA[")
+								&& value.endsWith("]]>")) {
+							String text = value
+									.substring(9, value.length() - 3);
+							element.addCDATA(text);
+						} else {
+							element.setText(value);
+						}
 					}
-					consoleOut_tLogRow_5
-							.println(strBuffer_tLogRow_5.toString());
-					consoleOut_tLogRow_5.flush();
-					nb_line_tLogRow_5++;
-					// ////
 
-					// ////
+					public void replaceDefaultNameSpace(
+							org.dom4j.Element nestRoot) {
+						if (nestRoot != null) {
+							for (org.dom4j.Element tmp : (java.util.List<org.dom4j.Element>) nestRoot
+									.elements()) {
+								if (("").equals(tmp.getQName().getNamespace()
+										.getURI())
+										&& ("").equals(tmp.getQName()
+												.getNamespace().getPrefix())) {
+									tmp.setQName(org.dom4j.DocumentHelper
+											.createQName(tmp.getName(),
+													nestRoot.getQName()
+															.getNamespace()));
+								}
+								replaceDefaultNameSpace(tmp);
+							}
+						}
+					}
 
-					// /////////////////////
+					public void removeEmptyElement(org.dom4j.Element root) {
+						if (root != null) {
+							for (org.dom4j.Element tmp : (java.util.List<org.dom4j.Element>) root
+									.elements()) {
+								removeEmptyElement(tmp);
+							}
+							if (root.content().size() == 0
+									&& root.attributes().size() == 0
+									&& root.declaredNamespaces().size() == 0) {
+								if (root.getParent() != null) {
+									root.getParent().remove(root);
+								}
+							}
+						}
+					}
 
-					tos_count_tLogRow_5++;
+					public String objectToString(Object value) {
+						if (value.getClass().isArray()) {
+							StringBuilder sb = new StringBuilder();
 
-					/**
-					 * [tLogRow_5 main ] stop
-					 */
+							int length = java.lang.reflect.Array
+									.getLength(value);
+							for (int i = 0; i < length; i++) {
+								Object obj = java.lang.reflect.Array.get(value,
+										i);
+								sb.append("<element>");
+								sb.append(obj);
+								sb.append("</element>");
+							}
+							return sb.toString();
+						} else {
+							return value.toString();
+						}
+					}
+				}
+				NestXMLTool_tWriteJSONField_1_Out nestXMLTool_tWriteJSONField_1_Out = new NestXMLTool_tWriteJSONField_1_Out();
 
-					/**
-					 * [tLogRow_5 process_data_begin ] start
-					 */
+				row19Struct rowStructOutput_tWriteJSONField_1_Out = new row19Struct();
+				// sort group root element for judgement of group
+				java.util.List<org.dom4j.Element> groupElementList_tWriteJSONField_1_Out = new java.util.ArrayList<org.dom4j.Element>();
+				org.dom4j.Element root4Group_tWriteJSONField_1_Out = null;
+				org.dom4j.Document doc_tWriteJSONField_1_Out = org.dom4j.DocumentHelper
+						.createDocument();
+				org.dom4j.io.OutputFormat format_tWriteJSONField_1_Out = org.dom4j.io.OutputFormat
+						.createCompactFormat();
+				format_tWriteJSONField_1_Out.setNewLineAfterDeclaration(false);
+				format_tWriteJSONField_1_Out.setTrimText(false);
+				format_tWriteJSONField_1_Out.setEncoding("ISO-8859-15");
+				int[] orders_tWriteJSONField_1_Out = new int[1];
 
-					currentComponent = "tLogRow_5";
+				/**
+				 * [tWriteJSONField_1_Out begin ] stop
+				 */
 
-					/**
-					 * [tLogRow_5 process_data_begin ] stop
-					 */
+				/**
+				 * [tFixedFlowInput_4 begin ] start
+				 */
 
-					/**
-					 * [tLogRow_5 process_data_end ] start
-					 */
+				ok_Hash.put("tFixedFlowInput_4", false);
+				start_Hash.put("tFixedFlowInput_4", System.currentTimeMillis());
 
-					currentComponent = "tLogRow_5";
+				currentComponent = "tFixedFlowInput_4";
 
-					/**
-					 * [tLogRow_5 process_data_end ] stop
-					 */
+				int tos_count_tFixedFlowInput_4 = 0;
 
-					/**
-					 * [tRowGenerator_1 process_data_end ] start
-					 */
+				StringBuilder result_tFixedFlowInput_4 = new StringBuilder();
+				result_tFixedFlowInput_4
+						.append("QW5kcmV3O1dhbGxhY2U7RG9jDQpKb2huO1NtaXRoO1ImRA0KQ2hyaXN0aWFuO0Rpb3I7U2FsZXM=");
+				String originalFileContent_tFixedFlowInput_4 = "";
+				try {
+					originalFileContent_tFixedFlowInput_4 = new String(
+							(new sun.misc.BASE64Decoder()).decodeBuffer(result_tFixedFlowInput_4
+									.toString()), utf8Charset);
+				} catch (java.lang.Exception e) {
+					e.printStackTrace();
+				}
 
-					currentComponent = "tRowGenerator_1";
+				int nb_line_tFixedFlowInput_4 = 0;
 
-					/**
-					 * [tRowGenerator_1 process_data_end ] stop
-					 */
+				for (int i_tFixedFlowInput_4 = 0; i_tFixedFlowInput_4 < 1; i_tFixedFlowInput_4++) {
 
-					/**
-					 * [tRowGenerator_1 end ] start
-					 */
+					java.io.InputStream ins_tFixedFlowInput_4 = new java.io.ByteArrayInputStream(
+							originalFileContent_tFixedFlowInput_4
+									.getBytes(utf8Charset));
+					org.talend.fileprocess.FileInputDelimited fid_tFixedFlowInput_4 = new org.talend.fileprocess.FileInputDelimited(
+							ins_tFixedFlowInput_4, utf8Charset, ";", "\n",
+							true, 0, 0, -1, -1, false);
 
-					currentComponent = "tRowGenerator_1";
+					while (fid_tFixedFlowInput_4.nextRecord()) {
+						nb_line_tFixedFlowInput_4++;
+						row19 = new row19Struct();
+
+						if (0 < fid_tFixedFlowInput_4
+								.getColumnsCountOfCurrentRow()) {
+							String colContent = fid_tFixedFlowInput_4.get(0);
+							row19.firstname = (colContent == null || colContent
+									.length() == 0) ? null : colContent;
+						} else {
+
+							row19.firstname = null;
+
+						}
+
+						if (1 < fid_tFixedFlowInput_4
+								.getColumnsCountOfCurrentRow()) {
+							String colContent = fid_tFixedFlowInput_4.get(1);
+							row19.lastname = (colContent == null || colContent
+									.length() == 0) ? null : colContent;
+						} else {
+
+							row19.lastname = null;
+
+						}
+
+						if (2 < fid_tFixedFlowInput_4
+								.getColumnsCountOfCurrentRow()) {
+							String colContent = fid_tFixedFlowInput_4.get(2);
+							row19.dept = (colContent == null || colContent
+									.length() == 0) ? null : colContent;
+						} else {
+
+							row19.dept = null;
+
+						}
+
+						/**
+						 * [tFixedFlowInput_4 begin ] stop
+						 */
+
+						/**
+						 * [tFixedFlowInput_4 main ] start
+						 */
+
+						currentComponent = "tFixedFlowInput_4";
+
+						tos_count_tFixedFlowInput_4++;
+
+						/**
+						 * [tFixedFlowInput_4 main ] stop
+						 */
+
+						/**
+						 * [tFixedFlowInput_4 process_data_begin ] start
+						 */
+
+						currentComponent = "tFixedFlowInput_4";
+
+						/**
+						 * [tFixedFlowInput_4 process_data_begin ] stop
+						 */
+
+						/**
+						 * [tWriteJSONField_1_Out main ] start
+						 */
+
+						currentVirtualComponent = "tWriteJSONField_1";
+
+						currentComponent = "tWriteJSONField_1_Out";
+
+						// row19
+						// row19
+
+						if (execStat) {
+							runStat.updateStatOnConnection("row19" + iterateId,
+									1, 1);
+						}
+
+						if (txf_tWriteJSONField_1_Out.getLastException() != null) {
+							currentComponent = txf_tWriteJSONField_1_Out
+									.getCurrentComponent();
+							throw txf_tWriteJSONField_1_Out.getLastException();
+						}
+						nb_line_tWriteJSONField_1_Out++;
+						valueMap_tWriteJSONField_1_Out.clear();
+						arraysValueMap_tWriteJSONField_1_Out.clear();
+						valueMap_tWriteJSONField_1_Out.put(
+								"firstname",
+								(row19.firstname != null ? row19.firstname
+										.toString() : null));
+						arraysValueMap_tWriteJSONField_1_Out.put(
+								"firstname",
+								(row19.firstname != null ? row19.firstname
+										.toString() : null));
+						valueMap_tWriteJSONField_1_Out.put(
+								"lastname",
+								(row19.lastname != null ? row19.lastname
+										.toString() : null));
+						arraysValueMap_tWriteJSONField_1_Out.put(
+								"lastname",
+								(row19.lastname != null ? row19.lastname
+										.toString() : null));
+						valueMap_tWriteJSONField_1_Out.put("dept",
+								(row19.dept != null ? row19.dept.toString()
+										: null));
+						arraysValueMap_tWriteJSONField_1_Out.put("dept",
+								(row19.dept != null ? row19.dept.toString()
+										: null));
+						String strTemp_tWriteJSONField_1_Out = "";
+						if (strCompCache_tWriteJSONField_1_Out == null) {
+							strCompCache_tWriteJSONField_1_Out = strTemp_tWriteJSONField_1_Out;
+
+						} else {
+							nestXMLTool_tWriteJSONField_1_Out
+									.replaceDefaultNameSpace(doc_tWriteJSONField_1_Out
+											.getRootElement());
+							java.io.StringWriter strWriter_tWriteJSONField_1_Out = new java.io.StringWriter();
+							org.dom4j.io.XMLWriter output_tWriteJSONField_1_Out = new org.dom4j.io.XMLWriter(
+									strWriter_tWriteJSONField_1_Out,
+									format_tWriteJSONField_1_Out);
+							output_tWriteJSONField_1_Out
+									.write(doc_tWriteJSONField_1_Out);
+							output_tWriteJSONField_1_Out.close();
+
+							row20Struct row_tWriteJSONField_1_Out = new row20Struct();
+
+							row_tWriteJSONField_1_Out.staff = strWriter_tWriteJSONField_1_Out
+									.toString();
+							listGroupby_tWriteJSONField_1_Out
+									.add(row_tWriteJSONField_1_Out);
+
+							doc_tWriteJSONField_1_Out.clearContent();
+							needRoot_tWriteJSONField_1_Out = true;
+							for (int i_tWriteJSONField_1_Out = 0; i_tWriteJSONField_1_Out < orders_tWriteJSONField_1_Out.length; i_tWriteJSONField_1_Out++) {
+								orders_tWriteJSONField_1_Out[i_tWriteJSONField_1_Out] = 0;
+							}
+
+							if (groupbyList_tWriteJSONField_1_Out != null
+									&& groupbyList_tWriteJSONField_1_Out.size() >= 0) {
+								groupbyList_tWriteJSONField_1_Out.clear();
+							}
+							strCompCache_tWriteJSONField_1_Out = strTemp_tWriteJSONField_1_Out;
+						}
+
+						org.dom4j.Element subTreeRootParent_tWriteJSONField_1_Out = null;
+
+						// build root xml tree
+						if (needRoot_tWriteJSONField_1_Out) {
+							needRoot_tWriteJSONField_1_Out = false;
+							org.dom4j.Element root_tWriteJSONField_1_Out = doc_tWriteJSONField_1_Out
+									.addElement("staff");
+							subTreeRootParent_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out;
+							org.dom4j.Element root_0_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out
+									.addElement("lastname");
+							if (valueMap_tWriteJSONField_1_Out.get("lastname") != null) {
+								nestXMLTool_tWriteJSONField_1_Out.setText(
+										root_0_tWriteJSONField_1_Out,
+										valueMap_tWriteJSONField_1_Out
+												.get("lastname"));
+							}
+							org.dom4j.Element root_1_tWriteJSONField_1_Out = root_tWriteJSONField_1_Out
+									.addElement("dept");
+							if (valueMap_tWriteJSONField_1_Out.get("dept") != null) {
+								nestXMLTool_tWriteJSONField_1_Out.setText(
+										root_1_tWriteJSONField_1_Out,
+										valueMap_tWriteJSONField_1_Out
+												.get("dept"));
+							}
+							root4Group_tWriteJSONField_1_Out = subTreeRootParent_tWriteJSONField_1_Out;
+						} else {
+							subTreeRootParent_tWriteJSONField_1_Out = root4Group_tWriteJSONField_1_Out;
+						}
+						// build group xml tree
+						// build loop xml tree
+						org.dom4j.Element loop_tWriteJSONField_1_Out = org.dom4j.DocumentHelper
+								.createElement("firstname");
+						if (orders_tWriteJSONField_1_Out[0] == 0) {
+							orders_tWriteJSONField_1_Out[0] = 0;
+						}
+						if (1 < orders_tWriteJSONField_1_Out.length) {
+							orders_tWriteJSONField_1_Out[1] = 0;
+						}
+						subTreeRootParent_tWriteJSONField_1_Out.elements().add(
+								orders_tWriteJSONField_1_Out[0]++,
+								loop_tWriteJSONField_1_Out);
+						if (valueMap_tWriteJSONField_1_Out.get("firstname") != null) {
+							nestXMLTool_tWriteJSONField_1_Out.setText(
+									loop_tWriteJSONField_1_Out,
+									valueMap_tWriteJSONField_1_Out
+											.get("firstname"));
+						}
+
+						tos_count_tWriteJSONField_1_Out++;
+
+						/**
+						 * [tWriteJSONField_1_Out main ] stop
+						 */
+
+						/**
+						 * [tWriteJSONField_1_Out process_data_begin ] start
+						 */
+
+						currentVirtualComponent = "tWriteJSONField_1";
+
+						currentComponent = "tWriteJSONField_1_Out";
+
+						/**
+						 * [tWriteJSONField_1_Out process_data_begin ] stop
+						 */
+
+						/**
+						 * [tWriteJSONField_1_Out process_data_end ] start
+						 */
+
+						currentVirtualComponent = "tWriteJSONField_1";
+
+						currentComponent = "tWriteJSONField_1_Out";
+
+						/**
+						 * [tWriteJSONField_1_Out process_data_end ] stop
+						 */
+
+						/**
+						 * [tFixedFlowInput_4 process_data_end ] start
+						 */
+
+						currentComponent = "tFixedFlowInput_4";
+
+						/**
+						 * [tFixedFlowInput_4 process_data_end ] stop
+						 */
+
+						/**
+						 * [tFixedFlowInput_4 end ] start
+						 */
+
+						currentComponent = "tFixedFlowInput_4";
+
+					}
+					fid_tFixedFlowInput_4.close();
+				}
+
+				globalMap.put("tFixedFlowInput_4_NB_LINE",
+						nb_line_tFixedFlowInput_4);
+
+				ok_Hash.put("tFixedFlowInput_4", true);
+				end_Hash.put("tFixedFlowInput_4", System.currentTimeMillis());
+
+				/**
+				 * [tFixedFlowInput_4 end ] stop
+				 */
+
+				/**
+				 * [tWriteJSONField_1_Out end ] start
+				 */
+
+				currentVirtualComponent = "tWriteJSONField_1";
+
+				currentComponent = "tWriteJSONField_1_Out";
+
+				if (nb_line_tWriteJSONField_1_Out > 0) {
+					nestXMLTool_tWriteJSONField_1_Out
+							.replaceDefaultNameSpace(doc_tWriteJSONField_1_Out
+									.getRootElement());
+					java.io.StringWriter strWriter_tWriteJSONField_1_Out = new java.io.StringWriter();
+					org.dom4j.io.XMLWriter output_tWriteJSONField_1_Out = new org.dom4j.io.XMLWriter(
+							strWriter_tWriteJSONField_1_Out,
+							format_tWriteJSONField_1_Out);
+					output_tWriteJSONField_1_Out
+							.write(doc_tWriteJSONField_1_Out);
+					output_tWriteJSONField_1_Out.close();
+					row20Struct row_tWriteJSONField_1_Out = new row20Struct();
+
+					row_tWriteJSONField_1_Out.staff = strWriter_tWriteJSONField_1_Out
+							.toString();
+					listGroupby_tWriteJSONField_1_Out
+							.add(row_tWriteJSONField_1_Out);
 
 				}
-				globalMap.put("tRowGenerator_1_NB_LINE",
-						nb_line_tRowGenerator_1);
+				globalMap.put("tWriteJSONField_1_Out_NB_LINE",
+						nb_line_tWriteJSONField_1_Out);
+				globalMap
+						.put("tWriteJSONField_1_In_FINISH"
+								+ (listGroupby_tWriteJSONField_1_Out == null ? ""
+										: listGroupby_tWriteJSONField_1_Out
+												.hashCode()), "true");
 
-				ok_Hash.put("tRowGenerator_1", true);
-				end_Hash.put("tRowGenerator_1", System.currentTimeMillis());
+				txf_tWriteJSONField_1_Out.join();
+				if (txf_tWriteJSONField_1_Out.getLastException() != null) {
+					currentComponent = txf_tWriteJSONField_1_Out
+							.getCurrentComponent();
+					throw txf_tWriteJSONField_1_Out.getLastException();
+				}
 
-				/**
-				 * [tRowGenerator_1 end ] stop
-				 */
-
-				/**
-				 * [tLogRow_5 end ] start
-				 */
-
-				currentComponent = "tLogRow_5";
-
-				// ////
-				// ////
-				globalMap.put("tLogRow_5_NB_LINE", nb_line_tLogRow_5);
-
-				// /////////////////////
-
+				resourceMap.put("finish_tWriteJSONField_1_Out", true);
 				if (execStat) {
 					if (resourceMap.get("inIterateVComp") == null
 							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
-						runStat.updateStatOnConnection("row14" + iterateId, 2,
+						runStat.updateStatOnConnection("row19" + iterateId, 2,
 								0);
 					}
 				}
 
-				ok_Hash.put("tLogRow_5", true);
-				end_Hash.put("tLogRow_5", System.currentTimeMillis());
+				ok_Hash.put("tWriteJSONField_1_Out", true);
+				end_Hash.put("tWriteJSONField_1_Out",
+						System.currentTimeMillis());
+
+				if (execStat) {
+					runStat.updateStatOnConnection("OnComponentOk", 0, "ok");
+				}
 
 				/**
-				 * [tLogRow_5 end ] stop
+				 * [tWriteJSONField_1_Out end ] stop
 				 */
 
 			}// end the resume
-
-			if (resumeEntryMethodName == null || globalResumeTicket) {
-				resumeUtil
-						.addLog("CHECKPOINT",
-								"CONNECTION:SUBJOB_OK:tRowGenerator_1:OnSubjobOk",
-								"", Thread.currentThread().getId() + "", "",
-								"", "", "", "");
-			}
-
-			if (execStat) {
-				runStat.updateStatOnConnection("OnSubjobOk4", 0, "ok");
-			}
-
-			tFixedFlowInput_3Process(globalMap);
 
 		} catch (java.lang.Exception e) {
 
 			TalendException te = new TalendException(e, currentComponent,
 					globalMap);
+
+			te.setVirtualComponentName(currentVirtualComponent);
 
 			throw te;
 		} catch (java.lang.Error error) {
@@ -2553,23 +2111,43 @@ public class test implements TalendJob {
 			try {
 
 				/**
-				 * [tRowGenerator_1 finally ] start
+				 * [tFixedFlowInput_4 finally ] start
 				 */
 
-				currentComponent = "tRowGenerator_1";
+				currentComponent = "tFixedFlowInput_4";
 
 				/**
-				 * [tRowGenerator_1 finally ] stop
+				 * [tFixedFlowInput_4 finally ] stop
 				 */
 
 				/**
-				 * [tLogRow_5 finally ] start
+				 * [tWriteJSONField_1_Out finally ] start
 				 */
 
-				currentComponent = "tLogRow_5";
+				currentVirtualComponent = "tWriteJSONField_1";
+
+				currentComponent = "tWriteJSONField_1_Out";
+
+				java.util.Queue listGroupby_tWriteJSONField_1_Out = (java.util.Queue) globalMap
+						.get("queue_tWriteJSONField_1_In");
+				if (resourceMap.get("finish_tWriteJSONField_1_Out") == null) {
+					globalMap
+							.put("tWriteJSONField_1_In_FINISH_WITH_EXCEPTION"
+									+ (listGroupby_tWriteJSONField_1_Out == null ? ""
+											: listGroupby_tWriteJSONField_1_Out
+													.hashCode()), "true");
+				}
+
+				if (listGroupby_tWriteJSONField_1_Out != null) {
+					globalMap
+							.put("tWriteJSONField_1_In_FINISH"
+									+ (listGroupby_tWriteJSONField_1_Out == null ? ""
+											: listGroupby_tWriteJSONField_1_Out
+													.hashCode()), "true");
+				}
 
 				/**
-				 * [tLogRow_5 finally ] stop
+				 * [tWriteJSONField_1_Out finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -2580,7 +2158,1080 @@ public class test implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tRowGenerator_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tFixedFlowInput_4_SUBPROCESS_STATE", 1);
+	}
+
+	public static class row21Struct implements
+			routines.system.IPersistableRow<row21Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
+		static byte[] commonByteArray_TECHNIP_test = new byte[0];
+
+		public String firstname;
+
+		public String getFirstname() {
+			return this.firstname;
+		}
+
+		public String lastname;
+
+		public String getLastname() {
+			return this.lastname;
+		}
+
+		public String dept;
+
+		public String getDept() {
+			return this.dept;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_test.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_test.length == 0) {
+						commonByteArray_TECHNIP_test = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_test = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_test, 0, length);
+				strReturn = new String(commonByteArray_TECHNIP_test, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_test) {
+
+				try {
+
+					int length = 0;
+
+					this.firstname = readString(dis);
+
+					this.lastname = readString(dis);
+
+					this.dept = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.firstname, dos);
+
+				// String
+
+				writeString(this.lastname, dos);
+
+				// String
+
+				writeString(this.dept, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("firstname=" + firstname);
+			sb.append(",lastname=" + lastname);
+			sb.append(",dept=" + dept);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row21Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row20Struct implements
+			routines.system.IPersistableRow<row20Struct> {
+		final static byte[] commonByteArrayLock_TECHNIP_test = new byte[0];
+		static byte[] commonByteArray_TECHNIP_test = new byte[0];
+
+		public String staff;
+
+		public String getStaff() {
+			return this.staff;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_TECHNIP_test.length) {
+					if (length < 1024
+							&& commonByteArray_TECHNIP_test.length == 0) {
+						commonByteArray_TECHNIP_test = new byte[1024];
+					} else {
+						commonByteArray_TECHNIP_test = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_TECHNIP_test, 0, length);
+				strReturn = new String(commonByteArray_TECHNIP_test, 0, length,
+						utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos)
+				throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_TECHNIP_test) {
+
+				try {
+
+					int length = 0;
+
+					this.staff = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.staff, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("staff=" + staff);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row20Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(),
+						object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public void tWriteJSONField_1_InProcess(
+			final java.util.Map<String, Object> globalMap)
+			throws TalendException {
+		globalMap.put("tWriteJSONField_1_In_SUBPROCESS_STATE", 0);
+
+		final boolean execStat = this.execStat;
+		String currentVirtualComponent = null;
+
+		String iterateId = "";
+
+		String currentComponent = "";
+		java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+		try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception()
+						.getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { // start the resume
+				globalResumeTicket = true;
+
+				row20Struct row20 = new row20Struct();
+				row21Struct row21 = new row21Struct();
+
+				/**
+				 * [tFileOutputJSON_1 begin ] start
+				 */
+
+				ok_Hash.put("tFileOutputJSON_1", false);
+				start_Hash.put("tFileOutputJSON_1", System.currentTimeMillis());
+
+				currentComponent = "tFileOutputJSON_1";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row21" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tFileOutputJSON_1 = 0;
+
+				int nb_line_tFileOutputJSON_1 = 0;
+				java.io.File file_tFileOutputJSON_1 = new java.io.File(
+						"C:/Users/Cillia/Desktop/Nouveau dossier (2)/out.json");
+				java.io.File dir_tFileOutputJSON_1 = file_tFileOutputJSON_1
+						.getParentFile();
+				if (dir_tFileOutputJSON_1 != null
+						&& !dir_tFileOutputJSON_1.exists()) {
+					dir_tFileOutputJSON_1.mkdirs();
+				}
+				java.io.PrintWriter outtFileOutputJSON_1 = new java.io.PrintWriter(
+						new java.io.BufferedWriter(
+								new java.io.FileWriter(
+										"C:/Users/Cillia/Desktop/Nouveau dossier (2)/out.json")));
+				outtFileOutputJSON_1.append("{\"" + "staff" + "\":[");
+				boolean isFirst_tFileOutputJSON_1 = true;
+
+				/**
+				 * [tFileOutputJSON_1 begin ] stop
+				 */
+
+				/**
+				 * [tExtractJSONFields_2 begin ] start
+				 */
+
+				ok_Hash.put("tExtractJSONFields_2", false);
+				start_Hash.put("tExtractJSONFields_2",
+						System.currentTimeMillis());
+
+				currentComponent = "tExtractJSONFields_2";
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null) {
+
+						runStat.updateStatOnConnection("row20" + iterateId, 0,
+								0);
+
+					}
+				}
+
+				int tos_count_tExtractJSONFields_2 = 0;
+
+				int nb_line_tExtractJSONFields_2 = 0;
+				String jsonStr_tExtractJSONFields_2 = "";
+
+				class ConvertJSONString_tExtractJSONFields_2 {
+					final static int Brace = 0; // {
+					final static int Bracket = 1; // [
+					private int barceType = -1;
+					private String originalJsonString = "";
+					private String originalLoopString = "";
+					private String jsonString4XML = null;
+					private String loopString4XML = null;
+					private String additionRoot = null;
+
+					public void barceType() {
+
+						for (int c = 0; c < originalJsonString.length(); ++c) {
+							if (originalJsonString.charAt(c) == '{') {
+								barceType = Brace;
+								break;
+							} else if (originalJsonString.charAt(c) == '[') {
+								barceType = Bracket;
+								break;
+							}
+						}
+					}
+
+					public void setJsonString(String originalJsonString) {
+						this.originalJsonString = originalJsonString;
+					}
+
+					public void setLoopString(String originalLoopString) {
+						this.originalLoopString = originalLoopString;
+					}
+
+					public String getJsonString4XML() {
+						return jsonString4XML;
+					}
+
+					public String getLoopString4XML() {
+						if (loopString4XML.length() > 1
+								&& loopString4XML.endsWith("/")) {
+							loopString4XML = loopString4XML.substring(0,
+									loopString4XML.length() - 1);
+						}
+						return loopString4XML;
+					}
+
+					public void setAdditionRoot(String additionRoot) {
+						this.additionRoot = additionRoot;
+					}
+
+					public String getAdditionRoot() {
+						return additionRoot;
+					}
+
+					public void generate() {
+						barceType();
+						jsonString4XML = originalJsonString;
+						loopString4XML = originalLoopString;
+						if (Brace == barceType) {
+							if (isNeedAddRoot(originalJsonString)) {
+								jsonString4XML = "{ \"root\": "
+										+ originalJsonString + " }";
+								loopString4XML = "root" + originalLoopString;
+								setAdditionRoot("root");
+							}
+						} else if (Bracket == barceType) {
+							jsonString4XML = "{ \"root\" : { \"object\": "
+									+ originalJsonString + " } }";
+							loopString4XML = "root/object" + originalLoopString;
+							setAdditionRoot("object");
+						}
+					}
+
+					public boolean isNeedAddRoot(String originalJsonString) {
+						boolean isNeedAddRoot = false;
+						net.sf.json.JSONObject jso = net.sf.json.JSONObject
+								.fromObject(originalJsonString);
+						String jsonKey = "";
+						Object firstObject = null;
+						if (jso.names().size() == 1) {
+							jsonKey = jso.names().get(0).toString();
+							firstObject = jso.get(jsonKey);
+						}
+						if (jso.size() > 1
+								|| (firstObject != null
+										&& firstObject instanceof net.sf.json.JSONArray && ((net.sf.json.JSONArray) firstObject)
+										.size() > 1)) {
+							isNeedAddRoot = true;
+						}
+						return isNeedAddRoot;
+					}
+
+				}
+
+				ConvertJSONString_tExtractJSONFields_2 cjs_tExtractJSONFields_2 = new ConvertJSONString_tExtractJSONFields_2();
+
+				de.odysseus.staxon.json.JsonXMLConfig config_tExtractJSONFields_2 = new de.odysseus.staxon.json.JsonXMLConfigBuilder()
+						.multiplePI(false).build();
+				de.odysseus.staxon.json.JsonXMLInputFactory jsonXMLInputFactory_tExtractJSONFields_2 = new de.odysseus.staxon.json.JsonXMLInputFactory(
+						config_tExtractJSONFields_2);
+				javax.xml.stream.XMLOutputFactory xmlOutputFactory_tExtractJSONFields_2 = javax.xml.stream.XMLOutputFactory
+						.newInstance();
+				boolean isGetWholeJson_tExtractJSONFields_2 = false;
+
+				class OriginalJSONString_tExtractJSONFields_2 {
+				}
+
+				OriginalJSONString_tExtractJSONFields_2 originalJSONString_tExtractJSONFields_2 = new OriginalJSONString_tExtractJSONFields_2();
+
+				class XML_API_tExtractJSONFields_2 {
+					public boolean isDefNull(org.dom4j.Node node)
+							throws javax.xml.transform.TransformerException {
+						if (node != null && node instanceof org.dom4j.Element) {
+							org.dom4j.Attribute attri = ((org.dom4j.Element) node)
+									.attribute("nil");
+							if (attri != null
+									&& ("true").equals(attri.getText())) {
+								return true;
+							}
+						}
+						return false;
+					}
+
+					public boolean isMissing(org.dom4j.Node node)
+							throws javax.xml.transform.TransformerException {
+						return node == null ? true : false;
+					}
+
+					public boolean isEmpty(org.dom4j.Node node)
+							throws javax.xml.transform.TransformerException {
+						if (node != null) {
+							return node.getText().length() == 0;
+						}
+						return false;
+					}
+				}
+
+				String xmlStr_tExtractJSONFields_2 = "";
+
+				XML_API_tExtractJSONFields_2 xml_api_tExtractJSONFields_2 = new XML_API_tExtractJSONFields_2();
+
+				/**
+				 * [tExtractJSONFields_2 begin ] stop
+				 */
+
+				/**
+				 * [tWriteJSONField_1_In begin ] start
+				 */
+
+				ok_Hash.put("tWriteJSONField_1_In", false);
+				start_Hash.put("tWriteJSONField_1_In",
+						System.currentTimeMillis());
+
+				currentVirtualComponent = "tWriteJSONField_1";
+
+				currentComponent = "tWriteJSONField_1_In";
+
+				int tos_count_tWriteJSONField_1_In = 0;
+
+				int nb_line_tWriteJSONField_1_In = 0;
+				net.sf.json.xml.XMLSerializer xmlSerializer_tWriteJSONField_1_In = new net.sf.json.xml.XMLSerializer();
+				xmlSerializer_tWriteJSONField_1_In.clearNamespaces();
+				xmlSerializer_tWriteJSONField_1_In.setSkipNamespaces(true);
+				xmlSerializer_tWriteJSONField_1_In.setForceTopLevelObject(true);
+
+				java.util.Queue<row20Struct> queue_tWriteJSONField_1_In = (java.util.Queue<row20Struct>) globalMap
+						.get("queue_tWriteJSONField_1_In");
+
+				String readFinishMarkWithPipeId_tWriteJSONField_1_In = "tWriteJSONField_1_In_FINISH"
+						+ (queue_tWriteJSONField_1_In == null ? ""
+								: queue_tWriteJSONField_1_In.hashCode());
+				String str_tWriteJSONField_1_In = null;
+
+				while (!globalMap
+						.containsKey(readFinishMarkWithPipeId_tWriteJSONField_1_In)
+						|| !queue_tWriteJSONField_1_In.isEmpty()) {
+					if (!queue_tWriteJSONField_1_In.isEmpty()) {
+
+						/**
+						 * [tWriteJSONField_1_In begin ] stop
+						 */
+
+						/**
+						 * [tWriteJSONField_1_In main ] start
+						 */
+
+						currentVirtualComponent = "tWriteJSONField_1";
+
+						currentComponent = "tWriteJSONField_1_In";
+
+						row20Struct result_tWriteJSONField_1_In = queue_tWriteJSONField_1_In
+								.poll();
+						str_tWriteJSONField_1_In = result_tWriteJSONField_1_In.staff;
+						// Convert XML to JSON
+						net.sf.json.JSON json_tWriteJSONField_1_In = xmlSerializer_tWriteJSONField_1_In
+								.read(str_tWriteJSONField_1_In);
+						row20.staff = json_tWriteJSONField_1_In.toString();
+
+						nb_line_tWriteJSONField_1_In++;
+
+						tos_count_tWriteJSONField_1_In++;
+
+						/**
+						 * [tWriteJSONField_1_In main ] stop
+						 */
+
+						/**
+						 * [tWriteJSONField_1_In process_data_begin ] start
+						 */
+
+						currentVirtualComponent = "tWriteJSONField_1";
+
+						currentComponent = "tWriteJSONField_1_In";
+
+						/**
+						 * [tWriteJSONField_1_In process_data_begin ] stop
+						 */
+
+						/**
+						 * [tExtractJSONFields_2 main ] start
+						 */
+
+						currentComponent = "tExtractJSONFields_2";
+
+						// row20
+						// row20
+
+						if (execStat) {
+							runStat.updateStatOnConnection("row20" + iterateId,
+									1, 1);
+						}
+
+						if (row20.staff != null) {// C_01
+							jsonStr_tExtractJSONFields_2 = row20.staff
+									.toString();
+
+							row21 = null;
+
+							org.dom4j.io.SAXReader reader_tExtractJSONFields_2 = new org.dom4j.io.SAXReader();
+							org.dom4j.Document doc_tExtractJSONFields_2 = null;
+							java.util.HashMap xmlNameSpaceMap_tExtractJSONFields_2 = new java.util.HashMap<String, String>();
+							org.dom4j.XPath x_tExtractJSONFields_2 = null;
+							java.util.List<org.dom4j.tree.AbstractNode> nodeList_tExtractJSONFields_2 = null;
+							boolean isStructError_tExtractJSONFields_2 = true;
+
+							String loopQuery_tExtractJSONFields_2 = "/staff";
+							String oraginalJsonStr_tExtractJSONFields_2 = jsonStr_tExtractJSONFields_2;
+							cjs_tExtractJSONFields_2
+									.setJsonString(jsonStr_tExtractJSONFields_2);
+							cjs_tExtractJSONFields_2
+									.setLoopString(loopQuery_tExtractJSONFields_2);
+							java.io.ByteArrayInputStream bais_tExtractJSONFields_2 = null;
+							java.io.ByteArrayOutputStream baos_tExtractJSONFields_2 = new java.io.ByteArrayOutputStream();
+							try {
+								cjs_tExtractJSONFields_2.generate();
+								jsonStr_tExtractJSONFields_2 = cjs_tExtractJSONFields_2
+										.getJsonString4XML();
+								loopQuery_tExtractJSONFields_2 = cjs_tExtractJSONFields_2
+										.getLoopString4XML();
+								bais_tExtractJSONFields_2 = new ByteArrayInputStream(
+										jsonStr_tExtractJSONFields_2
+												.getBytes("UTF-8"));
+								javax.xml.stream.XMLEventReader xmlEventReader_tExtractJSONFields_2 = jsonXMLInputFactory_tExtractJSONFields_2
+										.createXMLEventReader(bais_tExtractJSONFields_2);
+								javax.xml.stream.XMLEventWriter xmLEventWriter_tExtractJSONFields_2 = xmlOutputFactory_tExtractJSONFields_2
+										.createXMLEventWriter(
+												baos_tExtractJSONFields_2,
+												"UTF-8");
+								xmLEventWriter_tExtractJSONFields_2
+										.add(xmlEventReader_tExtractJSONFields_2);
+								// convert json string to xml
+								xmlStr_tExtractJSONFields_2 = baos_tExtractJSONFields_2
+										.toString();
+								xmLEventWriter_tExtractJSONFields_2.close();
+								xmlEventReader_tExtractJSONFields_2.close();
+
+								doc_tExtractJSONFields_2 = reader_tExtractJSONFields_2
+										.read(new java.io.StringReader(
+												xmlStr_tExtractJSONFields_2));
+								x_tExtractJSONFields_2 = doc_tExtractJSONFields_2
+										.createXPath(loopQuery_tExtractJSONFields_2);
+								x_tExtractJSONFields_2
+										.setNamespaceURIs(xmlNameSpaceMap_tExtractJSONFields_2);
+								nodeList_tExtractJSONFields_2 = (java.util.List<org.dom4j.tree.AbstractNode>) x_tExtractJSONFields_2
+										.selectNodes(doc_tExtractJSONFields_2);
+								isStructError_tExtractJSONFields_2 = false;
+
+							} catch (java.lang.Exception ex_tExtractJSONFields_2) {
+								System.err.println(ex_tExtractJSONFields_2
+										.getMessage());
+							} finally {
+								baos_tExtractJSONFields_2.close();
+								if (bais_tExtractJSONFields_2 != null) {
+									bais_tExtractJSONFields_2.close();
+								}
+							}
+
+							org.dom4j.Node node_tExtractJSONFields_2 = null;
+							String str_tExtractJSONFields_2 = "";
+							for (int i_tExtractJSONFields_2 = 0; isStructError_tExtractJSONFields_2
+									|| (nodeList_tExtractJSONFields_2 != null && i_tExtractJSONFields_2 < nodeList_tExtractJSONFields_2
+											.size()); i_tExtractJSONFields_2++) {
+
+								if (!isStructError_tExtractJSONFields_2) {
+									row21 = null;
+									row21 = new row21Struct();
+
+									org.dom4j.tree.AbstractNode temp_tExtractJSONFields_2 = nodeList_tExtractJSONFields_2
+											.get(i_tExtractJSONFields_2);
+
+									nb_line_tExtractJSONFields_2++;
+									try {
+										org.dom4j.XPath xTmp0_tExtractJSONFields_2 = temp_tExtractJSONFields_2
+												.createXPath("firstname");
+										xTmp0_tExtractJSONFields_2
+												.setNamespaceURIs(xmlNameSpaceMap_tExtractJSONFields_2);
+										Object obj0_tExtractJSONFields_2 = xTmp0_tExtractJSONFields_2
+												.evaluate(temp_tExtractJSONFields_2);
+										if (obj0_tExtractJSONFields_2 instanceof String
+												|| obj0_tExtractJSONFields_2 instanceof Number) {
+											node_tExtractJSONFields_2 = temp_tExtractJSONFields_2;
+											str_tExtractJSONFields_2 = String
+													.valueOf(obj0_tExtractJSONFields_2);
+										} else {
+											node_tExtractJSONFields_2 = xTmp0_tExtractJSONFields_2
+													.selectSingleNode(temp_tExtractJSONFields_2);
+
+											str_tExtractJSONFields_2 = xTmp0_tExtractJSONFields_2
+													.valueOf(temp_tExtractJSONFields_2);
+
+										}
+
+										if (xml_api_tExtractJSONFields_2
+												.isDefNull(node_tExtractJSONFields_2)) {
+											row21.firstname = null;
+										} else if (xml_api_tExtractJSONFields_2
+												.isEmpty(node_tExtractJSONFields_2)) {
+											row21.firstname = "";
+										} else if (xml_api_tExtractJSONFields_2
+												.isMissing(node_tExtractJSONFields_2)) {
+											row21.firstname = null;
+										} else {
+
+											row21.firstname = str_tExtractJSONFields_2;
+
+										}
+
+										org.dom4j.XPath xTmp1_tExtractJSONFields_2 = temp_tExtractJSONFields_2
+												.createXPath("lastname");
+										xTmp1_tExtractJSONFields_2
+												.setNamespaceURIs(xmlNameSpaceMap_tExtractJSONFields_2);
+										Object obj1_tExtractJSONFields_2 = xTmp1_tExtractJSONFields_2
+												.evaluate(temp_tExtractJSONFields_2);
+										if (obj1_tExtractJSONFields_2 instanceof String
+												|| obj1_tExtractJSONFields_2 instanceof Number) {
+											node_tExtractJSONFields_2 = temp_tExtractJSONFields_2;
+											str_tExtractJSONFields_2 = String
+													.valueOf(obj1_tExtractJSONFields_2);
+										} else {
+											node_tExtractJSONFields_2 = xTmp1_tExtractJSONFields_2
+													.selectSingleNode(temp_tExtractJSONFields_2);
+
+											str_tExtractJSONFields_2 = xTmp1_tExtractJSONFields_2
+													.valueOf(temp_tExtractJSONFields_2);
+
+										}
+
+										if (xml_api_tExtractJSONFields_2
+												.isDefNull(node_tExtractJSONFields_2)) {
+											row21.lastname = null;
+										} else if (xml_api_tExtractJSONFields_2
+												.isEmpty(node_tExtractJSONFields_2)) {
+											row21.lastname = "";
+										} else if (xml_api_tExtractJSONFields_2
+												.isMissing(node_tExtractJSONFields_2)) {
+											row21.lastname = null;
+										} else {
+
+											row21.lastname = str_tExtractJSONFields_2;
+
+										}
+
+										org.dom4j.XPath xTmp2_tExtractJSONFields_2 = temp_tExtractJSONFields_2
+												.createXPath("dept");
+										xTmp2_tExtractJSONFields_2
+												.setNamespaceURIs(xmlNameSpaceMap_tExtractJSONFields_2);
+										Object obj2_tExtractJSONFields_2 = xTmp2_tExtractJSONFields_2
+												.evaluate(temp_tExtractJSONFields_2);
+										if (obj2_tExtractJSONFields_2 instanceof String
+												|| obj2_tExtractJSONFields_2 instanceof Number) {
+											node_tExtractJSONFields_2 = temp_tExtractJSONFields_2;
+											str_tExtractJSONFields_2 = String
+													.valueOf(obj2_tExtractJSONFields_2);
+										} else {
+											node_tExtractJSONFields_2 = xTmp2_tExtractJSONFields_2
+													.selectSingleNode(temp_tExtractJSONFields_2);
+
+											str_tExtractJSONFields_2 = xTmp2_tExtractJSONFields_2
+													.valueOf(temp_tExtractJSONFields_2);
+
+										}
+
+										if (xml_api_tExtractJSONFields_2
+												.isDefNull(node_tExtractJSONFields_2)) {
+											row21.dept = null;
+										} else if (xml_api_tExtractJSONFields_2
+												.isEmpty(node_tExtractJSONFields_2)) {
+											row21.dept = "";
+										} else if (xml_api_tExtractJSONFields_2
+												.isMissing(node_tExtractJSONFields_2)) {
+											row21.dept = null;
+										} else {
+
+											row21.dept = str_tExtractJSONFields_2;
+
+										}
+
+									} catch (java.lang.Exception ex_tExtractJSONFields_2) {
+										System.err
+												.println(ex_tExtractJSONFields_2
+														.getMessage());
+										row21 = null;
+									}
+								}
+
+								isStructError_tExtractJSONFields_2 = false;
+
+								tos_count_tExtractJSONFields_2++;
+
+								/**
+								 * [tExtractJSONFields_2 main ] stop
+								 */
+
+								/**
+								 * [tExtractJSONFields_2 process_data_begin ]
+								 * start
+								 */
+
+								currentComponent = "tExtractJSONFields_2";
+
+								/**
+								 * [tExtractJSONFields_2 process_data_begin ]
+								 * stop
+								 */
+								// Start of branch "row21"
+								if (row21 != null) {
+
+									/**
+									 * [tFileOutputJSON_1 main ] start
+									 */
+
+									currentComponent = "tFileOutputJSON_1";
+
+									// row21
+									// row21
+
+									if (execStat) {
+										runStat.updateStatOnConnection("row21"
+												+ iterateId, 1, 1);
+									}
+
+									org.json.simple.JSONObject jsonRowtFileOutputJSON_1 = new org.json.simple.JSONObject();
+									if (row21.firstname != null) {
+
+										jsonRowtFileOutputJSON_1.put(
+												"firstname", row21.firstname);
+
+									} else {
+										jsonRowtFileOutputJSON_1.put(
+												"firstname", null);
+									}
+
+									if (row21.lastname != null) {
+
+										jsonRowtFileOutputJSON_1.put(
+												"lastname", row21.lastname);
+
+									} else {
+										jsonRowtFileOutputJSON_1.put(
+												"lastname", null);
+									}
+
+									if (row21.dept != null) {
+
+										jsonRowtFileOutputJSON_1.put("dept",
+												row21.dept);
+
+									} else {
+										jsonRowtFileOutputJSON_1.put("dept",
+												null);
+									}
+
+									if (!isFirst_tFileOutputJSON_1) {
+										outtFileOutputJSON_1.append(",");
+									}
+									isFirst_tFileOutputJSON_1 = false;
+									outtFileOutputJSON_1
+											.append(jsonRowtFileOutputJSON_1
+													.toJSONString());
+									nb_line_tFileOutputJSON_1++;
+
+									tos_count_tFileOutputJSON_1++;
+
+									/**
+									 * [tFileOutputJSON_1 main ] stop
+									 */
+
+									/**
+									 * [tFileOutputJSON_1 process_data_begin ]
+									 * start
+									 */
+
+									currentComponent = "tFileOutputJSON_1";
+
+									/**
+									 * [tFileOutputJSON_1 process_data_begin ]
+									 * stop
+									 */
+
+									/**
+									 * [tFileOutputJSON_1 process_data_end ]
+									 * start
+									 */
+
+									currentComponent = "tFileOutputJSON_1";
+
+									/**
+									 * [tFileOutputJSON_1 process_data_end ]
+									 * stop
+									 */
+
+								} // End of branch "row21"
+
+								// end for
+							}
+
+						} // C_01
+
+						/**
+						 * [tExtractJSONFields_2 process_data_end ] start
+						 */
+
+						currentComponent = "tExtractJSONFields_2";
+
+						/**
+						 * [tExtractJSONFields_2 process_data_end ] stop
+						 */
+
+						/**
+						 * [tWriteJSONField_1_In process_data_end ] start
+						 */
+
+						currentVirtualComponent = "tWriteJSONField_1";
+
+						currentComponent = "tWriteJSONField_1_In";
+
+						/**
+						 * [tWriteJSONField_1_In process_data_end ] stop
+						 */
+
+						/**
+						 * [tWriteJSONField_1_In end ] start
+						 */
+
+						currentVirtualComponent = "tWriteJSONField_1";
+
+						currentComponent = "tWriteJSONField_1_In";
+
+					}
+				}
+
+				String readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In = "tWriteJSONField_1_In_FINISH_WITH_EXCEPTION"
+						+ (queue_tWriteJSONField_1_In == null ? ""
+								: queue_tWriteJSONField_1_In.hashCode());
+				if (globalMap
+						.containsKey(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In)) {
+					if (!(globalMap instanceof java.util.concurrent.ConcurrentHashMap)) {
+						globalMap
+								.put(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In,
+										null);// syn
+					}
+					globalMap
+							.remove(readFinishWithExceptionMarkWithPipeId_tWriteJSONField_1_In);
+					return;
+				}
+				globalMap.remove("queue_tWriteJSONField_1_In");
+
+				if (!(globalMap instanceof java.util.concurrent.ConcurrentHashMap)) {
+					globalMap
+							.put(readFinishMarkWithPipeId_tWriteJSONField_1_In,
+									null);// syn
+				}
+				globalMap.remove(readFinishMarkWithPipeId_tWriteJSONField_1_In);
+
+				globalMap.put("tWriteJSONField_1_NB_LINE",
+						nb_line_tWriteJSONField_1_In);
+
+				ok_Hash.put("tWriteJSONField_1_In", true);
+				end_Hash.put("tWriteJSONField_1_In", System.currentTimeMillis());
+
+				/**
+				 * [tWriteJSONField_1_In end ] stop
+				 */
+
+				/**
+				 * [tExtractJSONFields_2 end ] start
+				 */
+
+				currentComponent = "tExtractJSONFields_2";
+
+				globalMap.put("tExtractJSONFields_1_NB_LINE",
+						nb_line_tExtractJSONFields_2);
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row20" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tExtractJSONFields_2", true);
+				end_Hash.put("tExtractJSONFields_2", System.currentTimeMillis());
+
+				/**
+				 * [tExtractJSONFields_2 end ] stop
+				 */
+
+				/**
+				 * [tFileOutputJSON_1 end ] start
+				 */
+
+				currentComponent = "tFileOutputJSON_1";
+
+				outtFileOutputJSON_1.print("]}");
+				outtFileOutputJSON_1.close();
+				globalMap.put("tFileOutputJSON_1_NB_LINE",
+						nb_line_tFileOutputJSON_1);
+
+				if (execStat) {
+					if (resourceMap.get("inIterateVComp") == null
+							|| !((Boolean) resourceMap.get("inIterateVComp"))) {
+						runStat.updateStatOnConnection("row21" + iterateId, 2,
+								0);
+					}
+				}
+
+				ok_Hash.put("tFileOutputJSON_1", true);
+				end_Hash.put("tFileOutputJSON_1", System.currentTimeMillis());
+
+				/**
+				 * [tFileOutputJSON_1 end ] stop
+				 */
+
+			}// end the resume
+
+		} catch (java.lang.Exception e) {
+
+			TalendException te = new TalendException(e, currentComponent,
+					globalMap);
+
+			te.setVirtualComponentName(currentVirtualComponent);
+
+			throw te;
+		} catch (java.lang.Error error) {
+
+			runStat.stopThreadStat();
+
+			throw error;
+		} finally {
+
+			try {
+
+				/**
+				 * [tWriteJSONField_1_In finally ] start
+				 */
+
+				currentVirtualComponent = "tWriteJSONField_1";
+
+				currentComponent = "tWriteJSONField_1_In";
+
+				/**
+				 * [tWriteJSONField_1_In finally ] stop
+				 */
+
+				/**
+				 * [tExtractJSONFields_2 finally ] start
+				 */
+
+				currentComponent = "tExtractJSONFields_2";
+
+				/**
+				 * [tExtractJSONFields_2 finally ] stop
+				 */
+
+				/**
+				 * [tFileOutputJSON_1 finally ] start
+				 */
+
+				currentComponent = "tFileOutputJSON_1";
+
+				/**
+				 * [tFileOutputJSON_1 finally ] stop
+				 */
+
+			} catch (java.lang.Exception e) {
+				// ignore
+			} catch (java.lang.Error error) {
+				// ignore
+			}
+			resourceMap = null;
+		}
+
+		globalMap.put("tWriteJSONField_1_In_SUBPROCESS_STATE", 1);
 	}
 
 	public String resuming_logs_dir_path = null;
@@ -3051,14 +3702,14 @@ public class test implements TalendJob {
 
 		try {
 			errorCode = null;
-			tRowGenerator_1Process(globalMap);
+			tFixedFlowInput_4Process(globalMap);
 			if (!"failure".equals(status)) {
 				status = "end";
 			}
-		} catch (TalendException e_tRowGenerator_1) {
-			globalMap.put("tRowGenerator_1_SUBPROCESS_STATE", -1);
+		} catch (TalendException e_tFixedFlowInput_4) {
+			globalMap.put("tFixedFlowInput_4_SUBPROCESS_STATE", -1);
 
-			e_tRowGenerator_1.printStackTrace();
+			e_tFixedFlowInput_4.printStackTrace();
 
 		}
 
@@ -3217,6 +3868,6 @@ public class test implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 89916 characters generated by Talend Open Studio for Data Integration on the
- * 27 janvier 2020 11:55:20 CET
+ * 115910 characters generated by Talend Open Studio for Data Integration on the
+ * 30 janvier 2020 16:26:46 CET
  ************************************************************************************************/

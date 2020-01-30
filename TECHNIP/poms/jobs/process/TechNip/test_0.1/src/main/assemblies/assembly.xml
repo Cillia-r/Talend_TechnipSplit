@@ -214,7 +214,13 @@
 			<outputDirectory>lib</outputDirectory>
 			<includes>
 				<include>org.example.local_project.code:routines</include>
+				<include>org.talend.libraries:commons-logging-1.1.1</include>
+				<include>org.talend.libraries:ezmorph-1.0.6</include>
+				<include>org.talend.libraries:jaxen-1.1.1</include>
+				<include>org.talend.libraries:json_simple-1.1</include>
+				<include>org.talend.libraries:staxon-1.2</include>
 				<include>org.talend.libraries:talend_file_enhanced_20070724</include>
+				<include>org.talend.libraries:xom-1.2.7</include>
 			</includes>
 			<!-- without version for talend libraries -->
 			<outputFileNameMapping>${artifact.artifactId}.${artifact.extension}
@@ -224,7 +230,11 @@
 		<dependencySet>
 			<outputDirectory>lib</outputDirectory>
 			<includes>
+				<include>commons-beanutils:commons-beanutils</include>
+				<include>commons-collections:commons-collections</include>
+				<include>commons-lang:commons-lang</include>
 				<include>dom4j:dom4j</include>
+				<include>net.sf.json-lib:json-lib</include>
 				<include>log4j:log4j</include>
 			</includes>
 			<useProjectArtifact>false</useProjectArtifact>
